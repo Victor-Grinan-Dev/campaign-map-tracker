@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Insert Unit Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Unit data card - army total pts: <strong> 0 </strong></h1>
+    </header>
+    <form>
+        <h3> Main unit data </h3>
+        <table>
+            <tr>
+                <td><label for="unitName" > Unit Name</label></td>
+                <td><input type="text" id="unitName" placeholder='"The Expendables"'></td>
+            </tr>
+            <tr>
+                <td><label for="battlefieldRole">Battlefield Role</label></td>
+                <td><input type="text" id="battlefieldRole" placeholder="elites"></td>
+            </tr>
+            <tr>
+                <td><label for="faction">Faction</label></td>
+                <td>
+                    <select name="faction" id="faction">
+                        <option value="" selected disabled hidden>Choose</option>
+                        <option>Humans</option>
+                        <option>Aliens</option>
+                        <option>Martians</option>
+                        <option>Beasts</option>
+                        <option>Daemons</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="type">Unit Type</label></td>
+                <td><input type="text" id="type" placeholder="Scouts"></td>
+            </tr>
+            <tr>
+                <td><label for="keywords"> Keywords </label></td>
+                <td><input type="text" id="keywords" placeholder="old people"></td>
+                <td><button>add keyword</button></td>
+                <td><button>reset</button></td>
+                <td>infantry, elite, expendables</td>
+            </tr>
+            <tr>
+                <td><label for="models"> models </label></td>
+                <td><input type="number" id="models" placeholder="6"></td>
+                <td><button>add model</button></td>
+            </tr>
+        </table>
+
+
+        <div>
+            <h3>Equipments</h3>
+            <table>
+                <tr>
+                    <td> Id </td>
+                    <td> name </td>
+                    <td> equipment </td>
+                    <td> relic </td>
+                    <td> pts </td>
+                </tr>
+                <tr>
+                    <td><label>model 1: </label></td>
+                    <td><input type="text" placeholder="Barney (Stallone)"></td>
+                    <td><input type="text" placeholder="camo cloak, storm bolter, chainsword"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=21></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><label>model 2: </label></td>
+                    <td><input type="text" placeholder="Conrad (Mel Gigson)"></td>
+                    <td><input type="text" placeholder="camo cloak, boltgun, pistol"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=16></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><label>model 3: </label></td>
+                    <td><input type="text" placeholder="Trench (Arnold)"></td>
+                    <td><input type="text" placeholder="camo cloak, heavy bolter, pistol"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=26></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><label>model 4: </label></td>
+                    <td><input type="text" placeholder="Mr. Church (Bruce Wills)"></td>
+                    <td><input type="text" placeholder="camo cloak, shotgun, pistol"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=16></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><label>model 5: </label></td>
+                    <td><input type="text" placeholder="Lee (Jason Stathan)"></td>
+                    <td><input type="text" placeholder="camo cloak, power axe, pistol"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=16></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><label>model 6:</label></td>
+                    <td><input type="text" placeholder="Galgo (Antonio Banderas)"></td>
+                    <td><input type="text" placeholder="camo cloak, sniper rifle, pistol"></td>
+                    <td><input type="text" placeholder="none"></td>
+                    <td><input type="number" placeholder=18></td>
+                    <td><button>X</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3> Other abilities (selected or default)</h3>
+
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><label for="psychic-powers">Psychic Powers</label></td>
+                <td><input type="text" id="psychic-powers"></td>
+                <td><button>add power</button></td>
+                <td><button>reset</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><label for="warlord-traits">Warlord Traits</label></td>
+                <td><input type="text" id="warlord-traits"></td>
+                <td><button>add trait</button></td>
+                <td><button>reset</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><label for="oratory">canticles / oratories</label></td>
+                <td><input type="text" id="oratory"></td>
+                <td><button>add canticle</button></td>
+                <td><button>reset</button></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Add abilities</td>
+                <td><input type="text" id="upgrades1" placeholder="behind enemy lines"></td>
+                <td><button>add ability</button></td>
+                <td><button>reset</button></td>
+            </tr>
+        </table>
+
+        <div>
+            bolter discipline, shock attack, and we shall know no fear
+        </div>
+
+        <h3> Final Cost </h3>
+
+        <div>
+            <label for="power-rating">Power Rating / Point Cost</label>
+            <input type="Number" id="power-rating" placeholder="113">
+        </div>
+    </form>
+
+    <h3>Tallies (this data will be filled in the course of the game)</h3>
+
+    <ul>
+        <h4>combat tally</h4>
+
+        <li>enemy units destroyed during shooting<strong id="destroyed-by-shooting"> 0</strong></li>
+        <li>enemy units destroyed during combat<strong id="destroyed-in-combat"> 0</strong></li>
+        <li>enemy units destroyed during psyk phase<strong id="destroyed-with-psyk"> 0</strong></li>
+        <li>points granted to player<strong id="point-granted"> 0</strong></li>
+        <li>rounds on a objective<strong id="on-objective-battle"> 0</strong></li>
+
+        <h4>campaing tally</h4>
+
+        <li>experience<strong id="experience"> 0 </strong></li>
+        <li>campaing points <strong id="campaing-points"> 0 </strong></li>
+        <li>rounds on a objective<strong id="on-objective-campaing"> 0</strong></li>
+        <li>actions performed (campaing actions)<strong id="actions"> 0</strong></li>
+        <li>fail mission (from campaing)<strong id="fail-mission"> 0</strong></li>
+        <li>fail morale test (campaing type)<strong id="fail-morale"> 0</strong></li>
+        <li>battles played <strong id="battles-played"> 0</strong></li>
+        <li>battle survived <strong id="battle-survived"> 0</strong></li>
+        <li>carrying Items<strong id="carrying"> 0</strong></li>
+    </ul>
+
+    <table>
+        <th>Honor & Scar</th>
+        <tr>
+            <td></td>
+            <td> blooded</td>
+            <td> battle hardened</td>
+            <td> Heroic </td>
+            <td> Legendary</td>
+        </tr>
+        <tr>
+            <td>battle honours</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>battle scars</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <footer>
+        <button><h1> SAVE & EXIT </h1></button>
+        <button><h1>SAVE & ADD ONE MORE</h1></button>
+        <button><h1>RESET</h1></button>
+    </footer>
+
+</body>
+</html>

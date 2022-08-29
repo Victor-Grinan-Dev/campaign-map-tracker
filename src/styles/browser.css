@@ -1,0 +1,155 @@
+.h1-title{
+    background-color: rgba(0, 0, 0, 0.757);
+    text-shadow: 0 0 2px black;
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.browseAndAdd-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+ }
+
+ .panel{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin-bottom: 25px;
+    background-image: url(https://image.shutterstock.com/image-vector/illustration-yellow-black-stripesa-symbol-260nw-1343525774.jpg);
+    background-size: 100vw;
+ }
+
+ .add-card-container{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.757);
+    text-shadow: 0 0 2px black;
+    margin: 10px;
+    border-radius: 5px;
+ }
+
+ .info-panel{
+    width: 30vw;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.757);
+    text-shadow: 0 0 2px black;
+    margin: 10px;
+    border-radius: 5px;
+ }
+
+ .info-container{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+ }
+
+ .browser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 40px;
+    width: 100vw;
+}
+/*
+
+
+
+
+.addCard-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    min-height: 300px;
+    
+    background: #242625;
+    border-radius: 10px;
+    box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+    margin: 50px 20px 10px 10px;
+    
+}
+
+.addCard-container form, 
+.component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.searchInput,
+.addCard-input{
+    width: 90%;
+    border-radius: 5px;
+}
+
+.component__button{
+    
+    border-radius: 50px;
+    background:  rgba(255, 168, 6, 0.479);;
+    color: white;
+    text-shadow:  0 0 10px black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 10px 35% ;
+    font-family: 'Big Shoulders Stencil Text',
+}
+
+.submit__button {
+    padding: 10px;
+    border-radius: 50px;
+    background:  rgba(255, 168, 6, 0.479);;
+    color: white;
+    text-shadow:  0 0 10px black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 10px auto;
+  }
+
+
+.componentType,
+.componentMovement,
+.componentComposition,
+.componentPoints {
+    display: inline;
+}
+
+.componentComposition{
+    width: 20px;
+}
+
+
+.addCard-container{
+    width: 400px;
+    
+  }
+  .addCard-input,
+  .componentType,
+  .input-select,
+  .numInput
+  {
+    font-family: 'Special Elite', cursive;
+  }
+  
+
+*/

@@ -1,0 +1,102 @@
+:root {
+    --base_color: rgb(44,48,45);
+    --contrast_color: bisque;
+    --myYellow: rgb(236,202,0);
+  }
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&family=Bungee+Hairline&family=Cabin+Sketch&family=Dynalight&family=Fredericka+the+Great&family=Libre+Barcode+128+Text&family=Monoton&family=Nosifer&family=Plaster&family=Press+Start+2P&family=Redacted+Script:wght@300&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Seaweed+Script&family=Special+Elite&family=Wallpoet&display=swap&family=Special+Elite&display=swap');
+
+/********FONT  OPTIONS**********/
+/*
+font-family: 'Big Shoulders Stencil Text', cursive;
+font-family: 'Bungee Hairline', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Dynalight', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Libre Barcode 128 Text', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'Plaster', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Redacted Script', cursive;
+font-family: 'Rubik Glitch', cursive;
+font-family: 'Rubik Wet Paint', cursive;
+font-family: 'Seaweed Script', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Wallpoet', cursive;
+*/
+
+*{
+  margin: 0;
+}
+
+body{
+  background-color: var(--base_color);
+  color:var(--contrast_color);
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  min-height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3{
+    color:var(--myYellow);
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0;
+  
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+a,
+ul li{
+    text-decoration: none;
+    color: orange;
+    margin: 5px;
+}
+
+a:hover{
+    color: coral;
+    text-shadow: 0 0 10px coral;
+}
+
+.flexRow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flexColumn{
+  display: flex;
+  flex-direction: Column;
+  align-items: center;
+}
+
+.textImput{
+  width: 150px;
+}
+
+.numInput{
+  width: 75px;
+}

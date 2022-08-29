@@ -1,0 +1,15 @@
+.drawPanel{ 
+    width: 100vw; 
+    display: flex; 
+    justify-content: space-between; 
+    width:  100vw; 
+    min-width:"950px";
+}
+
+.sidePanel{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+
+}

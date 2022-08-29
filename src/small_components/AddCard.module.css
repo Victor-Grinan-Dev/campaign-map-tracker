@@ -1,0 +1,33 @@
+.addCardContainer{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.addCardInput{
+    border-radius: 5px;
+}
+
+.addCardInputText{
+    border-radius: 5px;
+    resize: vertical;
+    width: 45vw;
+
+}
+
+.componentLine{
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.singleComponent{
+    width: 55%;
+}
+
+.numInput{
+    width: 75px;
+}

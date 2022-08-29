@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Campaing Form</title>
+</head>
+<body>
+<header>
+    <h1>CREATE A CAMPAIGN</h1>
+</header>
+    <form>
+        <label for="campaingName"> Campaing Name: </label>
+        <input type="text" id="campaingName">
+        <h2>Starting game size: </h2>
+        <table>
+            <tr>
+                <td>Kill team sizes:</td>
+                <td><input type="radio" name="game-size">100pts</td>
+                <td><input type="radio" name="game-size">200pts</td>
+                <td><input type="radio" name="game-size">300pts</td>
+                <td><input type="radio" name="game-size">400pts</td>
+            </tr>
+            <tr>
+                <td>Crusader size: </td>
+                <td><input type="radio" name="game-size">500pts</td>
+                <td><input type="radio" name="game-size">750pts</td>
+                <td><input type="radio" name="game-size">1000pts</td>
+                <td><input type="radio" name="game-size">1500pts</td>
+            </tr>
+            <tr>
+                <td>Apocaliptic size: </td>
+                <td><input type="radio" name="game-size">2000pts</td>
+                <td><input type="radio" name="game-size">3000pts</td>
+                <td><input type="radio" name="game-size">4000pts</td>
+                <td><input type="radio" name="game-size">5000pts</td>
+            </tr>
+
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="players">Map Size</label></td>
+                <td>
+                    <select name="faction" id="faction">
+                        <option value="" selected disabled hidden>Choose</option>
+                        <option>5x7 (2-4 players)</option>
+                        <option>7x9 (2-4 players)</option>
+                        <option>9x9 (2-6 players)</option>
+                        <option>15x15 (4-6 players)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="players">Amount of players</label></td>
+                <td><input type="number" value="4" id="players" min="2"></td>
+            </tr>
+        </table>
+        <h2>Factions: </h2>
+        <table>
+            <tr>
+                <td><input type="checkbox"> <strong>Triangular:</strong>
+                <td><input type="checkbox"> "The Ligth" </td>
+                <td><input type="checkbox"> "The Darkness" </td></td>
+                <td><input type="checkbox"> "ExtraTerranians" </td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox"> <strong>Aliance Level:</strong></td>
+                <td><input type="checkbox"> "The Ligth" </td>
+                <td><input type="checkbox"> "The Darkness" </td>
+                <td><input type="checkbox"> "ExtraTerranians" </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox"> "The Death Machines" </td></td>
+                <td><input type="checkbox"> "The Beast Hordes" </td>
+                <td><input type="checkbox"> "The Infestation" </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input type="checkbox"> <strong> Every man on his own </strong> </td></td>
+                <td><input type="checkbox"> allow repeated factions</td>
+            </tr>
+        </table>
+
+        <h3>Army Specifications for Players</h3>
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow named characters.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow models with more than 10 wounds.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow flyers</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow deepstriking</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allowed models under <input type="number" value="100" id="spencive-models" min="80">pts</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial Warlord traits</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial relics</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial upgrades (Chapter Master ...)</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allowed max amount of starting formations: <input type="number" value="3" min="1"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allowed max amount of overall formations: <input type="number" placeholder="None" min="3"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Allow units over <input type="number" min="0" value="0">pts to solo</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Allow any unit to be used to build (base on model count) </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Allow designated worker-units (building force bonus) +<input type="number" value="50" min="5">%</td>
+            </tr>
+        </table>
+
+        <h3>Map Specifications</h3>
+
+        <table>
+
+            <tr>
+                <td><input type="radio" name="#"></td>
+                <td> tiles generate their own resource type </td>
+            </tr>
+
+            <tr>
+                <td><input type="radio" name="#"></td>
+                <td> tiles generate random resource </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow tiles control to grants resourses /turn</td>
+                <td><input type="number" value="5" min="1">%</td>
+            </tr>
+
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow tile-explore action to grant item/resourses</td>
+                <td><input type="number" value="5" min="1">%</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow map infestatied with
+                    <select name="infestation" id="infestation">
+                        <option value="tyranidsCult">Tyranids & Cult</option>
+                        <option value="tyranids">Tyranids</option>
+                        <option value="orks">Orks</option>
+                        <option value="daemons">Daemons</option>
+                        <option value="astra/renegades">astra/renegades</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow mountains</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow impassable terrains</td>
+            </tr>
+        </table>
+
+        <h3>Neutral force specifications</h3>
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow villagers
+                    <select name="villagerSelect" id="villagerSelect">
+                        <option value="tyranidsCult"> civilians (no figth power) </option>
+                        <option value="astra/renegades"> Astra </option>
+                        <option value="tyranids"> Kroots </option>
+                        <option value="Tau"> Tau </option>
+                        <option value="mechanicus"> Adeptus Mechanicus </option>
+                        <option value="inquisition"> Inquisition </option>
+                        <option value="aeldaris"> Aeldaris mix</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow villagers to grant missions</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow barbarians
+                    <select name="barbariansSelect" id="barbariansSelect">
+                        <option value="renegades"> Renegades </option>
+                        <option value="orks"> Orks </option>
+                        <option value="astra/renegades"> Astra </option>
+                        <option value="tyranids"> Kroots </option>
+                        <option value="mechanicus"> Adeptus Mechanicus </option>
+                        <option value="inquisition"> Inquisition </option>
+                        <option value="aeldaris"> Aeldaris mix </option>
+                        <option value="marines"> marines (chapter) </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow agresive barbarians</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn creates</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn monstrous creatures</td>
+            </tr>
+        </table>
+        <h3>Campaing Specifications</h3>
+
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow builders</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow resources (tech, materials, local currency, Territory)</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow gems, pergamins, posions, runes, pets</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow merchants</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn creates</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn monstrous creatures</td>
+            </tr>
+        </table>
+
+        <h3>Formation Specifications</h3>
+
+        <table>
+
+            <tr>
+                <td></td>
+                <td> formation type </td>
+
+                <td>  abilities </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Patrol </td>
+                <td>
+                    <ul>
+                        <li><input type="checkbox"> "scout" (passive): reveals the strength of the enemy formations in sight</li>
+                        <li><input type="checkbox"> "agile" (pasive): cannot have units with less than movement 6 </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>  Riders </td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox"> "swift" (passive): cannot have units with
+                            less than movement 10. this formation has 1 extra moving action.
+                        </li>
+
+                        <li>
+                            <input type="checkbox"> "On the road" (passive): cannot enter in
+                            some tiles like mountains. slowing tiles cost 2 actions to get in
+                        </li>
+                    </ul>               
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Artillery </td>
+                <td>
+                    <ul>
+                        <li><input type="checkbox" > "Set equipments": use 1 action to deploy artilery, once deployed it allows "Support bombarment" action:
+                         -If the formation contains at least 1 barrage weapon it can do an attack for each weapon if his formation is within 3 tiles away from another formation in combat,
+                         -Macro-map shooting on a 4+ produces 5pts damage reduction to the target (reduce to 0 the actions of units in the target tile as they are pinned down), if they are attack combat shooting (shoot normaly as they would but next turn cant move)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Armoured </td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            tank overrun: it can get as reserve if 2
+                            tiles away instead of just 1 after
+                            2nd turn.
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            hart to kill: (pasive) normal patrol traps dont do damage if this formation has just tanks.
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            blitz assault: move 3 tiles to combat
+                        </li>
+                    </ul>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Jetpackers </td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            jump in: it can jump 3 tiles in a turn. but after that needs to charge this ability for 2 turns. if the landig tile is adjacent to a enemy tile: normal figth happens, if the landing tile contains enemies a behind enemy line combat happens. in all cases jumpers get the iniciative turn.
+                        </li>
+                    </ul>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> Hovercraft </td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            starfin run :
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            flatout
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> battallion </td>
+                <td>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            claim 
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td> dedicated work </td>
+                <td>                        <li>
+                    <input type="checkbox">
+                    doubles the work force of the models in it
+                </li></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox"> 
+                </td>
+                <td>
+                    "explorer": when search action is made it finds +1 item per explorer-level
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> "explorer": when search action is made it finds +1 item per explorer-level </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

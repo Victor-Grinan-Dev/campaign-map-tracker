@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Campaing Form</title>
+</head>
+<body>
+<header>
+    <h1>CREATE A CAMPAIGN</h1>
+</header>
+    <form>
+        <h2>Starting game size: </h2>
+        <table>
+            <tr>
+                <td>Kill team sizes:</td>
+                <td><input type="radio" name="game-size">100pts</td>
+                <td><input type="radio" name="game-size">200pts</td>
+                <td><input type="radio" name="game-size">300pts</td>
+                <td><input type="radio" name="game-size">400pts</td>
+            </tr>
+            <tr>
+                <td>Crusader size: </td>
+                <td><input type="radio" name="game-size">500pts</td>
+                <td><input type="radio" name="game-size">750pts</td>
+                <td><input type="radio" name="game-size">1000pts</td>
+                <td><input type="radio" name="game-size">1500pts</td>
+            </tr>
+            <tr>
+                <td>Apocaliptic size: </td>
+                <td><input type="radio" name="game-size">2000pts</td>
+                <td><input type="radio" name="game-size">3000pts</td>
+                <td><input type="radio" name="game-size">4000pts</td>
+                <td><input type="radio" name="game-size">5000pts</td>
+            </tr>
+
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="players">Map Size</label></td>
+                <td>
+                    <select name="faction" id="faction">
+                        <option value="" selected disabled hidden>Choose</option>
+                        <option>5x5 (2-4 players)</option>
+                        <option>5x8 (2-4 players)</option>
+                        <option>9x9 (2-6 players)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="players">Amount of players</label></td>
+                <td><input type="number" value="4" id="players"></td>
+            </tr>
+        </table>
+        <h2>Factions: </h2>
+        <table>
+            <tr>
+                <td><input type="checkbox"> <strong>Triangular:</strong>
+                <td><input type="checkbox"> Imperium </td>
+                <td><input type="checkbox"> Chaos & Daemons</td></td>
+                <td><input type="checkbox"> Xenos </td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox"> <strong>Aliance Level:</strong></td>
+                <td><input type="checkbox"> Imperium </td>
+                <td><input type="checkbox"> Chaos & Daemons </td>
+                <td><input type="checkbox"> Aeldaris & Tau</td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox"> Necrons </td></td>
+                <td><input type="checkbox"> orks</td>
+                <td><input type="checkbox"> Tyranids & Genestealers Cult </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input type="checkbox"> <strong> Every man on his own </strong> </td></td>
+                <td><input type="checkbox"> allow repeated factions</td>
+            </tr>
+        </table>
+
+        <h3>Army Specifications</h3>
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow named characters.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow models with more than 10 wounds.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow flyers</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow deepstriking</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allowed models under <input type="number" value="100" id="spencive-models">pts</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial Warlord traits</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial relics</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Allow initial upgrades (Chapter Master ...)</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow villagers</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow villagers to grant missions</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow barbarians</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow agrsive barbarians</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn creates</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>allow spawn monstrous creatures</td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+:root {
+    --base_color: rgb(44,48,45);
+    --contrast_color: bisque;
+    --myYellow: rgb(236,202,0);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&family=Bungee+Hairline&family=Cabin+Sketch&family=Dynalight&family=Fredericka+the+Great&family=Libre+Barcode+128+Text&family=Monoton&family=Nosifer&family=Plaster&family=Press+Start+2P&family=Redacted+Script:wght@300&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Seaweed+Script&family=Special+Elite&family=Wallpoet&display=swap&family=Special+Elite&display=swap');
+
+.NewCampaign{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.NewCampaign form{
+    flex-direction: row;
+}
+.section{
+    width: 25%;
+    min-width: 300px;
+    border: 5px;
+    border-style: solid;
+    border-color: brown;
+    padding: 10px;
+    margin: 5px;
+}
+
+.section:hover{
+    border-color: orange;
+    background-color: rgb(75, 70, 65);
+    box-shadow: 0 0 15px coral;
+}
+
+.sectionName{
+    color: var(--myYellow) ;
+}
+
+.selectFaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.selectFaction p{
+width: 50%;
+}
+.subSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.submit{
+    height: 50px;
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 50px;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+button{
+    margin: 5px;
+    color: black;
+    border-radius: 5px;
+    background-color: orange;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+.extraInfo{
+    margin-left: 50px;
+}

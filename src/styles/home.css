@@ -1,0 +1,25 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeHeader{
+    margin-top: 50px;
+}
+
+.gates{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 75px;
+    min-width: 300px;
+}
+.gate{
+    min-width: 100px;
+    width: 33%;
+    max-width: 300px;
+    filter: grayscale(100%);
+}
+

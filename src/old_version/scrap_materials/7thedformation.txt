@@ -1,0 +1,940 @@
+Battle Demi-Company - A Captain or Chaplain (which may be any of the named ICs), 3 Tactical Squads, 1 Assault Squad/Bike Squad/Attack Bike Squad/Land Speeder unit/Assault Centurion Squad, 1 Devastator or Centurion Devastator squad, 0-1 Command Squad and 0-1 Dreadnought unit(s) of any type. The Demi-Company gets Objective Secured and its own extra use of Tactical Doctrine. More importantly, if you bring two (with a Captain in one and a Chaplain in the other) within one Gladius Strike Force, the two Demi-Companies are counted as a Battle Company and can then buy Rhinos, Razorbacks, and Drop Pods as Dedicated Transports for the low, low price of FREE. You still need to pay for upgrades, but that can translate into 400-500 points worth of free transports - ideally, you'd use it to spam Razorbacks as a source of free guns or 20-point TL lascannons.
+Since the Demi-Company has a good chunk of what the average Marine player tends to bring anyway, and provides Objective Secured for everything in it, the Demi-Company is perfectly capable of getting by without being battle-forged unless you really want those snazzy detachment-level command benefits. Otherwise the Demi-Company works well as the general purpose core of an unbound army, the rest of your bases can be covered by adding other formations or individual units as you see fit (just note that bringing two Demi-Companies won’t benefit from being a Battle-Company unless they’re part of a battle-forged Gladius Strike Force).
+The Demi-Company's personal Tactical Doctrine can be really nasty if the Tactical Squads are put in Drop Pods and given a special/combi-weapon to blow up tanks or mow down backline units. It can really help these otherwise unimpressive "tax" units pull their weight.
+Free transport drop pods can be fairly hilarious. Dropping 10-14 drop pods (even empty ones) with ObSec around the board (that's 1-3 per objective) makes a big mess for your opponent.
+You can take 0-3 of the following "Command" choices:
+Strike Force Command- Any Captain or Chaplain (named ICs included, as well as Marneus Calgar), 0-1 Honor Guard, 0-1 Command Squad, and/or 0-1 Emperor's Champion. Here's all your non-Librarian HQs in one package. Unfortunately not a Formation by itself, so no Battle Forged army of just 10 heroes.
+Reclusiam Command Squad- Based on the old Reclusiam Command Squad dataslate, consists of a Chaplain with a Command Squad (he must join them during deployment, and can't leave them) with a Razorback DT. The formation gains Crusader, and all friendly Space Marines within 6" of the Chaplain re-roll misses in the first round of each close combat (aka Hatred). This time around, you aren't required to take an Apothecary or Champion, and don't have to pay points for the formation's unique rules. Still doesn't make it good, though if you insist on fielding a chaplain without a jump pack, bike, or terminator armor (any one of the three are ostensibly better choices, but again, if you insist), this is probably the best way to do it.
+That said, the rules don't actually say you can't bike your Chaplain and Command Squad. If you're fancying a razorback to use for no particular purpose (say you have a combat-squadded tactical squad, or the like), and were going to take a biker Chaplain & squad already, this gives you that plus a (minor-ish) bonus to the chaplain's special rules.
+Librarius Conclave- 3-5 Librarians, one of which may be Tigurius. Taking this lets you break out an excellent trick, as follows: you may nominate one of the Librarians at the start of a Psychic Phase. All the other ones within 12" of him can't use powers that phase, but the nominated Librarian now knows all of their powers until that phase's end. More importantly, he now harnesses Warp Charges on a 3+ if there's one Librarian within 12" of him, and 2+ if there's more than one in range. This makes your casting in the Psychic Phase ultra-efficient, especially with buffs (or summoning, if you don't give a shit about fluff and want free army points), to the point that even Eldar or Daemons would be jealous! Someone needs to e-mail Forgeworld about their Character Librarians like Chief Librarian Loth joining this.
+Done, FW replied saying that any named Badab War character may be taken in the same slot as a SM codex named character (but only if they are the same unit type, e.g. swapping Tigurius for Loth).
+The BRB FAQ (page 3) has rendered this formation's benefit practically irrelevant. Sure, you know all the powers of other Librarians within 12", and sure you can manifest them on 3+ or 2+ depending on the number of donors. However, your nominated model is limited in casting a number of powers up to his mastery level, so while he may know something like 16 powers, he is still only casting two or three. And those donors are standing around doing nothing, because they are not allowed to cast, meaning a whole bunch of wasted warp charges. The formation can be useful for getting Librarians into your army, but you should typically only be casting your powers individually.
+Sure, your other Librarians can't cast, but in return you can effectively get a +12" range extension on another Librarian's rolled power and an opportunity to reliably manifest several select 2 and 3 Warp Charge powers from a single point with much fewer spent dice and less chance of perils, as Mastery Levels do not restrict the number of charges you are pumping through a psyker, just the number of powers. Also, the harnessing bonus allows you to put more dice into manifesting a power so it will be harder for the opponent to dispel. If you are concerned about wasting Warp Charges, you can dip into Imperial Agents or Inquisition books and buy yourself some more Psykers to buff backfield units.
+You need at least 1 of these "Auxiliary" choices, but there's no hard limit as to how many of them you can take:
+Anti-Air Defense Force- A unit of Hunters and a unit of Stalkers, with the Stalker unit consisting of at least 2 models. Anytime a Hunter lands a hit on a Flyer or FMC, the Stalkers gain +1 BS against whatever got hit. Solves your AA problem nicely, and it's pretty cheap for how effective it is so a full Battle Company gets some wiggle room.
+1st Company Task Force- 3-5 of any combination of Terminators or Veterans, who gets Fear and Fearless. All enemies get -2 Ld when they're within 12" of at least 3 units (including the Dedicated Transports!) from this formation, and a selected enemy unit has Preferred Enemy applied to it when attacks are made against it by this formation (again, including the Transports). Expensive, but it'll keep a special snowflake on his toes. Works well with Psychic Shriek and any other sort of Ld-related attack or effect. Scary, scary Rhinos/Drop Pods.
+10th Company Task Force- 3-5 Scout squads and/or Scout Bike squads (the latter of which must be equipped with cluster mines), and can take Torias Telion. Everyone who Infiltrates but doesn't have Stealth gains a watered-down version of Stealth that lasts until they move, run, Turbo-boost, charge, or fall back, at which point it stops working (shooting doesn't dispel it, though.) And on the first turn, all of their shooting attacks have Precision Shots.
+Storm Wing- A Stormraven is joined by two Stormtalons. They count as a single unit for the purposes of Reserves, and as long as at least one Stormtalon is intact the Stormraven has Strafing Run. Yes, they did copypaste it from the original Storm Wing dataslate from an edition ago.
+Centurion Siegebreaker Cohort- An Ironclad Dreadnought unit teams up with 2-4 Assault Centurion squads. Everyone with an omniscope can reroll failed armor pen rolls against buildings and can choose to re-roll glancing hits as well. If they ever destroy a building or Transport in the Assault phase, the occupants suffer an extra 2d6 S6 AP4 hits with Ignores Cover. Would probably go well with an Imperial Fists army, and it'll definitely make your opponent think twice about taking fortifications.
+Land Raider Spearhead- 3 of any combination of the basic Land Raider types (standard, Crusader, and Redeemer). As long as they're within 6" of each other, they ignore all results on the vehicle damage table short of Explodes!, and they all re-roll failed to wound/armor penetration rolls against GCs, super-heavies, and buildings with the Mighty Bulwark rule. With this formation, the classic Land Raider may actually be worth taking as a superheavy-killer. Sadly, no option for Antaro Chronus to join, that's for the next entry.
+Armoured Task Force- A Techmarine, 0-3 Thunderfire Cannon units, 3-5 of any combination of Predators, Vindicators, and Whirlwinds, and the option of taking Antaro Chronus. As long as any of the vehicles is within 6" of the Techmarine or the Techmarine Gunners, they ignore Crew Shaken/Stunned, and said Techmarines gain a +1 bonus to their Blessings of the Omnissiah rolls when applied to any vehicle from the formation.
+Suppression Force- A unit of Land Speeders pairs up with a unit of Whirlwinds (minimum two models). If it doesn't move Flat Out, one of the Land Speeders can nominate an enemy within 18" in its line of sight in its shooting phase; the Whirlwinds have infinite range and re-roll To Hit against that target. Make it a 3-tank Whirlwind unit and watch blob armies cry.
+Scarblade Strike Force (Kauyon)
+A variant of the Gladius for the White Scars, this gives its members re-rolls on their Hit & Run test, a bonus d6" to Turbo-Boost and Flat Out (or 2d6" for Fast/Flyer vehicles), and Hammer of Wrath when they successfully charge something 8"+ away (if they already had it, HoW hits re-roll failed Wound rolls instead). Remember, these "elements" can be used as a stand-alone formation: you have to be White Scars to use the Scarblade Strike Force FOC, but you don't have to be White Scars to take any of the new formations introduced in the Kauyon book.
+
+Your unique Core elements are:
+Stormlance Demi-Company - This consists of a Captain or Chaplain (or any named variant thereof), 3 Tactical Squads, 1 Dev Squad, and 1 of either Bikers, Attack Bikes, Land Speeders, or Assault Marines, with the option to add a Command Squad. All non-vehicles in this formation must have either jump packs, bikes, or start the game inside a Rhino or Razorback. Everyone gets to re-roll misses during the Shooting Phase against enemies controlling an objective. All bikes and jump units get to move 2d6" after firing, while anything else moves d6" after shooting (with anything within 2" of the transports able to jump in even if they left that same turn). They can't assault after moving in this manner, but it's basically Battle Focus for marines, which is really good! Ideal for massaging ranges (i.e. Rapid Fire, melta), hitting and running, or shooting then hiding in your metal box.
+Do note that the boxes themselves get this bonus. I.e. you can move a Razorback 6", disembark a squad up to 6", shoot with the squad, move the squad back d6" and embark, shoot with the Razorback, then move it back d6", preferably behind a LOS-block. Model your dakka boxes with the gun just above the back door; this allows you to poke out of cover for an inch, do the switcheroo, and still get back into cover even if you roll 1".
+Hunting Force - A Biker Captain joins 2-5 Bike squads, 1-3 Attack Bike squads and 1-3 Scout Bike squads - you may optionally add a Bike Command Squad and/or a Biker Chaplain, and Kor'sarro Khan may replace either HQ. After deployment, this formation has to pick a primary target (which must be an enemy HQ), as well as secondary and tertiary targets. They re-roll misses and failed To Wound rolls when attacking the primary target, and gain Furious Charge if charging them. If the primary target dies, the Hunting Force gets those same bonuses against the secondary target, and the same against the tertiary once you kill the secondary. On top of that, units in this formation with at least five models hit twice when they make Hammer of Wrath attacks. Fluffy for White Scars, extremely potent against deathstars and other high-value targets, and perfect for still fielding massed bikes while getting in on the formation-y goodness.
+You may also incorporate these two Auxiliary elements:
+Stormbringer Squadron - 1-3 units of Land Speeders and 1-3 Scout Squads with Land Speeder Storms. The Scouts (but not their transports) get Objective Secured, their transports get +1 to Jink when within 6" of the formation's Land Speeder(s), and the Scouts can disembark from their Speeder even after it moves, as long as it moved less than 12". Perfect for rushing to capture points after your other forces clear them out, and the only way for a Scarblade force to get Objective Secured without a Battle Demi-Company. You can gib a tank or charge something Turn 1 with ease if you have some combination of multi-meltas on your Speeders and melta bombs/combi-meltas for the Scouts: deploy as close as possible, move 12" and disembark 6" (thanks to the formation bonus), then shoot the multi-meltas (ideally you've weaved into melta range), shoot the combi-melta if you have it, then charge in with a krak grenade and a melta bomb. If you take multiple Scout Squads (120 points gives the LSS a multi-melta and the Sarge a combi-melta and bombs), you can destroy enemy transports on Turn 1. If they deploy further back to avoid your melta rave, you have more room to scout/infiltrate and consolidate board position from the start.
+Speartip Strike - 1-3 units of Land Speeders accompany 2 squads of your choice of Bikes, Attack Bikes or Scout Bikes. At the start of your Shooting phase, you can choose Focused Suppression or Harassing Fire. Focused Suppression forces an enemy unit that at least two units shot at to take a Pinning test at -2 Leadership for every unit from this formation after the second that fires on it (i.e. if you took 3 units of Land Speeders and all five units shoot at one target, the FS Pinning test would be at -6 Ld). Harassing Fire causes any target that suffers at least one unsaved wound to take a Leadership test. If they fail the test, they may choose to Go to Ground. If they don't Go to Ground, and weren't already Gone to Ground, they are Provoked, and must move as far as possible towards the unit during the next Movement phase. This is perfect for neutralizing hit-and-run tactics or forcing an entrenched enemy (ideally something with Heavy or Salvo weapons) out of their hiding spots.
+Talon Strike Force (Kauyon)
+A Raven Guard-themed Gladius. It allows a re-roll for mission type, table side to deploy from, and your dice on the roll-off for who goes first IF your Warlord is in the TSF. Units in the TSF can choose to auto-fail Morale checks, and can roll for reserves on the first turn, passing on a 4+ (roll normally on other turns). Similar to Scarblade, only Raven Guard can use the Talon Strike Force FOC (unless FW okays the Raptors or other successors' use), but any Chapter can use the new formations that the Kauyon book added.
+
+Core (1-2)
+Battle Demi-Company - Same as Gladius Strike Force.
+Pinion Battle Demi-Company - A Captain/Chaplain (replaced by a named HQ if you want) takes an optional Command Squad, 3 Tacs, 1 Dev and 1 Assault squad, and 1-5 Scout squads, either on bike or on foot. During shooting, a Scout Sarge can spot for another unit from the Company within 9", giving that unit Ignores Cover. In addition, each Scout squad can lead another unit out of reserve (but not Deep Strike Reserve), and you use one roll for both the Scout unit and the other unit. If the Scouts outflank, the following unit arrives from the same table edge even if they can't normally outflank. When the two units arrive in this way, the unit being led gets Stealth until their next turn if they were within 9" of the Scouts leading them.
+If you use this, definitely set up a unit of Scouts near your Devastators. Ignores Cover Missile Launchers, or Lascannons? Yeah, that would be pretty brutal.
+Command (0-2)
+Reclusiam Command Squad
+Strike Force Command
+Sadly, you can't take the Librarius Conclave as part of the Talon Strike Force, so they won't get 1st-turn reserves or auto-fail Morale checks.
+Auxiliary (1+)
+1st Company Task Force
+10th Company Task Force
+Storm Wing
+Anti-Air Defense Force
+Suppression Force
+Shadowstrike Kill Team - 2-4 Scout squads and 1-3 Vanguard Veteran squads with jump packs. The Vanguards can choose to auto-pass or auto-fail their Reserve roll (which combines very nicely with the TSF ability to roll for reserve on Turn 1). They can also charge on the turn they Deep Strike, and if they arrive within 9" of at least two Scout squads from this formation, they don't scatter. The Scout squads' Scout and Infiltrate moves almost guarantee a precision Vanguard Vet turn 1 alpha strike in TSF, as long as you got the first turn or don't get the Scouts shot off the table before the Vanguards can show up. Non-Raven Guard can still use this formation very effectively - in particular, you can put a Locator Beacon in a Drop Pod to Deep Strike the Vanguard Vets in a perfect spot to reinforce your alpha strike.
+Bladewing Assault Brotherhood - A jump pack Captain/Chaplain (or Shrike) with 1-3 Vanguards and 2-4 Assault squads, all with jump packs and numbering no more than 30 models. Once per game, in your Movement phase, you can make every unit here disengage and jump back into reserves (even if they were locked in close combat!). They arrive from reserves as a single unit - when Deep Striking, draw a straight line from table one edge to another. You must aim your Deep Strike on a point along that line, and can re-roll the scatter.
+This is as close as any bound army can get right now to an Assault Reserve Company, and not limited to just Raven Guard. Worth a look if you like assault marines.
+Skyhammer Orbital Strike Force - 3 Tacs in Drop Pods and 1-3 Land Speeders. Pick a point on the board before any Turn 1 Drop Pods land - Drop Pods landing within 12" of that point only scatter d6", and anyone that targets an enemy within 12" of this spot can re-roll hit and wound rolls of 1. On top of that, the Tacs can run and shoot the turn they disembark.
+Ravenhawk Assault Group - A Stormraven joins a Dread of any type and a Sternguard squad. The Stormraven can Deep Strike, but must Hover the turn it arrives - its size makes it risky to DS successfully, never mind that it can be shot at normally, just have it arrive normally. When the first unit from this formation deploys or arrives from reserve, nominate an enemy unit as the formation's target - the Assault Group re-rolls all misses against that unit for the rest of the battle.
+Raptor Wing - A squad of Land Speeders and 2 Stormtalons. The Talons automatically arrive on your Turn 2 if they were in reserve. Also, once per turn, the Land Speeder designates an enemy unit within 18" and in line of sight as a priority target, giving the Stormtalons re-rolls to Wound and Armor Penetration, and can even re-roll glances to try for penetrating hits instead.
+Shadow Force - A Captain (replaceable by named guys) joins a Sternguard Squad, Vanguard Squad, and a Land Speeder, nobody with Termie Armor. Everyone gets Acute Senses, Move Through Cover, and Scout, while everyone can re-roll runs (vehicles add 6" to Flat-Out instead). This matches the contents of Strike Force Solaq from the box set.
+Fist of Medusa Strike Force (Angels of Death)
+An Iron Hands flavored Decurion. Contains copy-pasta from the Gladius, plus some new units. The command benefits are a 12" bubble around any independent character that grants +1 to Feel No Pain rolls (because Smashfucker needed that...), with all vehicles in the bubble gaining Power of the Machine Spirit, and a bonus Warlord Trait, with the 2nd one only coming from either Strategic or Tactical rulebook traits.
+
+1-2 Core
+As Space Marines
+Armoured Task Force
+Battle Demi-Company
+New
+Stormlance Demi-Company
+1 Captain or Chaplain
+0-1 Command Squad
+3 Tactical Squads
+1 Devastator Squad
+1 Assault, Bike, or Attack Bike Squad, or 1 Land Speeder
+Clear and Sweep
+Re-roll misses in the Shooting Phase when targeting an enemy unit which is controlling an Objective Marker.
+Mobile Firebase
+Units with Bikes or Jump Packs can move 2d6" immediately after shooting in the shooting phase; other units can move 1d6". They may embark on their Dedicated Transport if all of their models end this move within 2" of one of its Access Points, even if they disembarked on the same turn. Units that move after shooting cannot charge in the subsequent Assault Phase.
+0-3 Command
+As Space Marines
+Reclusiam Command Squad
+Librarius Conclave
+New
+Strike Force Command
+1 Terminator Captain, Captain, Chaplain, or Venerable Dreadnought
+0-1 Honour Guard
+0-1 Command Squad
+1+ Auxiliary
+As Space Marines
+1st Company Task Force
+10th Company Task Force
+Storm Wing
+Anti-Air Defence Force
+Suppression Force
+Centurion Siege Breaker Cohort
+Land Raider Spearhead
+Strike Force Ultra
+New
+Skyhammer Orbital Strikeforce
+3 Tactical Squads, each with a Drop Pod as a Dedicated Transport
+1-3 Land Speeders
+Dropsite Clearance
+At the start of your first turn, before any Drop Pods arrive using Drop Pod Assault, pick a point on the battlefield to mark the center of this Formation's dropsite. Units gain Preferred Enemy against units within 12" of that point, and Drop Pods that Deep Strike within 12" of that point scatter one less die.
+Shock Assault
+Tactical Squads can Run and then Shoot on the same turn they disembark from their Drop Pods.
+Skyhammer Annihilation Force
+2 Assault Squads with Jump Packs
+2 Devastator Squads with Drop Pods as Dedicated Transports
+Shock Deployment
+All units in a Skyhammer Annihilation Force start the game in Deep Strike Reserve. Instead of using the normal deployment and reserve rules for these units, you can, during deployment, choose whether this Formation will arrive during your first or second turn. The entire Skyhammer Annihilation Force automatically arrives on the turn you choose—no Reserve Rolls are required. Ignore this Formation’s Drop Pods for the purposes of the Drop Pod Assault special rule.
+First the Fire, then the Blade
+On the turn they arrive from Deep Strike Reserve, the Devastator Squads in a Skyhammer Annihilation Force have the Relentless special rule and the Assault Squads can charge even though they arrived from Reserves that turn.
+Suppressing Fusillade
+A unit targeted by a Skyhammer Annihilation Force’s Devastator Squad in the Shooting phase must take a Morale test at the end of the phase on 3D6, regardless of how many casualties were inflicted. If the test is failed, the enemy unit does not Fall Back, but must immediately Go to Ground. If the test is passed, the enemy unit is unable to fire Overwatch for the rest of the turn.
+Leave No Survivors
+Assault Squads in a Skyhammer Annihilation Force can use their Jump Packs in both the Movement phase and the Assault phase. If an Assault Squad from a Skyhammer Annihilation Force charges a unit that has Gone to Ground as a result of the Suppressing Fusillade special rule, that Assault Squad can reroll failed To Hit and To Wound rolls in the ensuring Assault phase.
+Raptor Wing
+1 unit of Land Speeders
+2 Stormtalons.
+Incoming Support
+The Stormtalons automatically arrive on your Turn 2 if they were in reserve.
+Priority Target Received
+Once per turn in the shooting phase, one Land Speeder may designate an enemy unit within 18" and in line of sight as a priority target, giving the Stormtalons re-rolls to Wound and Armor Penetration, and can even re-roll glances to try for penetrating hits instead. The priority target remains such for this formation until it is destroyed or the formation designates a new one.
+Honored Ancients
+1 unit of normal, Venerable, Ironclad, or Contemptor Dreads.
+Iron Guardians
+This is copy-pasta of Honored Ancients, except you can include a Tactical Squad.
+
+
+SPACE WOLVES
+Ironclaw Strike Force Formation
+
+Requirements: 1 Iron Priest, 1 Stormwolf, 1 Wolf Guard Terminator unit, 1 Blood Claw unit, 1 Venerable Dreadnought, 1 Fenrisian Wolf unit
+
+Restrictions: None.
+
+Special Rules:
+
+Emulate your Elders: If the Wolf Guard Terminators or Venerable Dreadnought from this Formation make a successful charge, then for the remainder of the phase the Blood Claws from this Formation can re-roll the dice when they charge. In addition, the Blood Claws gain the Furious Charge special rule until the end of the turn.
+
+Strike Force Daggerfist Formation
+
+Requirements: Murderfang, 1 Wulfen unit, 1 Wolf Guard unit, 3 Wolf Guard Terminator units, 1 Stormfang Gunship
+
+Restrictions: None.
+
+Special Rules:
+
+Kingsguard: The following units from this Formation have +1 Weaponskill, Wolf Guard, Wolf Guard Terminator, Wolf Guard Pack Leader, Wolf Guard Terminator Leader.
+
+Wulfenkin: Add 1 to the Attacks of any Strike Force Daggerfist model whose is within 6? of this Formation’s Wulfen unit at the start of the Assault phase. This effect lasts until the end of the phase.
+
+Oath of Protection: Enemy units can only target Strike Force Daggerfist’s Wulfen unit if they are the closest target from this Formation to the attacking unit.
+
+Space Wolves Deathpack Formation
+
+Requirements: 1 Wolf Lord, 1 Unit of Grey Hunters, 1 Unit of Thunderwolf Cavalry
+
+Restrictions: None.
+
+Special Rules:
+
+For Glory, For Russ: The Wolf Lord, and any units from the Deathpack Formation that are within 12? of him at the start of your Shooting phase, can either shoot and the re-roll to hit rolls of 1, or Run and still be able to charge in the same turn. Different units can choose different options, so one unit could Run and charge, while another re-rolls hit rolls of 1.
+
+Wolfkin Formation
+
+Requirements: 2-5 units of Fenrisian Wolves
+
+Restrictions: None.
+
+Special Rules: Monster Hunter, Outflank
+
+Alpha Pack: If you wish, all of the units in a Wolfkin can be deployed as a single unit known as an Alpha Pack. Add 1 to the Attacks characteristic of all Fenrisian Wolf and Cyberwolf models in an Alpha Pack whilst there are 20 or more models in the unit.
+
+Call of the Wolves: If a Wolfkin unit is within 12? of either the left or right table edges when a friendly Outflanking Space Wolves unit arrives from Reserves, you can choose for them to arrive from that table edge instead of rolling to see which table edge they arrive from.
+
+Heralds of the Great Wolf
+
+Requirements: 1 Wolf Priest, 1 Rune Priest, 1 Iron Priest
+
+Restrictions: None.
+
+Special Rules:
+
+Brotherhood of Priests: The Heralds of the Great Wolf must be deployed as a single unit. In addition, all models in the Formation lose the Independent Character special rule, but gain the following special rules and benefits whilst the relevant model from this Formation is still alive: Wolf Priest: It Will Not Die. Rune Priest: Enemy units that target the Heralds of the Great Wolf in the Shooting phase must subtract 1 from their Ballistic Skill characteristic. Iron Priest: Ignore the first failed saving throw made by a Herald of the Great Wolf each phase.
+
+Sage Counsel: An army that includes any Heralds of the Great Wolf can re-roll the dice when determining who deploys first, and adds 1 to the dice roll when attempting to Seize the Initiative.
+
+Ancients of the Fang Formation
+
+Requirements: 1 Iron Priest, 2-5 Dreadnoughts
+
+Restrictions: None.
+
+Special Rules:
+
+A Gathering of Ancients: All of the Dreadnoughts from the Ancients of the Fang must be fielded as a single Vehicle Squadron as described in Warhammer 40,000: The Rules. However, whilst this Formation includes three or more Dreadnoughts, they can all re-roll failed To Hit rolls in close combat.
+
+Blessings of the Iron Wolf: Dreadnoughts from the Ancients of the Fang have the It Will Not Die special rule whilst they are within 6? of their Iron Priest.
+
+The Saga that Walks: Friendly units with the Space Wolves Faction within 6? of a Dreadnought from the Ancients of the Fang have the Stubborn special rule.
+
+Wyrdstorm Brotherhood Formation
+
+Requirements: 2-5 Rune Priests
+
+Restrictions: None.
+
+Special Rules:
+
+Masters of the Wyrdstorm: Models from a Wyrdstorm Brotherhood harness Warp Charge points on a result of 3+ when attempting to manifest psychic powers from the Tempestas discipline or The Living Storm psychic power.
+
+The Eye of the Storm: At the start of each of your Psychic phases, select 1 model from the Wyrdstorm Brotherhood to be the Eye of the Storm. That model can attempt to manifest The Living Storm psychic power. Increase the Attacks rolled by D6 for each other Rune Priest in the Wyrdstorm Brotherhood that is on the battlefield.
+
+Spear of Russ Formation
+
+Requirements: 1-3 Iron Priests, 1-3 units chosen in any combination from the following list: Predators Whirlwinds Vindicators. 1-3 units chosen in any combination from the following list: Land Raider, Land Raider Crusader, Land Raider Redeemer
+
+Restrictions: None.
+
+Special Rules:
+
+Alpha Machine Spirits: Vehicles from a Spear of Russ have the Power of the Machine Spirit special rule whilst they are within 12? of any Land Raiders, Land Raider Crusaders or Land Raider Redeemers from the same Formation.
+
+Lord of Iron: At the start of each of your Shooting phases, nominate one vehicle from a Spear of Russ that is either transporting, or is within 6? of, any Iron Priests from the same Formation. That vehicle gains a special rule from the following list for that phase: Monster Hunter, Precision Shots, Preferred Enemy, Tank Hunters.
+
+Wulfen Murderpack Formation
+
+Requirements: 2-5 units of Wulfen
+
+Restrictions: None.
+
+Special Rules:
+
+Infectious Ferocity: Add 1 to any rolls on the Hunt and/or Kill tables for each unit from a Wulfen Murderpack on the battlefield after the first. If this results in a total of 7 or more, consult the Wulfen Murderpack Formation Table.
+
+Orgy of Slaughter: Each time a model from a Wulfen Murderpack rolls a 6 To Hit in close combat, it can immediately make one additional Attack.
+
+The Greatpack Formation
+
+The Blackmanes Formation
+
+Requirements: Ragnar Blackmane or Wolf Guard Battle Leader, 1 unit of Wolf Guard, Wolf Guard Terminators or Thunderwolf Cavalry, 3-5 units chosen in any combination from the following list: Blood Claws Skyclaws, Swiftclaws, 0-1 Lukas the Trickster, 4-6 units chosen in any combination from the following list: Grey Hunters, Land Speeders, 1-2 units of Long Fangs, 1 unit of Wolf Scouts, 0-2 Lone Wolves
+
+Restrictions: None.
+
+Special Rules:
+
+The Claws of Russ: Any Blackmanes unit that has the option to take Drop Pod as a Dedicated Transport may take one at no points cost (though they must pay for any additional upgrades and options as normal). All Drop Pods in this Formation arrive from Deep Strike Reserve at the start of the controlling player’s first turn. Drop Pods in this Formation do not count towards the number of models that arrive in the first turn as part of the Drop Pod Assault special rule.
+
+Inspirational Example: Whilst Ragnar Blackmane is on the battlefield, he and all units of Blood Claws, Skyclaws and Swiftclaws from this Formation re-roll all failed To Hit rolls in close combat.
+
+The Joy of Battle: Blackmanes units that disembark from a Drop Pod have the Fearless and Feel No Pain (6+) special rules until the start of their next turn.
+
+The Deathwolves Formation
+
+Requirements: Harald Deathwolf or Wolf Guard Battle Leader, 0-1 Canis Wolfborn, 1 unit of Thunderwolf Cavalry, 2-3 units chosen in any combination from the following list: Blood Claws, Skyclaws, Swiftclaws. 2-4 units chosen in any combination from the following list: Grey Hunters, Land Speeders, 1-2 units of Long Fangs, 1 unit of Wolf Scouts, 0-2 Lone Wolves, 0-1 unit of Fenrisian Wolves
+
+The Drakeslayers Formation
+
+Requirements: Wolf Lord Krom or Wolf Guard Battle Leader, 1-2 units chosen in any combination from the following list: Wolf Guard, Wolf Guard Terminators, 2-3 units of Blood Claws, 2-4 units chosen in any combination from the following list: Grey Hunters, Land Speeders, 1-2 units of Long Fangs, 0-1 unit of Wolf Scouts, 0-2 Lone Wolves
+
+
+
+Requirements: 1 Wolf Lord or Wolf Guard Battle Leader, 0-1 units chosen from the following list: Wolf Guard, Wolf Guard Terminators, Thunderwolf Cavalry, 1-3 units chosen in any combination from the following list: Blood Claws, Skyclaws, Swiftclaws, 0-1 Lukas the Trickster 3-5 units chosen in any combination from the following list: Grey Hunters, Land Speeders, 1-2 units of Long Fangs, 0-1 units of Wolf Scouts, 0-2 Lone Wolves
+
+Restrictions: None.
+
+Special Rules:
+
+Running of the Wolf: Before deployment, roll a D6 for each unit in a Greatpack, adding 2 to the result if the unit’s Battlefield Role is Troops and it has been joined by an Independent Character from this Formation (before rolling, inform your opponent which Independent Characters, if any, will start the game joined to which Troops units). On a 6+, that unit has the Outflank special rule. In addition, if a Greatpack is led by a Wolf Lord, at the start of each of your turns after the first, you may select one unit from this Formation that is in Reserves. That unit automatically passes its Reserve Roll to arrive this turn (no dice roll is necessary).
+
+Jarl of Russ: If this Formation is your Primary Detachment, or is part of your Primary Detachment, you can re-roll the result when rolling on the Warlord Traits table in Codex: Space Wolves.
+
+The Champions of Fenris Formation
+
+Requirements: Logan Grimnar or Wolf Guard Battle Leader, 0-1 Arjac Rockfist, 2-3 units chosen in any combination from the following list: Wolf Guard, Wolf Guard Terminators, Thunderwolf Cavalry, 3-6 units chosen in any combination from the following list: Blood Claws, Skyclaws, Swiftclaws 4-8 units chosen in any combination from the following list: Grey Hunters, Land Speeders, 2-3 units of Long Fangs, 1-2 units of Wolf Scouts, 0-3 Lone Wolves
+
+Restrictions: None.
+
+Special Rules: Fearless.
+
+The High King: At the start of each of your turns, choose one special rule from the following list: Furious Charge, Monster Hunter, Preferred Enemy, Relentless, Tank Hunters. All Champions of Fenris units within 12? of Logan Grimnar gain that special rule until the start of your next turn.
+
+Kingsguard: The following Champions of Fenris models have +1 WS on their profile: Wolf Guard Wolf Guard Pack Leader Wolf Guard Terminator Wolf Guard Terminator Leader Thunderwolf Cavalry Thunderwolf Cavalry Pack Leader.
+
+The Firehowlers Formation
+
+Requirements: 1 Wolf Lord or Wolf Guard Battle Leader, 1 unit of Wolf Guard, 2-4 units chosen in any combination from the following list: Skyclaws, Swiftclaws, 2-4 units chosen in any combination from the following list: Grey Hunters, Land Speeders 0-1, unit of Long Fangs 0-1, unit of Wolf Scouts, 0-2 Lone Wolves
+
+Restrictions: This Formation’s Wolf Lord, Wolf Guard Battle Leader and Wolf Guard must be equipped with jump packs or ride Space Marine Bikes.
+
+Special Rules:
+
+Bloodcurdling Charge: Enemy units attempting to fire Overwatch at a charging Firehowlers unit must first pass a Leadership test or be unable to fire Overwatch for the duration of that Assault phase. In addition, units from this Formation cause Fear on the turn they charge. Enemy units with the And They Shall Know No Fear or Fearless special rules are immune to the effects of Bloodcurdling Charge.
+
+Eager for Combat: All Firehowlers units can re-roll failed charge rolls.
+
+Rising Fury: If you roll a 10 or more when determining the charge distance of a Firehowlers unit, all models in that unit have the Furious Charge special rule that turn.
+
+Ragnar’s Claws Formation
+
+Requirements: Ragnar Blackmane, 3 Units of Blood Claws, 1 Unit of Skyclaws, 1 Unit of Swiftclaws
+
+Restrictions: All units of Blood Claws and Skyclaws must have at least 10 models.
+
+Special Rules:
+
+Eager to Impress: Any units from this Formation within 12? of Ragnar Blackmane have the Zealot special rule.
+
+Reckless Ferocity: If a unit from this Formation is within 6? of an enemy non-vehicle model at the beginning of the Shooting phase, that unit cannot shoot and must attempt to charge in the ensuing Assault phase, but can re-roll failed charge ranges.
+
+Grimnar’s Kingsguard Formation
+
+Requirements: Logan Grimnar, Arjac Rockfist, 2 Units of Wolf Guard or Wolf Guard Terminators, 2 Land Raiders
+
+Restrictions: All units of Wolf Guard or Wolf Guard Terminators must take one of the Formation’s Land Raiders (any type) as a Dedicated Transport. Arjac must join one of these units. Unless he is equipped with Stormrider, Logan Grimnar must also join one of these units.
+
+Special Rules: Fearless.
+
+The High King: At the start of each of your turns, nominate one unit from this Formation that is within 12? of Logan Grimnar. That unit gains one special rule from the following list until the start of your next turn: Furious Charge, Monster Hunter, Preferred Enemy, Tank Hunters.
+
+Kingsguard: The following models have +1 WS on their profile when chosen as part of this Formation: Wolf Guard, Wolf Guard Pack Leader, Wolf Guard Terminator, Wolf Guard Terminator Leader
+
+Wolfguard Strike Force Formation
+
+Requirements: 1 Wolf Guard Battle Leader, 2 Units of Wolfguard Terminators, 2 Stormwolves
+
+Restrictions: Each unit of Wolf Guard Terminators must take one of the Formation’s Stormwolves as a Dedicated Transport. The Wolf Guard Battle Leader must join one of these units. All Infantry models in this Formation must begin the game embarked within their Stormwolf transports.
+
+Special Rules:
+
+Explosive Arrival: In a turn in which a model from this Formation disembarks from a Stormwolf, that model has the Hammer of Wrath special rule and its ranged weapons have the Twin-linked special rule.
+
+Hunting Pack: When rolling for Reserves, make a single Reserve Roll to see when this Formation arrives. On a successful roll, all units in this Formation will arrive.
+
+The Champions of Fenris Formation
+
+Requirements: Kingsguard Stormforce Formation, Brethren of the Fell-Handed Formation, Wolf Guard Void Claws Formation, Grimnar’s War Council Formation, Arjac’s Shieldbrothers Formation, Wolf Guard Thunderstrike Formation
+
+Restrictions: The units in this Formation must adhere to all of the restrictions detailed in each of the corresponding Formation datasheets.
+
+Special Rules: The units in this Formation retain all of the special rules specified in the corresponding Formation datasheets. In addition, the following special rules apply: Fear, Fearless.
+
+Great Wolf: As long as Logan Grimnar is alive, all non-vehicle models in this Formation re-roll failed To Hit rolls in close combat.
+
+Iron High Priest: As long as the Iron Priest is alive, all vehicle models in this Formation have the It Will Not Die special rule.
+
+Rune High Priest: As long as Njal Stormcaller is alive, all models in this Formation have the Adamantium Will special rule.
+
+Wolf High Priest: As long as Ulrik the Slayer is alive, all models in this Formation have the Preferred Enemy special rule.
+
+Requirements: 1 Unit of Wolf Guard Terminators, 1 Unit of Wolf Guard, 1 Drop Pod
+
+Restrictions: The Wolf Guard unit must include 10 models and must take the Formation’s Drop Pod as a Dedicated Transport.
+
+Special Rules: First Among Equals, Kingsguard, Sagaborn.
+
+Explosive Arrival: During the turn in which they arrive from Reserves, the ranged weapons of all Infantry models from this Formation have the Twin-linked special rule.
+
+Thunderstrike: When rolling for Reserves, make a single Reserve Roll to see when this Formation arrives. On a successful roll, all units in this Formation will arrive. These units must deploy by Deep Strike.
+
+Arjac’s Shieldbrothers Formation
+
+Requirements: Arjac Rockfist, 1 Unit of Wolf Guard Terminators, 1 Land Raider Crusader
+
+Restrictions: All models in this Formation’s unit of Wolf Guard Terminators must be equipped with thunder hammers and storm shields. Arjac Rockfist must be deployed with this unit, and they must take the Formation’s Land Raider Crusader as a Dedicated Transport.
+
+Special Rules: First Among Equals, Hammer of Wrath, Kingsguard, Sagaborn.
+
+Protect the King!: As long as Logan Grimnar is alive and on the battlefield, all models in this Formation have the Fearless special rule. If Logan Grimnar is slain, the Fearless special rule is replaced with the Zealot special rule.
+
+Shieldwall: Any model in this Formation that is in base contact with at least one other model from this Formation has +1 Toughness. Each time a model from this Formation passes an invulnerable save against a close combat attack on the roll of a 6, the unit that made the attack suffers an immediate hit resolved at Strength 8 AP2, using Random Allocation. This hit has the Concussive special rule.
+
+Grimnar’s Wolf Council Formation
+
+Requirements: Ulrik the Slayer, Njal Stormcaller, 1 Rune Priest and 1 Iron Priest
+
+Restrictions: Before deployment, the controlling player must decide whether to field this Formation as a number of Independent Characters or as a single unit
+
+Special Rules: Fearless, First Among Equals, Sagaborn.
+
+Conclave of War: If deployed as a single unit, all of the models in this Formation lose the Independent Character special rule, though they remain characters. Furthermore, no Independent Characters can join this unit with the exception of Logan Grimnar (unless he is mounted on Stormrider) and Arjac Rockfist. However, the Formation’s Fearless special rule is replaced with the Zealot special rule for as long as Logan Grimnar remains with the unit.
+
+Wise Counsel: An army that includes this Formation can re-roll the dice when determining who deploys first, and adds 2 to the dice roll when attempting to Seize the Initiative.
+
+Wolf Guard Void Claws Formation
+
+Requirements: 1 Unit of Wolf Guard Terminators
+
+Restrictions: All models in this Formation’s squad of Wolf Guard Terminators must be equipped with one pair of wolf claws. The squad of Wolf Guard Terminators must include at least 5 models.
+
+Special Rules: First Among Equals, Kingsguard, Sagaborn.
+
+Coordinated Assault: As long as at least one model from this Formation is still alive and on the table, the controlling player can re-roll any Reserve Rolls.
+
+If Needs Must: When units from this Formation arrive by Deep Strike, you can re-roll the scatter dice if you wish. Spearhead Strike: All units from this Formation begin the game in Reserves, and must arrive by Deep Strike in their controlling player’s first turn.
+
+Brethren of the Fell-Handed Formation
+
+Requirements: Bjorn the Fell-Handed, 2 Venerable Dreadnoughts
+
+Restrictions: All Dreadnoughts must be upgraded to Venerable Dreadnoughts.
+
+Special Rules: Adamantium Will, Sagaborn.
+
+Blessing of Russ: As long as a Dreadnought from this Formation remains within 6? of Bjorn the Fell-Handed, it has a 5+ invulnerable save. Warriors of Legend: Whilst Bjorn the Fell-Handed is alive, all units in this Formation re-roll all failed To Hit rolls in close combat.
+
+Kingsguard Stormforce Formation
+
+Requirements: Logan Grimnar with Stormrider, 1 Wolf Guard Terminator Unit, 1 Landraider, 1 Stormfang Gunship
+
+Restrictions: Logan Grimnar must be equipped with Stormrider. The Wolf Guard Terminator unit must include 5 models and must take the Formation’s Land Raider as a Dedicated Transport.
+
+Special Rules: First Among Equals, Kingsguard, Sagaborn.
+
+First Into the Fray: On any turn that they disembark from this Formation’s Land Raider, the Wolf Guard Terminator unit has the Furious Charge special rule, and can reroll failed charges.
+
+Wrath of the Stormfang: As long as Logan Grimnar is alive, the controlling player can choose whether to pass or fail any Reserve Rolls for this Formation’s Stormfang Gunship.
+
+Great Company Formation
+
+Requirements: 1 Wolf Lord, 1 Wolf Guard Battle Leader, 1 Wolf Guard Unit, 5 Units of Grey Hunters, 3 Units of either Blood Claws, Swiftclaws, Skyclaws, 2 Units of Long Fangs
+
+Restrictions: One unit of Grey Hunters must include a wolf standard.
+
+Special Rules:
+
+Jarl of Russ: If this Formation is chosen as your Primary Detachment, you can re-roll the result when rolling on the Warlord Traits table in Codex: Space Wolves.
+
+Cunning of the Wolf: Before Deployment, roll a D6 for each unit in this Formation, adding +2 to the result if the unit’s Battlefield Role is Troops and it has been joined by an Independent Character from this Formation (before rolling, inform your opponent which Independent Characters, if any, will start the game joined to which Troops units). On a 6+, that unit has the Outflank special rule. In addition, at the start of each of your turns after the first, you may select one unit from this Formation that is in Reserves. That unit automatically passes its Reserve Roll to arrive this turn (no dice roll is necessary).
+
+The Howl of Wolves: As long as this Formation’s Wolf Lord is alive, all units in this Formation have the Fear and Furious Charge special rules.
+
+Pack Instincts: If a unit from this Formation targets and enemy unit in a the Shooting phase and hits with at least one weapon, second and subsequent units from this Formation that target the same enemy unit in the Assault phase, second and subsequent units from this Formation that declare a charge against the same enemy unit in that phase re-roll failed charge rolls.
+
+The Fierce-Eye’s Finest Formation
+
+Requirements: Krom Dragongaze, The Fierce-eye’s Wolf Guard, Hengist Ironaxe’s Grey Hunters, Egil Redfist’s Blood Claws
+
+Restrictions: None.
+
+Special Rules:
+
+Furious Determination: Whilst Krom Dragongaze is alive, all units in this Formation have the Furious Charge special rule.
+
+Pack Instincts: If a unit from this Formation targets and enemy unit in a the Shooting phase and hits with at least one weapon, second and subsequent units from this Formation that target the same enemy unit in the Assault phase, second and subsequent units from this Formation that declare a charge against the same enemy unit in that phase re-roll failed charge rolls.
+
+Hunter Cadre: A Battlesuit Commander and an optional Fireblade and Bodyguard gets to join 3-6 teams of Fire Warriors (either kind) or Kroot, 1-3 squads of Crisis suits, Stealth suits, Riptides, or Ghostkeels, 1-3 squads of Pathfinders, Drones, Piranhas, or Vespids, and 1-3 squads of Broadsides, Hammerheads, Stormsurges, or Sniper Drones. Units from this Formation may use Supporting Fire to assist other units from the same Formation within 12" rather than the usual 6". Furthermore, the Ambushes and Feints ability means that any units from this Formation within 12" of the same Formation's Battlesuit Commander or Fireblade may make a free Run or Flat-Out move before Shooting in this phase.
+Summary: This formation gives some interesting bonuses, though with the higher Troop tax and loss of Objective Secured, you must think carefully whether it's worth running this over a CAD. The extra range for Supporting Fire is nice to have, but super-situational, especially if you come across another shooty army or one that can deny your Overwatch. The extra pre-game movement is more helpful though, granting Tau extra mobility, and allowing them to reposition based on their own shooting results. The humble Tau Piranha in particular becomes a surprisingly comedic Melta vector.
+Note how you can use this to run with your infantry while remaining stationary in the movement phase, meaning you can still benefit from Cadre Fireblades ability Volley Fire. Enjoy your now moving Wall of Death.
+Command (0-1 per Core)
+Contingent Headquarters: A bonus Battlesuit Commander (or Shadowsun) get 1-2 squads of Bodyguards and can call in an optional Ethereal (named or not). There's no other bonus to this. (Notice how the only way to take an Ethereal, without taking a separate CAD and adding two more troop choices to the 3 already required in the Hunter Cadre, is to own two Commanders. Gotta sell the new Commander model somehow I guess since every Tau player already had one).
+Auxiliary (1-10 per Core)
+Retaliation Cadre: AKA Farsight Bomb 2, electric boogaloo. One Commander, 3 units of Crisis Suits, 1 unit of Broadsides, and 1 Riptide combine to gain Relentless and auto Deep-strike on turn two if you choose, adding +1 BS the turn they arrive. With the changes to Crisis and Riptide squad sizes this can mean up to 27 Crisis suits and 3 Riptides dropping in. Along with the Commander and the Broadsides that is 31 suits. Not that you will play this many outside of Apocalypse, but remember they don't need to be full units. Defeat the traitor Farsight at his own game!
+Read that again: Deepstriking Relentless Broadsides. Their only problem was they couldn't move and fire in the same turn and this formation fixes that. Try to get that 'Coordinated Fire' bonus so their exclusive Missile drones get the benefits without needing an attached Buffmander for themselves. The FAQ clarified that this doesn't work anymore.
+Heavy Retribution Cadre: A Ghostkeel joins two unit of Stormsurges for dat new cheese. Acting as a spotter, if the enemy is within 12" of the Ghostkeel, the Stormsurges can re-roll to hit it. If at least two units of this formation attack the same enemy unit, the afflicted unit now can't run/flat-out and can only charge at half his distance. So yeah, they can't melee these Tau, they can't outshoot them - they can only cry. Just in case you needed more reasons to field those Taubaddons.
+Infiltration Cadre: Three Pathfinder teams join two Stealth suit squads and a Piranha unit as an alpha strike. If any unit here is destroyed, then everything you have in reserves automatically arrives - sacrifice one for the Greater Good?. If you lay three markerlights on an enemy you also get a Seeker missile to automatically hit them as well, absolutely free.
+Optimized Stealth Cadre: An evolution of the old Optimized Stealth Group. A Ghostkeel alongside 2 Stealth Teams. Any Stealthsuits within 6" of the Ghostkeel gain +1 BS, get Ignores Cover, and AUTOMATICALLY HIT THE REAR ARMOR OF ANY VEHICLE. So yeah, they run independent of Markerlights, feel free to give them to someone else. Buh-bye, Leman Russes. Seeya Doomsday Ark! Amazing against GEQ (that includes Tau too) when the Stealth teams bring Gun Drones, a Controller, Fusion guns and Target Locks. The drones' Pulse Carbines WILL pin down those guardsmen now their AP5 shots ignore cover, and the fusion gun will poke their supporting armour's behinds blowing them sky high, as dirty as it sounds, without taking the Ghostkeel into account. That's 414 pts minimum, but it counters more than its cost on enemies in a single turn. Shame on you, Gue'La.
+Firebase Support Cadre: A Riptide unit along with 2 Broadside teams. Very good way to beef out your tau with lots of fire support and a BIG distraction. These are even cheesier than their 6E iteration because they can all combine their fire, with an even better (see below) "resolving their shots as if they were one unit" trick than above, on top of also getting Tank Hunter and Monster Hunter when they do so. Everything within range will DIE.
+Specifically, when the Hunter Cadre's Coordinated Firepower rule was errataed in the FAQ, the same FAQ conspicuously did not errata the Firebase Support Cadre. As a result, it has the original wording, which means all of the units fire as if one giant unit, so any unit-wide buff in any unit is shared by all of them. That means you can e.g. attach a Buffmander to either Broadside team to propagate those benefits not only to the other Broadside team, but also to the Riptides.
+Armoured Interdiction Cadre: 3 Hammerhead units alongside a Skyray unit. At the start of any Shooting Phase you can select one point on the board. The formation rerolls failed hits when shooting at anything within 6" of that point. Technically it also affects flyers.
+This formation breathes extra life into the Ion Cannon by granting extra insurance against bad scatters and Gets Hot, turning it into a budget Leman Russ that outperforms in the areas that count.
+Air Caste Support Cadre: 2 Razorshark units along with a Sunshark unit. Everyone now ignores Crew Shaken/Stunned on a 2+ and they all restore a HP on a 6.
+Allied Advance Cadre: 4 Kroot packs join 2 Vespids gangs. Vespids gain Infiltrate and Stealth (Forests), and any Kroot within 12" of them replace Stealth with Shrouded while simultaneously gaining +1 BS, stackable with Coordinated Firepower. In addition, the formation gets Supporting Fire when assisting any member of their formation.
+Drone Network: One unit of drones. And that's it, no bonus rules. Useful to make meets end and to achieve Coordinated Firepower's +1 BS easier. Not actually a Formation.
+Dawn Blade Contingent (Mont'Ka)
+This detachment is exclusive to Farsight Enclaves. Besides letting the Warlord trait re-roll, this detachment's main draw is Killing Blow: This lets you secretly mark a unit for death at the start of your opponent's turn, and during your subsequent turn you declare which unit was Marked. Anyone from this Detachment rerolls to wound/penetrate that target for the remainder of your turn (Note: This is **not** Shred/Tank Hunters, which is probably for the best considering how which could interact with Target Locks, Ion Accelerators, etc). So, while Kauyon hits more often, Mont'Ka hits harder (duh). This Detachment has a higher potential damage ceiling, which can be useful against Deathstars, but requires more support to truly take advantage of.
+
+Core (1+)
+Hunter Cadre: As seen in Kauyon, yours is a little more expensive because mandatory Bonded Knife.
+Retaliation Cadre: Unlike Kauyon's, it's a Core choice here instead of Auxiliary, which is more manageable because it was too expensive to use this and Hunter cadre outside Apocalypse. Now your whole army can be an XBOX HUEG Farsight Bomb. Excellent.
+Command (1)
+Contingent Headquarters: A generic Commander/Farsight grabs a generic Bodyguard. Notice you don't get Ethereals. Not much else to it.
+The Eight: Farsight brings with him his besties. Now they actually get extra rules instead of behaving like generic Commanders. They have Fearless, Preferred Enemy, Independent Character (Note O'vesa still can't hide into a unit per 7th Edition BRB FAQ, because he is a monster), can Supporting Fire themselves from 24" away and, as long as one lives, all friendly Tau Empire are Stubborn. BUT you have to take them all, which means you wont see them at all in games smaller than 2000 pts, and even then you wilk not take a lot of units along with them.
+Auxiliary (1-10 per Core)
+Allied Advance Cadre: Another shared formation. Noteworthy in that you could take them to hold home objectives for rather cheap (384 pts bare bones, 444 decent, 1588 maxed) while the rest of your army Farsight-bombs the enemy. Quite doable in a 2000 pts game. Does not provide Objective Secured, so don't completely assume any objective they're holding will stay held.
+Firebase Support Cadre: The last of the shared formations, they allow you to manage the relatively few markerlights you have. They can finish what your Crisis team started, and it helps that you have a better Riptide.
+Counterstrike Cadre: A Pathfinder team and three units of Fire Warriors (either Strike or Breachers) all ride Devilfish. In exchange, all models reroll failed shots against any enemy unit within 3" of an Objective, and the Devilfish gain Fast on the first turn they are on the table (this includes reserves).
+Notably, the Formation bonus applies to the Devilfish as well. If you're a fan of Devilfish and Seeker Missiles, you might as well use this Formation. The single turn of Fast allows them to move 12" and fire both missiles at normal BS, rerolling to-hit versus any target within 3" of an objective. Combined with the Dawn Blade's ability to enable rerolling armor penetration...
+Rapid Insertion Force: A Stealth team, 3 Crisis teams and a Riptide unit. The Stealth team has to start on the field while the rest of the formation stays in reserve. When they deep-strike within 6" of the Stealth suits, nothing scatters AND they get Twin-Linked for the turn. H-how lewd, Farsight-senpai... - Notice how several formations are differently-flavored Farsight bombs? Not like that is a bad thing, tho. This formation's benefit is riskier than the Retaliation Cadre, and the Stealth team will have a giant Distraction Carnifex target painted on it.
+Ranged Support Cadre: 3 units of Pathfinders and Broadsides make the single most cheese team out there. If the Broadsides use any markerlights fired by their Pathfinders, they count as double, so they'll always ignore cover. The Pathfinders also get Infiltrate and Shrouded, but lose the latter if they ever move or fire something that isn't a Markerlight. Well, at least the Broadsides can Supporting Fire for them at full range.
+Piranha Firestream Wing: Like that Apocalypse formation, these are your Four Horsemen (ay lmao). 4 UNITS of Piranhas, but one of them must go alone and acts as a spotter for the other 3 and nominates a unit within 36" visible to it (doesn't give up shooting). The formation gets +1BS and Tank Hunters against the marked unit. Now the turbo fondue: if any unit ends up within 6" of a Table Edge after movement, it can escape into Ongoing reserves and return with EVERYTHING REFILLED (including dead unit members). Which means they can (and should) spam all the drones and missiles they want. You may now proceed to hum Ride of the Valkyries, if put through a sci-fi filter. Whether it is awesome or just plain trolling depends on your point of view.
+Skysweep Missile Defense: A Devilfish takes command of 3 Skyrays. If the flyers get within 12" of the Fish, they can fire as many missiles they want and, while the Fish lives, everyone gains 5+ cover against anything shot by a flyer (so take Disruption pods, as usual). This brings a whole new definition to FISH OF FURY.
+Assigned Air Caste Asset: Grab a Sunshark or Razorshark. Nothing more to it.
+Air Superiority Cadre: Grab 3 Razorsharks. They all get +1 BS against flyers. On top of that, as long as one of them is still alive, they can drop D3 Markerlights on any unit they want, just like a Fighter Ace. To make this even worse, you can automatically arrive from reserves if you find any Flyers, Skimmers or Jetbikes. Y'know, just in case you didn't have ENOUGH answers against those sorts of things. Can still get options from SoD, so take this over a CAD/ASD-bought Razorshark Wing, if you've already got Reserve rolls on lock.
+Drone Net VX1-0: 4+ Drone Squads, controlled by Skynet herself. They all get Interceptor, Jink, Outflank, Precision Shot, and Split Fire. Also, as long as at least 2 squads remain on the field, all drones in your army gain +1 BS. Your Interceptor/EWO phase now has Marker support. Sorry to say, but the GW faq states that no unit can both jink and Go to Ground, so dreams of killer Roombas must now go the way of the dodo.
+Dataslate Formations
+Ethereal Honour Guard (Start Collecting Tau pack): An Ethereal on a hoverdrone, a Crisis Team and a Strike Team, all in one box. This gives the other guys a bit of a free move if they're near the Ethereal - The unit can pick a single model in the unit to act as a Lynchpin and then have everyone regroup around him so that they're all 3" away from him (Unless it's a turret. The turret stays where it is). It's a pretty devious way to get some more range from the other units, or to pull one unit out of a melee.
+Infiltration Cadre Burning Dawn (Infiltration Cadre Burning Dawn Boxed Set): Aun'Do, Pathfinder Team Aurora, Stealth Team Shadowtide and the Tireless Hunter (All a box set) team up. Aun'Do gets one turn to pull two elements, everyone gets Shrouded and Scout (or Infiltrate if they have Scout before). All in all, not too bad a setup, but it is fragile.
+Tidewall Counterstrike Cadre (Web-Exclusive Bundle): In a blatant move to sell even more Tidewalls comes an exclusive formation along the lines of the Cohort Mechanicus and the Court of House Terryn. It's composed of a Strike Team, Pathfinders, and two Breacher Teams in a Tidewall filled with two Shieldlines, two Gunrigs and a Droneport to center on. The Breachers , when firing from the Shieldlines, get to boost the ranges on their weapons' profiles, so now you have a not-quite plasma gun from 10" away, which is much safer. The Strike Team re-rolls hits while on the Gunrigs or Droneport and the Pathfinders act as, well, Pathfinders, as the Tidewall can move up to 9" so long as it gets closer to them.
+Tau Firebase Support Cadre (Dataslate): The Tau Firebase Support Cadre is a Formation consisting of one Riptide and two FULL units of Broadsides. Each member of the formation has the Tank Hunters and Preferred Enemy (Space Marines) special rules. In return, your Space Marine enemies will get Hatred (Tau Firebase Support Cadre). This is fair enough really, and not much of a downside... If you're stupid enough to let Space Marines get into CC with your units, then you probably deserve to lose. Even with the 7E version around this formation is still very valid - Marines are the most common army and PE is better than Monster Hunters against them, who have none. Also, you don't need to fire at the same unit like the 7E formation, so it's valid against other armies as well. Keep in mind how versatile this formation is. You want all High-Yield Missile Pods and Interceptor on your Broadsides, and an Ion Cannon and Early Warning System on your Riptide? Good idea. You don't want to include Shas'vre in each Broadside team? No problem. You want lashings of Drones with every model? Sounds good! At the end of the day, this separate detachment will end up costing however much you decide to spend, but the bare minimum is 570 pts so it's not cheap. But it's a hell of a lot of potential firepower that your opponent has to face down the barrel of, with units you might have already planned on bringing. Flyer heavy opponents probably shit their pants just thinking about this formation.
+Kroot Hunting Pack (Apocalypse): 5 Kroot squads, kitted out however you like. This is a fluff formation, plain and simple. They only get Furious Charge and the ability to Outflank on any side they wish. Better than your average Kroot, they're beleaguered by the fact they're still just Kroot.
+Optimized Stealth Group (Apocalypse): 3+ Stealth Teams are needed. This formation has one nice rule and one meh rule. The nice thing is that their shots ignore cover. The meh thing is that if they infiltrate, they need to halve the distance they can set up from the enemy. Being Tau, the prospect of being closer to the enemy shouldn't be a good idea...but it does leave them in Melta range, even when Infiltration in line of sight. With the arrival of Ghostkeels this formation has lost most of its allure.
+Riptide Wing (Mont'ka): 3-9 Riptides. THAT GUY TEAM COMING UP!! Yeah, this is just being unfair. Not only can any Riptide within 6" of another re-roll failed Nova Reactor rolls, but they also get +1 BS when firing at something another Riptide already shot at, and once per battle they can shoot twice with each weapon in a turn they didn't move, which can be also combined with Ripple Fire to allow to each Riptide to fire the same weapon four times. Really, who'd want to play this and claim themselves fair?
+Ghostkeel Wing (Mont'ka): 3-9 Ghostkeels. They get +1 BS when firing at something another Ghostkeel already shot at, their drones have effect to every Tau within 12" from at least two of the formation's units and if they charge an enemy unit within 6" from another Ghostkeel, that unit can't Overwatch.
+Ethereal Council (Mont'ka): 3-7 Ethereals (Aun'Va and Aun'Shi can be part of the formation). As long as two of them are still alive, they're considered a single unit, the range for Failure isn't an Option is doubled, and they give all four the elemental buffs in the same turn.
+Warzone Damocles
+Shadowsun's Firestrike Assault Hunter Cadre (Apocalypse): Shadowsun takes command of a grand total of: a Crisis Bodyguard team, 2 regular Crisis teams, 6 Fire Warriors with a Fish, 6 without, 2 Pathfinders with Fish, 2 Stealth teams, 2 Riptides, 3 Hammerheads, 3 Skyrays, and 4 Razorsharks. Really, this is just a convenient excuse to gather all this wanton firepower together, with a bonus of giving anyone within 24" of the commander Fearless and Preferred Enemy. If you really have that many models together (and you like running stuff like the Tyranids Living Tide) then rock on, you extremely rich GW slave.
+Piranha Fireteam Squadron (Apocalypse): 5 Piranhas. Only five, no more, no less. This is a surprise assault formation, plain and simple. They deploy as a team on the second turn, they can jump into reserves so long as they're all within 6" of a table edge and come back whenever fully restocked and restored. If you thought the Tau had enough cheese, there's this, an instant-revival that can make even Tyranids jelly.
+Ethereal Council (Apocalypse): So long as you get three Characters, you can choose between Aun'Va, Aun'Shi, and more than one plain Ethereal. Grouping this many squishy Tau together boosts their FiNaO range from 12" to 24", but if they're all removed, the enemy gets another VP for killing them all. In addition, they can all use one more elemental power just to coordinate the other side's ruination by control.
+Hunter Cadre (Apocalypse): In a smaller Shadowsun formation, a single generic Commander gets: a Bodyguard team, 2-6 regular Crisis teams, Broadsides, Piranhas, and Hammerheads, 1-3 Stealth, Pathfinder, regular Drone, and Sniper Drone teams, 1-3 Skyrays, 3+ Fire Warrior teams, and an option to take up to 3 Fireblades, Kroot, and Vespids each. This formation gifts a bit more to the team. First off, they grab Acute Senses. Then, they can start from reserves and then get out in the first turn. After that, they all get 12" range for their Supporting Fire, meaning that now it changed charging them from a stupid idea to a phenomenally suicidal idea. All for the Greater Good.
+Drone-net VX1-0 (Apocalypse): A real drone network. 12+ Gun, Marker, and/or Shield drones can take optional Sniper, Missile, Recon, Grav-inhibitor, and Pulse Accelerator Drones, all in groups of four or more. All this dronage grants them a grand total of...+1 to their BS. It's meant to be a distraction, and the Shields help on that, but if you're expecting them to survive, don't.
+Hammerhead Interdiction Cadre (Apocalypse): 3-5 Hammerheads put together (so that's +1 BS due to Fire Team). Now, you love Skyrays, ya hate their lack of Railguns. Watch this, so long as the lead vehicle hasn't been blown to bits, it can give your army D3+1 Markerlights to use for extra killing, because this is Tau.
+Paradox Squadron (Apocalypse): 3-5 Sunsharks in a team. When put in the Arrowhead pattern with 3+ pulse bombs, the lead bomber gets to make a Strength D AP1 Large Blast bombing run, with rolls of 1 on the D table instead restoring lost wounds/hull points. Really, this is more of a gamble than most would want, with a chance of either instantly wiping out an enemy or making them even tougher than before. Its only a 17% chance but still, run at your peril.
+Ranged Support Cadre (Apocalypse): 1-3 Pathfinders leading 3-6 Broadsides. By joining, the Pathfinders all get Infiltrate and Shrouded. However, if they ever fire something other than Markerlights or even move they lose it, making placement a priority. In addition, if the Broadsides use the Pathfinders' Markerlights, the value of the lights get doubled. Yes, this is about as cheese as everything else, because this gives them the ability to get +2 BS or ignore cover with all of ONE markerlight.
+
+Fallen Champions Formation
+
+Requirements: Cypher, 1-3 Fallen
+
+Restrictions: None.
+
+Special Rules: Infiltrate.
+
+Fallen Leader: Any unit from this Formation that is within 12″ of Cypher must use his Leadership characteristic instead of their own for any Leadership tests, and has the And They Shall Know No Fear special rule.
+
+Requirements: 1 Helbrute, 2 Chaos Cultist Squads
+
+Restrictions: None.
+
+Special Rules:
+
+Apocalyptic Fury: This Formation’s Helbrute has the Rage special rule. Furthermore, when rolling To Hit with the Helbrute’s Melee attacks, any unmodified rolls of a 1 are not discarded. Instead, they automatically hit a friendly model (but not the Helbrute) nearby. Randomly determine (for each roll of a 1) which model is hit, from those within 6? of the Helbrute, even if they are not involved in the same combat. If there are no viable targets in range, these Attacks are discarded.
+
+Living Idol of Chaos: As long as the Helbrute is alive, both of the Formation’s units of Chaos Cultists have the Fearless special rule. If the Helbrute is completely destroyed, the Formation’s units of Chaos Cultists lose the Fearless special rule, but gain the Zealot special rule.
+
+Human Shields: If the Helbrute is partially obscured from the firer’s line of sight by models from one or more of this Formation’s units of Chaos Cultists, it receives a 3+ cover save. However, for each successful cover save the controlling player makes as a result of this special rule, the nearest intervening Cultist model is removed as a casualty with no saves allowed.
+
+Helfist Murderpack Formation
+
+Requirements: 5 Helbrutes
+
+Restrictions: One Helbrute must be nominated to be the Helbrute Champion.
+
+Special Rules:
+
+Murderpack: All of the Helbrutes in this Formation count as a single vehicle squadron.
+
+Pack Leader: The Helbrute Champion has the Vehicle (character) unit type, and the Aura of Dark Glory special rule. Other Helbrutes in the same vehicle squadron can make Look Out, Sir attempts to protect the Helbrute Champion as long as they are within 6?. Furthermore, if any of the Formation’s Helbrutes have crazed markers, do not roll on the Crazed Table if the Helbrute Champion is still alive; instead, the controlling player can choose which result affects them each turn, though the nominated result applies to all the Helbrutes in the Formation with crazed markers.
+
+Death of a Leader: If the Helbrute Champion is completely destroyed, all other Helbrutes in the Formation gain the Rage special rule.
+
+Mayhem Pack Formation
+
+Requirements: 3 Helbrutes
+
+Restrictions: None.
+
+Special Rules:
+
+It Will Not Die Mayhem from the Maelstrom: All of the units in this Formation must begin the game in Reserve. When making Reserve Rolls, make a single roll for the entire Formation. On a successful Reserves Roll, the all of the units in this Formation arrives from Reserve by Deep Strike.
+
+Tormented Terrors: At the start of each of your Movement phases, make a single roll on the Crazed Table. All of the Helbrutes in this Formation are affected by the result, even if they have not suffered glancing or penetrating hit.
+
+Kranon’s Helguard Formation
+
+Requirements: 1 Chaos Lord, 1 unit of Chosen, 1 unit of Chaos Terminators, 2 units of Chaos Cultists, 1 unit of Raptors, 1 Chaos Land Raider, 1 Helbrute
+
+Restrictions: All units in this Formation must have the Chaos Space Marines Faction.
+
+Special Rules: Fear, Stubborn
+
+Swarm of Phantasms: Enemy units that are within 12? of at least one unit from this Formation subtract 1 from their Leadership. Enemy units that are within 12? of at least two units from this Formation also subtract 1 from their Ballistic Skill, to a minimum of 1.
+
+Khârn’s Butcherhorde Formation
+
+Requirements: Khârn the Betrayer, 4 Chaos Space Marines Units, 4 Khorne Berserkers Units
+
+Restrictions: All units in this Formation must have the Chaos Space Marines Faction. All units of Chaos Space Marines in this Formation must take the Mark of Khorne upgrade.
+
+Special Rules: Adamantium Will
+
+Blood and Rage: If a unit from this Formation rolls an 8 when rolling its charge range (after any re-rolls), all models in that unit double the Attacks value on their profile until the end of the phase.
+
+Slaughter Without Respite: Each time a model from this Formation scores a 6 when rolling To Hit in the Assault phase, it can immediately make another Attack. If these additional Attacks score a 6 To Hit, they also grant additional Attacks.
+
+The Bringers of Despair Formation
+
+Requirements: Abaddon the Despoiler, 1 unit of Chaos Terminators
+
+Restrictions: This is a Black Legion Formation.
+
+Special Rules:
+
+Without Equal: Chaos Terminators that are part of this Formation (including the Terminator Champion) have a Weapon Skill and Ballistic Skill of 5 rather than 4.
+
+The Despoiler’s Guard: While Abaddon the Despoiler is joined to the unit of Chaos Terminators from this Formation, you can re-roll one Look Out, Sir roll for him in each phase.
+
+Chosen of Abaddon Formation
+
+Requirements: 1-4 Chaos Lords or Sorcerers (in any combination), 1 unit of Chosen or Chaos Terminators (in any combination) for each Chaos Lord or Sorcerer
+
+Restrictions: This is a Black Legion Formation.
+
+Special Rules:
+
+Exalted Champions: During deployment, each Chaos Lord and Sorcerer from this Formation must join one of the units of Chosen or Chaos Terminators. Only one character can join each unit in this way, and they cannot leave these units during the course of the battle. As long as the character is on the battlefield, his unit has the Fearless special rule.
+
+Blessed by the Chaos Gods: Before deployment, roll on the Chaos Boon table in Codex: Chaos Space Marines for each Chaos Lord and Sorcerer in this Formation, re-rolling any results of Spawnhood or Dark Apotheosis. The result lasts for the entire game.
+
+Hounds of Abaddon Formation
+
+Requirements: 1 Chaos Lord, 1-3 units of Khorne Berzerkers, 1-3 units of Chaos Space Marines, 1-3 units of Raptors, Warp Talons or Chaos Bikers (in any combination)
+
+Restrictions: This is a Black Legion Formation. Any unit that has the option to take a Mark of Khorne must do so, but at no additional points cost.
+
+Special Rules:
+
+Let Slip the Hounds: Once per game, at the start of any of your turns after the first, you can declare a massed assault. For the duration of that turn, units from this Formation can charge in the Assault phase even if they made a Run move in the same turn.
+
+Khorne’s Favour: If a unit from this Formation makes a successful charge and the total rolled for its charge range is 8 or more (before modifers), add 1 to the Strength of its models until the end of the Assault phase.
+
+Daemon Engine Pack Formation
+
+Requirements: 1 Warpsmith, 2 Forgefiends or Maulerfiends (in any combination)
+
+Restrictions: This is a Black Legion Formation.
+
+Special Rules: Hunting Pack: After deployment, but before the first turn, you can nominate one character in the enemy army. All Forgefiends and Maulerfiends from this Formation have the Preferred Enemy special rule against that character. If the nominated character is slain by a vehicle from this Formation, that model regains a Hull Point lost earlier in the battle.
+
+Prized Possessions: At the start of each Shooting and Assault phase, you can nominate a Forgefiend or Maulerfiend from this Formation that is within 12? of the Formation’s Warpsmith. Until the end of the phase, that model uses the Warpsmith’s Weapon Skill or Ballistic Skill instead of its own.
+
+Cyclopia Cabal Formation
+
+Requirements: 3-5 Sorcerers
+Restrictions: This is a Black Legion Formation.
+Special Rules:
+Shroud of Deceit: At the start of each of your Psychic phases, select one model from the Cyclopia Cabal to lead it in a dark ritual. That model can attempt to manifest the Shroud of Deceit psychic power, below. For each other Sorcerer from this Formation that is within 12?, add one dice to the Psychic Test – these dice do not cost any Warp Charge points.
+
+The Tormented Formation
+
+Requirements: Daemon Prince, 2-5 units of Possessed
+
+Restrictions: This is a Black Legion Formation.
+
+Special Rules:
+
+Advanced Possession: Units of Possessed from The Tormented have Weapon Skill and Initiative 5, and the Rending special rule. However, any unit of Possessed from the Tormented that is not locked in combat at the start of its turn must take a Leadership test. If it fails, the unit can only move D6? in the Movement Phase as it is wracked with mutative spasms. Units that are within 18? of the Formation’s Daemon Prince pass this test automatically.
+
+Black Legion Warband Formation
+Black Legion Warband Formation
+
+Requirements: 1 Chaos Lord, 0-1 Sorcerer, 2-6 units of Chaos Space Marines or Chosen (in any combination), 1-3 units of Chaos Terminators or Possessed (in any combination), 1-3 units of Raptors, Warp Talons or Bikers (in any combination), 1-3 units of Havocs or Helbrutes (in any combination)
+
+Restrictions: This is a Black Legion Formation.
+
+Special Rules:
+
+Favoured of the Warmaster: When a model from a Black Legion Warband earns a roll on the Chaos Boon table as a result of the Champion of Chaos special rule, roll twice on the table and choose either one or both of the results.
+Thirst for Glory: If an enemy unit is completely destroyed by a unit from a Black Legion Warband, all other units from the same Black Legion Warband can re-roll To Hit and To Wound rolls of 1 until the end of the phase.
+
+The Ravagers Formation
+The Ravagers Formation
+
+Requirements: 1 unit of Chosen, 1 unit of Possessed
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+Sight of the Third Eye: If the Chosen Champion from Draznicht’s Ravagers is alive at the start of your turn, you can pick one of the units from the Formation to benefit from his prescience. For the duration of your turn, that unit can re-roll all failed To Hit rolls.
+
+Disciples of Mannon Formation
+
+Requirements: 1 Sorcerer, 1 unit of Possessed
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+Signs and Portents: At the start of the battle, roll two dice and put them to one side, representing a prophecy granted to the Sorcerer. The first time during the battle that your opponent rolls exactly two dice (for example, when making a Leadership test, a charge roll, a Psychic Test using two Warp Charge points, a model firing an Assault 2 weapon, etc.) and the result matches the two dice you put aside, the prophecy comes to pass and a unit of Daemons is immediately summoned within 18? of the Sorcerer from the Disciples of Mannon, as if he had just manifested a conjuration psychic power. Roll a D6 to determine what kind of unit is summoned.
+
+Brethren of the Dark Covenant Formation
+Brethren of the Dark Covenant Formation
+
+Requirements: 1 Dark Apostle, 1 unit of Possessed, 1-3 units of Chaos Space Marines
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+Unbridled Wrath: At the start of your Shooting phase, the Dark Apostle from the Brethren of the Dark Covenant can scream a litany of rage and bloodshed instead of shooting. If he does so, each other unit from the Formation that is within 12? is filled with unholy zeal, and gains the Zealot and Feel No Pain special rules until the start of your next turn.
+
+Cult of Slaughter Formation
+
+Requirements: 1 Dark Apostle, 2-8 units of Chaos Cultists
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+The Desperate and the Depraved: Units of Chaos Cultists from the Cults of Slaughter have a Leadership of 10 while they are within 9? of the Formation’s Dark Apostle.
+
+Frenzied Horde: The Cults of Slaughter follow their Dark Apostle unquestioningly, stragglers seizing up fallen weapons even as mortally wounded warriors drag themselves to their feet to continue fighting. At the start of each of your Movement phases, roll a dice for each unit of Chaos Cultists in the Cults of Slaughter that is within 18? of the Formation’s Dark Apostle. That many slain models are returned to the unit. Each must be set up within unit coherency and not within 1? of any enemy models. Any models that cannot be set up are lost.
+
+Lords of Slaughter Formation
+
+Requirements: 1 Chaos Lord, 1 unit of Possessed, 1 unit of Chaos Terminators, 1-3 units of Chaos Space Marines
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+Whispered Portents: The Chaos Lord from the Lords of Slaughter has the Psyker (Mastery Level 1) special rule. He always knows the Prescience power from the Divination discipline. He can target any unit from the Lords of Slaughter regardless of range when attempting to manifest this power.
+
+The Red Onslaught Formation
+
+Requirements: The Ravagers Formation, Disciples of Mannon Formation, Brethren of the Dark Covenant Formation, Cult of Slaughter Formation, Lords of Slaughter Formation, Kranon’s Helguard Formation
+
+Restrictions: This is a Crimson Slaughter Formation.
+
+Special Rules:
+
+The Maddening Horde: While at least one unit from this Formation is on the battlefield, subtract 1 from the Leadership of all units in the enemy army.
+
+Daemonic Resurgence: At the start of each of your turns, roll a dice. On a result of 4 or more, each unit of Possessed from the Red Onslaught that has been completely destroyed is placed into Ongoing Reserve. When these units arrive, they do so using the rules for Deep Strike. Regardless of any Formation they were previously part of, these units do not benefit from any Formation special rules – however, they can still be summoned back to the battlefield using this rule.
+
+Wrathborn Formation
+
+Requirements: 1 Chaos Lord, 1 Chaos Space Marine unit , 1 Hellbrute
+
+Restrictions: The Chaos Lord must be equipped with Terminator Armour.
+
+Special Rules:
+
+Avatar of Spite: The Chaos Lord and all Wrathborn units within 12? inches of him have the Hatred special rule.
+
+Chaos Warband Formation
+
+Requirements: 1 Chaos Lord, 0-1 Sorcerer, 1-3 units chosen from Chosen, Chaos Terminators, Possessed, 2-6 Chaos Space Marine Units, 1-3 chosen from Raptors, Warp Talons, Chaos Bikers, 1-3 units chosen from Havocs, Helbrutes
+
+Restrictions: None.
+
+Special Rules:
+
+Favoured Scions: When a model from a Chaos Warband earns a roll on the Chaos Boon table as a result of the Champion of Chaos special rule, roll twice on the table and choose either one or both of the results.
+
+Objective Secured: All units in a Chaos Warband have this special rule and will control objectives even if an enemy scoring unit is within range of the Objective Marker, unless the enemy unit also has the this special rule.
+
+Maelstrom of Gore Formation
+
+Requirements: 1 Chaos Lord or Kharn the Betrayer, 4-8 Khorne Berserker units
+
+Restrictions: Chaos Lord must be given the Mark of Khorne at no additional points cost.
+
+Special Rules:
+
+Blood-crazed: Maelstrom of Gore units have the Fleet special rule and add 3 inches to their charge distances.
+
+Red Rain: Once per battle, at the start of your movement phase, a Maelstrom of Gore can summon the red rain. When it does, every unit in the Formation that is locked in combat is allowed to Pile In and fight as if it were a Fight sub-phase, but enemy units cannot fight back. Using this ability does not stop the Maelstrom of Gore’s units from fighting again in the Assault phase of the same turn.
+
+The Lost and the Damned Formation
+
+Requirements: 1 Dark Apostle, 4-9 Chaos Cultist units.
+
+Restrictions: None.
+
+Special Rules:
+
+A Tide of Traitors: Each time a unit of Chaos Cultists from this Formation is completely destroyed, a roll a D6: on a 4+, you can immediately place a new, identical unit into Ongoing Reserve. These new units gain the Outflank special rule, but otherwise count as being art of the original Formation, so rollaD6 as described above if they are subsequently destroyed as well. Victory points are awarded as normal for new units in this Formation that have been completely destroyed
+
+Prophet of the Gods: The Dark Apostle’s Zealot Special rule applies to all Lost and the Damned units within 6 inches of him.
+
+Hellforged Warpack Formation
+
+Requirements: 1 Warpsmith, 3-5 units chosen from this list, Helbrute, Maulerfiend, Forgefiend, Defiler.
+
+Restrictions: None.
+
+Special Rules:
+
+Master of Mechanical Warpcraft: Whilst their Warpsmith is alive and on the battlefield, Helforged Warpack models that have already used their Daemonforge Special rule during the game can choose to do so for a second time.
+
+Warpack Alpha: One vehicle model from this Formation must be nominated as the Warpack Alpha. The Warpack Alpha gains the (Character) unit type and a 4+ invulnerable save. If the Warpack Alpha is completely destroyed, all other models in its Helforged Warpack gain the Rage special rule.
+
+Heldrake Terror Pack Formation
+
+Requirements: 2-4 Heldrakes.
+
+Restrictions: None.
+
+Special Rules:
+
+Rising Terror: Enemy units that are within 12 inches of two models from a Heldrake Terror Pack reduce their Leadership by 1. Enemy units that are within 12 inches of three models from a Heldrake Terror Pack instead reduce their Leadership by 2, or by 3 if they are within 12 inches of four models from a Heldake Terror Pack.
+
+Merciles Pursuit: When performing a Vector Strike with a model from a Heldrake Terror Pack against a target unit that is Pinned, Falling Back, or has Gone to Ground, that unit suffers D6 Strength 7, AP2 hits instead of only 1 hit.
+
+Cult of Destruction Formation
+
+Requirements: 1-3 Warpsmiths, 3-5 units chosen from the following list, Obliterators, Mutliators.
+
+Restrictions: None.
+
+Special Rules:
+
+Empyrionic Guidance Rituals: At the star of the Chaos Space Marine Movement phase, each Warpsmith in this Formation can perform a set of Empyrionic Guidance Rituals on one unit of Obliterators or Mutilators from the Formation that is within 8 inches. If a unit of Obliterators is selected then it can shoot twice at the same unit in the Shooting phase of the turn. If a unit of Mutilators s selected,then it can attack twice after Piling In in the Assault phase of the turn. Carry out the first set of attacks to completion, then carry out the second set of attacks. A unit must use different weapons for the two different sets of attacks, and cannot use a weapon it used in the previous turn.
+
+Fist of the Gods Formation
+
+Requirements: 1 Warpsmith, 3-5 units chosen from the following list, Chaos Predators, Chaos Vindicators, Chaos Land Raiders.
+
+Restrictions: None.
+
+Special Rules:
+
+Dark Wards: All vehicles from this Formation have a 6+ invulnerable save whilst they are within 12 inches of their Warspmith.
+
+Unholy Blessings: The Warpsmith from this Formation has a +1 bonus when making attempts to repair a vehicle from its Formation.
+
+Raptor Talon Formation
+
+Requirements: 1 Chaos Lord, 3-5 units from the following list Raptors, Warp Talons.
+
+Restrictions: The Chaos Lord must be equipped with a jump pack at no additional cost.
+
+Special Rules: Predatory Warriors: Units in this Formation can charge on the same turn they arrive from Deep Strike Reserve, but always count as making a disordered charge when they do so.
+
+Cacophonic War Cries: Enemy units that are charged by two or more units from a Raptor Talon must subtract 2 from there Leadership unit the end of the turn
+
+Terminator Annihilation Force Formation
+
+Requirements: 1 Chaos Lord or Sorcerer, 3-5 Chaos Terminators units.
+
+Restrictions: The Chaos Lord must be equipped with a Terminator armour at no additional cost.
+
+Special Rules:
+
+Targeted For Annihilation: At the start of the game before deployment, nominate one unit in the enemy army. Units in this Formation have the Hatred special rule when making attacks against the nominated unit. In addition, units from this Formation can make a shooting attack against the nominated unit immediately after they deploy by Deep Strike, if it is within range and line of sight. This does not stop the unit from shooting again later in the same turn, either at the same or different target.
+
+Target Updated: If the enemy unit nominated for annihilation is completely destroyed, you can immediately pick a new enemy unit as a replacement target. The Targeted for Annihilation rules apply to the new unit from then on. If the new unit is also destroyed, pick another new unit, and so on.
+
+Favoured of Chaos Formation
+
+Requirements: 1 Daemon Prince, 3-5 Possessd units.
+
+Restrictions: None.
+
+Special Rules:
+
+Baleful Nexus of Warp Energies: Units of Possessed from the Favoured of Chaos that are within 12 inches of their Daemon Prince at the start of the Fight sub-phase receive the benefit of all three Mutations from their Mutation table, rather than only one.
+
+Trinity of Blood Formation
+
+Requirements: 3 Khorne Lords of Skulls.
+
+Restrictions: None.
+
+Special Rules: Rampage.
+
+Apoplectic Storm: At the Star of this Formation’s movement phase, any enemy units locked in combat with any models from a Trinity of Blood are engulfed in a scorching storm of rage-fueled energy. Affected units suffer a number of Strength 6 AP4 hits with the Ignores Cover and Soul Blaze special rules equal to the number of models in the unit. Any Wounds caused by these hits are Randomly Allocated.
+
+Crashing Volleys: Weapons used by a Model from this Formation have the Twin-linked special if they are used to attack a target that has already been attacked by another model from the Formation earlier in that Shooting Phase.
+
+Plague Colony Formation
+
+Requirements: 1 Chaos Lord or Typhus, 3-7 Plague Marine units.
+
+Restrictions: None.
+
+Special Rules: Fear.
+
+Enervating Pestilential Aura: Enemy models within 7″ of any Plague Colony units at the start of the Fight sub-phase must reduce Initiative and Weapon Skill by 1 for the duration of the phase. If this Formation includes the maximum number of units at the start of the battle, then enemy models within 7″ of any Plague Colony unit at the startof the Fight sub-phase must also reduce their Toughness by 1 for the duration of the phase.
+
+Kakophoni Formation
+
+Requirements: 1 Chaos Lord or Lucius the Eternal, 3-6 Noise Marine units
+
+Restrictions: None.
+
+Special Rules: Split Fire.
+
+Sonic Overload: All sonic weapons used by units from a Kakophoni have the Shred special rule. If this Formation includes the maximum number of units at the start of the battle, then all attacks made by sonic weapons from the Kakophoni are also resolved at +1 Strength.
+
+War Cabal Formation
+
+Requirements: 1 of the following Ahriman, Daemon Prince, Exalted Sorcerer, Sorcerer, 1-3 unit of Exalted Sorcerer or Sorcerer, 1-3 Rubric Marines units, 1-3 Scarab Occult Terminator units
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules:
+
+Favoured of Tzeentch: If a War Cabal contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Oracular Guidance: If a Psyker from a War Cabal successfully manifests a psychic power, the Psyker, and any War Cabal unit he is part of or has joined, ca re-roll failed To Hit rolls or 1 until the start of our next Psychic phase.
+
+War Coven Formation
+
+Requirements: 1 of the following Daemon Prince, Exalted Sorcerer, Sorcerer, 3-9 unit of Exalted Sorcerer or Sorcerer
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules:
+
+Favoured of Tzeentch: If a War Coven contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Prosperine Cult: Before generating powers for models from a War Coven, you can choose a single cult of ancient Prospero. All units in the Formation then count as having belonged to that cult and harness Warp Charges points on a result of 3+ when attempting to manifest psychic powers from their cult’s associated psychic disciple.
+
+Tzaangor Warherd Formation
+
+Requirements: 1 Exalted Sorcerer or Sorcerer, 3 Tzaangor units, 0-6 Tzaangor or Spawn units.
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules: Fleet.
+
+Favoured of Tzeentch: If a Tzaangor Warherd contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Avaricious Vigour: Tzaangor units from this Formation can Run and Charge in the same turn. In addition, if a charging Tzaangor unit rolls 9 or more for its charge roll add 1 to their Strength and Initiative in the ensuring Fight sub-phase.
+
+Sekhmet Conclave Formation
+
+Requirements: 1 of the following Magnus the Red, Ahriman, Daemon Prince, Exalted Sorcerer, Sorcerer. 3-9 Scarab Occult Terminator units.
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules: Fear.
+
+Favoured of Tzeentch: If a Sekhmet Conclave contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Sorcerous Sigil-wards: Units from this Formation have +1 Toughness so long as they are within 6″ of at least2 other units from their Formation
+
+Ahriman’s Exiles Formation
+
+Requirements: Ahriman, 3-9 Exalted Sorcerers
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules: Fear.
+
+Favoured of Tzeentch: If a Ahriman’s Exiles contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Cabal of the Rubric: Ahriman, and models from this Formation that are within 18″ of him, harness Warp Charge points on a result of 3+ when attempting to manifest psychic powers.
+
+Rehati War Sect Formation
+
+Requirements: Magnus the Red, 3-9 Daemon Princes or Exalted Sorcerers
+
+Restrictions: This is a Thousand Sons Detachment.
+
+Special Rules: Fear.
+
+Favoured of Tzeentch: If a Rehati War Sect contains the maximum number of units, then all units from the Formation can re-roll any failed saving throws of 1.
+
+Cabal of the Rubric: Ahriman, and models from this Formation that are within 18″ of him, harness Warp Charge points on a result of 3+ when attempting to manifest psychic powers.

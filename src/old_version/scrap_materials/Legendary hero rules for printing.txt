@@ -1,0 +1,689 @@
+﻿Unit name
+	
+
+	LvL
+	
+
+	Henchman
+	Type
+	Ws
+	Bs
+	S
+	T
+	W
+	I
+	A
+	Ld
+	Sv
+	Points
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Wargear / Abilities
+	Special rules 
+	Range
+	Strength
+	Ap
+	Effects
+	cost
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Legendary hero gained skills and relics
+Skill or relic
+	lvl
+	Special rule
+	Effect
+	Points increase
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Battle Honours / Heroic Feats
+Date
+	Who fought
+	What happened
+	Notable kills
+	Injuries
+	xp earned
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Battle Honours / Heroic Feats
+Date
+	Who fought
+	What happened
+	Notable kills
+	Injuries
+	xp earned
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+Legendary Heroes
+- Player must inform their opponent that they have a legendary hero or heroes in their list. Two are allowed per game.
+-A player has to keep track of his Legendary heroes by himself. 
+-Each hero must play a game with each new skill before taking in a next one. 
+- lvl 0 effects will only come into play when the legendary hero has  experience of  35 or more. 
+-LvL 0 Legendary heroes gets to choose their Warlord trait and gains the objective secured special rule. nothing else. 
+- For each level of a hero (levels added together)  player has over his opponent, the opponent will get to re -roll one dice roll in the game. 
+- For each wound or limitation the hero has suffered in the previous game and that is in effect for the current game, the here is counted as being a one level less for counts g how many re rolls the opponent gets.
+
+
+Slain
+Each time a character that has been collecting experience in the game is slain in a game that is part of the campaign, roll on the table below. Add +1 to the roll for each surviving medic, sorcerer or apothecary after each battle for one  slain character per medic etc. (no more that +3).
+-1 if slain in a challenge
+-1 if killed by instant kill , (does not stack with destroyer weapons)
+-2 if killed by a destroyer weapon
+
+
+Table of Death roll d6
+0 Out of Action. The hero is not available for the next  d6 game's as he Is treated for the grievous wounds. in addition roll again on this table with +1 modifier. If you roll this result three times in a row the hero dies permanently and a new one can be chosen.
+1 roll thrice on the injury table,both apply to the next d4 battles
+2 roll twice on the injury table, applies to the next d3 battles
+3 roll on the injury table, applies to the next d3 battles
+4 roll on the injury table, takes effect on d6 roll of 1 before each battle, lasts for d6 battles
+5 roll on injury table, effect is for next game only
+6 Lucky escape, no adverse effects
+
+
+	Injury table roll 2d6
+* On 5+ drops one random relic on the battlefield. 
+2 Mortal Wound festers, roll on the death table with -1
+3 Leg injured, Cannot run or turbo boost, and moves as in difficult terrain.
+4 Weapon arm injured -1WS
+5 Shield arm wounded, may not use additional weapon or shield. (reduce the cost of that weapon from his profile for the battles)
+6 Torn muscle -1S
+7 Injury prone -1T
+8 Shoulder injured -1A
+9 Slower reactions, I is halved, rounding up. If  2 or below, cannot fire overwatch
+10, Refused to be hospitalized, seriously battered and weakened. -1W
+11 Aiming eye damaged, -1BS
+12  Serious head wound or Psychological trauma, will is lessened, Faith in own success and purity of purpose is faltering and trust in mental stability is on question Losses the adamantium will, shall know no fear, fearless and stubborn special rules. -1ld to all friendly units inside 6”, cannot act as a warlord anymore until healed. 
+Between battles:
+Any skill gained may be changed, to change a skill the character will lose 1/2 the xp required to acquire that skill (the difference between the levels)
+
+
+Experience can be earned in a battle by completing following categories. 
+Each category can only be completed only once per unit per battle if not stated otherwise;
+- Survived the battle they fought in +40xp/50 if warlord
+- Did not survive the battle (ran off the board) + 30xp
+- Destroys enemy unit of total value over 150p(or several squads with total value over 200p)  +10xp 
+- Killed enemy character in challenge +10xp 
+- Killed enemy independent character in challenge +20xp
+- Killed enemy (tough guy) grandmaster/ Chaos lord / hero with more xp than yourself or named character in a challenge, heroic feat, +30xp
+- Killed a monstrous creature or dreadnought +20xp
+- Killed a super heavy +30xp
+- Any change in weapons, equipment, numbers from the last battle participated in, -10 xp
+- Acting beyond the Call of duty; used some weapon, power or skill to effect the game significantly, (killed a enemy unit or helped in it or saved a friendly unit. +10xp (bot players must agree on the unit)
+	
+
+
+
+Level
+	Ex required
+	Cost of skill 
+	Skills will increase the model cost by following
+	1
+	100
+	5
+	Stats can be upped only once per stat per level skill. 
+	2
+	200
+	10
+	If a lvl 4 hero chooses two lvl 1 skills, one lvl 3 skill and one level 4 skill the model would cost 5pts+5pth+15pts + 20pts = costing then 45pts more than normal. 
+	3
+	400
+	15
+	4
+	600
+	20
+	5
+	900
+	25
+	6
+	1300
+	25
+	 Legendary hero XP LvL 1.jpg 
+ Legendary hero XP LvL 2.jpg
