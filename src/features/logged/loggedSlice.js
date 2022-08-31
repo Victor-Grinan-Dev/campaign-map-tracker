@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useNavigate } from "react-router-dom";
 
 export const loggedSlice = createSlice({
-
+    
     name: 'logged',
     
     initialState: {
@@ -11,6 +12,8 @@ export const loggedSlice = createSlice({
     reducers:{
         changeLogStatus: (state, action) => {
             if (action.payload === "visitor"){
+                state.value = !state.value;
+            }else if(!action.payload){
                 state.value = !state.value;
             }
         },

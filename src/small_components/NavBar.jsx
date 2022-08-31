@@ -1,9 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import css from './navBar.module.css';
+import Button from './Button';
+import logo from '../logo.svg'
+
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { loggedSelector } from '../features/logged/loggedSlice';
+import { changeLogStatus } from '../features/logged/loggedSlice';
+
+
 
 function NavBar() {
+   const dispatch = useDispatch();
+   const navigate = useNavigate();
+
+const logOutHandler = () => {
+    dispatch(changeLogStatus(null));
+    navigate('/');
+}
+
   return (
-        <nav>
+ 
+        <nav className={css.navbar}>
+         <div className={css.logo}>
+                <img src={logo} alt="logo" className={css.logo}/>
+         </div>
+
           <ul>
             <li><Link to="/"> Hall </Link></li>
             <li><Link to="/newcampaign"> New Campaign </Link></li>
@@ -11,8 +34,11 @@ function NavBar() {
             <li><Link to="/myarmy">My Army</Link></li>
             <li><Link to="/about">About</Link></li>
           </ul>
+
+          <Button caption="Log Out" action={logOutHandler}/>
         </nav>
+        
   )
 }
 
-export default NavBar
+export default NavBar;
