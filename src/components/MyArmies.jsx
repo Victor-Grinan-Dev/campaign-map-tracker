@@ -3,10 +3,10 @@ import axios from 'axios';
 import Card from '../small_components/Card';
 import { useState, useEffect } from 'react';
 import AddCard from '../small_components/AddCard';
-
+import BackTo from '../small_components/BackTo';
 import { Unit, Formation } from '../functions/Objects';
 import Database from '../functions/dbConnection';
-
+import NavBar from '../small_components/NavBar';
 const databaseApi = 'http://localhost:8010/database';
 
 const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")
@@ -58,7 +58,7 @@ function MyArmies() {
   return (
 
     <div className='browseAndAdd-container'>
-
+      <NavBar/>
       <div className="panel">
         <div className='add-card-container'>
         <h1 className='h1-title'>Add Formation:</h1>
@@ -88,8 +88,9 @@ function MyArmies() {
         </div>
       </div>
 
-      <div className='search-container'> <input type="text" placeholder='Serach'/></div>
-
+      <div className='search-container'> 
+      <BackTo pageUrl={'/hall'} pageName="Hall"/>
+        <input type="text" placeholder='Serach'/></div>
       <div className={"browser"}>
 
         {formations.map(formation => (

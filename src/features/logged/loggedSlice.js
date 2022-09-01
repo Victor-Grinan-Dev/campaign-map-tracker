@@ -6,6 +6,8 @@ export const loggedSlice = createSlice({
     
     initialState: {
         value: false,
+        currentUser:undefined, //just the name of the user
+        userType:"visitor"
     },
     
     reducers:{
@@ -16,9 +18,12 @@ export const loggedSlice = createSlice({
                 state.value = !state.value;
             }
         },
+        changeUser:(state, action)=>{
+            state.currentUser = action.payload;
+        }
     },
 });
 
-export const { changeLogStatus } = loggedSlice.actions;
+export const { changeLogStatus, changeUser } = loggedSlice.actions;
 export const loggedSelector = (state) => state.logged.value;
-export default loggedSlice.reducer;
+export default loggedSlice.reducer
