@@ -26,4 +26,6 @@ export const loggedSlice = createSlice({
 
 export const { changeLogStatus, changeUser } = loggedSlice.actions;
 export const loggedSelector = (state) => state.logged.value;
+export const userSelector = (state) => state.logged.currentUser;
+export const userTypeSelector = (state) => state.logged.userType;
 export default loggedSlice.reducer
