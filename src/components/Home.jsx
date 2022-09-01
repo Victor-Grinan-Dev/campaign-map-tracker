@@ -2,7 +2,7 @@ import React from 'react';
 import css from './home.module.css'
 import logo from '../logo.svg';
 import NextPage from '../small_components/NextPage';
-
+import Button from '../small_components/Button';
 import { useState } from 'react';
 
 import { useSelector } from 'react-redux';
@@ -15,11 +15,13 @@ const admin = "https://source.unsplash.com/BoISbSP0HVk";
 const user = "https://source.unsplash.com/1vC4ZwkJNdA";
 
 const loginModal = () => {
-    return (
-        <div>
-            login modal
-        </div>
-    )
+    return <div>
+        <p>Welcome! </p>
+        <p>As a visitor you data wont be saved and will be lost after logout</p>
+        <p>But you will ge a taste of our website, enjoy</p>
+        <input type="text" name="tempUsername" placeholder="write a username..."/>
+
+    </div>
 }
 
 function Home(){
@@ -52,6 +54,7 @@ function Home(){
                 </div>
             
             </div>
+            {/* TODO: get an custom username from the visitor */}
             {isLogged && <NextPage pageUrl={"/hall"} pageName={"Hall"} /> }
         </div>
     );

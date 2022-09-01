@@ -24,7 +24,7 @@ function DrawMap() {
     };
     const [currentMap, setCurrentMap] = useState(emptySqMap);
     const [changingName, setChangingName] = useState(false);
-    const [brush, setBrush] = useState ("planes");
+    const [brush, setBrush] = useState ("blank");
     const [showTilesId, setShowTilesId] = useState(false);
 
     const changeData = (e) => {  
@@ -111,7 +111,6 @@ function DrawMap() {
     const brushTool = () => {
         return <>
             <select name="brushTool" onChange={brushHandler} >
-                <option  value={null}> Choose </option>
                 <option  value="blank"> blank </option>
                 <option  value="planes"> planes </option>
                 <option  value="forest"> forest </option>
@@ -154,7 +153,7 @@ function DrawMap() {
     <div >
         <div className={css.drawPanel}>
             <BackTo pageUrl={"/newcampaign"} pageName={"Create Campaign"} />
-            {changingName ? <span><input type="text" name="name" onChange={changeData}/> <button onClick={nameHandler}>Done</button> </span>:<span><span >"{currentMap.name}"</span> <button onClick={nameHandler}>rename</button></span>}
+            {changingName ? <span><input type="text" name="name" onChange={changeData}/> <button onClick={nameHandler}>Done</button> </span>:<span><span >"{currentMap.name}"</span> </span>}
             <Button caption="save map" />
         </div>
 

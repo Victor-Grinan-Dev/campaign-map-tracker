@@ -1,8 +1,11 @@
 import React from 'react'
-
+import NavBar from '../small_components/NavBar';
 function Conctact() {
   return (
-    <div>Conctact</div>
+    <div>
+      <NavBar />
+      Conctact
+      </div>
   )
 }
 

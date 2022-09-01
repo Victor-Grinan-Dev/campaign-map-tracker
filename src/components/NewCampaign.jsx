@@ -7,6 +7,7 @@ import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
 import Button from '../small_components/Button';
+import NavBar from '../small_components/NavBar';
 
 import css from './NewCampaign.module.css'
 const justiceAlianceColor = "#309abb";
@@ -327,7 +328,8 @@ function NewCampaign() {
 
   return (
     <div className="NewCampaign">
-        <h1>Create New Campaign</h1>
+        <NavBar />
+        
         <form onSubmit={saveCampaignData}>
 
             {writeCampaignName()}
@@ -340,7 +342,7 @@ function NewCampaign() {
 
             {pickMap()}
 
-            {mapArea()}
+            {/*mapArea() */}
 
             {setPlayerAmount()}
    
@@ -348,7 +350,10 @@ function NewCampaign() {
                     <p className='sectionName'>Campaing Code: "{data.campaignName}": {data.armySize}-{data.mapShape}-{data.mapSize}-{data.playersAmount}p-f{data.factionCode}-{data.rounds}r </p>
                 </div> */}
 
-            <Button caption={"Create"} role={"submit"} />    
+                <div>
+                    <Button caption={"Create"} role={"submit"} />    
+                    <Button caption={"Cancel"} /> 
+                </div>
             </form>
     </div>
   )

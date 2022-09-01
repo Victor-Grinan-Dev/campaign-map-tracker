@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import NavBar from '../small_components/NavBar';
 function About() {
   return (
     <div>
+      <NavBar />
       <header>
         <h1>About</h1>
       </header>
@@ -16,4 +17,5 @@ function About() {
   )
 }
 
-export default About
+export default About;
+

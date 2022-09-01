@@ -1,8 +1,11 @@
 import React from 'react'
-
+import NavBar from '../small_components/NavBar';
 function HallSingle() {
   return (
-    <div>HallSingle</div>
+    <div>
+      <NavBar />
+      HallSingle
+      </div>
   )
 }
 
