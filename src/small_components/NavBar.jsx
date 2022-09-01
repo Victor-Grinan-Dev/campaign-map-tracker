@@ -7,7 +7,7 @@ import logo from '../logo.svg'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { loggedSelector } from '../features/logged/loggedSlice';
-import { changeLogStatus } from '../features/logged/loggedSlice';
+import { changeLogStatus, changeUser } from '../features/logged/loggedSlice';
 
 
 
@@ -17,6 +17,7 @@ function NavBar() {
 
 const logOutHandler = () => {
     dispatch(changeLogStatus(null));
+    dispatch(changeUser(undefined));
     navigate('/');
 }
 
@@ -28,7 +29,7 @@ const logOutHandler = () => {
          </div>
 
           <ul>
-            <li><Link to="/"> Hall </Link></li>
+            <li><Link to="/hall"> Hall </Link></li>
             <li><Link to="/newcampaign"> New Campaign </Link></li>
             <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/myarmy">My Army</Link></li>
