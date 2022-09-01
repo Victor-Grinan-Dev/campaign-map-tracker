@@ -192,6 +192,8 @@ const campaign_Object = {
 }
 
 class Campaign {
+    isStarted = false
+    isEnded = false
     constructor(name, armySize, mapShape, mapSize, map = {}, playersAmount = 2, factions = [], rounds = 4, campaignCode = "") {
         this.name = name
         this.armySize = armySize
@@ -200,7 +202,12 @@ class Campaign {
         this.map = map
         this.playersAmount = playersAmount
         this.factions = factions
-        this.rounds = rounds
+        if (rounds < 4){
+            rounds = 4
+        }else{
+            this.rounds = rounds
+        }
+        
         this.campaignCode = campaignCode
     }
 }

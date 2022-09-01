@@ -4,7 +4,8 @@ import { mapReader } from '../functions/positions';
 import BackTo from '../small_components/BackTo';
 import { useState } from 'react';
 import Button from '../small_components/Button';
-import css from './DrawMap.module.css'
+import css from './DrawMap.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const tilesArrayImages = [
     "blank",
@@ -16,6 +17,7 @@ const tilesArrayImages = [
 ]
 
 function DrawMap() {
+    const navigate = useNavigate();
     const emptySqMap = canvasSquare("Unknown Sq Map", 17, 17);
     const emptyHxMap = canvasHex("Unknown Hx Map", 9);
     const mapCanvas = {
@@ -24,7 +26,7 @@ function DrawMap() {
     };
     const [currentMap, setCurrentMap] = useState(emptySqMap);
     const [changingName, setChangingName] = useState(false);
-    const [brush, setBrush] = useState ("planes");
+    const [brush, setBrush] = useState ("blank");
     const [showTilesId, setShowTilesId] = useState(false);
 
     const changeData = (e) => {  
@@ -55,7 +57,7 @@ function DrawMap() {
         ))
         setCurrentMap({ ...currentMap, map: tempNestedArray });
     };
-    const changeAllTiles = (toImage) => {
+    const changeAllTiles = (toImage=null) => {
         const tempMap = currentMap.map;
 
         tempMap.map(row => (
@@ -105,7 +107,6 @@ function DrawMap() {
         setCurrentMap({ ...currentMap, map: tempNestedArray });
     }
     const brushHandler = (e) => {
-        console.log(e.target.value)
         setBrush(e.target.value)
     }
     const brushTool = () => {
@@ -121,13 +122,7 @@ function DrawMap() {
             </select>
         </>  
     };
-    const percentageArray = () => {
-
-        const planesPercent = 50;
-        const mountainsPercent = 1;
-        const forestPercent = 24;
-        const hillsPercent = 15;
-        const swampPercent = 10;
+    const percentageArray = (planesPercent = 50,mountainsPercent = 1,forestPercent = 24,hillsPercent = 15, swampPercent= 10) => {
 
         const planesTiles = new Array(planesPercent).fill(tilesArrayImages[1]);
         const mountainsTiles = new Array(mountainsPercent).fill(tilesArrayImages[2]);
@@ -148,14 +143,25 @@ function DrawMap() {
                 tile.image ? tile.image = percentSrc[Math.floor(Math.random() * percentSrc.length )] : null  
             ))
         ))
+        console.log(tempMap)
         setCurrentMap({ ...currentMap, map: tempMap });    
+    }
+
+    const cancelHandler = () => {
+        navigate('/newcampaign')
+        //TODO: empty the state here.
     }
   return (
     <div >
         <div className={css.drawPanel}>
             <BackTo pageUrl={"/newcampaign"} pageName={"Create Campaign"} />
             {changingName ? <span><input type="text" name="name" onChange={changeData}/> <button onClick={nameHandler}>Done</button> </span>:<span><span >"{currentMap.name}"</span> <button onClick={nameHandler}>rename</button></span>}
+            <div>
+            
+            <Button caption="Cancel" action={cancelHandler}/>
             <Button caption="save map" />
+            </div>
+            
         </div>
 
         <div className={css.sidePanel}>

@@ -480,7 +480,6 @@ const canvasHex = (name, side = 13) => {
 
     const width = side * 3 - 5;
     const height = side * 2 - 1;
-    const empty = nullTile;
 
     let row;
     let funnyCase;  

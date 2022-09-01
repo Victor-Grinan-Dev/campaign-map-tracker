@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useNavigate } from "react-router-dom";
 
 export const loggedSlice = createSlice({
     
@@ -22,4 +21,4 @@ export const loggedSlice = createSlice({
 
 export const { changeLogStatus } = loggedSlice.actions;
 export const loggedSelector = (state) => state.logged.value;
-export default loggedSlice.reducer
+export default loggedSlice.reducer;

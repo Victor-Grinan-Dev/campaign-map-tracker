@@ -7,7 +7,7 @@ import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
 import Button from '../small_components/Button';
-
+import { useNavigate } from 'react-router-dom';
 import css from './NewCampaign.module.css'
 const justiceAlianceColor = "#309abb";
 const darkForcesColor = "#830202";
@@ -48,7 +48,7 @@ const factions = [
 const available_maps = availableMaps;
 
 function NewCampaign() {
-
+    const Navigate = useNavigate()
     const [isMap, setIsMap] = useState(false)
     const [map, setMap] = useState([])
     const [data, setData] = useState(campaign_Object);
@@ -277,7 +277,7 @@ function NewCampaign() {
         )
     }
 
-    const mapData = (data) => {
+    const mapDataDisplay = (data) => {
         return <div>
             <p>Map name: {data.name}</p>
             <p>Shape: {data.shape}</p>
@@ -298,7 +298,7 @@ function NewCampaign() {
                     height:200
                 }}>
                     {/* {isMap && console.log(data.map)} */}
-                    {isMap &&  mapData(data.map) }
+                    {isMap &&  mapDataDisplay(data.map) }
                     
                 </div>
                 <div className={css.mapTile}>
@@ -324,7 +324,10 @@ function NewCampaign() {
             </div>
         )
     }
-
+const cancelHandler = () => {
+    Navigate('/hall')
+    //TODO: empty the state here.
+}
   return (
     <div className="NewCampaign">
         <h1>Create New Campaign</h1>
@@ -348,7 +351,7 @@ function NewCampaign() {
                     <p className='sectionName'>Campaing Code: "{data.campaignName}": {data.armySize}-{data.mapShape}-{data.mapSize}-{data.playersAmount}p-f{data.factionCode}-{data.rounds}r </p>
                 </div> */}
 
-            <Button caption={"Create"} role={"submit"} />    
+            <Button caption={"Create"} role={"submit"} />    <Button caption={"Cancel"} action={cancelHandler} />  
             </form>
     </div>
   )
