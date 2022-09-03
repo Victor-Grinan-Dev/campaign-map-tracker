@@ -18,6 +18,7 @@ import MyArmies from './components/MyArmies';
 import NewCampaign  from './components/NewCampaign';
 import Profile from './components/Profile';
 import ShowMap from './components/ShowMap';
+import Game from './components/Game';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/drawmap' element={<DrawMap />} />
           <Route path='/hall' element={<Hall />} />
+          <Route path='/game' element={<Game />} />
           <Route path='/hall/:campaign' element={<HallSingle />} />
         </Routes>
       </BrowserRouter>     

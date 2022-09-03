@@ -89,7 +89,7 @@ function MyArmies() {
       </div>
 
       <div className='search-container'> 
-      <BackTo pageUrl={'/hall'} pageName="Hall"/>
+      <BackTo pageUrl={'/profile'} pageName="Profile"/>
         <input type="text" placeholder='Serach'/></div>
       <div className={"browser"}>
 
@@ -98,7 +98,6 @@ function MyArmies() {
         ))}
 
       </div>
-       
     </div>
   )
 }

@@ -1,8 +1,17 @@
 import React from 'react';
+import css from './game.module.css';
+import { mapReader } from '../functions/positions';
+import { availableMaps } from '../functions/mapGenerator';
+
+const map = availableMaps[3];
 
 function Game() {
   return (
-    <div>Game</div>
+    <div className={css.game}>
+        <div>
+        {mapReader(map.map)}
+        </div>
+    </div>
   )
 }
 

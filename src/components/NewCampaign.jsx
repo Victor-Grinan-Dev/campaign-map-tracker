@@ -9,7 +9,7 @@ import Campaign, {campaign_Object} from '../functions/Objects';
 import Button from '../small_components/Button';
 import NavBar from '../small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
-import css from './NewCampaign.module.css'
+import css from './newCampaign.module.css'
 const justiceAlianceColor = "#309abb";
 const darkForcesColor = "#830202";
 const aliensEtColor = "#1fc778";
@@ -88,14 +88,27 @@ function NewCampaign() {
         </div>
         )
     }
-//className={css.}
 
     const setGameRounds = () => {
         return(
             <div className={css.section} >
-                <p className={css.sectionName} >Game rounds:</p> 
-                <input type="number" name="rounds" placeholder="Choose" onChange={changeData} min="3" 
+                <p className={css.sectionName} >Game rounds / Round duration:</p> 
+                <div>
+                <input type="number" name="rounds" placeholder="Rounds..." onChange={changeData} min="3" 
                 className={css.numInput}/>
+                <input type="number" name="duration" placeholder="Duration..." onChange={changeData} min="1" 
+                className={css.numInput}/>
+                <select name="timeLapse" id="">
+                    <option value="null">Choose</option>
+                    <option value="hours">hour(s)</option>
+                    <option value="days">day(s)</option>
+                    <option value="weeks">week(s)</option>
+                    <option value="month">month(s)</option>
+
+                </select>
+                </div>
+                <p className={css.sectionName} ></p> 
+                
             </div>
         )
     }
@@ -277,7 +290,6 @@ function NewCampaign() {
         </div>
         )
     }
-
     const mapDataDisplay = (data) => {
         return <div>
             <p>Map name: {data.name}</p>
@@ -325,10 +337,10 @@ function NewCampaign() {
             </div>
         )
     }
-const cancelHandler = () => {
-    Navigate('/hall')
-    //TODO: empty the state here.
-}
+    const cancelHandler = () => {
+        Navigate('/hall')
+        //TODO: empty the state here.
+    }
   return (
     <div className="NewCampaign">
         <NavBar />
@@ -352,8 +364,11 @@ const cancelHandler = () => {
             {/* <div className="section" >     
                     <p className='sectionName'>Campaing Code: "{data.campaignName}": {data.armySize}-{data.mapShape}-{data.mapSize}-{data.playersAmount}p-f{data.factionCode}-{data.rounds}r </p>
                 </div> */}
-
-            <Button caption={"Create"} role={"submit"} />    
+            <div>
+            <Button caption={"Create"} role={"submit"} /> 
+            <Button caption={"Cancel"} action={cancelHandler} />    
+            </div>
+            
             </form>
     </div>
   )

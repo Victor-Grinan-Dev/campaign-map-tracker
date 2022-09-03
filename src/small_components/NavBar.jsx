@@ -29,11 +29,12 @@ const logOutHandler = () => {
          </div>
 
           <ul>
-            <li><Link to="/hall"> Hall </Link></li>
+            <li><Link to="/hall"> Campaigns </Link></li>
             <li><Link to="/newcampaign"> New Campaign </Link></li>
             <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/myarmy">My Army</Link></li>
+            {/* <li><Link to="/myarmy">My Army</Link></li> */}
             <li><Link to="/about">About</Link></li>
+            <li><Link to="/game">TEST GAME</Link></li>
           </ul>
 
           <Button caption="Log Out" action={logOutHandler}/>
