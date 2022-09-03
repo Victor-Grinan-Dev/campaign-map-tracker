@@ -41,9 +41,8 @@ const setFlag = (color) => {
             borderBottomRightRadius:'5px'
           }}>
         </div>
-function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPlayer=null }) {
+function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPlayer=null, objective=false }) {
 
-  
   return (
     <div
     id={id}
@@ -57,6 +56,7 @@ function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPla
     >
       {showId && <p>{id}</p>}
       {startPlayer && setFlag(startPlayer)}
+      {objective && setFlag('white')}
     </div>
   )
 }

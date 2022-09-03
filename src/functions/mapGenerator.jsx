@@ -228,7 +228,7 @@ const miniMapHx = {
                         posY:null,
                         posX:null,
                         owned_by:null,
-                        objective:null,
+                        objective:true,
                     },
                 {
                     id:"b01",
@@ -250,20 +250,20 @@ const miniMapHx = {
                     posY:null,
                     posX:null,
                     owned_by:null,
-                    objective:null,
+                    objective:true,
                 }
             ],
             [
                 {
                     id:"a02",
-                    image:"planes",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
                     posY:null,
                     posX:null,
                     owned_by:null,
-                    objective:null,
+                    objective:false,
                 },
                 {
                     id:"b02",
@@ -289,7 +289,7 @@ const miniMapHx = {
                 },
                 {
                     id:"d02",
-                    image:"planes",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
@@ -313,7 +313,7 @@ const miniMapHx = {
                 },
                 {
                     id:"b03",
-                    image:"forest",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
@@ -335,7 +335,7 @@ const miniMapHx = {
                 },
                 {
                     id:"d03",
-                    image:"forest",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
@@ -359,7 +359,7 @@ const miniMapHx = {
             [
                 {
                     id:"b04",
-                    image:"planes",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
@@ -392,7 +392,7 @@ const miniMapHx = {
                 },
                 {
                     id:"e04",
-                    image:"planes",
+                    image:"swamp",
                     move_in:1,
                     cover:false,
                     is_starting_position:false,
@@ -424,7 +424,7 @@ const miniMapHx = {
                     posY:null,
                     posX:null,
                     owned_by:null,
-                    objective:null,
+                    objective:true,
                 },
                 {
                     id:"d05",
@@ -435,7 +435,7 @@ const miniMapHx = {
                     posY:null,
                     posX:null,
                     owned_by:null,
-                    objective:null,
+                    objective:false,
                 },
                 {
                     id:"e05",
@@ -447,7 +447,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:true,
-                    
+
                 }
             ]
         ],
