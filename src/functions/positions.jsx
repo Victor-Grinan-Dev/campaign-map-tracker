@@ -64,18 +64,19 @@ const mapReader = (map, action=null, showTilesId) => {
             
             {
                 map.map((row, y) => (
-                    row.map((col, x) => (  
+                    row.map((tile, x) => (  
                         
-                        col.image && <Tile 
-                            key={col.id} 
-                            id={col.id}
+                        tile.image && <Tile 
+                            key={tile.id} 
+                            id={tile.id}
                             showId={showTilesId}
-                            image={col.image}  
+                            image={tile.image}  
                             imgUrl={"'../assets/tile_images/blank.png'"}
                             posTop={topStart + top * y} 
                             posLeft={handleLeft(y, x)} 
                             tileWidth={side} 
-                            func={action}    
+                            func={action} 
+                            startPlayer={tile.owned_by}   
                         />
                     ))
                 ))

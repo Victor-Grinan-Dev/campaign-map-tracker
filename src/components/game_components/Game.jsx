@@ -5,8 +5,6 @@ import { availableMaps } from '../../functions/mapGenerator';
 
 import Token from './Token';
 
-
-
 const map = availableMaps[3];
 
 function Game() {

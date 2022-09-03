@@ -31,7 +31,6 @@ const setFlag = (color) => {
     </div>
   )
 }
-
         <div  
           style={{
             height: '450px',

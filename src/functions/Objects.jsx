@@ -304,20 +304,21 @@ export const nullTile = {
     }
 
 export class Tile {
-    constructor(id, image, move_in = 1, cover = false, is_starting_position = false, posY = null, posX = null){
+    move_in = 1
+    is_cover = undefined
+    can_hIde_in = undefined
+    blocks_sight = undefined
+    owned_by = undefined
+    formations_in = []
+    resources_in = []
+    buildings_in = []
+    objective = null
+    actions = []
+
+    constructor(id, image, is_starting_position = false){
         this.id = id,  
-        this.image = image, 
-        this.move_in = move_in, 
-        this.is_cover = cover,
-        this.is_starting_position = is_starting_position,
-        this.posY = posY,
-        this.posX = posX
-        this.can_hIde_in = false,
-        this.blocks_sight = false,
-        this.owned_by = "free",
-        this.formations_in = [],
-        this.resources_in = [],
-        this.buildings_in = []
+        this.image = image,    
+        this.is_starting_position = is_starting_position
     }
 }
 
