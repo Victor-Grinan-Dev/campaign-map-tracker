@@ -5,9 +5,46 @@ import css from './Tile.module.css';
 
 //TODO: change the changes of the map tile in temporary db? global state? 
 
-function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId }) {
+const setFlag = (color) => {
+  return(
+    <div className="wrapper" style={{display: 'flex'}}>
+        <div className="stick"
+        style={{
+          height: '20px',
+          width: '5px',
+          background: 'black',
+          borderTopLeftRadius: '5px',
+          borderBottomLeftRadius: '5px',
+          borderBottomRightRadius:'5px'
+        }}
+        >
+        </div>
+        <div className="flag"
+        style={{
+          width: "15px",
+          height: "10px",
+          boxShadow: "0px 0px 90px 1px #989",
+          backgroundColor: `${color}`,
+          position: "relative",
+        }}
+        ></div>
+    </div>
+  )
+}
 
-  //console.log(imgUrl)
+        <div  
+          style={{
+            height: '450px',
+            width: '10px',
+            background: 'black',
+            borderTopLeftRadius: '10px',
+            borderBottomLeftRadius: '5px',
+            borderBottomRightRadius:'5px'
+          }}>
+        </div>
+function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPlayer=null }) {
+
+  
   return (
     <div
     id={id}
@@ -20,7 +57,7 @@ function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId }) {
     }}
     >
       {showId && <p>{id}</p>}
-
+      {startPlayer && setFlag(startPlayer)}
     </div>
   )
 }
