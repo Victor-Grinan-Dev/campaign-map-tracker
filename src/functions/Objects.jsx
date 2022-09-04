@@ -1,109 +1,5 @@
 /* eslint-disable */
 
-export const unitTypes = {
-  infantry:{
-    "id":1,
-    "type":"infantry",
-    "movement":2,
-    "active_skills":["build", "set-defence", "ovrwatch"],
-    "actions":2,
-    "negative":[],
-    "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-  },
-  lightInfantry:{
-    "id":2,
-    "type":"light-infantry",
-    "movement":2,
-    "active_skills":["build","set-defence", "ovrwatch"],
-    "actions":2,
-    "negative":[],
-    "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-  },
-  heavyInfantry:{
-    "id":3,
-    "type":"heavy-infantry",
-    "movement":1,
-    "active_skills":[ "build","set-defence", "ovrwatch"],
-    "actions":2,
-    "negative":[],
-    "passive_skills":["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
-  },
-  jetInfantry:{
-    "id":4,
-    "type":"jet-infantry",
-    "movement":3,
-    "active_skills":["deep-assault"],
-    "actions":1,
-    "negative":["No-water"],
-    "passive_skills":["fly"]
-  },
-  rider:{
-    "id":5,
-    "type":"rider",
-    "movement":3,
-    "active_skills":["hit&run", "turbo-boost"],
-    "actions":1,
-    "negative":["No-water", "no-Mountain", "hard-in-swamps" ],
-    "passive_skills":["turbo-boost"]
-  },
-
-  armouredTransport:{
-    "id":6,
-    "type":"armoured-transport",
-    "movement":3,
-    "active_skills":null,
-    "actions":1,
-    "negative":["No-water", "no-Mountain" ],
-    "passive_skills":["transport-10"]
-  },
-  lightTank:{
-    "id":7,
-    "type":"light-tank",
-    "movement":3,
-    "active_skills":null,
-    "actions":1,
-    "negative":["No-water", "no-Mountain" ],
-    "passive_skills":[]
-  },
-  heavyTank:{
-    "id":7.1,
-    "type":"heavy-tank",
-    "movement":3,
-    "active_skills":null,
-    "actions":1,
-    "negative":["No-water", "no-Mountain" ],
-    "passive_skills":[]
-  },
-
-  fastHoverTransport:{
-    "id":8,
-    "type":"fast-hover-transport",
-    "movement":4,
-    "active_skills":null,
-    "actions":1,
-    "negative":["No-water", "low-defence"],
-    "passive_skills":["fly", "transport-5"]
-  },
-  fastHover:{
-    "id":9,
-    "type":"fast-hover",
-    "movement":4,
-    "active_skills":null,
-    "actions":1,
-    "negative":["No-water", "low-defence"],
-    "passive_skills":["fly"]
-  },
-  walkerVehicle:{
-    "id":10,
-    "type":"walker-vehicle",
-    "movement":2,
-    "active_skills":null,
-    "passive_skills":[],
-    "actions":1,
-    "negative":["no-water"]
-  }
-}
-
 export class Faction {
     constructor(name, color){
         this.name = name
@@ -111,40 +7,22 @@ export class Faction {
     }
 }
 
-/**
-   infantry:{
-    "id":1,
-    "type":"infantry",
-    "movement":2,
-    "active_skills":["build", "set-defence", "ovrwatch"],
-    "actions":2,
-    "negative":[],
-    "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-},
- */
 export class Unit {//one single model.
 
     level = 0
     badges = []
-    movement = 6
     
-    constructor(id, unitName, models, point_const, type=unitType){
+    constructor(id, unitName, models, point_const){
         this.id = id
         this.name = unitName
         this.models = models
         this.point_const = point_const
-        this.type = type.type
-    }
-
-    getParams(){
-        const params = {id:undefined, unitName:undefined, movement:undefined, models:undefined, point_const:undefined, type:undefined} 
-        return params;
+  
     }
 }
 
 export class Formation {//one or more models and/or squads in the same tile and from the same army. As a token in the map they move toguether.
 
-    point_const = 0
     actionPoints=1
     damage = null
     modelCount = 0
@@ -165,15 +43,24 @@ export class Formation {//one or more models and/or squads in the same tile and 
         this.sDescription = sDescription
         this.lDescription = lDescription
         this.image = image
-        this.setPointCost()
+        this.point_const = this.setPointCost() 
         this.setDamage()
         this.setMovement()
         }
-
+        
+    get pointCost (){
+      let total = 0;
+      this.composition.forEach(unit =>{
+        this.point_const += unit.point_const
+      }) 
+      return total;
+    }
     setPointCost(){
-      if (typeof(this.composition === 'array')){
-        //map the array
-      }
+      let total = 0;
+      this.composition.forEach(unit =>{
+        total += unit.point_const
+      })
+      return total;
     }
     
     setDamage(){
@@ -207,10 +94,6 @@ export class Formation {//one or more models and/or squads in the same tile and 
         })
       }
    
-      getParams(){
-        const params = {id:undefined, formationName:undefined, composition:undefined, sDescription:"", lDescription:"", image:""} 
-        return params;
-      }
 
       increasePoint_const(increment){
         this.point_const+=increment;
@@ -256,20 +139,26 @@ export class Formation {//one or more models and/or squads in the same tile and 
       }
 }
 
-export class ArmyList {// all the models inthe map from the same player.
+export class ArmyList {// all the models in the map from the same player.
     point_cost = 0
     color=null
+    faction = null //this is an object with own properties, including faction color.
+
     constructor(name, composition){
         this.name = name
-        this.composition = composition //all formations-objects inside.
+        this.composition = composition //an array of all formations-objects.
         this.setPointCost()
+    }
+
+    setColor(color){
+      this.composition.forEach(formation=> formation.color = color)
+      this.color=color
     }
 
     setPointCost(){
       this.composition.forEach(formation => this.point_cost += formation.pointCost)
     }
 }
-
 export class User {
     id = undefined
     type = "Visitor"
@@ -290,34 +179,15 @@ export class User {
     }
 }
 //Map objects:
-
-export const tile_object = {
-    id:"",
-    image:"",
-    move_in:null,
-    is_cover:false,
-    is_starting_position:false
-}
-
-export const nullTile = {
-    id:null,
-    image:null,
-    move_in:null,
-    cover:null,
-    is_starting_position:null,
-    posY:null,
-    posX:null
-    }
-
 export class Tile {
     move_in = 1
     is_cover = undefined
     can_hIde_in = undefined
     blocks_sight = undefined
     owned_by = undefined
-    formations_in = []
-    resources_in = []
-    buildings_in = []
+    formation = null
+    resources = []
+    buildings = []
     objective = null
     actions = []
 
@@ -327,87 +197,75 @@ export class Tile {
         this.is_starting_position = is_starting_position
     }
 }
-
-export class MapLine {//i think this is not necesary... for now.
-    constructor(position, line){
-        this.position = position, //the index in the map line?
-        this.line = line // each line is a row of tiles-objects.
-    }
-}
-
-export const map_object = {
-    name:"",
-    shape:null,
-    dimensions: null,
-    map:[],
-    maxPlayers:null
-}
-
 export class Map {
+    maxPlayers = 0
     constructor(name, shape, dimensions, map, maxPlayers){
     this.name = name
     this.shape = shape
     this.dimensions = dimensions
     this.map = map// array of MapLines/bidimentional array
-    this.maxPlayers = maxPlayers
+    this.setMaxPlayers();
+    }
+    getFormation(fromTileId){       
+      this.map.map((row)=>{
+          row.map((tile)=>{
+              if (tile.id === fromTileId){
+                  return tile.formation
+              }
+          })
+      });
+    }
+    placeFormation(formation, tileId){
+        this.map.map((row)=>{
+            row.map((tile)=>{
+                if (tile.id === tileId){
+                    tile.formation = formation
+                    return
+                } 
+            })
+        })
+    }
+    deleteFormation(tileId){
+        this.map.map((row)=>{
+            row.map((tile)=>{
+                if (tile.id === tileId){
+                    tile.formation = null
+                    return
+                }
+            })
+        })
+    }
+    moveFormation(fromTileId, toTileId){
+        const formation = this.getFormation(fromTileId);
+        this.placeFormation(formation, toTileId);
+        this.deleteFormation(fromTileId);
+    }
+    setMaxPlayers(){
+      this.map.map(row => {
+        row.map(tile => {
+          if(tile.is_starting_position){
+            this.maxPlayers += 1
+          }
+        })
+      })
     }
 }
-
 export const campaign_Object = {
+  //this is used in newCampaign, should be used the original class Campaign instead. 
     campaignName: "",
     armySize: null,
     map: {},
     playersAmount: null,
-    factions: [
-        {id:"ja",name:"The Justice Aliance", color:"#309abb"},
-        {id:"df",name:"The Dark Forces", color:"#830202"},
-        {id:"ae",name:"The Aliens and ET's", color:"#1fc778"},
-        {id:"dm",name:"The Death Machines", color:"#395B64"},
-        {id:"bh",name:"The Beast Hordes", color:"#0F3D3E"},
-        {id:"ib",name:"The Infestation Bugs", color:"#D1512D"},
-],
+    factions: [],
     rounds: null,
     campaignCode: "",
 }
-
-export const dedications = {
-    'anti-infantry':'+10% damage vs infantry', 
-    'anti-tank':'+10% damage vs tank', 
-    'spotter':'+1 vision', 
-    'speeder':'+1 movement', 
-    'tank':'-5% damage recieve', 
-    'tracker':'10% luck on search',
-    'hard-worker':'+1 actionPoints',
-    'analizer':'+10% Xp',
-}
-
- 
-
-export const badges = {
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'',
-    '':'',
-    '':'',
-}
-
-export const abilities = {
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'',
-    '':'',
-    '':'',
-}
-
 export default class Campaign {
     isStarted = false
     isEnded = false
+    rules = null
+    players = []
+
     constructor(name, armySize, mapShape, mapSize, map = {}, playersAmount = 2, factions = [], rounds=4, duration=4, timeLapse="weeks", campaignCode = "") {
         this.name = name
         this.armySize = armySize

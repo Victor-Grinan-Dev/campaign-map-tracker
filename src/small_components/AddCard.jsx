@@ -2,129 +2,27 @@ import React from 'react';
 import axios from 'axios';
 import css from './AddCard.module.css';
 import Button from './Button';
-import { Formation, Unit } from '../functions/Objects';
+import { ArmyList, Formation, Unit } from '../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { capitalStart } from '../functions/functions'
+import { unitTypes } from '../functions/objectsGame';
+
+
 
 const databaseApi = 'http://localhost:8010/database';
-
 const formationsEndPoint = '/users/0/formations';
 const armyListEndPoint = '/users/0/army_lists';
 
-const unitTypes = [
-    {
-        "id":1,
-        "type":"infantry",
-        "movement":2,
-        "active_skills":["build", "set-defence", "ovrwatch"],
-        "actions":2,
-        "negative":[],
-        "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-    },
-    {
-        "id":2,
-        "type":"light-infantry",
-        "movement":2,
-        "active_skills":["build","set-defence", "ovrwatch"],
-        "actions":2,
-        "negative":[],
-        "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-    },
-    {
-        "id":3,
-        "type":"heavy-infantry",
-        "movement":1,
-        "active_skills":[ "build","set-defence", "ovrwatch"],
-        "actions":2,
-        "negative":[],
-        "passive_skills":["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
-    },
-    {
-        "id":4,
-        "type":"jet-infantry",
-        "movement":3,
-        "active_skills":["deep-assault"],
-        "actions":1,
-        "negative":["No-water"],
-        "passive_skills":["fly"]
-    },
-    {
-        "id":5,
-        "type":"rider",
-        "movement":3,
-        "active_skills":["hit&run", "turbo-boost"],
-        "actions":1,
-        "negative":["No-water", "no-Mountain", "hard-in-swamps" ],
-        "passive_skills":["turbo-boost"]
-    },
-    {
-        "id":6,
-        "type":"armoured-transport",
-        "movement":3,
-        "active_skills":null,
-        "actions":1,
-        "negative":["No-water", "no-Mountain" ],
-        "passive_skills":["transport-10"]
-    },
-    {
-        "id":7,
-        "type":"light-tank",
-        "movement":3,
-        "active_skills":null,
-        "actions":1,
-        "negative":["No-water", "no-Mountain" ],
-        "passive_skills":[]
-    },
-    {
-        "id":7.1,
-        "type":"heavy-tank",
-        "movement":3,
-        "active_skills":null,
-        "actions":1,
-        "negative":["No-water", "no-Mountain" ],
-        "passive_skills":[]
-    },
-    
-    {
-        "id":8,
-        "type":"fast-hover-transport",
-        "movement":4,
-        "active_skills":null,
-        "actions":1,
-        "negative":["No-water", "low-defence"],
-        "passive_skills":["fly", "transport-5"]
-    },
-    {
-        "id":9,
-        "type":"fast-hover",
-        "movement":4,
-        "active_skills":null,
-        "actions":1,
-        "negative":["No-water", "low-defence"],
-        "passive_skills":["fly"]
-    },
-    {
-        "id":10,
-        "type":"walker-vehicle",
-        "movement":2,
-        "active_skills":null,
-        "passive_skills":[],
-        "actions":1,
-        "negative":["no-water"]
-    }
-  ]
-const sampleUnit = new Unit(1,"sample 1", 2, 5, 100, "infantry");
-const sampleFormation = new Formation(2, "sampl2 form", []);
-const emptyUnit = sampleUnit.getParams();
-const emptyFormation = sampleFormation.getParams([]);
+const sampleUnit = new Unit(1,"sample 1", 5, 100, unitTypes.infantry);
+const sampleFormation = new Formation(2, "sampl2 form", [sampleUnit]);
+const sampleArmy = new ArmyList('sample army', [sampleFormation],)
+
 
 function AddCard() {
 
-    const [formationData, setFormationData] = useState(emptyFormation);
-    const [units, setUnits] = useState([
-        new Unit(1, "", null, null, null, "")
-    ]);
+    const [formationData, setFormationData] = useState(new Formation(undefined, "", []));
+    const [units, setUnits] = useState([new Unit(1, "", null, null, null, "")]);
    
     const changeFormationData = (e) => {
         setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
@@ -167,7 +65,7 @@ function AddCard() {
             
         })
         //axios.post(, formationData);
-        setFormationData(emptyFormation);
+        setFormationData(new Formation(undefined, "", []));
       };
 
   return (

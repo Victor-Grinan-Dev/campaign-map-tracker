@@ -6,8 +6,13 @@ import swamp from '../assets/tile_images/swamp.png';
 import { Tile, Map } from './Objects';
 
 
+//TEST
+import { DemoArmies } from './dummyGameObjects';
+const astraArmy = DemoArmies[0]; 
+const wolvesArmy = DemoArmies[1];
 
-
+const astraToken = astraArmy.formation;
+const wolvesToken = wolvesArmy.formation;
 
 const relation = {
     5:1,
@@ -332,7 +337,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'red',
                     objective:null,
-                    formation:null,
+                    formation:astraToken,
                 },
                 {
                     id:"b03",
@@ -380,7 +385,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'blue',
                     objective:null,
-                    formation:null,
+                    formation:wolvesToken,
                 }
             ],
             [

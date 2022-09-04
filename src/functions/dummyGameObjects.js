@@ -1,5 +1,5 @@
-import { unitTypes, Unit, Formation, ArmyList, Campaign, User  } from "./Objects";
-
+import { Unit, Formation, ArmyList, Campaign, User  } from "./Objects";
+import { unitTypes } from "./objectsGame";
 //user1 (hard coded):
 const user1 = new User('user1', 'user1@campaign.com', 123456);
 
@@ -20,9 +20,6 @@ const formation4 = new Formation('f04U1', 'Thunder Riders', [thunderwolf_cavalry
 
 const user1Army = new ArmyList("Elgir's Finests", [formation1, formation2, formation3, formation4]);
 
-const wolfForm150ptsDemo = new Formation(1, 'Wolves', [elgir, grey_hunters])
-export const wolfDemoArmy = new ArmyList("Elgir's Finests", [wolfForm150ptsDemo]);
-
 
 //user 2 ():
 const user2 = new User('user2', 'user2@campaign.com', 654321);
@@ -42,7 +39,16 @@ user2ArmyItems.map((item)=>(
     user2Units.push(new Unit(item[0], item[1], item[2], item[3], item[4], item[5])
 )));
 
+
+/** DEMO DATA **/
+
+//wolves:
+const wolfForm150ptsDemo = new Formation(1, 'Wolves', [elgir, grey_hunters])
+const wolfDemoArmy = new ArmyList("Elgir's Finests", [wolfForm150ptsDemo]);
+
+//astra:
 user2Units[1].point_cost += 10;
 const astraForm150Demo = new Formation(2,'235 platoon', [user2Units[0], user2Units[1], user2Units[2]]);
+const AstraDemoArmy = new ArmyList('235 platoon', [astraForm150Demo]);
 
-export const AstraDemoArmy = new ArmyList('235 platoon', [astraForm150Demo]);
+export const DemoArmies = [AstraDemoArmy, wolfDemoArmy]

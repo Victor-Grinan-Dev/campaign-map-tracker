@@ -77,7 +77,8 @@ const mapReader = (map, action=null, showTilesId) => {
                             tileWidth={side} 
                             func={action} 
                             startPlayer={tile.owned_by} 
-                            objective={tile.objective}  
+                            objective={tile.objective} 
+                            formation={tile.formation}
                         />
                     ))
                 ))

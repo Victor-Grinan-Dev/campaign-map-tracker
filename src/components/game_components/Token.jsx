@@ -2,15 +2,21 @@ import React from 'react';
 import css from './token.module.css';
 
 function Token({formation}) {
+  let color;
+  let name;
+  let points;
+  formation ? color= formation.color : color = 'brown';
+  formation ? name = formation.name : name = 'unknown';
+  formation ? points = formation.point_const : points = 100;
   return (
     <div 
     className={css.token}
     style={{
-      backgroundColor: `${formation.color}`
+      backgroundColor: `${color}`
     }}
     >
-      <p className={css.tokenName}>{formation.name}</p>
-      <p className={css.tokenPoints}>{formation.point_const}</p>
+      <p className={css.tokenName}>{name}</p>
+      <p className={css.tokenPoints}>{points}</p>
     </div>
   )
 }

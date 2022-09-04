@@ -11,16 +11,14 @@ const databaseApi = 'http://localhost:8010/database';
 
 const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")
 const testUnit2 = new Unit('vgT', "Vitrix guards's tank", 4, 1, 125, "transport-tank")
-const formation1 = new Formation(1, "Vitrix Guards", 3, [testUnit1, testUnit2] );
-
-
+//const formation1 = new Formation(1, "Vitrix Guards", 3, [testUnit1, testUnit2] );
 
 function MyArmies() {
   const [data, setData] = useState({})
-  const [formations, setformations] = useState([formation1]);
+  //const [formations, setformations] = useState([formation1]);
   // const [country, setCountry] = useState([]);
   // const [search, setSearch] = useState('');
-  const [enlisted, setEnlisted] = useState([formation1])
+  const [enlisted, setEnlisted] = useState(undefined)
   const [loading, setLoading] = useState(false);
 
   // const formationsFilter = formations.filter((res) => {
@@ -44,9 +42,9 @@ function MyArmies() {
         const userData = results[0].data.users.filter((user)=>{
           return user.id == currentUserId;
         })
-        const formations = userData[0].formations;
-        const  armyList = userData[0].armyList;
-        setformations(formations)
+        //const formations = userData[0].formations;
+        //const  armyList = userData[0].armyList;
+        //setformations(formations)
         setLoading(false);
       });
     }, []);
@@ -93,9 +91,11 @@ function MyArmies() {
         <input type="text" placeholder='Serach'/></div>
       <div className={"browser"}>
 
-        {formations.map(formation => (
+        {/**
+         formations.map(formation => (
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
-        ))}
+        ))
+         */}
 
       </div>
     </div>

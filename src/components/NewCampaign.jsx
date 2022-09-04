@@ -6,47 +6,14 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
+import { factions } from '../functions/objectsGame';
 import Button from '../small_components/Button';
 import NavBar from '../small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import css from './newCampaign.module.css'
-const justiceAlianceColor = "#309abb";
-const darkForcesColor = "#830202";
-const aliensEtColor = "#1fc778";
-const deathMachinesColor = "#395B64";
-const beastHordesColor = "#0F3D3E";
-const infestationColor = "#D1512D";
-
-//TODO: change to read data from database
-const factions = [
-    {
-        id:"ja",
-        name:"The Justice Aliance",
-        color:"#309abb"},
-    {
-        id:"df",
-        name:"The Dark Forces",
-        color:"#830202"},
-    {
-        id:"ae",
-        name:"The Aliens and ET's",
-        color:"#1fc778"},
-    {
-        id:"dm",
-        name:"The Death Machines",
-        color:"#395B64"},
-    {
-        id:"bh",
-        name:"The Beast Hordes",
-        color:"#0F3D3E"},
-    {
-        id:"ib",
-        name:"The Infestation Bugs",
-        color:"#D1512D"
-    }
-]
 
 const available_maps = availableMaps;
+//TODO: change this to redux
 
 function NewCampaign() {
     const Navigate = useNavigate()
