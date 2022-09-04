@@ -3,7 +3,10 @@ import forest from '../assets/tile_images/forest.png';
 import hills from '../assets/tile_images/hills.png';
 import mountains from '../assets/tile_images/mountains.png';
 import swamp from '../assets/tile_images/swamp.png';
-import { Tile, Map, nullTile } from './Objects';
+import { Tile, Map } from './Objects';
+
+
+
 
 
 const relation = {
@@ -127,7 +130,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:true,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     },
                     {
                         id:"b01",
@@ -136,7 +140,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     },
                     {
                         id:"c01",
@@ -145,7 +150,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     }
                 ],
 
@@ -157,7 +163,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     },
                     {
                         id:"c02",
@@ -166,7 +173,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     }
                 ],
                 [
@@ -177,7 +185,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     },
                     {
                         id:"d03",
@@ -186,7 +195,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     },
                     {
                         id:"e03",
@@ -195,7 +205,8 @@ const miniMapSq = {
                         cover:false,
                         is_starting_position:true,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        formation:null
                     }
                 ]
             ],
@@ -218,6 +229,8 @@ const miniMapHx = {
                         posX:null,
                         owned_by:null,
                         objective:null,
+                        formation:null,
+                        
                     },
                     {
                         id:"a01",
@@ -229,6 +242,8 @@ const miniMapHx = {
                         posX:null,
                         owned_by:null,
                         objective:true,
+                        formation:null,
+                        
                     },
                 {
                     id:"b01",
@@ -240,6 +255,8 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
+    
                 },
                 {
                     id:"c01",
@@ -251,6 +268,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:true,
+                    formation:null,
                 }
             ],
             [
@@ -264,6 +282,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:false,
+                    formation:null,
                 },
                 {
                     id:"b02",
@@ -275,6 +294,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"c02",
@@ -286,6 +306,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"d02",
@@ -297,6 +318,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 }
             ],
             [
@@ -310,6 +332,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'red',
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"b03",
@@ -321,6 +344,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"c03",
@@ -332,6 +356,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"d03",
@@ -343,6 +368,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"e03",
@@ -354,6 +380,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'blue',
                     objective:null,
+                    formation:null,
                 }
             ],
             [
@@ -367,6 +394,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"c04",
@@ -378,6 +406,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"d04",
@@ -389,6 +418,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"e04",
@@ -400,6 +430,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 }
             ],
 
@@ -414,6 +445,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:null,
+                    formation:null,
                 },
                 {
                     id:"c05",
@@ -425,6 +457,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:true,
+                    formation:null,
                 },
                 {
                     id:"d05",
@@ -436,6 +469,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:false,
+                    formation:null,
                 },
                 {
                     id:"e05",
@@ -447,6 +481,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:null,
                     objective:true,
+                    formation:null,
 
                 }
             ]

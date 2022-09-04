@@ -1,7 +1,10 @@
 import React from 'react';
-import { useState } from 'react';
 import css from './Tile.module.css';
-//import { imported_tiles_images } from '../functions/tilesImages';
+import Token from '../components/game_components/Token';
+
+import { AstraDemoArmy, wolfDemoArmy } from '../functions/dummyGameObjects';
+
+console.log(AstraDemoArmy)
 
 //TODO: change the changes of the map tile in temporary db? global state? 
 
@@ -31,17 +34,8 @@ const setFlag = (color) => {
     </div>
   )
 }
-        <div  
-          style={{
-            height: '450px',
-            width: '10px',
-            background: 'black',
-            borderTopLeftRadius: '10px',
-            borderBottomLeftRadius: '5px',
-            borderBottomRightRadius:'5px'
-          }}>
-        </div>
-function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPlayer=null, objective=false }) {
+
+function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPlayer=null, objective=false, formation=null}) {
 
   return (
     <div
@@ -57,6 +51,7 @@ function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId, startPla
       {showId && <p>{id}</p>}
       {startPlayer && setFlag(startPlayer)}
       {objective && setFlag('white')}
+      {formation && <Token formation={formation}/>}
     </div>
   )
 }

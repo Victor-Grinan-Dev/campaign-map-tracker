@@ -1,112 +1,116 @@
 /* eslint-disable */
 
-/*{
-  "id":1,
-  "type":"infantry",
-  "movement":2,
-  "active_skills":["build", "set-defence", "ovrwatch"],
-  "actions":2,
-  "negative":[],
-  "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-},
-{
-  "id":2,
-  "type":"light-infantry",
-  "movement":2,
-  "active_skills":["build","set-defence", "ovrwatch"],
-  "actions":2,
-  "negative":[],
-  "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
-},
-{
-  "id":3,
-  "type":"heavy-infantry",
-  "movement":1,
-  "active_skills":[ "build","set-defence", "ovrwatch"],
-  "actions":2,
-  "negative":[],
-  "passive_skills":["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
-},
-{
-  "id":4,
-  "type":"jet-infantry",
-  "movement":3,
-  "active_skills":["deep-assault"],
-  "actions":1,
-  "negative":["No-water"],
-  "passive_skills":["fly"]
-},
-{
-  "id":5,
-  "type":"rider",
-  "movement":3,
-  "active_skills":["hit&run", "turbo-boost"],
-  "actions":1,
-  "negative":["No-water", "no-Mountain", "hard-in-swamps" ],
-  "passive_skills":["turbo-boost"]
-},
-{
-  "id":6,
-  "type":"armoured-transport",
-  "movement":3,
-  "active_skills":null,
-  "actions":1,
-  "negative":["No-water", "no-Mountain" ],
-  "passive_skills":["transport-10"]
-},
-{
-  "id":7,
-  "type":"light-tank",
-  "movement":3,
-  "active_skills":null,
-  "actions":1,
-  "negative":["No-water", "no-Mountain" ],
-  "passive_skills":[]
-},
-{
-  "id":7.1,
-  "type":"heavy-tank",
-  "movement":3,
-  "active_skills":null,
-  "actions":1,
-  "negative":["No-water", "no-Mountain" ],
-  "passive_skills":[]
-},
+export const unitTypes = {
+  infantry:{
+    "id":1,
+    "type":"infantry",
+    "movement":2,
+    "active_skills":["build", "set-defence", "ovrwatch"],
+    "actions":2,
+    "negative":[],
+    "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
+  },
+  lightInfantry:{
+    "id":2,
+    "type":"light-infantry",
+    "movement":2,
+    "active_skills":["build","set-defence", "ovrwatch"],
+    "actions":2,
+    "negative":[],
+    "passive_skills":["hold-position", "all-terrain", "maxmove-1"]
+  },
+  heavyInfantry:{
+    "id":3,
+    "type":"heavy-infantry",
+    "movement":1,
+    "active_skills":[ "build","set-defence", "ovrwatch"],
+    "actions":2,
+    "negative":[],
+    "passive_skills":["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
+  },
+  jetInfantry:{
+    "id":4,
+    "type":"jet-infantry",
+    "movement":3,
+    "active_skills":["deep-assault"],
+    "actions":1,
+    "negative":["No-water"],
+    "passive_skills":["fly"]
+  },
+  rider:{
+    "id":5,
+    "type":"rider",
+    "movement":3,
+    "active_skills":["hit&run", "turbo-boost"],
+    "actions":1,
+    "negative":["No-water", "no-Mountain", "hard-in-swamps" ],
+    "passive_skills":["turbo-boost"]
+  },
 
-{
-  "id":8,
-  "type":"fast-hover-transport",
-  "movement":4,
-  "active_skills":null,
-  "actions":1,
-  "negative":["No-water", "low-defence"],
-  "passive_skills":["fly", "transport-5"]
-},
-{
-  "id":9,
-  "type":"fast-hover",
-  "movement":4,
-  "active_skills":null,
-  "actions":1,
-  "negative":["No-water", "low-defence"],
-  "passive_skills":["fly"]
-},
-{
-  "id":10,
-  "type":"walker-vehicle",
-  "movement":2,
-  "active_skills":null,
-  "passive_skills":[],
-  "actions":1,
-  "negative":["no-water"]
+  armouredTransport:{
+    "id":6,
+    "type":"armoured-transport",
+    "movement":3,
+    "active_skills":null,
+    "actions":1,
+    "negative":["No-water", "no-Mountain" ],
+    "passive_skills":["transport-10"]
+  },
+  lightTank:{
+    "id":7,
+    "type":"light-tank",
+    "movement":3,
+    "active_skills":null,
+    "actions":1,
+    "negative":["No-water", "no-Mountain" ],
+    "passive_skills":[]
+  },
+  heavyTank:{
+    "id":7.1,
+    "type":"heavy-tank",
+    "movement":3,
+    "active_skills":null,
+    "actions":1,
+    "negative":["No-water", "no-Mountain" ],
+    "passive_skills":[]
+  },
+
+  fastHoverTransport:{
+    "id":8,
+    "type":"fast-hover-transport",
+    "movement":4,
+    "active_skills":null,
+    "actions":1,
+    "negative":["No-water", "low-defence"],
+    "passive_skills":["fly", "transport-5"]
+  },
+  fastHover:{
+    "id":9,
+    "type":"fast-hover",
+    "movement":4,
+    "active_skills":null,
+    "actions":1,
+    "negative":["No-water", "low-defence"],
+    "passive_skills":["fly"]
+  },
+  walkerVehicle:{
+    "id":10,
+    "type":"walker-vehicle",
+    "movement":2,
+    "active_skills":null,
+    "passive_skills":[],
+    "actions":1,
+    "negative":["no-water"]
+  }
 }
-*/
+
 export class Faction {
     constructor(name, color){
         this.name = name
         this.color = color
     }
 }
+
 /**
    infantry:{
     "id":1,
@@ -152,6 +156,7 @@ export class Formation {//one or more models and/or squads in the same tile and 
     movement = 4
     type = undefined
     dedication=[]
+    color='white'
 
     constructor(id, name, composition = [], sDescription="", lDescription="", image=""){
         this.id = id
@@ -253,6 +258,7 @@ export class Formation {//one or more models and/or squads in the same tile and 
 
 export class ArmyList {// all the models inthe map from the same player.
     point_cost = 0
+    color=null
     constructor(name, composition){
         this.name = name
         this.composition = composition //all formations-objects inside.

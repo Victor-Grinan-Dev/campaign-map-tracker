@@ -1,15 +1,18 @@
 import React from 'react';
 import css from './token.module.css';
 
-function Token({name='token', color='black'}) {
+function Token({formation}) {
   return (
-    <div className={css.token}
+    <div 
+    className={css.token}
     style={{
-        backgroundColor:{color},
+      backgroundColor: `${formation.color}`
     }}
-    >{name}
+    >
+      <p className={css.tokenName}>{formation.name}</p>
+      <p className={css.tokenPoints}>{formation.point_const}</p>
     </div>
   )
 }
 
-export default Token
+export default Token;

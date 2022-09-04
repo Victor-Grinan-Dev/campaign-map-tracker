@@ -18,9 +18,10 @@ const formation3 = new Formation('f03U1', 'WhiteFang', [ciberwolf], 'scout', ' t
 
 const formation4 = new Formation('f04U1', 'Thunder Riders', [thunderwolf_cavalry], 'Harrasment', 'this will be harassing enemy weak formations', undefined);
 
-user1Army = new ArmyList("Elgir's Finests", [formation1, formation2, formation3, formation4]);
+const user1Army = new ArmyList("Elgir's Finests", [formation1, formation2, formation3, formation4]);
 
-
+const wolfForm150ptsDemo = new Formation(1, 'Wolves', [elgir, grey_hunters])
+export const wolfDemoArmy = new ArmyList("Elgir's Finests", [wolfForm150ptsDemo]);
 
 
 //user 2 ():
@@ -36,9 +37,12 @@ const user2ArmyItems = [
     [ 'user2-6',"Chimera", 4, 1, 75, 'transport-tank(12)'],
 ];
 
-
 const user2Units = [];
 user2ArmyItems.map((item)=>(
     user2Units.push(new Unit(item[0], item[1], item[2], item[3], item[4], item[5])
 )));
 
+user2Units[1].point_cost += 10;
+const astraForm150Demo = new Formation(2,'235 platoon', [user2Units[0], user2Units[1], user2Units[2]]);
+
+export const AstraDemoArmy = new ArmyList('235 platoon', [astraForm150Demo]);

@@ -9,7 +9,6 @@ import './styles/tile.css';
 /****** components ******/
 import About from './components/About';
 import Conctact from './components/Conctact';
-import CreateMap from './components/CreateMap';
 import DrawMap from './components/DrawMap';
 import Hall from './components/Hall';
 import HallSingle from './components/HallSingle';
@@ -19,6 +18,7 @@ import NewCampaign  from './components/NewCampaign';
 import Profile from './components/Profile';
 import ShowMap from './components/ShowMap';
 import Game from './components/Game';
+
 
 function App() {
   return (
@@ -30,8 +30,6 @@ function App() {
           <Route path="/newcampaign" element={<NewCampaign />} />
           <Route path="newcampaign/:map" element={<ShowMap />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/Campaign" element={<Profile />} />
-          <Route path="/createmap" element={<CreateMap />} />
           <Route path="/myarmy" element={<MyArmies />} />
           <Route path='/contact' element={<Conctact />} />
           <Route path='/about' element={<About />} />
