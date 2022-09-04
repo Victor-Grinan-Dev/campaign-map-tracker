@@ -56,10 +56,13 @@ const AstraDemoArmy = new ArmyList('235 platoon', [astraForm150Demo]);
 
 
 
+/**
 const astraArmy = DemoArmies[0]; 
 const wolvesArmy = DemoArmies[1];
-
 const astraToken = astraArmy.formation;
 const wolvesToken = wolvesArmy.formation;
+ */
+
+  
 
 export const DemoArmies = [AstraDemoArmy, wolfDemoArmy]
