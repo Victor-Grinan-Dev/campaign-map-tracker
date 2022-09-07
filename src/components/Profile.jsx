@@ -5,11 +5,18 @@ import { useSelector } from 'react-redux';
 //import { capitalStart } from '../functions/functions';
 import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 import NewCampaignCss from './newCampaign.module.css';
-
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 function Profile() {
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userSelector);
+  const navigate = useNavigate();
 
+  useEffect(()=>{
+    if (!currentUser && userType==='visitor'){
+      navigate('/');
+    }
+  },[currentUser]);
 
     const visitorWelcoming = () => {
         console.log(userType);

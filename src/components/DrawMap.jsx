@@ -6,6 +6,9 @@ import { useState } from 'react';
 import Button from '../small_components/Button';
 import css from './DrawMap.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { useEffect } from 'react';
 
 const tilesArrayImages = [
     "blank",
@@ -14,10 +17,11 @@ const tilesArrayImages = [
     "forest",
     "hills",
     "swamp"
-]
+];
 
 function DrawMap() {
-    const navigate = useNavigate();
+    const userType = useSelector(userTypeSelector);
+    const currentUser = useSelector(userSelector);
     const emptySqMap = canvasSquare("Unknown Sq Map", 17, 17);
     const emptyHxMap = canvasHex("Unknown Hx Map", 9);
     const mapCanvas = {
@@ -28,6 +32,13 @@ function DrawMap() {
     const [changingName, setChangingName] = useState(false);
     const [brush, setBrush] = useState ("blank");
     const [showTilesId, setShowTilesId] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+      if (!currentUser && userType==='visitor'){
+        navigate('/');
+      }
+    },[currentUser]);
 
     const changeData = (e) => {  
         setCurrentMap({ ...currentMap, [e.target.name]: e.target.value });    

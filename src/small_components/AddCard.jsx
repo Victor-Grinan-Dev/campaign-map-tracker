@@ -8,15 +8,14 @@ import { useEffect } from 'react';
 import { capitalStart } from '../functions/functions'
 import { unitTypes } from '../functions/objectsGame';
 
-
-
 const databaseApi = 'http://localhost:8010/database';
-const formationsEndPoint = '/users/0/formations';
-const armyListEndPoint = '/users/0/army_lists';
 
+
+/*
 const sampleUnit = new Unit(1,"sample 1", 5, 100, unitTypes.infantry);
 const sampleFormation = new Formation(2, "sampl2 form", [sampleUnit]);
 const sampleArmy = new ArmyList('sample army', [sampleFormation],)
+*/
 
 
 function AddCard() {
@@ -60,10 +59,12 @@ function AddCard() {
 
       const submitData = (e) => {
         e.preventDefault()
+/*
         axios.get(databaseApi + formationsEndPoint).then(res => {
             console.log(res.data)
             
         })
+*/
         //axios.post(, formationData);
         setFormationData(new Formation(undefined, "", []));
       };
@@ -90,6 +91,7 @@ function AddCard() {
                                     <p>Unit type</p>
                                     <select className={css.componentTypeSelect} name="type" onChange={(e) => changeUnits(e, index)}>
                                         <option value='none'> Choose Type </option>
+    {/*
                                         {unitTypes.map((type) => 
                                             <option 
                                             value= {type.type}
@@ -99,6 +101,7 @@ function AddCard() {
 
                                             </option>
                                         )}  
+    */}
                                     </select>
                                 </div>
                                 

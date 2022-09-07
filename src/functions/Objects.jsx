@@ -1,17 +1,12 @@
 /* eslint-disable */
 
-
-export class Faction {
-    constructor(name, color){
-        this.name = name
-        this.color = color
-    }
-};
-
 export class Unit {//one single model.
 
     level = 0
     badges = []
+    pointCost = 0
+    pointsPerModel = 0
+    models = 0
     
     constructor(id, unitName, models, point_const, unitType){
         this.id = id
@@ -58,9 +53,11 @@ export class Formation {//one or more models and/or squads in the same tile and 
     }
     setPointCost(){
       let total = 0;
-      this.composition.forEach(unit =>{
+      /*
+        this.composition.forEach(unit =>{
         total += unit.point_const
       })
+      */
       return total;
     }
     

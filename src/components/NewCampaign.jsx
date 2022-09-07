@@ -11,6 +11,8 @@ import Button from '../small_components/Button';
 import NavBar from '../small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import css from './newCampaign.module.css'
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 
 const available_maps = availableMaps;
 //TODO: change this to redux
@@ -21,7 +23,14 @@ function NewCampaign() {
     const [map, setMap] = useState([])
     const [data, setData] = useState(campaign_Object);
     const [database, setDatabase] = useState()
-
+    const userType = useSelector(userTypeSelector);
+    const currentUser = useSelector(userSelector);
+    const navigate = useNavigate();
+    useEffect(()=>{
+      if (!currentUser && userType==='visitor'){
+        navigate('/');
+      }
+    },[currentUser]);
     //data handling fuctions:
     const changeData = (e) => {
         if (e.target.name === "map"){

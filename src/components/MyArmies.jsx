@@ -5,17 +5,29 @@ import { useState, useEffect } from 'react';
 import AddCard from '../small_components/AddCard';
 import BackTo from '../small_components/BackTo';
 import { Unit, Formation } from '../functions/Objects';
-import Database from '../functions/dbConnection';
 import NavBar from '../small_components/NavBar';
-const databaseApi = 'http://localhost:8010/database';
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { useNavigate } from 'react-router-dom';
 
-const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")
+const databaseApi = 'http://localhost:8010/database';
+/**
+ const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")
 const testUnit2 = new Unit('vgT', "Vitrix guards's tank", 4, 1, 125, "transport-tank")
 const formation1 = new Formation(1, "Vitrix Guards", 3, [testUnit1, testUnit2] );
+ */
 
 function MyArmies() {
+  const userType = useSelector(userTypeSelector);
+  const currentUser = useSelector(userSelector);
+  const navigate = useNavigate();
+    useEffect(()=>{
+      if (!currentUser && userType==='visitor'){
+        navigate('/');
+      }
+    },[currentUser]);
   const [data, setData] = useState({})
-  const [formations, setformations] = useState([formation1]);
+  const [formations, setformations] = useState([]);
   //const [country, setCountry] = useState([]);
    const [search, setSearch] = useState('');
   const [enlisted, setEnlisted] = useState([])
@@ -91,11 +103,11 @@ function MyArmies() {
         <input type="text" placeholder='Serach'/></div>
       <div className={"browser"}>
 
-        {/**
+        {
          formations.map(formation => (
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
         ))
-         */}
+         }
 
       </div>
     </div>
