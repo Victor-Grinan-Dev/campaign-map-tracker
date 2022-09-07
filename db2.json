@@ -1,0 +1,379 @@
+
+{
+    "database":{
+        "campaings":[
+        ],
+        "maps":[
+            {
+                "id":1,
+                "name":"The flat earth",
+                "sahape":"sq",
+                "dimensions":"7x7",
+                "map":[
+                    [{"id":"a01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}, {"id":"b01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}],
+                    [{"id":"b02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}],
+                    [{"id":"b03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"h03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}],
+                    [{"id":"c04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"h04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}],
+                    [{"id":"c05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"h05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"i05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}],
+                    [{"id":"d06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"h06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"i06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}],
+                    [{"id":"d07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}, {"id":"e07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"h07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"i07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"j07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}]
+                ],
+                "maxPlayers":4
+            }, 
+            {
+                "id":2,
+                "name":"Tiny world war",
+                "shape":"hx",
+                "dimensions":"4x4x4",
+                "map":[
+                    ["", "", "", {"id":"a01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"b01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false},  {"id":"c01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d01", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, "", "", ""],
+                    ["", "", {"id":"a02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"b02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e02", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, "", ""], 
+                    ["", {"id":"a03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"b03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f03", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, ""],
+                    [{"id":"a04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}, {"id":"b04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g04", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":true}],
+                    ["", {"id":"d05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"c05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g05", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, ""], 
+                    ["", "", {"id":"c06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"d06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g06", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, "", ""], 
+                    ["", "", "", {"id":"d07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"e07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"f07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, {"id":"g07", "image":"planes", "move_in":1,"is_cover":false,"is_starting_position":false}, "", "", ""]
+                ],
+                "maxPlayers":2
+            }
+        ],
+        
+        "factions":[
+                {
+                    "id":"ja",
+                    "name":"The Justice Aliance",
+                    "color":"#309abb"
+                },
+                {
+                    "id":"df",
+                    "name":"The Dark Forces",
+                    "color":"#830202"
+                },
+                {
+                    "id":"ae",
+                    "name":"The Aliens and ET's",
+                    "color":"#1fc778"
+                },
+                {
+                    "id":"dm",
+                    "name":"The Death Machines",
+                    "color":"#395B64"
+                },
+                {
+                    "id":"bh",
+                    "name":"The Beast Hordes",
+                    "color":"#0F3D3E"
+                },
+                {
+                    "id":"ib",
+                    "name":"The Infestation Bugs",
+                    "color":"#D1512D"
+                }
+            ],
+        "badges":{},
+        "active_skills":[
+                "build", 
+                "set-defence", 
+                "ovrwatch",
+                "hit&run", 
+                "turbo-boost",
+                "deep-assault"
+            ],
+        "passive_skills":[
+                "hold-position", 
+                "all-terrain", 
+                "maxmove-1", 
+                "bonus-damage",
+                "fly",
+                "turbo-boost",
+                "transpor-10",
+                "fly", 
+                "transpor-5"
+            ],
+        "negative":[
+                "No-water", 
+                "no-Mountain", 
+                "hard-in-swamps",
+                "low-defence"
+            ], 
+        "objects":{
+                "unit":{
+                    "id":"",
+                    "name":"",
+                    "models":null,
+                    "point_const":null,
+                    "unit_type":null
+                }
+            },
+    
+    "users":{
+        "v01":{
+            "id":"v01",
+            "email":"visitor@onlinecampaign.com",
+            "username":"Visitor",
+            "password":null,
+            "type":"visitor",
+            "formations":[
+                {
+                    "id":1,
+                    "name": "Team Alfa",
+                    "description": "Multi-use",
+                    "image":"https://i.insider.com/5db7100ddee019682c6fb402?width=700",
+                    "components":[
+                        {
+                            "type":"infantry-squad",
+                            "movement":2,
+                            "composition":5,
+                            "pts":100
+                        },
+                        {
+                            "type":"infantry squad",
+                            "movement":2,
+                            "composition":1,
+                            "pts":100
+                        }
+                    ],
+                    "badges":[
+                        "objective-holder"
+                    ],
+                    "formation":"motorized-patrol",
+                    "is_selected":true
+        
+                },
+                {
+                    "id":2,
+                    "name": "Team Bravo",
+                    "description": "harrasment",
+                    "image":"https://upload.wikimedia.org/wikipedia/commons/1/1d/British_and_French_Snipers_During_Ex_Boars_Head.jpg",
+                    "components":[
+                        {
+                            "type":"light-infantry-squad",
+                            "movement":3,
+                            "composition":5,
+                            "pts":110
+                        }
+                    ],
+                    "badges":[
+                        "stealh",
+                        "sniper",
+                        "agile"               
+                    ],
+                    "formation":"motorized-patrol",
+                    "is_selected":true
+                },
+                {
+                    "id":3,
+                    "name": "Team Charlie",
+                    "description": "fire support",
+                    "image":"https://preview.redd.it/cpdp97hc3in71.jpg?width=640&crop=smart&auto=webp&s=8984472d0d17914561b0dcc54d3a1b7197100422",
+                    "components":[
+                        {
+                            "type":"infantry-tank",
+                            "movement":4,
+                            "composition":1,
+                            "pts":150
+                        },
+                        {
+                            "type":"infantry-tank",
+                            "movement":3,
+                            "composition":1,
+                            "pts":150
+                        }
+                    ],
+                    "badges":[
+                        
+                    ],
+                    "formation":"artillery-battery",
+                    "is_selected":false
+                },
+                {
+                    "id":4,
+                    "name": "Team Delta",
+                    "description": "Conscripts",
+                    "image":"https://st.depositphotos.com/1066666/4556/i/450/depositphotos_45565989-stock-photo-japanese-armed-marching-soldiers.jpg",
+                    "components":[
+                        {
+                            "type":"infantry-squad",
+                            "movement":2,
+                            "composition":5,
+                            "pts":100
+                        },
+                        {
+                            "type":"transport-tank",
+                            "movement":3,
+                            "composition":1,
+                            "pts":135
+                        }
+                    ],
+                    "badges":[
+                        
+                    ],
+                    "formation":"motorized-patrol",
+                    "is_selected":false
+        
+                },
+                {
+                    "id":5,
+                    "name": "The A team",
+                    "description": "motorized-infantry",
+                    "image":"https://www.nationalreview.com/wp-content/uploads/2021/05/a-team-full-cast-youtube.jpg?fit=1200%2C700",
+                    "components":[
+                        {
+                            "type":"light-infantry-squad",
+                            "movement":3,
+                            "composition":5,
+                            "pts":110
+                        }
+                    ],
+                    "badges":[
+                        "stealh",
+                        "sniper",
+                        "agile"               
+                    ],
+                    "formation":"light-infantry",
+                    "is_selected":false
+                },
+                {
+                    "id":6,
+                    "name": "Guardians of the galaxy",
+                    "description": "fire support",
+                    "image":"https://c.files.bbci.co.uk/35D5/production/_125718731_gettyimages-1241324225.jpg",
+                    "components":[
+                        {
+                            "type":"artillery-tank",
+                            "movement":4,
+                            "composition":1,
+                            "pts":135
+                        },
+                        {
+                            "type":"artillery-tank",
+                            "movement":3,
+                            "composition":1,
+                            "pts":135
+                        }
+                    ],
+                    "badges":[
+                        
+                    ],
+                    "formation":"artillery-battery",
+                    "is_selected":false
+                },
+                {
+                    "id":7,
+                    "name": "The Justice league",
+                    "description": "anti-hordes",
+                    "image":"http://2.bp.blogspot.com/-Uhym0ZSI3Bc/VikMZuM_W7I/AAAAAAABUfA/bzSQWFp7ZmY/s1600/Title.jpg",
+                    "components":[
+                        {
+                            "type":"infantry-squad",
+                            "movement":2,
+                            "composition":5,
+                            "pts":100
+                        },
+                        {
+                            "type":"transport-tank",
+                            "movement":3,
+                            "composition":1,
+                            "pts":135
+                        }
+                    ],
+                    "badges":[
+                    ],
+                    "formation":"motorized-patrol",
+                    "is_selected":false
+                },
+                {
+                    "id":8,
+                    "name": "The Avengers",
+                    "description": "Alfa strike",
+                    "image":"https://i.pinimg.com/736x/22/4e/24/224e24d50855164a902e142a234d852a--future-soldier-futuristic-design.jpg",
+                    "components":[
+                        {
+                            "type":"jet-infantry",
+                            "movement":3,
+                            "composition":5,
+                            "pts":125
+                        },
+                        {
+                            "type":"jet-infantry",
+                            "movement":3,
+                            "composition":5,
+                            "pts":125
+                        }
+                    ],
+                    "badges":[
+                                    
+                    ],
+                    "formation":"jet-troops",
+                    "is_selected":false
+                },
+                {
+                    "id":9,
+                    "name": "The expendables",
+                    "description": "multi-use",
+                    "image":"https://muropaketti.com/wp-content/uploads/2018/08/the-expendables-3.jpg",
+                    "components":[
+                        {
+                            "type":"inantry",
+                            "movement":2,
+                            "composition":10,
+                            "pts":180
+                        },
+                        {
+                            "type":"artillery-tank",
+                            "movement":3,
+                            "composition":1,
+                            "pts":125
+                        }
+                    ],
+                    "badges":[
+                        
+                    ],
+                    "formation":"artillery-battery",
+                    "is_selected":true
+                }  
+            ],
+            "army_lists":[],
+            "stats":{}
+        },    
+        "a01":{
+            "id":"a01",
+            "email":"admin@onlinecampaign.com",
+            "username":"Vitisman",
+            "password":null,
+            "type":"admin",
+            "formations":[
+                {
+                    "id":1,
+                    "name": "DT-26",
+                    "description": "Multi-use",
+                    "image":"https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
+                    "components":[
+                        {
+                            "type":"infantry-squad",
+                            "movement":2,
+                            "composition":5,
+                            "pts":100
+                        },
+                        {
+                            "type":"infantry squad",
+                            "movement":2,
+                            "composition":1,
+                            "pts":100
+                        }
+                    ],
+                    "badges":[
+                        "objective-holder"
+                    ],
+                    "formation":"motorized-patrol",
+                    "is_selected":true
+        
+                }
+            ],
+            "army_lists":[],
+            "stats":{}
+        }
+
+    }
+    }
+}

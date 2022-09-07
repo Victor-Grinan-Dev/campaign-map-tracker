@@ -233,9 +233,8 @@ const miniMapHx = {
                         posY:null,
                         posX:null,
                         owned_by:null,
-                        objective:null,
+                        objective:false,
                         formation:null,
-                        
                     },
                     {
                         id:"a01",
@@ -244,7 +243,10 @@ const miniMapHx = {
                         cover:false,
                         is_starting_position:false,
                         posY:null,
-                        posX:null
+                        posX:null,
+                        owned_by:null,
+                        objective:true,
+                        formation:null,
                     },
                 {
                     id:"b01",

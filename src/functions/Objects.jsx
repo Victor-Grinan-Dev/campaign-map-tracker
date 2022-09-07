@@ -1,23 +1,24 @@
 /* eslint-disable */
 
+
 export class Faction {
     constructor(name, color){
         this.name = name
         this.color = color
     }
-}
+};
 
 export class Unit {//one single model.
 
     level = 0
     badges = []
     
-    constructor(id, unitName, models, point_const){
+    constructor(id, unitName, models, point_const, unitType){
         this.id = id
         this.name = unitName
         this.models = models
         this.point_const = point_const
-  
+        this.unitType = unitType
     }
 }
 
