@@ -6,7 +6,7 @@ import { ArmyList, Formation, Unit } from '../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { capitalStart } from '../functions/functions'
-import { unitTypes } from '../functions/objectsGame';
+import { unitTypesArray } from '../functions/objectsGame';
 
 const databaseApi = 'http://localhost:8010/database';
 
@@ -91,8 +91,8 @@ function AddCard() {
                                     <p>Unit type</p>
                                     <select className={css.componentTypeSelect} name="type" onChange={(e) => changeUnits(e, index)}>
                                         <option value='none'> Choose Type </option>
-    {/*
-                                        {unitTypes.map((type) => 
+    
+                                        {unitTypesArray.map((type) => 
                                             <option 
                                             value= {type.type}
                                             key={type.id}
@@ -101,7 +101,7 @@ function AddCard() {
 
                                             </option>
                                         )}  
-    */}
+    
                                     </select>
                                 </div>
                                 

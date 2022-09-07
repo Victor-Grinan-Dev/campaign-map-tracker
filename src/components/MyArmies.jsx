@@ -11,11 +11,6 @@ import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 import { useNavigate } from 'react-router-dom';
 
 const databaseApi = 'http://localhost:8010/database';
-/**
- const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")
-const testUnit2 = new Unit('vgT', "Vitrix guards's tank", 4, 1, 125, "transport-tank")
-const formation1 = new Formation(1, "Vitrix Guards", 3, [testUnit1, testUnit2] );
- */
 
 function MyArmies() {
   const userType = useSelector(userTypeSelector);
@@ -42,9 +37,9 @@ function MyArmies() {
 
   const getformations = () => axios.get(databaseApi);
   
-  // const searchHandler = (e) => {
-  //   setSearch(e.target.value); 
-  //   };
+   const searchHandler = (e) => {
+    setSearch(e.target.value); 
+    };
 
   const currentUserId = 'v01';
 

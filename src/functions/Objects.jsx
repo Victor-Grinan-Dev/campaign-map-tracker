@@ -158,7 +158,7 @@ export class ArmyList {// all the models in the map from the same player.
     }
 }
 export class User {
-    id = undefined
+  
     type = "Visitor"
     level = 0
     rank = "conscript"
@@ -167,14 +167,13 @@ export class User {
     winRate = 0
     formations = []
 
-    constructor( username, email="", password=""){
+    constructor(id, username, email="", password=""){
         this.email = email
         this.username = username
         this.password = password
+        this.id = id
     }
-    setId(){
-        return username + `${Math.random()}`
-    }
+
 }
 //Map objects:
 export class Tile {

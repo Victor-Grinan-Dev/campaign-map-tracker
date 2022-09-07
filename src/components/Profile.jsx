@@ -19,14 +19,15 @@ function Profile() {
   },[currentUser]);
 
     const visitorWelcoming = () => {
-        console.log(userType);
         if (userType === 'visitor'){
             return <div>
-            <h2>Have a warm welcome {currentUser}!</h2>
-            Before starting browsing around is recomandable to take a look to our <a href="/about">About page</a>. Also take a look <a href="#">Terms and Conditions</a> and to our <a href="#">Privacy  Policy</a> 
+            <h2> Have a warm welcome {currentUser}!</h2>
+            <p>
+            Before starting browsing around is recomandable to take a look to our <a href="/about">About page</a>. Also take a look <a href="#">Terms and Conditions</a> and to our <a href="#">Privacy  Policy.</a> Is IMPORTANT to know that as a visitor you will be automatically logged out if you refresh the page, all your changes will be lost.
+            </p>
         </div>
         }
-    }
+    };
 
   return (
     <div>

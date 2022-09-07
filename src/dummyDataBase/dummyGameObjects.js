@@ -1,14 +1,14 @@
-import { Unit, Formation, ArmyList, Campaign, User  } from "./Objects";
-import { unitTypes } from "./objectsGame";
+import { Unit, Formation, ArmyList, Campaign, User  } from "../functions/Objects";
+import { unitTypesArray } from "../functions/objectsGame";
 //user1 (hard coded):
 const user1 = new User('user1', 'user1@campaign.com', 123456);
 
-const elgir = new Unit('user1-0', 'Elgir BladeClaw', 2, 1, 55, unitTypes.infantry);
-const grey_hunters = new Unit('user1-1', 'Elgir\'s Grey Hunters', 2, 5, 90, unitTypes.infantry);
-const wolf_scouts = new Unit('user1-2', 'Shadow Wolves', 2, 5, 95, unitTypes.infantry);
+const elgir = new Unit('user1-0', 'Elgir BladeClaw', 2, 1, 55, unitTypesArray.infantry);
+const grey_hunters = new Unit('user1-1', 'Elgir\'s Grey Hunters', 2, 5, 90, unitTypesArray.infantry);
+const wolf_scouts = new Unit('user1-2', 'Shadow Wolves', 2, 5, 95, unitTypesArray.infantry);
 const ciberwolf = new Unit('user1-3', "WhiteFang", 4, 1, 15, 'beast');//beast cant do actions
-const thunderwolf_cavalry = new Unit('user1-0', "Thunder Riders", 3, 3, 145, unitTypes.rider);
-const razor_back = new Unit('user1-4', "IronBite", 4, 1, 125, unitTypes.armoured_transport)
+const thunderwolf_cavalry = new Unit('user1-0', "Thunder Riders", 3, 3, 145, unitTypesArray.rider);
+const razor_back = new Unit('user1-4', "IronBite", 4, 1, 125, unitTypesArray.armoured_transport)
 
 const formation1 = new Formation('f01U1', 'Elgir\'s Patrol', [elgir, grey_hunters, razor_back], 'the archiver group', ' this group will be use for holding and archieving objectives', undefined )
 

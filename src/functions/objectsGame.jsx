@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export const unitTypes = {
+export const unitTypesObject = {
     infantry:{
       id:1,
       type:"infantry",
@@ -112,7 +112,118 @@ export const unitTypes = {
       passive_skills:["no-water"]
     }
   }
+  export const unitTypesArray = [
+    {
+      id:1,
+      type:"infantry",
+      movement:2,
+      active_skills:["build", "set-defence", "ovrwatch"],
+      actions:2,
+      negative:[],
+      passive_skills:["hold-position", "all-terrain", "maxmove-1"]
+    },
+    {
+      id:2,
+      type:"light-infantry",
+      movement:2,
+      active_skills:["build","set-defence", "ovrwatch"],
+      actions:2,
+      negative:[],
+      passive_skills:["hold-position", "all-terrain", "maxmove-1"]
+    },
+    {
+      id:3,
+      type:"heavy-infantry",
+      movement:1,
+      active_skills:[ "build","set-defence", "ovrwatch"],
+      actions:2,
+      negative:[],
+      passive_skills:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
+    },
+    {
+      id:4,
+      type:"jet-infantry",
+      movement:3,
+      active_skills:["deep-assault"],
+      actions:1,
+      negative:["No-water"],
+      passive_skills:["fly"]
+    },
+    {
+      id:5,
+      type:"rider",
+      movement:3,
+      active_skills:["hit&run", "turbo-boost"],
+      actions:1,
+      negative:["No-water", "no-Mountain", "hard-in-swamps" ],
+      passive_skills:["turbo-boost"]
+    },
   
+    {
+      id:6,
+      type:"armoured-transport",
+      movement:3,
+      active_skills:null,
+      actions:1,
+      negative:["No-water", "no-Mountain" ],
+      passive_skills:["transport-10"]
+    },
+    {
+      id:7,
+      type:"light-tank",
+      movement:3,
+      active_skills:null,
+      actions:1,
+      negative:["No-water", "no-Mountain" ],
+      passive_skills:[]
+    },
+    {
+      id:7.1,
+      type:"heavy-tank",
+      movement:3,
+      active_skills:null,
+      actions:1,
+      negative:["No-water", "no-Mountain" ],
+      passive_skills:[]
+    },
+  
+    {
+      id:8,
+      type:"fast-hover-transport",
+      movement:4,
+      active_skills:null,
+      actions:1,
+      negative:["No-water", "low-defence"],
+      passive_skills:["fly", "transport-5"]
+    },
+    {
+      id:9,
+      type:"fast-hover",
+      movement:4,
+      active_skills:null,
+      actions:1,
+      negative:["No-water", "low-defence"],
+      passive_skills:["fly"]
+    },
+    {
+      id:10,
+      type:"walker-vehicle",
+      movement:2,
+      active_skills:null,
+      actions:[],
+      negative:1,
+      passive_skills:["no-water"]
+    },
+    {
+      id:11,
+      type:"artillery-tank",
+      movement:4,
+      active_skills:['deploy'],
+      actions:[],
+      negative:1,
+      passive_skills:["no-water"]
+    }
+  ]
   export const factions = [
     {
         id:"ja",

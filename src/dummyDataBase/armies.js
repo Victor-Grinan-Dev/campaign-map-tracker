@@ -1,16 +1,16 @@
 
 import { User, Unit, Formation, ArmyList} from "../functions/Objects";
-import { unitTypes } from "../functions/objectsGame";
+import { unitTypesObject } from "../functions/objectsGame";
 
 //user1 (hard coded):
 const user1 = new User('user1', 'user1@campaign.com', 123456);
 
-const elgir = new Unit('user1-0', 'Elgir BladeClaw', 1, 55, unitTypes.infantry);
-const grey_hunters = new Unit('user1-1', 'Elgir\'s Grey Hunters', 2, 5, 90, unitTypes.infantry);
-const wolf_scouts = new Unit('user1-2', 'Shadow Wolves', 5, 95, unitTypes.infantry);
+const elgir = new Unit('user1-0', 'Elgir BladeClaw', 1, 55, unitTypesObject.infantry);
+const grey_hunters = new Unit('user1-1', 'Elgir\'s Grey Hunters', 2, 5, 90, unitTypesObject.infantry);
+const wolf_scouts = new Unit('user1-2', 'Shadow Wolves', 5, 95, unitTypesObject.infantry);
 const ciberwolf = new Unit('user1-3', "WhiteFang", 1, 15, 'beast');//beast cant do actions
-const thunderwolf_cavalry = new Unit('user1-0', "Thunder Riders", 3, 3, 145, unitTypes.rider);
-const razor_back = new Unit('user1-4', "IronBite", 1, 125, unitTypes.armouredTransport)
+const thunderwolf_cavalry = new Unit('user1-0', "Thunder Riders", 3, 3, 145, unitTypesObject.rider);
+const razor_back = new Unit('user1-4', "IronBite", 1, 125, unitTypesObject.armouredTransport)
 
 const formation1 = new Formation('f01U1', 'Elgir\'s Patrol', [elgir, grey_hunters, razor_back], 'the archiver group', ' this group will be use for holding and archieving objectives', undefined )
 
@@ -27,22 +27,22 @@ const user1Army = new ArmyList("Elgir's Finests", [formation1, formation2, forma
 const user2 = new User('user2', 'user2@campaign.com', 654321);
 
 const user2ArmyItems = [
-    [ 'user2-0',"Commander", 1, 40, unitTypes.infantry],
-    [ 'user2-1',"command squad", 4, 40, unitTypes.infantry],
-    [ 'user2-2',"infantry squad Alpha", 10, 60, unitTypes.infantry],
-    [ 'user2-3',"infantry squad Beta", 10, 60, unitTypes.infantry],
-    [ 'user2-4',"Hellhound", 1, 100, unitTypes.lightTank],
-    [ 'user2-5',"Basillisk", 1, 125, unitTypes.artilleryTank],
-    [ 'user2-6',"Chimera", 1, 75, unitTypes.transportTank],
+    [ 'user2-0',"Commander", 1, 40, unitTypesObject.infantry],
+    [ 'user2-1',"command squad", 4, 40, unitTypesObject.infantry],
+    [ 'user2-2',"infantry squad Alpha", 10, 60, unitTypesObject.infantry],
+    [ 'user2-3',"infantry squad Beta", 10, 60, unitTypesObject.infantry],
+    [ 'user2-4',"Hellhound", 1, 100, unitTypesObject.lightTank],
+    [ 'user2-5',"Basillisk", 1, 125, unitTypesObject.artilleryTank],
+    [ 'user2-6',"Chimera", 1, 75, unitTypesObject.transportTank],
 ];
 
-const commander = new Unit('user2-0',"Commander", 1, 40, unitTypes.infantry);
-const command_squad = new Unit('user2-1',"command squad", 4, 40, unitTypes.infantryy);
-const squad_alpha = new Unit('user2-2',"infantry squad Alpha", 10, 60, unitTypes.infantry);
-const squad_beta = new Unit('user2-3',"infantry squad Beta", 10, 60, unitTypes.infantry);//beast cant do actions
-const hellhound = new Unit('user2-4',"Hellhound", 1, 100, unitTypes.lightTank);
-const basillisk = new Unit('user2-5',"Basillisk", 1, 125, unitTypes.artilleryTank)
-const chimera = new Unit('user2-6',"Chimera", 1, 75, unitTypes.transportTank)
+const commander = new Unit('user2-0',"Commander", 1, 40, unitTypesObject.infantry);
+const command_squad = new Unit('user2-1',"command squad", 4, 40, unitTypesObject.infantryy);
+const squad_alpha = new Unit('user2-2',"infantry squad Alpha", 10, 60, unitTypesObject.infantry);
+const squad_beta = new Unit('user2-3',"infantry squad Beta", 10, 60, unitTypesObject.infantry);//beast cant do actions
+const hellhound = new Unit('user2-4',"Hellhound", 1, 100, unitTypesObject.lightTank);
+const basillisk = new Unit('user2-5',"Basillisk", 1, 125, unitTypesObject.artilleryTank)
+const chimera = new Unit('user2-6',"Chimera", 1, 75, unitTypesObject.transportTank)
 /** DEMO DATA **/
 
 //wolves:

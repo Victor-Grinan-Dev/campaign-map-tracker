@@ -17,7 +17,7 @@ function Conctact() {
   return (
     <div>
       <NavBar />
-      Conctact
+      <p>Conctacts:</p> 
       </div>
   )
 }

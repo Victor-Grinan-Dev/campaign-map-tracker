@@ -17,7 +17,7 @@ import MyArmies from './components/MyArmies';
 import NewCampaign  from './components/NewCampaign';
 import Profile from './components/Profile';
 import ShowMap from './components/ShowMap';
-import Game from './components/Game';
+import Game from './components/game_components/Game';
 
 function App() {
   return (

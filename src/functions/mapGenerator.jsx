@@ -5,12 +5,10 @@ import mountains from '../assets/tile_images/mountains.png';
 import swamp from '../assets/tile_images/swamp.png';
 import { Tile, Map } from './Objects';
 
-
 //TEST
-import { DemoArmies } from './dummyGameObjects';
+import { DemoArmies } from '../dummyDataBase/armies';
 const astraArmy = DemoArmies[0]; 
 const wolvesArmy = DemoArmies[1];
-
 const astraToken = astraArmy.formation;
 const wolvesToken = wolvesArmy.formation;
 
@@ -21,6 +19,7 @@ const relation = {
     11:6,
     13:8,
 }
+/*
 const tilesImages = [//is plains no planes
     "planes",
     "forest",
@@ -28,7 +27,9 @@ const tilesImages = [//is plains no planes
     "mountains",
     "swamp"
     ]
-//example out come: 
+*/
+//example outcome:
+//TODO: erase this little example maps.
 const squareTestMap = {
     name:"Planes Valley",
     shape:"sq",
