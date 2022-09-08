@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import loggedReducer from '../features/logged/loggedSlice';
-
+import loggedReducers from '../features/logged/loggedSlice';
+import armyReducers from'../features/army/armySlice';
 export default configureStore({
 reducer: {
-    logged: loggedReducer,
-
+    logged: loggedReducers,
+    army: armyReducers
     }
 })
