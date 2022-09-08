@@ -39,7 +39,7 @@ function Home(){
         })
     },[])
     const createUser = () => {
-        changeUserId(userType + '_' + currentUser + '_' + Math.floor(Math.random() * 100));
+        dispatch(changeUserId(userType + '_' + currentUser + '_' + Math.floor(Math.random() * 100)));
         const newUser = new User(userId, currentUser, null, null);
         newUser.formations = commonFormations;
         axios.post(visitorEndPoint, newUser);
