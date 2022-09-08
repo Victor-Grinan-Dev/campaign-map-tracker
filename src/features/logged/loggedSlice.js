@@ -5,10 +5,10 @@ export const loggedSlice = createSlice({
     name: 'logged',
     
     initialState: {
-        value: false,
+        value: false, //call this is_logged instead? ... later!?!?
         currentUser:undefined, //just the name of the user
-        userType:"visitor",
-        userId:undefined,
+        userType:"user",//change to visitor after find how to erase from db on log out
+        userIndex:1,//change to undefined
     },
     
     reducers:{
@@ -22,15 +22,15 @@ export const loggedSlice = createSlice({
         changeUser:(state, action)=>{
             state.currentUser = action.payload;
         },
-        changeUserId:(state, action) =>{
-            state.userId = action.payload
+        changeUserIndex:(state, action) =>{
+            state.userIndex = action.payload
         }
     },
 });
 
-export const { changeLogStatus, changeUser, changeUserId } = loggedSlice.actions;
+export const { changeLogStatus, changeUser, changeUserIndex } = loggedSlice.actions;
 export const loggedSelector = (state) => state.logged.value;
 export const userSelector = (state) => state.logged.currentUser;
 export const userTypeSelector = (state) => state.logged.userType;
-export const userIdSelector = (state) => state.logged.userId;
+export const userIndexSelector = (state) => state.logged.userIndex;
 export default loggedSlice.reducer

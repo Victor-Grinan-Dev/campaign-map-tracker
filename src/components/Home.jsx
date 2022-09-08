@@ -6,8 +6,8 @@ import Button from '../small_components/Button';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { loggedSelector, userIdSelector, userSelector, userTypeSelector } from '../features/logged/loggedSlice';
-import { changeLogStatus, changeUser, changeUserId } from '../features/logged/loggedSlice';
+import { loggedSelector, userIndexSelector, userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { changeLogStatus, changeUser, changeUserIndex } from '../features/logged/loggedSlice';
 import { User } from '../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -23,7 +23,7 @@ function Home(){
     const isLogged = useSelector(loggedSelector);
     const currentUser = useSelector(userSelector);
     const userType = useSelector(userTypeSelector);
-    const userId = useSelector(userIdSelector);
+    const userIndex = useSelector(userIndexSelector);
     const [commonFormations, setFormations] = useState([]);
 
     const usernameHandler = () => {
@@ -39,10 +39,17 @@ function Home(){
         })
     },[])
     const createUser = () => {
-        dispatch(changeUserId(userType + '_' + currentUser + '_' + Math.floor(Math.random() * 100)));
-        const newUser = new User(userId, currentUser, null, null);
+        let index;
+        dispatch(changeUserIndex(userType + '_' + currentUser + '_' + Math.floor(Math.random() * 100)));
+        const newUser = new User(userIndex, currentUser, null, null);
         newUser.formations = commonFormations;
-        axios.post(visitorEndPoint, newUser);
+        axios.post(visitorEndPoint, newUser)
+        .then(() => {
+            axios.get(visitorEndPoint).then(res => {
+                index = res.data.length
+                dispatch(changeUserIndex(index - 1))
+            })
+        })
     }
 
     const loginModalVisitor = () => {

@@ -14,9 +14,17 @@ export const getData = (url) => {
 
 export const deleteData = (url, id) => {
     (async () =>{
-        axios.delete(url + '/' + id)
-        .catch(err => {
-            console.log(err);
+        axios.get(url).then(res => {
+            res.data.map((user, index) => {
+                if(user.id === id){
+                    axios.delete(url + '/' + index)
+                    .catch(err => {
+                        console.log('something wrong deleting the data', err);
+                    });
+                }
+            })
+        }).catch(err => {
+            console.log('something wrong getting the database', err);
         });
     })();
 };

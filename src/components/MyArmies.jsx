@@ -1,57 +1,65 @@
 import React from 'react';
 import axios from 'axios';
-import Card from '../small_components/Card';
+
+//hooks:
 import { useState, useEffect } from 'react';
-import AddCard from '../small_components/AddCard';
-import BackTo from '../small_components/BackTo';
-import { Unit, Formation } from '../functions/Objects';
-import NavBar from '../small_components/NavBar';
 import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { userSelector, userTypeSelector, userIndexSelector } from '../features/logged/loggedSlice';
 import { useNavigate } from 'react-router-dom';
 
-const databaseApi = 'http://localhost:8010/database';
+//components:
+import Card from '../small_components/Card';
+import AddCard from '../small_components/AddCard';
+import BackTo from '../small_components/BackTo';
+import NavBar from '../small_components/NavBar';
+
+//objects:
+import { Unit, Formation } from '../functions/Objects';
+
+const databaseApi = 'http://localhost:8011/database';
+const visitorDb2 = 'http://localhost:8011/visitors';
 
 function MyArmies() {
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userSelector);
   const navigate = useNavigate();
-    useEffect(()=>{
-      if (!currentUser && userType==='visitor'){
-        navigate('/');
-      }
-    },[currentUser]);
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
   const [formations, setformations] = useState([]);
-  //const [country, setCountry] = useState([]);
-   const [search, setSearch] = useState('');
-  const [enlisted, setEnlisted] = useState([])
+  const [search, setSearch] = useState('');
+  const [enlisted, setEnlisted] = useState([]);
   const [loading, setLoading] = useState(false);
+  const userIndex = useSelector(userIndexSelector);;
+
+  //useEffect(()=>{
+  //  //on page reload, log out.
+  //  if (!currentUser && userType==='visitor'){
+  //    navigate('/');
+  //  }
+  //},[currentUser]);
 
   const formationsFilter = formations.filter((res) => {
     res.name = res.name.toLowerCase()
     return res.name.includes(search.toLowerCase());
   });
 
-  const getData = () => axios.get(databaseApi)
-
-  const getformations = () => axios.get(databaseApi);
-  
-   const searchHandler = (e) => {
+  const getData = () => axios.get(visitorDb2)
+  //const getformations = () => axios.get(databaseApi);
+  const searchHandler = (e) => {
     setSearch(e.target.value); 
     };
 
-  const currentUserId = 'v01';
+  //const currentUserId = 'v01';
 
     useEffect(() => {
       setLoading(true);
-      Promise.all([getData()]).then(function (results) {
-        const userData = results[0].data.users.filter((user)=>{
-          return user.id == currentUserId;
-        })
-        const formations = userData[0].formations;
-        const  armyList = userData[0].armyList;
-        setformations(formations)
+      Promise.all([getData()]).then((res) => {
+
+        console.log(res[0].data[userIndex].formations)
+        //const userData = results[0].data.users.filter((user)=>{
+        //  return user.id == currentUserId;
+        //})
+        //const  armyList = userData[0].armyList;
+        setformations(res[0].data[userIndex].formations)
         setLoading(false);
       });
     }, []);
