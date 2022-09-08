@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import css from './AddCard.module.css';
 import Button from './Button';
-import { ArmyList, Formation, Unit } from '../functions/Objects';
+//import { ArmyList, Formation, Unit } from '../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { capitalStart } from '../functions/functions'
@@ -20,12 +20,12 @@ const sampleArmy = new ArmyList('sample army', [sampleFormation],)
 
 function AddCard() {
 
-    const [formationData, setFormationData] = useState(new Formation(undefined, "", []));
-    const [units, setUnits] = useState([new Unit(1, "", null, null, null, "")]);
+    //const [formationData, setFormationData] = useState(new Formation("", null, []));
+    //const [units, setUnits] = useState([new Unit("", null, null, undefined)]);
    
-    const changeFormationData = (e) => {
-        setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
-      };
+    //const changeFormationData = (e) => {
+        //setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
+      //};
 
       /*//TODO: read the unitTypes available from the database.
        //const [unitTypes, setUnitTypes] = useState()
@@ -42,23 +42,23 @@ function AddCard() {
       */
  
 
-      const changeUnits = (e, i) => {
-        const { name, value } = e.target;
-        const unitList = [...units];
-        unitList[i][name] = value;
-        setUnits(unitList);
-        setFormationData({ ...formationData, composition: unitList });
-        console.log(formationData)
-      };
+      //const changeUnits = (e, i) => {
+      //  const { name, value } = e.target;
+      //  const unitList = [...units];
+      //  unitList[i][name] = value;
+      //  setUnits(unitList);
+      //  setFormationData({ ...formationData, composition: unitList });
+      //  console.log(formationData)
+      //};
 
-      const addUnit = (e) => {
-        e.preventDefault();
-        const newUnit = new Unit(units.length + 1, "", null, null, null, "");
-        setUnits([...units, newUnit])
-      }
+      //const addUnit = (e) => {
+      //  e.preventDefault();
+      //  const newUnit = "new unit from state?";
+      //  setUnits([...units, newUnit])
+      //}
 
-      const submitData = (e) => {
-        e.preventDefault()
+      //const submitData = (e) => {
+      //  e.preventDefault()
 /*
         axios.get(databaseApi + formationsEndPoint).then(res => {
             console.log(res.data)
@@ -66,12 +66,20 @@ function AddCard() {
         })
 */
         //axios.post(, formationData);
-        setFormationData(new Formation(undefined, "", []));
-      };
+        //setFormationData(new Formation("", []));
+      //};
 
   return (
     <div className={css.addCardContainer}>
-        <form>
+        
+    </div>
+  )
+}
+
+export default AddCard;
+
+/*
+<form>
 
             <input className={css.addCardInput} type="text" name="name" placeholder='Name...' onChange={changeFormationData}/>
             <textarea className={css.addCardInputText} type="text" name="sDescription" placeholder='Short Description... (optional)' onChange={changeFormationData}/>
@@ -155,8 +163,4 @@ function AddCard() {
             
             <Button caption="Create Formation" role="submit" action={submitData}/>
         </form>
-    </div>
-  )
-}
-
-export default AddCard;
+*/

@@ -1,14 +1,12 @@
 /* eslint-disable */
 
 export class Unit {//one single model.
-
-    level = 0
-    badges = []
-    pointCost = 0
-    pointsPerModel = 0
-    models = 0
-    
-    constructor(id, unitName, models, point_const, unitType){
+    movement = 0
+    actions = 0
+    active_skills = []
+    negative = []
+    passive_skills = []
+    constructor(unitName, models, point_const, unitType){
         this.id = id
         this.name = unitName
         this.models = models
@@ -19,30 +17,32 @@ export class Unit {//one single model.
 
 export class Formation {//one or more models and/or squads in the same tile and from the same army. As a token in the map they move toguether.
 
-    actionPoints=1
-    damage = null
-    modelCount = 0
-    vision = 2
-    Xp=0
-    level= null
-    abilities=[]
-    badges=[]
-    movement = 4
-    type = undefined
-    dedication=[]
-    color='white'
+  action_points=1
+  damage = null
+  model_count = 0
+  vision = 2
+  Xp=0
+  level= 0
+  benefits=[]
+  badges=[]
+  movement = 4
+  type = undefined
+  dedication=[]
+  color='white'
+  is_listed = false
+  carry_capacity = undefined
 
-    constructor(id, name, composition = [], sDescription="", lDescription="", image=""){
-        this.id = id
-        this.name = name
-        this.composition = composition
-        this.sDescription = sDescription
-        this.lDescription = lDescription
-        this.image = image
-        this.point_const = this.setPointCost() 
-        this.setDamage()
-        this.setMovement()
-        }
+  constructor(name, composition = [], s_description="", l_description="", image=""){
+    this.id = id
+    this.name = name
+    this.composition = composition
+    this.s_description = s_description
+    this.l_description = l_description
+    this.image = image
+    this.point_const = this.setPointCost() 
+    this.setDamage()
+    this.setMovement()
+    }
         
     get pointCost (){
       let total = 0;
@@ -159,21 +159,20 @@ export class ArmyList {// all the models in the map from the same player.
 }
 export class User {
   
-    type = "Visitor"
-    level = 0
-    rank = "conscript"
-    badges = []
-    battles = 0
-    winRate = 0
-    formations = []
+  type = "Visitor"
+  level = 0
+  rank = "conscript"
+  badges = []
+  battles = 0
+  winRate = 0
+  formations = []
 
-    constructor(id, username, email="", password=""){
-        this.email = email
-        this.username = username
-        this.password = password
-        this.id = id
-    }
-
+  constructor(id, username, email="", password=""){
+      this.email = email
+      this.username = username
+      this.password = password
+      this.id = id
+  }
 }
 //Map objects:
 export class Tile {
@@ -282,21 +281,309 @@ export default class Campaign {
     }
 }
 
-/**
- * export {
-    campaign_Object,
-    Faction,
-    Unit,
-    Formation,
-    ArmyList,
-    User,
-    tile_object,
-    nullTile,
-    Tile,
-    MapLine,
-    map_object,
-    Map,
-    dedications
+
+export const unitTypesObject = {
+  infantry:{
+    id:1,
+    type:"infantry",
+    movement:2,
+    active_skills:["build", "set-defence"],
+    actions:2,
+    negative:[],
+    passive_skills:["claim-tile", "all-terrain"]
+  },
+  lightInfantry:{
+    id:2,
+    type:"light-infantry",
+    movement:2,
+    active_skills:["build", "conceal"],
+    actions:2,
+    negative:["defense(-10)"],
+    passive_skills:["hold-position", "all-terrain", "move(+1)" ]
+  },
+  heavyInfantry:{
+    id:3,
+    type:"heavy-infantry",
+    movement:1,
+    active_skills:[ "build","set-defence", "ovrwatch"],
+    actions:2,
+    negative:[],
+    passive_skills:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
+  },
+  jetInfantry:{
+    id:4,
+    type:"jet-infantry",
+    movement:3,
+    active_skills:["deep-assault"],
+    actions:1,
+    negative:["No-water"],
+    passive_skills:["fly"]
+  },
+  rider:{
+    id:5,
+    type:"rider",
+    movement:3,
+    active_skills:["hit&run", "turbo-boost"],
+    actions:1,
+    negative:["No-water", "no-Mountain", "hard-in-swamps" ],
+    passive_skills:["turbo-boost"]
+  },
+
+  armouredTransport:{
+    id:6,
+    type:"armoured-transport",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:["transport-10"]
+  },
+  lightTank:{
+    id:7,
+    type:"light-tank",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:[]
+  },
+  heavyTank:{
+    id:7.1,
+    type:"heavy-tank",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:[]
+  },
+
+  fastHoverTransport:{
+    id:8,
+    type:"fast-hover-transport",
+    movement:4,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "low-defence"],
+    passive_skills:["fly", "transport-5"]
+  },
+  fastHover:{
+    id:9,
+    type:"fast-hover",
+    movement:4,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "low-defence"],
+    passive_skills:["fly"]
+  },
+  walkerVehicle:{
+    id:10,
+    type:"walker-vehicle",
+    movement:2,
+    active_skills:null,
+    actions:[],
+    negative:1,
+    passive_skills:["no-water"]
+  },
+  artilleryTank:{
+    id:11,
+    type:"artillery-tank",
+    movement:4,
+    active_skills:['deploy'],
+    actions:[],
+    negative:1,
+    passive_skills:["no-water"]
+  }
 }
- */
+export const unitTypesArray = [
+  {
+    id:1,
+    type:"infantry",
+    movement:2,
+    active_skills:["build", "set-defence", "ovrwatch"],
+    actions:2,
+    negative:[],
+    passive_skills:["hold-position", "all-terrain", "no-minus-move"]
+  },
+  {
+    id:2,
+    type:"light-infantry",
+    movement:2,
+    active_skills:["build","set-defence", "ovrwatch"],
+    actions:2,
+    negative:[],
+    passive_skills:[]
+  },
+  {
+    id:3,
+    type:"heavy-infantry",
+    movement:1,
+    active_skills:[ "build","set-defence", "ovrwatch"],
+    actions:2,
+    negative:[],
+    passive_skills:[]
+  },
+  {
+    id:4,
+    type:"jet-infantry",
+    movement:3,
+    active_skills:["deep-assault"],
+    actions:1,
+    negative:["No-water"],
+    passive_skills:[]
+  },
+  {
+    id:5,
+    type:"rider",
+    movement:3,
+    active_skills:["hit&run", "turbo-boost"],
+    actions:1,
+    negative:["No-water", "no-Mountain", "hard-in-swamps" ],
+    passive_skills:[]
+  },
+
+  {
+    id:6,
+    type:"armoured-transport",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:[]
+  },
+  {
+    id:7,
+    type:"light-tank",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:[]
+  },
+  {
+    id:7.1,
+    type:"heavy-tank",
+    movement:3,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive_skills:[]
+  },
+
+  {
+    id:8,
+    type:"fast-hover-transport",
+    movement:4,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "low-defence"],
+    passive_skills:[]
+  },
+  {
+    id:9,
+    type:"fast-hover",
+    movement:4,
+    active_skills:null,
+    actions:1,
+    negative:["No-water", "low-defence"],
+    passive_skills:[]
+  },
+  {
+    id:10,
+    type:"walker-vehicle",
+    movement:2,
+    active_skills:null,
+    actions:[],
+    negative:1,
+    passive_skills:[]
+  },
+  {
+    id:11,
+    type:"artillery-tank",
+    movement:4,
+    active_skills:['deploy'],
+    actions:[],
+    negative:1,
+    passive_skills:[]
+  }
+]
+export const factions = [
+  {
+      id:"ja",
+      name:"The Justice Aliance",
+      color:"#309abb"},
+  {
+      id:"df",
+      name:"The Dark Forces",
+      color:"#830202"},
+  {
+      id:"ae",
+      name:"The Aliens and ET's",
+      color:"#1fc778"},
+  {
+      id:"dm",
+      name:"The Death Machines",
+      color:"#395B64"},
+  {
+      id:"bh",
+      name:"The Beast Hordes",
+      color:"#0F3D3E"},
+  {
+      id:"ib",
+      name:"The Infestation Bugs",
+      color:"#D1512D"
+  }
+]
+export const dedications = {
+  'anti-infantry':'+10% damage vs infantry', 
+  'anti-tank':'+10% damage vs tank', 
+  'spotter':'+1 vision', 
+  'speeder':'+1 movement', 
+  'tank':'-5% damage recieve', 
+  'tracker':'10% luck on search',
+  'hard-worker':'+1 actionPoints',
+  'analizer':'+10% Xp',
+}
+export const badges = {
+  '':'', 
+  '':'', 
+  '':'', 
+  '':'', 
+  '':'', 
+  '':'',
+  '':'',
+  '':'',
+}
+
+export const active_skills =[
+  "build", 
+  "get-ready",
+  "claim-tile",
+  "build", 
+  "set-defence",
+  "ambush",
+  "build", 
+  "conceal",
+  "build",
+  "set-defence", 
+  "ovrwatch",
+  "deep-assault",
+  "hit&run", 
+  "turbo-boost",
+  "deploy",
+  "jump"
+]
+
+export const negative =[
+  "no-waters", "no-swamps"
+]
+export const passive_skills =[
+  "all-terrain", 
+  "no-minus-move", 
+  "tranport_capacity()", 
+  "carry_capacity()",
+  "ocupy-position", //means that ocupies the tile while standind in it
+  "bonus-damage()",
+  "fly"
+]
+ 
 

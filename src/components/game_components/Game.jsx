@@ -11,6 +11,9 @@ import { useEffect } from 'react';
 
 const map = availableMaps[3];
 
+/** object testing */
+
+
 function Game() {
     const userType = useSelector(userTypeSelector);
     const currentUser = useSelector(userSelector);

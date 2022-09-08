@@ -112,7 +112,7 @@ export const unitTypesObject = {
       passive_skills:["no-water"]
     }
   }
-  export const unitTypesArray = [
+export const unitTypesArray = [
     {
       id:1,
       type:"infantry",
@@ -224,7 +224,7 @@ export const unitTypesObject = {
       passive_skills:["no-water"]
     }
   ]
-  export const factions = [
+export const factions = [
     {
         id:"ja",
         name:"The Justice Aliance",
@@ -251,7 +251,6 @@ export const unitTypesObject = {
         color:"#D1512D"
     }
   ]
-
 export const dedications = {
     'anti-infantry':'+10% damage vs infantry', 
     'anti-tank':'+10% damage vs tank', 
@@ -262,7 +261,6 @@ export const dedications = {
     'hard-worker':'+1 actionPoints',
     'analizer':'+10% Xp',
 }
-
 export const badges = {
     '':'', 
     '':'', 
@@ -274,13 +272,12 @@ export const badges = {
     '':'',
 }
 
-export const abilities = {
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'', 
-    '':'',
-    '':'',
-    '':'',
+export const active_skills ={
+
+}
+export const negative ={
+
+}
+export const passive_skills ={
+
 }

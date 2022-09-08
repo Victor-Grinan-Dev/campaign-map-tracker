@@ -5,13 +5,6 @@ import mountains from '../assets/tile_images/mountains.png';
 import swamp from '../assets/tile_images/swamp.png';
 import { Tile, Map } from './Objects';
 
-//TEST
-import { DemoArmies } from '../dummyDataBase/armies';
-const astraArmy = DemoArmies[0]; 
-const wolvesArmy = DemoArmies[1];
-const astraToken = astraArmy.formation;
-const wolvesToken = wolvesArmy.formation;
-
 const relation = {
     5:1,
     7:2,
@@ -336,7 +329,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'red',
                     objective:null,
-                    formation:astraToken,
+                    formation:null,
                 },
                 {
                     id:"b03",
@@ -384,7 +377,7 @@ const miniMapHx = {
                     posX:null,
                     owned_by:'blue',
                     objective:null,
-                    formation:wolvesToken,
+                    formation:null,
                 }
             ],
             [
@@ -599,15 +592,12 @@ const canvasHex = (name, side = 13) => {
     
     return hexMap;
 }
-
-
 //TODO: generate a proper map:
 const generateHexagonalMap = (name, side = 13) => {
     let hexMap;
     hexMap =  canvasHex(name, side);
     return hexMap;
 }
-
 //TODO: generate a proper map:
 const generateSqMap  = (name = "Blank Canvas", maxRows = 25, maxCols = 25, shape="sq") => {
     //not done
@@ -616,7 +606,6 @@ const generateSqMap  = (name = "Blank Canvas", maxRows = 25, maxCols = 25, shape
     map = canvasSquare(name, maxRows, maxCols);
     return map;
 }
-
 //TODO: switcth shapes
 const generateMap = (name = "Unknown", dimensions="7x7", shape = "sq") => {
     //this should be the only function you need to generate any of the available map options as a canvas or a random tiles
@@ -637,8 +626,6 @@ const generateMap = (name = "Unknown", dimensions="7x7", shape = "sq") => {
     }
     return map;
 }
-
-
 const blankCanvas = canvasSquare();
 const availableMaps = [squareTestMap, hexTestMap, miniMapSq , miniMapHx];
 

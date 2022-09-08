@@ -102,12 +102,13 @@ function MyArmies() {
       </div>
 
       <div className='search-container'> 
-      <BackTo pageUrl={'/profile'} pageName="Profile"/>
-        <input type="text" placeholder='Serach'/></div>
+      
+        <input type="text" placeholder='Search...' onChange={searchHandler}/>
+        </div>
       <div className={"browser"}>
 
         {
-         formations.map(formation => (
+         formationsFilter.map(formation => (
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
         ))
          }
@@ -118,3 +119,6 @@ function MyArmies() {
 }
 
 export default MyArmies;
+/**
+<BackTo pageUrl={'/profile'} pageName="Profile"/>
+ */
