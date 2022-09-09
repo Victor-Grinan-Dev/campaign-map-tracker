@@ -1,16 +1,11 @@
 /* eslint-disable */
 
 export class Unit {//one single model.
-    movement = 0
-    actions = 0
-    active_skills = []
-    negative = []
-    passive_skills = []
-    constructor(unitName, models, point_const, unitType){
+    constructor(unitName, models, point_const, skills){
         this.name = unitName
         this.models = models
         this.point_const = point_const
-        this.unitType = unitType
+        this.skills = skills
     }
 }
 
@@ -280,124 +275,110 @@ export default class Campaign {
     }
 }
 
-export const skills = {
+export const skills_by_unit_type = {
   infantry:{
   
-    type:"infantry",
     movement:2,
-    active_skills:["build", "set-defence"],
+    active:["build", "set-defence"],
     actions:2,
     negative:[],
-    passive_skills:["claim-tile", "all-terrain"]
+    passive:["claim-tile", "all-terrain"]
   },
   light_infantry:{
-    type:"light_infantry",
     movement:2,
-    active_skills:["build", "conceal", "get-ready",
+    active:["build", "conceal", "get-ready",
     "claim-tile"],
     actions:2,
     negative:["defense(-10)", "damage(-10)"],
-    passive_skills:["hold-position", "all-terrain", "move(+1)" ]
+    passive:["hold-position", "all-terrain", "move(+1)" ]
   },
   heavy_infantry:{
-    type:"heavy_infantry",
     movement:1,
-    active_skills:[ "build","set-defence", "ovrwatch"],
+    active:[ "build","set-defence", "ovrwatch"],
     actions:2,
     negative:[],
-    passive_skills:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
+    passive:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
   },
   jetInfantry:{
-    type:"jet-infantry",
     movement:3,
-    active_skills:["deep-assault"],
+    active:["deep-assault"],
     actions:1,
     negative:["No-water"],
-    passive_skills:["fly"]
+    passive:["fly"]
   },
   rider:{
-    type:"rider",
     movement:3,
-    active_skills:["hit&run", "turbo-boost"],
+    active:["hit&run", "turbo-boost"],
     actions:1,
     negative:["No-water", "no-Mountain", "hard-in-swamps" ],
-    passive_skills:["turbo-boost"]
+    passive:["turbo-boost"]
   },
 
   transport_tank:{
-    type:"transport_tank",
     movement:3,
-    active_skills:null,
+    active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
-    passive_skills:["transport-10"]
+    passive:["transport-10"]
   },
   light_tank:{
-    type:"light-tank",
     movement:3,
-    active_skills:null,
+    active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
-    passive_skills:[]
+    passive:[]
   },
   heavy_tank:{
-    type:"heavy_tank",
     movement:3,
-    active_skills:null,
+    active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
-    passive_skills:[]
+    passive:[]
   },
 
   fast_hover_transport:{
-    type:"fast_hover_transport",
     movement:4,
-    active_skills:null,
+    active:null,
     actions:1,
     negative:["No-water", "low-defence"],
-    passive_skills:["fly", "transport-5"]
+    passive:["fly", "transport-5"]
   },
   fast_fover:{
-    type:"fast_fover",
     movement:4,
-    active_skills:null,
+    active:null,
     actions:1,
     negative:[ "low-defence"],
-    passive_skills:["fly"]
+    passive:["fly"]
   },
   walker_wehicle:{
-    type:"walker_wehicle",
     movement:2,
-    active_skills:null,
+    active:null,
     actions:[],
     negative:1,
-    passive_skills:["no-water"]
+    passive:["no-water"]
   },
   artillery_tank:{
-    type:"artillery_tank",
     movement:4,
-    active_skills:['deploy', "barage"],
+    active:['deploy', "barage"],
     actions:[],
     negative:1,
-    passive_skills:["no-water"]
+    passive:["no-water"]
   },
 
   artillery_battery:{
-    type:"artillery_battery",
     movement:1,
-    active_skills:['deploy'],
+    active:['deploy'],
     actions:[],
     negative:1,
-    passive_skills:["no-water"]
+    passive:["no-water"]
   },
 
   warsuit:{
-    type:"warsuit",
     movement:3,
-    active_skills:[],
+    active:[],
     actions:[],
     negative:[],
-    passive_skills:["no-water"]
+    passive:["no-water"]
   }
 }
 

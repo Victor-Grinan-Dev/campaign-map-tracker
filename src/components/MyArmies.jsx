@@ -15,11 +15,11 @@ import NavBar from '../small_components/NavBar';
 
 //objects:
 import { Unit, Formation } from '../functions/Objects';
-import { skills } from '../functions/Objects';
+import { skills_by_unit_type } from '../functions/Objects';
 
 //console.log(unitTypes)
-const victor = new Unit("victor", 1, 100, skills.infantry);
-console.log(victor);
+const victor = new Unit("victor", 1, 100, skills_by_unit_type.infantry);
+console.log(victor.skills);
 
 
 const databaseApi = 'http://localhost:8011/database';
