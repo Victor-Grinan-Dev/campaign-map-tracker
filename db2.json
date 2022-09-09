@@ -731,7 +731,7 @@
       "formations": [
         {
           "id": 1,
-          "name": "DT-26",
+          "name": "Team Alfa",
           "description": "Multi-use",
           "image": "https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
           "components": [
@@ -762,219 +762,201 @@
   "visitors": [
     {
       "id": "v00",
-      "email": "none",
+      "email": null,
       "username": "",
       "password": null,
       "type": "visitor",
+      "level": 0,
+      "rank": "conscript",
+      "badges": [],
+      "battles": 0,
+      "winRate": 0,
       "formations": [
         {
           "id": 1,
           "name": "Team Alfa",
-          "description": "Multi-use",
-          "image": "https://i.insider.com/5db7100ddee019682c6fb402?width=700",
-          "components": [
+          "s_description:": "Multi-use",
+          "l_description": "El tabaco es una planta herbasea horiunda de löos campos tropicales delas islas caribeñas",
+          "image": "https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
+          "type": null,
+          "is_selected": false,
+          "action_points": 2,
+          "damage": 20,
+          "model_count": 6,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 200,
+          "composition": [
             {
-              "type": "infantry-squad",
+              "name": "squad-1",
+              "models": 5,
+              "point_const": 100,
+              "type": "infantry",
               "movement": 2,
-              "composition": 5,
-              "pts": 100
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
             },
             {
-              "type": "infantry squad",
-              "movement": 2,
-              "composition": 1,
-              "pts": 100
+              "name": "Humbee",
+              "models": 1,
+              "point_const": 100,
+              "unitType": "transport-tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": [
+                "fly",
+                "transport-5"
+              ]
             }
-          ],
-          "badges": [
-            "objective-holder"
-          ],
-          "formation": "motorized-patrol",
-          "is_selected": true
+          ]
         },
         {
           "id": 2,
           "name": "Team Bravo",
-          "description": "harrasment",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/British_and_French_Snipers_During_Ex_Boars_Head.jpg",
-          "components": [
+          "s_description": "Harrasment",
+          "l_description": "El tabaco es una planta herbasea horiunda de los campos tropicales delas islas caribeñas",
+          "image": "http://2.bp.blogspot.com/-Uhym0ZSI3Bc/VikMZuM_W7I/AAAAAAABUfA/bzSQWFp7ZmY/s1600/Title.jpg",
+          "type": null,
+          "action_points": 2,
+          "damage": 12,
+          "model_count": 5,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 120,
+          "composition": [
             {
-              "type": "light-infantry-squad",
-              "movement": 3,
-              "composition": 5,
-              "pts": 110
+              "unitName": "scout squad 205",
+              "models": 5,
+              "point_const": 120,
+              "type": "light_infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "conceal",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
             }
-          ],
-          "badges": [
-            "stealh",
-            "sniper",
-            "agile"
-          ],
-          "formation": "motorized-patrol",
-          "is_selected": true
+          ]
         },
         {
           "id": 3,
-          "name": "Team Charlie",
-          "description": "fire support",
-          "image": "https://preview.redd.it/cpdp97hc3in71.jpg?width=640&crop=smart&auto=webp&s=8984472d0d17914561b0dcc54d3a1b7197100422",
-          "components": [
-            {
-              "type": "infantry-tank",
-              "movement": 4,
-              "composition": 1,
-              "pts": 150
-            },
-            {
-              "type": "infantry-tank",
-              "movement": 3,
-              "composition": 1,
-              "pts": 150
-            }
-          ],
-          "badges": [],
-          "formation": "artillery-battery",
-          "is_selected": false
-        },
-        {
-          "id": 4,
-          "name": "Team Delta",
-          "description": "Conscripts",
-          "image": "https://st.depositphotos.com/1066666/4556/i/450/depositphotos_45565989-stock-photo-japanese-armed-marching-soldiers.jpg",
-          "components": [
-            {
-              "type": "infantry-squad",
-              "movement": 2,
-              "composition": 5,
-              "pts": 100
-            },
-            {
-              "type": "transport-tank",
-              "movement": 3,
-              "composition": 1,
-              "pts": 135
-            }
-          ],
-          "badges": [],
-          "formation": "motorized-patrol",
-          "is_selected": false
-        },
-        {
-          "id": 5,
-          "name": "The A team",
-          "description": "motorized-infantry",
-          "image": "https://www.nationalreview.com/wp-content/uploads/2021/05/a-team-full-cast-youtube.jpg?fit=1200%2C700",
-          "components": [
-            {
-              "type": "light-infantry-squad",
-              "movement": 3,
-              "composition": 5,
-              "pts": 110
-            }
-          ],
-          "badges": [
-            "stealh",
-            "sniper",
-            "agile"
-          ],
-          "formation": "light-infantry",
-          "is_selected": false
-        },
-        {
-          "id": 6,
-          "name": "Guardians of the galaxy",
-          "description": "fire support",
-          "image": "https://c.files.bbci.co.uk/35D5/production/_125718731_gettyimages-1241324225.jpg",
-          "components": [
-            {
-              "type": "artillery-tank",
-              "movement": 4,
-              "composition": 1,
-              "pts": 135
-            },
-            {
-              "type": "artillery-tank",
-              "movement": 3,
-              "composition": 1,
-              "pts": 135
-            }
-          ],
-          "badges": [],
-          "formation": "artillery-battery",
-          "is_selected": false
-        },
-        {
-          "id": 7,
-          "name": "The Justice league",
-          "description": "anti-hordes",
-          "image": "http://2.bp.blogspot.com/-Uhym0ZSI3Bc/VikMZuM_W7I/AAAAAAABUfA/bzSQWFp7ZmY/s1600/Title.jpg",
-          "components": [
-            {
-              "type": "infantry-squad",
-              "movement": 2,
-              "composition": 5,
-              "pts": 100
-            },
-            {
-              "type": "transport-tank",
-              "movement": 3,
-              "composition": 1,
-              "pts": 135
-            }
-          ],
-          "badges": [],
-          "formation": "motorized-patrol",
-          "is_selected": false
-        },
-        {
-          "id": 8,
-          "name": "The Avengers",
-          "description": "Alfa strike",
-          "image": "https://i.pinimg.com/736x/22/4e/24/224e24d50855164a902e142a234d852a--future-soldier-futuristic-design.jpg",
-          "components": [
-            {
-              "type": "jet-infantry",
-              "movement": 3,
-              "composition": 5,
-              "pts": 125
-            },
-            {
-              "type": "jet-infantry",
-              "movement": 3,
-              "composition": 5,
-              "pts": 125
-            }
-          ],
-          "badges": [],
-          "formation": "jet-troops",
-          "is_selected": false
-        },
-        {
-          "id": 9,
           "name": "The expendables",
-          "description": "multi-use",
+          "s_description": "Good for everything",
+          "l_description": "this unit is product of the civil war during the chorizo war back in 1904.",
           "image": "https://muropaketti.com/wp-content/uploads/2018/08/the-expendables-3.jpg",
-          "components": [
+          "type": null,
+          "action_points": 2,
+          "damage": 12,
+          "model_count": 5,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 120,
+          "composition": [
             {
-              "type": "inantry",
+              "name": "Supreme Leader",
+              "models": 1,
+              "point_const": 75,
+              "type": "infantry",
               "movement": 2,
-              "composition": 10,
-              "pts": 180
+              "actions": 2,
+              "active_skills": [],
+              "negative": [],
+              "passive_skills": []
             },
             {
-              "type": "artillery-tank",
-              "movement": 3,
-              "composition": 1,
-              "pts": 125
+              "name": "The expendables",
+              "models": 5,
+              "point_const": 150,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
+            },
+            {
+              "name": "The expendables trasport",
+              "models": 1,
+              "point_const": 125,
+              "type": "transport_tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": [
+                "carry(+3)",
+                "trasport(6)"
+              ]
             }
-          ],
-          "badges": [],
-          "formation": "artillery-battery",
-          "is_selected": true
+          ]
         }
       ],
-      "army_lists": [],
-      "stats": {}
+      "army_lists": []
     },
     {
       "type": "Visitor",
@@ -985,58 +967,194 @@
       "winRate": 0,
       "formations": [
         {
-            "id": 1,
-            "name": "Team Alfa",
-            "description": "Multi-use",
-            "image": "https://i.insider.com/5db7100ddee019682c6fb402?width=700",
-            "composition": [
-              {
-                "id":1,
-                "unitName":"dt-26",
-                "models":5,
-                "point_const":100,
-                "unitType":"infantry",
-                "movement":2,
-                "actions":2,
-                "active_skills":["build", "get-ready", "claim-tile"],
-                "negative":[],
-                "passive_skills":["all-terrain", "no-minus-move"]
-              },
-              {
-                "id":2,
-                "unitName":"Da Car",
-                "models":4,
-                "point_const":100,
-                "unitType":"transport-tank",
-                "movement":4,
-                "actions":1,
-                "active_skills":[],
-                "negative":["no-waters", "no-swamps"],
-                "passive_skills":["tranport_capacity(6)", "carry_capacity(+3)"]
-              }
-            ],
-            "badges": [],
-            "formation": "motorized-patrol",
-            "is_listed": true,
-            "action_points":2,
-            "damage":20,
-            "model_count":5,
-            "vision":2,
-            "Xp":0,
-            "level":0,
-            "benefits":[],
-            "movement":4,
-            "type":null,
-            "dedication":[],
-            "color":"white",
-            "s_description":"",
-            "l_description":"",
-            "point_const":200,
-            "carry_capacity":3
-          }
-      ]
+          "id": 1,
+          "name": "Team Alfa",
+          "s_description:": "Multi-use",
+          "l_description": "El tabaco es una planta herbasea horiunda de löos campos tropicales delas islas caribeñas",
+          "image": "https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
+          "type": null,
+          "is_selected": false,
+          "action_points": 2,
+          "damage": 20,
+          "model_count": 6,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 200,
+          "composition": [
+            {
+              "name": "squad-1",
+              "models": 5,
+              "point_const": 100,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
+            },
+            {
+              "name": "Humbee",
+              "models": 1,
+              "point_const": 100,
+              "unitType": "transport-tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": [
+                "fly",
+                "transport-5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Team Bravo",
+          "s_description": "Harrasment",
+          "l_description": "El tabaco es una planta herbasea horiunda de los campos tropicales delas islas caribeñas",
+          "image": "http://2.bp.blogspot.com/-Uhym0ZSI3Bc/VikMZuM_W7I/AAAAAAABUfA/bzSQWFp7ZmY/s1600/Title.jpg",
+          "type": null,
+          "action_points": 2,
+          "damage": 12,
+          "model_count": 5,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 120,
+          "composition": [
+            {
+              "unitName": "scout squad 205",
+              "models": 5,
+              "point_const": 120,
+              "type": "light_infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "conceal",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "The expendables",
+          "s_description": "Good for everything",
+          "l_description": "this unit is product of the civil war during the chorizo war back in 1904.",
+          "image": "https://muropaketti.com/wp-content/uploads/2018/08/the-expendables-3.jpg",
+          "type": null,
+          "action_points": 2,
+          "damage": 12,
+          "model_count": 5,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "white",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 120,
+          "composition": [
+            {
+              "name": "Supreme Leader",
+              "models": 1,
+              "point_const": 75,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [],
+              "negative": [],
+              "passive_skills": []
+            },
+            {
+              "name": "The expendables",
+              "models": 5,
+              "point_const": 150,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain",
+                "move(+1)"
+              ]
+            },
+            {
+              "name": "The expendables trasport",
+              "models": 1,
+              "point_const": 125,
+              "type": "transport_tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": [
+                "carry(+3)",
+                "trasport(6)"
+              ]
+            }
+          ]
+        }
+      ],
+      "army_lists": [],
+      "email": null,
+      "username": "victor",
+      "password": null,
+      "id": 1
     }
-]}
-
-
-
+  ]
+}

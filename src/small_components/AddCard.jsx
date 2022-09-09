@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import css from './AddCard.module.css';
 import Button from './Button';
-//import { ArmyList, Formation, Unit } from '../functions/Objects';
+import { ArmyList, Formation, Unit, unitTypesObject } from '../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { capitalStart } from '../functions/functions'
@@ -19,10 +19,10 @@ const sampleArmy = new ArmyList('sample army', [sampleFormation],)
 
 
 function AddCard() {
-
     //const [formationData, setFormationData] = useState(new Formation("", null, []));
     //const [units, setUnits] = useState([new Unit("", null, null, undefined)]);
-   
+    
+    console.log(unitTypesArray)
     //const changeFormationData = (e) => {
         //setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
       //};
