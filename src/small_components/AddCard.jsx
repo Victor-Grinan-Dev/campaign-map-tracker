@@ -22,7 +22,7 @@ function AddCard() {
     //const [formationData, setFormationData] = useState(new Formation("", null, []));
     //const [units, setUnits] = useState([new Unit("", null, null, undefined)]);
     
-    console.log(unitTypesArray)
+    
     //const changeFormationData = (e) => {
         //setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
       //};

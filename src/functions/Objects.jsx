@@ -7,7 +7,6 @@ export class Unit {//one single model.
     negative = []
     passive_skills = []
     constructor(unitName, models, point_const, unitType){
-        this.id = id
         this.name = unitName
         this.models = models
         this.point_const = point_const
@@ -33,7 +32,6 @@ export class Formation {//one or more models and/or squads in the same tile and 
   carry_capacity = undefined
 
   constructor(name, composition = [], s_description="", l_description="", image=""){
-    this.id = id
     this.name = name
     this.composition = composition
     this.s_description = s_description
@@ -167,7 +165,7 @@ export class User {
   winRate = 0
   formations = []
   army_lists = []
-  
+
   constructor(id, username, email="", password=""){
       this.email = email
       this.username = username
@@ -282,9 +280,9 @@ export default class Campaign {
     }
 }
 
-export const unitTypes = {
+export const skills = {
   infantry:{
-    id:1,
+  
     type:"infantry",
     movement:2,
     active_skills:["build", "set-defence"],
@@ -293,7 +291,6 @@ export const unitTypes = {
     passive_skills:["claim-tile", "all-terrain"]
   },
   light_infantry:{
-    id:2,
     type:"light_infantry",
     movement:2,
     active_skills:["build", "conceal", "get-ready",
@@ -303,7 +300,6 @@ export const unitTypes = {
     passive_skills:["hold-position", "all-terrain", "move(+1)" ]
   },
   heavy_infantry:{
-    id:3,
     type:"heavy_infantry",
     movement:1,
     active_skills:[ "build","set-defence", "ovrwatch"],
@@ -312,7 +308,6 @@ export const unitTypes = {
     passive_skills:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
   },
   jetInfantry:{
-    id:4,
     type:"jet-infantry",
     movement:3,
     active_skills:["deep-assault"],
@@ -321,7 +316,6 @@ export const unitTypes = {
     passive_skills:["fly"]
   },
   rider:{
-    id:5,
     type:"rider",
     movement:3,
     active_skills:["hit&run", "turbo-boost"],
@@ -331,7 +325,6 @@ export const unitTypes = {
   },
 
   transport_tank:{
-    id:6,
     type:"transport_tank",
     movement:3,
     active_skills:null,
@@ -340,7 +333,6 @@ export const unitTypes = {
     passive_skills:["transport-10"]
   },
   light_tank:{
-    id:7,
     type:"light-tank",
     movement:3,
     active_skills:null,
@@ -349,7 +341,6 @@ export const unitTypes = {
     passive_skills:[]
   },
   heavy_tank:{
-    id:7.1,
     type:"heavy_tank",
     movement:3,
     active_skills:null,
@@ -359,7 +350,6 @@ export const unitTypes = {
   },
 
   fast_hover_transport:{
-    id:8,
     type:"fast_hover_transport",
     movement:4,
     active_skills:null,
@@ -368,7 +358,6 @@ export const unitTypes = {
     passive_skills:["fly", "transport-5"]
   },
   fast_fover:{
-    id:9,
     type:"fast_fover",
     movement:4,
     active_skills:null,
@@ -377,7 +366,6 @@ export const unitTypes = {
     passive_skills:["fly"]
   },
   walker_wehicle:{
-    id:10,
     type:"walker_wehicle",
     movement:2,
     active_skills:null,
@@ -386,7 +374,6 @@ export const unitTypes = {
     passive_skills:["no-water"]
   },
   artillery_tank:{
-    id:11,
     type:"artillery_tank",
     movement:4,
     active_skills:['deploy', "barage"],
@@ -396,7 +383,6 @@ export const unitTypes = {
   },
 
   artillery_battery:{
-    id:12,
     type:"artillery_battery",
     movement:1,
     active_skills:['deploy'],
@@ -406,7 +392,6 @@ export const unitTypes = {
   },
 
   warsuit:{
-    id:13,
     type:"warsuit",
     movement:3,
     active_skills:[],

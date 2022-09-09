@@ -15,6 +15,12 @@ import NavBar from '../small_components/NavBar';
 
 //objects:
 import { Unit, Formation } from '../functions/Objects';
+import { skills } from '../functions/Objects';
+
+//console.log(unitTypes)
+const victor = new Unit("victor", 1, 100, skills.infantry);
+console.log(victor);
+
 
 const databaseApi = 'http://localhost:8011/database';
 const visitorDb2 = 'http://localhost:8011/visitors';
@@ -54,7 +60,7 @@ function MyArmies() {
       setLoading(true);
       Promise.all([getData()]).then((res) => {
 
-        console.log(res[0].data[userIndex].formations)
+        //console.log(res[0].data[userIndex].formations)
         //const userData = results[0].data.users.filter((user)=>{
         //  return user.id == currentUserId;
         //})
