@@ -7,10 +7,9 @@ export class Unit {//READY!
         this.point_const = point_const
         this.skills = skills
     }
-}
+};
 
-export class Formation {//one or more models and/or squads in the same tile and from the same army. As a token in the map they move toguether.
-
+export class Formation {
   action_points=1
   damage = null
   model_count = 0
@@ -24,7 +23,9 @@ export class Formation {//one or more models and/or squads in the same tile and 
   dedication=[]
   color='white'
   is_listed = false
-  carry_capacity = undefined
+  point_const = 0
+  carry_capacity = 0
+  infantry_count = 0
 
   constructor(name, composition = [], s_description="", l_description="", image=""){
     this.name = name
@@ -32,50 +33,77 @@ export class Formation {//one or more models and/or squads in the same tile and 
     this.s_description = s_description
     this.l_description = l_description
     this.image = image
-    this.point_const = this.setPointCost() 
+    this.setPointCost() 
     this.setDamage()
     this.setMovement()
     }
         
-    get pointCost (){
-      let total = 0;
+    setPointCost(){      
       this.composition.forEach(unit =>{
-        this.point_const += unit.point_const
-      }) 
-      return total;
-    }
-    setPointCost(){
-      let total = 0;
-      /*
-        this.composition.forEach(unit =>{
-        total += unit.point_const
-      })
-      */
-      return total;
+      this.point_const += unit.point_const
+      });
     }
     
     setDamage(){
         this.damage = Math.ceil(this.point_const / 10)
     }
 
+    setManPowerCount(){
+
+    }
+
     setMovement(){
       let isTransport = false;
       let transportCapacity = 0;
-      let isInfantryUnitsLessThanTransport = false;
+      let nonInfantryModelsMinMovement = 100;
+      let slowestMovement = 100;
 
-      //check for transports
-/**        this.composition.forEach(unit => {
-          if(unit.type.includes('transport')){
-            transportCapacity = unit.type.split('-')
-          } 
-        })
+      //check each unit in the formation.
+      this.composition.forEach(unit => {  
+        //checks the slowest movement value in the formation.
+        if (unit.skills.movement < slowestMovement) {
+          slowestMovement = unit.skills.movement;
+          console.log("slowest movement: ", slowestMovement)
+        }   
+        //check how many infantry models.
+        if(unit.skills.type.includes('infantry')){
+          this.infantry_count += unit.models;
+          console.log("infantry count: ", this.infantry_count)
+        };
 
-        this.composition.forEach(unit => {
-          if(unit.movement < this.movement){
-            this.movement=unit.movement;
+        //what is the minimun movement value of all not infantry models in the formation.
+        if(!unit.skills.type.includes('infantry')){
+          if (unit.skills.movement < nonInfantryModelsMinMovement){
+            nonInfantryModelsMinMovement = unit.skills.movement;
+            console.log("nonInfantryModelsMinMovement: ", nonInfantryModelsMinMovement)
+            }
+        }
+        
+        //check if there is transport(s) and if true, whats the transport combine capacity.
+        unit.skills.passive.forEach(skill => {
+          if(skill.includes('transport')){
+            isTransport = true;
+            transportCapacity += parseInt(skill.split('-')[1], 10);
+            console.log("isTransport: ", isTransport);
+            console.log("capacity: ", transportCapacity);
+    
           }
-        })*/
-      }
+        }) 
+         
+      })
+      //is the transport capacity iqual or more that the infantry models. if yes min movement is taken from tranports else from the slowes unit in the formastion
+      if(transportCapacity >= this.infantry_count){
+        this.movement = nonInfantryModelsMinMovement;
+        console.log("capacity: ", transportCapacity >= this.infantry_count)
+        console.log("final movement: ", nonInfantryModelsMinMovement)
+      }else{
+        this.movement = slowestMovement;
+        console.log("capacity: ", transportCapacity >= this.infantry_count)
+        console.log("final movement: ", this.movement)
+        }  
+    }
+
+
       setModelCount(){
         this.composition.forEach(unit=>{
           if(unit.type){
@@ -274,10 +302,9 @@ export default class Campaign {
         this.campaignCode = campaignCode
     }
 }
-
 export const skills_by_unit_type = {
   infantry:{
-  
+    type:"infantry",
     movement:2,
     active:["build", "set-defence"],
     actions:2,
@@ -285,6 +312,7 @@ export const skills_by_unit_type = {
     passive:["claim-tile", "all-terrain"]
   },
   light_infantry:{
+    type:"light_infantry",
     movement:2,
     active:["build", "conceal", "get-ready",
     "claim-tile"],
@@ -293,43 +321,68 @@ export const skills_by_unit_type = {
     passive:["hold-position", "all-terrain", "move(+1)" ]
   },
   heavy_infantry:{
+    type:"heavy_infantry",
     movement:1,
     active:[ "build","set-defence", "ovrwatch"],
     actions:2,
     negative:[],
     passive:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
   },
-  jetInfantry:{
-    movement:3,
-    active:["deep-assault"],
+  jet_infantry:{
+    type:"jet_infantry",
+    movement:2,
+    active:["deep-assault", "jump"],
     actions:1,
-    negative:["No-water"],
+    negative:["No-water", "recharge jets"],
     passive:["fly"]
   },
   rider:{
-    movement:3,
+    type:"rider",
+    movement:5,
     active:["hit&run", "turbo-boost"],
     actions:1,
     negative:["No-water", "no-Mountain", "hard-in-swamps" ],
     passive:["turbo-boost"]
   },
+  beast_rider:{
+    type:"rider",
+    movement:3,
+    active:["hit&run", "turbo-boost"],
+    actions:1,
+    negative:["No-water"],
+    passive:["vision+1"]
+  },
 
   transport_tank:{
-    movement:3,
+    type:"transport_tank",
+    movement:4,
     active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
     passive:["transport-10"]
   },
+
+  transport_armored_tank:{
+    type:"transport_tank",
+    movement:4,
+    active:null,
+    actions:1,
+    negative:["No-water", "no-Mountain" ],
+    passive:["transport-6"]
+  },
+
   light_tank:{
-    movement:3,
+    type:"light_tank",
+    movement:4,
     active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
     passive:[]
   },
+
   heavy_tank:{
-    movement:3,
+    type:"heavy_tank",
+    movement:4,
     active:null,
     actions:1,
     negative:["No-water", "no-Mountain" ],
@@ -337,27 +390,34 @@ export const skills_by_unit_type = {
   },
 
   fast_hover_transport:{
-    movement:4,
+    type:"fast_hover_transport",
+    movement:6,
     active:null,
     actions:1,
-    negative:["No-water", "low-defence"],
+    negative:["low-defence"],
     passive:["fly", "transport-5"]
   },
+
   fast_fover:{
-    movement:4,
+    type:"fast_fover",
+    movement:6,
     active:null,
     actions:1,
     negative:[ "low-defence"],
     passive:["fly"]
   },
+
   walker_wehicle:{
+    type:"walker_wehicle",
     movement:2,
     active:null,
     actions:[],
     negative:1,
-    passive:["no-water"]
+    passive:["no-water", "no-swamp"]
   },
+
   artillery_tank:{
+    type:"artillery_tank",
     movement:4,
     active:['deploy', "barage"],
     actions:[],
@@ -366,6 +426,7 @@ export const skills_by_unit_type = {
   },
 
   artillery_battery:{
+    type:"artillery_battery",
     movement:1,
     active:['deploy'],
     actions:[],
@@ -374,14 +435,14 @@ export const skills_by_unit_type = {
   },
 
   warsuit:{
+    type:"warsuit",
     movement:3,
     active:[],
     actions:[],
     negative:[],
     passive:["no-water"]
   }
-}
-
+};
 export const factions = [
   {
       id:"ja",
