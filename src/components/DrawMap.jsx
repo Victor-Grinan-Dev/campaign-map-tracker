@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 const tilesArrayImages = [
     "blank",
     "planes",
+    //"fores_sonja",
     "mountains",
     "forest",
     "hills",
@@ -108,7 +109,7 @@ function DrawMap() {
         setShowTilesId(!showTilesId);
     }
     const drawTileHandler = (e, image=brush) => {
-
+        console.log("drawMap-drawtilehandler:", image);
         const tempNestedArray = currentMap.map;
         tempNestedArray.map(row=>(
             row.map(tile => (
@@ -121,10 +122,12 @@ function DrawMap() {
         setBrush(e.target.value)
     }
     const brushTool = () => {
+        //TODO: read the available options from database.
         return <>
             <select name="brushTool" onChange={brushHandler} >
                 <option  value="blank"> blank </option>
                 <option  value="planes"> planes </option>
+                <option  value="forest_sonja"> forest_sonja </option>
                 <option  value="forest"> forest </option>
                 <option  value="hills"> hills </option>
                 <option  value="swamp"> swamp </option>
