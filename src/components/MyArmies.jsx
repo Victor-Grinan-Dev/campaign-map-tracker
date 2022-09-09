@@ -19,9 +19,12 @@ import { skills_by_unit_type } from '../functions/Objects';
 
 //console.log(unitTypes)
 const victor = new Unit("victor", 1, 100, skills_by_unit_type.infantry);
-console.log(victor.skills);
+const transport = new Unit("victor's transport", 1, 150, skills_by_unit_type.transport_tank);
+transport.skills.movement = 4
 
 
+const riding_victor = new Formation("riding victor", [victor, transport], "assault", "is just me as a lone wolve model assaulting in a tank", "https://i.pinimg.com/474x/5d/69/1c/5d691c4e1e7b4a6f9913033d805e301e.jpg")
+console.log(riding_victor)
 const databaseApi = 'http://localhost:8011/database';
 const visitorDb2 = 'http://localhost:8011/visitors';
 

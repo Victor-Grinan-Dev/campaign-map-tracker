@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export class Unit {//one single model.
+export class Unit {//READY!
     constructor(unitName, models, point_const, skills){
         this.name = unitName
         this.models = models
