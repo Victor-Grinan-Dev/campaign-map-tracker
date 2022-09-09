@@ -6,47 +6,16 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
+import { factions } from '../functions/objectsGame';
 import Button from '../small_components/Button';
 import NavBar from '../small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
-import css from './NewCampaign.module.css'
-const justiceAlianceColor = "#309abb";
-const darkForcesColor = "#830202";
-const aliensEtColor = "#1fc778";
-const deathMachinesColor = "#395B64";
-const beastHordesColor = "#0F3D3E";
-const infestationColor = "#D1512D";
-
-//TODO: change to read data from database
-const factions = [
-    {
-        id:"ja",
-        name:"The Justice Aliance",
-        color:"#309abb"},
-    {
-        id:"df",
-        name:"The Dark Forces",
-        color:"#830202"},
-    {
-        id:"ae",
-        name:"The Aliens and ET's",
-        color:"#1fc778"},
-    {
-        id:"dm",
-        name:"The Death Machines",
-        color:"#395B64"},
-    {
-        id:"bh",
-        name:"The Beast Hordes",
-        color:"#0F3D3E"},
-    {
-        id:"ib",
-        name:"The Infestation Bugs",
-        color:"#D1512D"
-    }
-]
+import css from './newCampaign.module.css'
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 
 const available_maps = availableMaps;
+//TODO: change this to redux
 
 function NewCampaign() {
     const Navigate = useNavigate()
@@ -54,7 +23,14 @@ function NewCampaign() {
     const [map, setMap] = useState([])
     const [data, setData] = useState(campaign_Object);
     const [database, setDatabase] = useState()
-
+    const userType = useSelector(userTypeSelector);
+    const currentUser = useSelector(userSelector);
+    const navigate = useNavigate();
+    useEffect(()=>{
+      if (!currentUser && userType==='visitor'){
+        navigate('/');
+      }
+    },[currentUser]);
     //data handling fuctions:
     const changeData = (e) => {
         if (e.target.name === "map"){
@@ -88,14 +64,27 @@ function NewCampaign() {
         </div>
         )
     }
-//className={css.}
 
     const setGameRounds = () => {
         return(
             <div className={css.section} >
-                <p className={css.sectionName} >Game rounds:</p> 
-                <input type="number" name="rounds" placeholder="Choose" onChange={changeData} min="3" 
+                <p className={css.sectionName} >Game rounds / Round duration:</p> 
+                <div>
+                <input type="number" name="rounds" placeholder="Rounds..." onChange={changeData} min="3" 
                 className={css.numInput}/>
+                <input type="number" name="duration" placeholder="Duration..." onChange={changeData} min="1" 
+                className={css.numInput}/>
+                <select name="timeLapse" id="">
+                    <option value="null">Choose</option>
+                    <option value="hours">hour(s)</option>
+                    <option value="days">day(s)</option>
+                    <option value="weeks">week(s)</option>
+                    <option value="month">month(s)</option>
+
+                </select>
+                </div>
+                <p className={css.sectionName} ></p> 
+                
             </div>
         )
     }
@@ -277,7 +266,6 @@ function NewCampaign() {
         </div>
         )
     }
-
     const mapDataDisplay = (data) => {
         return <div>
             <p>Map name: {data.name}</p>
@@ -325,10 +313,10 @@ function NewCampaign() {
             </div>
         )
     }
-const cancelHandler = () => {
-    Navigate('/hall')
-    //TODO: empty the state here.
-}
+    const cancelHandler = () => {
+        Navigate('/hall')
+        //TODO: empty the state here.
+    }
   return (
     <div className="NewCampaign">
         <NavBar />
@@ -352,8 +340,11 @@ const cancelHandler = () => {
             {/* <div className="section" >     
                     <p className='sectionName'>Campaing Code: "{data.campaignName}": {data.armySize}-{data.mapShape}-{data.mapSize}-{data.playersAmount}p-f{data.factionCode}-{data.rounds}r </p>
                 </div> */}
-
-            <Button caption={"Create"} role={"submit"} />    
+            <div>
+            <Button caption={"Create"} role={"submit"} /> 
+            <Button caption={"Cancel"} action={cancelHandler} />    
+            </div>
+            
             </form>
     </div>
   )

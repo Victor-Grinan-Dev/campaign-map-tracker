@@ -43,7 +43,7 @@ const fillCoords = (tileSize, rows, columns = rows, shape = "sq", topStart = 150
     //hard coded variables:
     const side = 50
     const topStart = 100;
-    const leftStart = 100;
+    const leftStart = 150;
 
     //logic variables:
     const evenLeftStart = leftStart + side * 0.5;
@@ -64,18 +64,21 @@ const mapReader = (map, action=null, showTilesId) => {
             
             {
                 map.map((row, y) => (
-                    row.map((col, x) => (  
+                    row.map((tile, x) => (  
                         
-                        col.image && <Tile 
-                            key={col.id} 
-                            id={col.id}
+                        tile.image && <Tile 
+                            key={tile.id} 
+                            id={tile.id}
                             showId={showTilesId}
-                            image={col.image}  
+                            image={tile.image}  
                             imgUrl={"'../assets/tile_images/blank.png'"}
                             posTop={topStart + top * y} 
                             posLeft={handleLeft(y, x)} 
                             tileWidth={side} 
-                            func={action}    
+                            func={action} 
+                            startPlayer={tile.owned_by} 
+                            objective={tile.objective} 
+                            formation={tile.formation}
                         />
                     ))
                 ))
@@ -87,9 +90,9 @@ const mapReader = (map, action=null, showTilesId) => {
 // const mapReader = (map, imageUrl='../assets/tile_images/blank.png') => {
 //     return (
 //         map.map((row, y) => (
-//             row.map((col, x) => (  
+//             row.map((tile, x) => (  
 //                 //TODO: pass image url instead for use as css background image
-//                 col.image && <Tile key={col.id} image={tilesImages[col.image]}  posTop={topStart + top * y} posLeft={handleLeft(y, x)} tileWidth={side} func={testFunc}/>
+//                 tile.image && <Tile key={tile.id} image={tilesImages[tile.image]}  posTop={topStart + top * y} posLeft={handleLeft(y, x)} tileWidth={side} func={testFunc}/>
 //             ))
 //         ))
 //     )

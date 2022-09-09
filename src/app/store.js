@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import loggedReducer from '../features/logged/loggedSlice';
-
+import loggedReducers from '../features/logged/loggedSlice';
+import armyReducers from'../features/army/armySlice';
 export default configureStore({
 reducer: {
-    counter: counterReducer,
-    logged: loggedReducer,
-
+    logged: loggedReducers,
+    army: armyReducers
     }
 })

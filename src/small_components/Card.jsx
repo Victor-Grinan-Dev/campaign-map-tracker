@@ -2,13 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import checkMark from '../assets/icon_package/answer-right.png'
 
+/*
 const visit_for_cards = "https://freefrontend.com/css-cards/"
 const randomArtillery = "https://source.unsplash.com/500x400/?artillery"
 const randomTank = 'https://source.unsplash.com/500x400/?tank';
-const randomSoldier = 'https://source.unsplash.com/500x400/?soldier';
 const defaulImagen = "https://png.pngtree.com/png-clipart/20210129/ourmid/pngtree-default-male-avatar-png-image_2811083.jpg";
+*/
 
-
+const randomSoldier = 'https://source.unsplash.com/500x400/?soldier';
 
 function Card({name, description = null, image = null, is_selected = false}) {
   const [checked, setChecked] = useState(is_selected);

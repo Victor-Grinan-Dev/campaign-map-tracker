@@ -3,37 +3,62 @@ import css from './home.module.css'
 import logo from '../logo.svg';
 import NextPage from '../small_components/NextPage';
 import Button from '../small_components/Button';
-import { useState } from 'react';
-
+import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { loggedSelector, userSelector } from '../features/logged/loggedSlice';
-import { changeLogStatus, changeUser } from '../features/logged/loggedSlice';
+import { loggedSelector, userIndexSelector, userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { changeLogStatus, changeUser, changeUserIndex } from '../features/logged/loggedSlice';
+import { User } from '../functions/Objects';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const visitor = "https://source.unsplash.com/R_6kw7NUTLY";
 const admin = "https://source.unsplash.com/BoISbSP0HVk";
 const user = "https://source.unsplash.com/1vC4ZwkJNdA";
 
+const visitorEndPoint = 'http://localhost:8011/visitors';
+
 function Home(){
     const dispatch = useDispatch()
     const isLogged = useSelector(loggedSelector);
     const currentUser = useSelector(userSelector);
+    const userType = useSelector(userTypeSelector);
+    const userIndex = useSelector(userIndexSelector);
+    const [commonFormations, setFormations] = useState([]);
 
     const usernameHandler = () => {
         dispatch(changeLogStatus("visitor"));
     }
     const userChanger = (e) => {
-        //console.log(e.target.value)
         dispatch(changeUser(e.target.value));
-        console.log(currentUser)
     }
 
-    const loginModal = () => {
+    useEffect(()=>{
+        axios.get(visitorEndPoint).then(res =>{
+            setFormations(res.data[0].formations);
+        })
+    },[])
+    const createUser = () => {
+        let index;
+        dispatch(changeUserIndex(userType + '_' + currentUser + '_' + Math.floor(Math.random() * 100)));
+        const newUser = new User(userIndex, currentUser, null, null);
+        newUser.formations = commonFormations;
+        axios.post(visitorEndPoint, newUser)
+        .then(() => {
+            axios.get(visitorEndPoint).then(res => {
+                index = res.data.length
+                dispatch(changeUserIndex(index - 1))
+            })
+        })
+    }
+
+    const loginModalVisitor = () => {
+              
         return <div>
             <h2>Oh, Hello there! </h2>
             <p>How should we call you?</p>
             <input type="text" name="tempUsername" placeholder="write a username..." onChange={userChanger}/>
-            { currentUser && <NextPage pageUrl={"/profile"} pageName={"Welcome Page"} />} 
+            { currentUser && <NextPage pageUrl={"/profile"} pageName={"Welcome Page"} action={createUser}/>} 
         </div>
     }
     return (
@@ -73,12 +98,12 @@ function Home(){
            
                 <div className={css.gateContainer}>
                 <p className={css.userGate}>User: </p>
-                <img className={css.gate} src={user} alt="boardgamer" onClick={loginModal}/>
+                <img className={css.gate} src={user} alt="boardgamer" onClick={loginModalVisitor}/>
                 </div>
             
             </div>
             {/* TODO: get an custom username from the visitor */}
-            {isLogged && loginModal() }
+            {isLogged && loginModalVisitor() }
         </div>
     );
 }

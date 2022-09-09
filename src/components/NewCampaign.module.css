@@ -34,6 +34,7 @@
 
 .sectionName{
     color: var(--myYellow) ;
+
 }
 
 .selectFaction{
@@ -72,4 +73,9 @@ button{
 
 .extraInfo{
     margin-left: 50px;
+}
+
+.numInput{
+    width: 75px;
+    display: inline-block;
 }
