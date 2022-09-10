@@ -1,5 +1,19 @@
 /* eslint-disable */
 
+const getValue = (skill) => {
+  let divider;
+  if(skill.includes('+')){
+    divider = '+';
+  }else if(skill.includes('-')){
+    divider = '-';
+  }else{
+    console.log("no divider found");
+    return;
+  }
+  return parseInt(skill.split(divider)[1], 10);
+  
+}
+
 export class Unit {//READY!
     constructor(unitName, models, point_const, skills){
         this.name = unitName
@@ -10,21 +24,23 @@ export class Unit {//READY!
 };
 
 export class Formation {
-  action_points=1
+  action_points = 1 //amount of actions a formation can do in a turn.
+  work_force = 0 //points to complete the an action.
   damage = null
+  defense = 0
   model_count = 0
   vision = 2
   Xp=0
   level= 0
-  benefits=[]
-  badges=[]
+  benefits=[]//this benefits come from the formation type if there is one 
+  badges=[]//this are archievements as formation
   movement = 4
-  type = undefined
-  dedication=[]
-  color='white'
+  type = undefined //this comes from the composition of the formation (old 40k formations rules)
+  dedication=[] //this are enancements assigned to the formation by user
+  color='white' //mission/campaign/faction related
   is_listed = false
-  point_const = 0
-  carry_capacity = 0
+  point_const = 0  
+  carry_capacity = 0 //from the units
   infantry_count = 0
 
   constructor(name, composition = [], s_description="", l_description="", image=""){
@@ -36,23 +52,41 @@ export class Formation {
     this.setPointCost() 
     this.setDamage()
     this.setMovement()
+    this.setWorkForce()
+    this.setModelCount()
+    this.setMaxVision()
+    //action points
+    //max vision
     }
-        
-    setPointCost(){      
+    
+    setPointCost(){ // checked  
       this.composition.forEach(unit =>{
       this.point_const += unit.point_const
       });
     }
-    
-    setDamage(){
-        this.damage = Math.ceil(this.point_const / 10)
+    setDamage(){ //checked
+        this.damage = Math.floor(this.point_const / 10)
     }
-
-    setManPowerCount(){
-
+    setWorkForce(){ //checked
+      let apply_bonus = false;
+      let bonus = 0;
+      this.composition.forEach(unit => {
+        if(unit.skills.type.includes("infantry")){
+          this.work_force += unit.point_const;
+        }
+        unit.skills.passive.forEach(skill =>{
+          if(skill.includes("work_force")){
+            apply_bonus = true
+            bonus = (parseInt(skill.split('+')[1], 10)/100);
+            
+          }
+        });
+      })
+      if(apply_bonus){
+        this.work_force += this.work_force * bonus;
+      }
     }
-
-    setMovement(){
+    setMovement(){ //checked
       let isTransport = false;
       let transportCapacity = 0;
       let nonInfantryModelsMinMovement = 100;
@@ -63,19 +97,16 @@ export class Formation {
         //checks the slowest movement value in the formation.
         if (unit.skills.movement < slowestMovement) {
           slowestMovement = unit.skills.movement;
-          console.log("slowest movement: ", slowestMovement)
         }   
         //check how many infantry models.
         if(unit.skills.type.includes('infantry')){
           this.infantry_count += unit.models;
-          console.log("infantry count: ", this.infantry_count)
         };
 
         //what is the minimun movement value of all not infantry models in the formation.
         if(!unit.skills.type.includes('infantry')){
           if (unit.skills.movement < nonInfantryModelsMinMovement){
             nonInfantryModelsMinMovement = unit.skills.movement;
-            console.log("nonInfantryModelsMinMovement: ", nonInfantryModelsMinMovement)
             }
         }
         
@@ -83,80 +114,38 @@ export class Formation {
         unit.skills.passive.forEach(skill => {
           if(skill.includes('transport')){
             isTransport = true;
-            transportCapacity += parseInt(skill.split('-')[1], 10);
-            console.log("isTransport: ", isTransport);
-            console.log("capacity: ", transportCapacity);
-    
+            transportCapacity += parseInt(skill.split('+')[1], 10);  
           }
-        }) 
-         
+        })       
       })
       //is the transport capacity iqual or more that the infantry models. if yes min movement is taken from tranports else from the slowes unit in the formastion
       if(transportCapacity >= this.infantry_count){
         this.movement = nonInfantryModelsMinMovement;
-        console.log("capacity: ", transportCapacity >= this.infantry_count)
-        console.log("final movement: ", nonInfantryModelsMinMovement)
       }else{
         this.movement = slowestMovement;
-        console.log("capacity: ", transportCapacity >= this.infantry_count)
-        console.log("final movement: ", this.movement)
         }  
     }
-
-
-      setModelCount(){
+    setModelCount(){ //checked
         this.composition.forEach(unit=>{
-          if(unit.type){
-            console.log(unit)
-          }
-          
-        })
-      }
-   
-
-      increasePoint_const(increment){
-        this.point_const+=increment;
-      }
-      increaseActionPoints(increment){
-        this.actionsPoints+=increment;
-      }
-      increaseDamage(increment){
-        this.damage+=increment;
-      }
-      increaseVision(increment){
-        this.vision+=increment;
-      }
-      increaseXp(increment){
-        this.Xp+=increment
-      }
-      increaseLevel(increment){
-        this.level+=increment;
-      }
-      increaseAbilities(newAbility){
-        this.abilities.push(newAbility);
-      }
-      increaseBadges(newBadge){
-        this.badges.push(newBadge);
-      }
-      increaseMovement(increment){
-        this.movement+=increment;
-      }
-      increaseType(newType){
-        this.type.push(newType);
-      }
-      replaceType(newType){
-        this.type=newType;
-      }
-      increaseDedication(newDedication){
-        this.dedication.push(newDedication);
-      }
-      replaceDedication(newDedication, replacingOld=undefined){
-        if(!replacingOld){
-            this.dedication=new Array().fill(newDedication);
-        }
-        //todo: replace a dedication inside a multiple values array
-      }
-}
+          this.model_count += unit.models;
+        });
+    }
+    setMaxVision(){ //checked
+      let bonusVision = 0;
+      let tempBonus = 0;
+      this.composition.forEach(unit => {//ok
+        unit.skills.passive.forEach(skill => {//ok
+          if (skill.includes('vision+')){ //ok
+            tempBonus = getValue(skill);
+            if(tempBonus > bonusVision){//ok
+              bonusVision = tempBonus;
+            };
+          };
+        });
+        this.vision += bonusVision;
+      });
+    };
+};
 
 export class ArmyList {// all the models in the map from the same player.
     point_cost = 0
@@ -302,54 +291,54 @@ export default class Campaign {
         this.campaignCode = campaignCode
     }
 }
-export const skills_by_unit_type = {
+export const skills_by_unit_type = {//TODO?: smarter change all this to separate tags?
   infantry:{
     type:"infantry",
     movement:2,
-    active:["build", "set-defence"],
-    actions:2,
+    active:["build", "set_defence", "get_ready"],
     negative:[],
-    passive:["claim-tile", "all-terrain"]
+    passive:["claim_tile", "all_terrain", "work_force%+20"]
   },
   light_infantry:{
     type:"light_infantry",
     movement:2,
-    active:["build", "conceal", "get-ready",
-    "claim-tile"],
-    actions:2,
-    negative:["defense(-10)", "damage(-10)"],
-    passive:["hold-position", "all-terrain", "move(+1)" ]
+    active:["conceal", "get_ready", "claim_tile"],
+    negative:["defense-10", "damage-10"],
+    passive:["hold_position", "all_terrain", "movement+1" ]
   },
-  heavy_infantry:{
-    type:"heavy_infantry",
+  heavy_armoured_infantry:{
+    type:"heavy_armoured_infantry",
     movement:1,
-    active:[ "build","set-defence", "ovrwatch"],
-    actions:2,
+    active:[ "set_defence", "get_ready", "claim_tile"],
     negative:[],
-    passive:["hold-position", "all-terrain", "maxmove-1", "bonus-damage"]
+    passive:["hold_position", "all_terrain", "defense+5"]
+  },
+  heavy_weapons_infantry:{
+    type:"heavy_weapons_infantry",
+    movement:1,
+    active:[ "set_defence", "get_ready", "claim_tile"],
+    negative:[],
+    passive:["hold_position", "all_terrain", "damage+5"]
   },
   jet_infantry:{
     type:"jet_infantry",
     movement:2,
-    active:["deep-assault", "jump"],
-    actions:1,
-    negative:["No-water", "recharge jets"],
+    active:["deep_assault", "jump"],
+    negative:["No_water", "recharge_jets"],
     passive:["fly"]
   },
   rider:{
     type:"rider",
     movement:5,
-    active:["hit&run", "turbo-boost"],
-    actions:1,
-    negative:["No-water", "no-Mountain", "hard-in-swamps" ],
-    passive:["turbo-boost"]
+    active:["hit&run"],
+    negative:["No_water", "no_Mountain", "hard_in_swamps" ],
+    passive:["turbo_boost"]
   },
   beast_rider:{
     type:"rider",
     movement:3,
-    active:["hit&run", "turbo-boost"],
-    actions:1,
-    negative:["No-water"],
+    active:["hit&run", "turbo_boost"],
+    negative:["No_water"],
     passive:["vision+1"]
   },
 
@@ -357,53 +346,47 @@ export const skills_by_unit_type = {
     type:"transport_tank",
     movement:4,
     active:null,
-    actions:1,
-    negative:["No-water", "no-Mountain" ],
-    passive:["transport-10"]
+    negative:["No_water", "no_Mountain" ],
+    passive:["transport+10"]
   },
 
-  transport_armored_tank:{
-    type:"transport_tank",
+  transport_armoured_tank:{
+    type:"transport_armoured_tank",
     movement:4,
     active:null,
-    actions:1,
-    negative:["No-water", "no-Mountain" ],
-    passive:["transport-6"]
+    negative:["No_water", "no_Mountain" ],
+    passive:["transport+6"]
   },
 
   light_tank:{
     type:"light_tank",
     movement:4,
     active:null,
-    actions:1,
-    negative:["No-water", "no-Mountain" ],
+    negative:["No_water", "no_Mountain", "low_defence" ],
     passive:[]
   },
 
   heavy_tank:{
     type:"heavy_tank",
-    movement:4,
+    movement:3,
     active:null,
-    actions:1,
-    negative:["No-water", "no-Mountain" ],
-    passive:[]
+    negative:["No_water", "no_Mountain"],
+    passive:["defense+10", "damage+15"]
   },
 
   fast_hover_transport:{
     type:"fast_hover_transport",
     movement:6,
     active:null,
-    actions:1,
-    negative:["low-defence"],
-    passive:["fly", "transport-5"]
+    negative:["low_defence"],
+    passive:["fly", "transport+5"]
   },
 
   fast_fover:{
     type:"fast_fover",
     movement:6,
     active:null,
-    actions:1,
-    negative:[ "low-defence"],
+    negative:[ "low_defence"],
     passive:["fly"]
   },
 
@@ -411,63 +394,93 @@ export const skills_by_unit_type = {
     type:"walker_wehicle",
     movement:2,
     active:null,
-    actions:[],
-    negative:1,
-    passive:["no-water", "no-swamp"]
+    negative:["no_water", "no_swamp"],
+    passive:[]
   },
 
   artillery_tank:{
     type:"artillery_tank",
     movement:4,
     active:['deploy', "barage"],
-    actions:[],
-    negative:1,
-    passive:["no-water"]
+    negative:["no_water"],
+    passive:[]
   },
 
   artillery_battery:{
     type:"artillery_battery",
     movement:1,
-    active:['deploy'],
-    actions:[],
-    negative:1,
-    passive:["no-water"]
+    active:['deploy', "barage"],
+    negative:["no_water"],
+    passive:[]
   },
 
   warsuit:{
     type:"warsuit",
     movement:3,
     active:[],
-    actions:[],
+    negative:["no_water"],
+    passive:[]
+  },
+
+  monster:{
+    type:"monster",
+    movement:3,
+    active:[],
     negative:[],
-    passive:["no-water"]
-  }
+    passive:[]
+  },
+  beast:{
+    type:"beast",
+    movement:4,
+    active:[],
+    negative:[],
+    passive:["vision+1"]
+  },
+
+  flying_beast:{
+    type:"flying_beast",
+    movement:6,
+    active:[],
+    negative:[],
+    passive:["vision+2"]
+  },
 };
 export const factions = [
   {
-      id:"ja",
-      name:"The Justice Aliance",
-      color:"#309abb"},
+    id:"ja",
+    name:"The Justice Aliance",
+    color:"#309abb",
+    benefit:["defence%+10"]
+  },
+      
   {
-      id:"df",
-      name:"The Dark Forces",
-      color:"#830202"},
+    id:"df",
+    name:"The Dark Forces",
+    color:"#830202",
+    benefit:["damage%+10"]
+  },
   {
-      id:"ae",
-      name:"The Aliens and ET's",
-      color:"#1fc778"},
+    id:"ae",
+    name:"The Aliens and ET's",
+    color:"#1fc778",
+    benefit:[]
+  },
   {
-      id:"dm",
-      name:"The Death Machines",
-      color:"#395B64"},
+    id:"dm",
+    name:"The Death Machines",
+    color:"#395B64",
+    benefit:["build%+10"]},
   {
-      id:"bh",
-      name:"The Beast Hordes",
-      color:"#0F3D3E"},
+    id:"bh",
+    name:"The Beast Hordes",
+    color:"#0F3D3E",
+    benefit:["movement+1"]
+  },
   {
-      id:"ib",
-      name:"The Infestation Bugs",
-      color:"#D1512D"
+    id:"ib",
+    name:"The Infestation Bugs",
+    color:"#D1512D",
+    benefit:["pasive: claim_tile"]
   }
 ]
 export const dedications = {
@@ -479,6 +492,7 @@ export const dedications = {
   'tracker':'10% luck on search',
   'hard-worker':'+1 actionPoints',
   'analizer':'+10% Xp',
+  'anti-air':"+10% damage vs fly"
 }
 export const badges = {
   '':'', 
@@ -508,10 +522,10 @@ export const active_skills =[
   "deploy",
   "jump"
 ]
-export const negative =[
+export const negative = [
   "no-waters", "no-swamps"
 ]
-export const passive_skills =[
+export const passive_skills = [
   "all-terrain", 
   "no-minus-move", 
   "tranport_capacity()", 
