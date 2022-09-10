@@ -56,7 +56,6 @@ export class Formation {
     this.setModelCount()
     this.setMaxVision()
     //action points
-    //max vision
     }
     
     setPointCost(){ // checked  
@@ -534,4 +533,38 @@ export const passive_skills = [
   "bonus-damage()",
   "fly"
 ]
- 
+export const buildings = {
+  fortification:{
+    //player fortify a tile and each time value increase as tile contains all the fortified elements listed here, defense values are cumulatives.
+    level_1:{
+      name:"observation post",
+      work_force_cost:50,
+      defence:0
+    },
+    level_2:{
+      name:"trench",
+      work_force_cost:100,
+      defence:5
+      },
+    level_3:{
+      name:"bunker1",
+      work_force_cost:200,
+      defence:10
+    },
+    level_4:{
+      name:"bunker2",
+      work_force_cost:200,
+      defence:10
+    },
+    level_5:{
+      name:"bunker2",
+      work_force_cost:400,
+      defence:20
+    },
+  },
+  
+}
+
+name:"",
+work_force_cost:null,
+defence:
