@@ -15,7 +15,8 @@ const getValue = (skill) => {
 }
 
 export class Unit {//READY!
-    constructor(unitName, models, point_const, skills){
+    constructor(id, unitName, models, point_const, skills){
+      this.id = id
         this.name = unitName
         this.models = models
         this.point_const = point_const
@@ -290,6 +291,7 @@ export default class Campaign {
         this.campaignCode = campaignCode
     }
 }
+
 export const skills_by_unit_type = {//TODO?: smarter change all this to separate tags?
   infantry:{
     type:"infantry",
@@ -350,7 +352,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
 
   transport_armoured_tank:{
-    type:"transport_armoured_tank",
+    type:"transport_heavy_weapon_tank",
     movement:4,
     active:null,
     negative:["No_water", "no_Mountain" ],
@@ -444,6 +446,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
     passive:["vision+2"]
   },
 };
+
 export const factions = [
   {
     id:"ja",
@@ -562,9 +565,24 @@ export const buildings = {
       defence:20
     },
   },
-  
+  field_nursery:{
+    name:"field_nursery",
+    work_force_cost:200,
+    defence:0,
+    benefit:"heal 10pts per turn of a formation in it up to original pts if contains infantry models"
+  },
+  bootCamp:{
+    name:"bootCamp",
+    work_force_cost:100,
+    defence:0,
+    benefit:"adds 1XP per turn to the formation ocupying it"
+  },
+  work_shop:{
+    name:"bootCamp",
+    work_force_cost:200,
+    defence:0,
+    benefit:"heal 10pts per turn of a formation in it up to original pts if contains vehicle models"
+  }
 }
 
-name:"",
-work_force_cost:null,
-defence:
+  
