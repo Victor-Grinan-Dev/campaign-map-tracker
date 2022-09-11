@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const createFormatinSlice = createSlice({
-    name: 'createFormation',
+    name: 'formation',
     initialState:{
         name:"",
         composition:[],
@@ -26,9 +26,24 @@ const createFormatinSlice = createSlice({
         changeImage:(state, action) => {
             state.image = action.payload;
         },
+        resetState:(state) => {
+            state.value = {
+                name:"",
+                composition:[],
+                s_description:"",
+                l_description:"",
+                image:"",
+            }
+        }
     },
 });
 
 export const {changeName, changeComposition, changeS_description, changeL_description, changeImage} = createFormatinSlice.actions;
+
+export const nameFormationSelector = (state) => state.formation.name;
+export const compositionFormationSelector = (state) => state.formation.composition;
+export const s_descriptionFormationSelector = (state) => state.formation.s_description;
+export const l_descriptionFormationSelector = (state) => state.formation.l_description;
+export const imageFormationSelector = (state) => state.formation.image;
 
 export default createFormatinSlice.reducer;

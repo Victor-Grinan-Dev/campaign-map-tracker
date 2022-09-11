@@ -31,6 +31,14 @@ export const unitsSlice = createSlice({
         changeSkills:(state, action) => {
             state.skills = action.payload;
         },
+        resetUnitState:(state) => {
+            state.value = { 
+                name: "", 
+                models:null, 
+                point_const:null, 
+                skills:undefined,
+            }
+        }
     },
 });
 
