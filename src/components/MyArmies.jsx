@@ -13,10 +13,13 @@ import AddCard from '../small_components/AddCard';
 import BackTo from '../small_components/BackTo';
 import NavBar from '../small_components/NavBar';
 import AddCard2 from '../small_components/AddCard2';
+import CreateUnit from '../small_components/CreateUnit';
 //objects:
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
 import { unitTypesArray } from '../functions/objectsGame';
+import Button from '../small_components/Button';
+import CreateFormation from '../small_components/CreateFormation';
 
 //console.log(unitTypes)
 const dog = new Unit(1, "firulais", 1, 15, skills_by_unit_type.beast);
@@ -89,32 +92,12 @@ function MyArmies() {
     <div className='browseAndAdd-container'>
       <NavBar/>
       <div className="panel">
-        <div className='add-card-container'>
-        <h1 className='h1-title'>Add Formation:</h1>
-          <AddCard2 />
-          <AddCard />
-        </div>
 
-        <div className='info-panel'>
-            <h1 className='h1-title'>Army Info: </h1>
-          <div className='info-container'>
-            
-          <div className="enlisted-formations">
-              <p>listed formations:</p>
-              <ul>
-              {enlisted.map((formation, index) => (
-                  <li key={index}> - {formation.name} </li>
-                  ))}
-              </ul>
-            </div>
-            
-            <div className='data-collection'>
-                  <p>infantry: 75</p>
-                  <p>vehicles: 45</p>
-                  <p>total units:10</p>
-            </div>   
-          </div>
-          <p>Total amount of points: </p>
+        <div className='add-card-container'>
+        <CreateFormation />
+        </div>
+        <div className='add-card-container'>{/* Add unit container */}
+          <CreateUnit />
         </div>
       </div>
 
@@ -139,3 +122,65 @@ export default MyArmies;
 /**
 <BackTo pageUrl={'/profile'} pageName="Profile"/>
  */
+/*
+        <div className='add-card-container'>
+        <h1 className='h1-title'>Add Formation:</h1>
+          <AddCard2 />
+          <AddCard />
+        </div>
+
+        <div className='info-panel'>
+            <h1 className='h1-title'>Formation Info: </h1>
+          <div >
+            
+          <div className="enlisted-formations">
+            <p>Name: "Unknown"</p>
+          </div>
+          
+          <div>
+          <div className="enlisted-formations">
+            <p>Units:</p>
+            <ul style={{
+              display:"flex",
+              flexDirection:"column"
+            }}>
+                <li key={1}> unit 1 <Button caption={'X'}/></li>
+                <li key={2}> unit 2 <Button caption={'X'}/></li>
+                <li key={3}> unit 3 <Button caption={'X'}/></li>
+            </ul>
+          </div>
+          </div>
+          
+            <div className='data-collection'>
+                  <p>description: Harrasment unit</p>
+                  <p>total damage: 123</p>
+                  <p>work force: 12</p>
+                  <p>movement: 2</p>
+            </div>   
+          </div>
+          <p>Total amount of points: 12345</p>
+        </div>
+*/
+/*
+        <div className='info-panel'>
+            <h1 className='h1-title'>Army Info: </h1>
+          <div className='info-container'>
+            
+          <div className="enlisted-formations">
+              <p>listed formations:</p>
+              <ul>
+              {enlisted.map((formation, index) => (
+                  <li key={index}> - {formation.name} </li>
+                  ))}
+              </ul>
+            </div>
+            
+            <div className='data-collection'>
+                  <p>infantry: 75</p>
+                  <p>vehicles: 45</p>
+                  <p>total units:10</p>
+            </div>   
+          </div>
+          <p>Total amount of points: </p>
+        </div>
+*/

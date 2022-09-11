@@ -112,7 +112,15 @@ function AddCard() {
     }
   return (
     <div className={css.addCardContainer}>
-        <form>
+        
+    </div>
+  )
+}
+
+export default AddCard;
+
+/*
+<form>
             <input className={css.addCardInput} type="text" name="name" placeholder='Name...' onChange={changeFormationData}/>
                 
             <input className={css.addCardInputText} type="text" name="s_description" placeholder='Write a short description to keep track of your creations... ' onChange={changeFormationData}/>
@@ -129,9 +137,4 @@ function AddCard() {
             <input className='addCard-input' type="text" name="image" placeholder='Image url... (optional)' onChange={changeFormationData}/>
             <Button caption="Create Formation" role="submit" action={submitData}/>
         </form>
-    </div>
-  )
-}
-
-export default AddCard;
-
+*/
