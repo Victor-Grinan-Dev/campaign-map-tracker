@@ -12,7 +12,7 @@ import Card from '../small_components/Card';
 import AddCard from '../small_components/AddCard';
 import BackTo from '../small_components/BackTo';
 import NavBar from '../small_components/NavBar';
-
+import AddCard2 from '../small_components/AddCard2';
 //objects:
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
@@ -91,6 +91,7 @@ function MyArmies() {
       <div className="panel">
         <div className='add-card-container'>
         <h1 className='h1-title'>Add Formation:</h1>
+          <AddCard2 />
           <AddCard />
         </div>
 

@@ -59,6 +59,15 @@ export class Formation {
     //action points
     }
     
+    setAllUnits(){
+      //call this method if you added units after created the formation.
+      this.setPointCost() 
+      this.setDamage()
+      this.setMovement()
+      this.setWorkForce()
+      this.setModelCount()
+      this.setMaxVision()
+    }
     setPointCost(){ // checked  
       this.composition.forEach(unit =>{
       this.point_const += unit.point_const
@@ -336,7 +345,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
     passive:["turbo_boost"]
   },
   beast_rider:{
-    type:"rider",
+    type:"beast_rider",
     movement:3,
     active:["hit&run", "turbo_boost"],
     negative:["No_water"],

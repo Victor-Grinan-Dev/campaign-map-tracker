@@ -23,7 +23,7 @@ export const loggedSlice = createSlice({
             state.currentUser = action.payload;
         },
         changeUserIndex:(state, action) =>{
-            state.userIndex = action.payload
+            state.userIndex = action.payload;
         }
     },
 });
@@ -33,4 +33,4 @@ export const loggedSelector = (state) => state.logged.value;
 export const userSelector = (state) => state.logged.currentUser;
 export const userTypeSelector = (state) => state.logged.userType;
 export const userIndexSelector = (state) => state.logged.userIndex;
-export default loggedSlice.reducer
+export default loggedSlice.reducer;
