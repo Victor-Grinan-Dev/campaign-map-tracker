@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBar from '../small_components/NavBar';
-import NextPage from '../small_components/NextPage';
+import NavBar from './small_components/NavBar';
+import NextPage from './small_components/NextPage';
 import { useSelector } from 'react-redux';
 //import { capitalStart } from '../functions/functions';
 import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';

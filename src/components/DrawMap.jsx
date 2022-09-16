@@ -3,7 +3,7 @@ import { canvasSquare, canvasHex, generateSqareMap, generateHexagonalMap } from 
 import { mapReader } from '../functions/positions';
 import BackTo from '../small_components/BackTo';
 import { useState } from 'react';
-import Button from '../small_components/Button';
+import Button from './small_components/Button';
 import css from './DrawMap.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';

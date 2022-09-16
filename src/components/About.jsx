@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 
 import { useSelector } from 'react-redux';
 import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';

@@ -8,18 +8,18 @@ import { userSelector, userTypeSelector, userIndexSelector } from '../features/l
 import { useNavigate } from 'react-router-dom';
 
 //components:
-import Card from '../small_components/Card';
-import AddCard from '../small_components/AddCard';
-import BackTo from '../small_components/BackTo';
-import NavBar from '../small_components/NavBar';
-import AddCard2 from '../small_components/AddCard2';
-import CreateUnit from '../small_components/CreateUnit';
+import Card from './small_components/Card';
+import AddCard from './small_components/AddCard';
+import BackTo from './small_components/BackTo';
+import NavBar from './small_components/NavBar';
+import AddCard2 from './small_components/AddCard2';
+import CreateUnit from './small_components/CreateUnit';
 //objects:
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
 import { unitTypesArray } from '../functions/objectsGame';
-import Button from '../small_components/Button';
-import CreateFormation from '../small_components/CreateFormation';
+import Button from './small_components/Button';
+import CreateFormation from './small_components/CreateFormation';
 
 //console.log(unitTypes)
 /*

@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './home.module.css'
 import logo from '../logo.svg';
-import NextPage from '../small_components/NextPage';
-import Button from '../small_components/Button';
+import NextPage from './small_components/NextPage';
+import Button from './small_components/Button';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';

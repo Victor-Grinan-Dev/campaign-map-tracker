@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 import { useSelector } from 'react-redux';
 import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 import { useNavigate } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Tile.module.css';
-import Token from '../components/game_components/Token';
+import Token from '../game_components/Token';
 
 //TODO: change the changes of the map tile in temporary db? global state? 
 

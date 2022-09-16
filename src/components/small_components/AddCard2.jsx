@@ -6,9 +6,9 @@ import Button from './Button';
 
 //redux
 import { useDispatch, useSelector } from 'react-redux';
-import { unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSelector} from '../features/unit/unitSlice';
+import { unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSelector} from '../../features/unit/unitSlice';
 
-import {changeUnitName, changeModels, changePointCost, changeSkills} from '../features/unit/unitSlice';
+import {changeUnitName, changeModels, changePointCost, changeSkills} from '../../features/unit/unitSlice';
 
 function AddCard2() {
     const dispatch = useDispatch()
