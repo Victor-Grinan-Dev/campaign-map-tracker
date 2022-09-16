@@ -123,8 +123,8 @@ export default AddCard;
 <form>
             <input className={css.addCardInput} type="text" name="name" placeholder='Name...' onChange={changeFormationData}/>
                 
-            <input className={css.addCardInputText} type="text" name="s_description" placeholder='Write a short description to keep track of your creations... ' onChange={changeFormationData}/>
-            <textarea className={css.addCardInputText} type="text" name="l_description" placeholder='Write a detailed description or the story of this formation... (optional)' onChange={changeFormationData}/>
+            
+            
             <div className={css.components}>
 
                     {
@@ -134,7 +134,7 @@ export default AddCard;
                     <Button caption="Add unit to formation" action={addUnit}/>
 
                 </div>
-            <input className='addCard-input' type="text" name="image" placeholder='Image url... (optional)' onChange={changeFormationData}/>
+            
             <Button caption="Create Formation" role="submit" action={submitData}/>
         </form>
 */

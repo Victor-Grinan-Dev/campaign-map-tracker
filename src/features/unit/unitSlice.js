@@ -1,24 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const emptyUnit = {
-            id:null, 
-            name: "", 
-            models:null, 
-            point_const:null, 
-            skills:undefined,
-}
 
 export const unitsSlice = createSlice({
 
     name: 'unit',
     initialState: { 
+        id:1,
         name: "", 
         models:null, 
         point_const:null, 
         skills:undefined,
     },
     reducers:{
-
+        changeUnitId:(state) => {
+            state.id = parseInt(state.id, 10) + 1;
+        },
         changeUnitName:(state, action) => {
             state.name = action.payload;
         },
@@ -42,8 +38,8 @@ export const unitsSlice = createSlice({
     },
 });
 
-export const {changeUnitName, changeModels, changePointCost, changeSkills} = unitsSlice.actions;
-
+export const {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} = unitsSlice.actions;
+export const unitIdSelector = (state) => state.unit.id;
 export const unitNameSelector = (state) => state.unit.name;
 export const unitModelsSelector = (state) => state.unit.models;
 export const unitPointConstSelector = (state) => state.unit.point_const;

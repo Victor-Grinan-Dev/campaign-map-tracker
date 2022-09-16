@@ -32,30 +32,36 @@ export class Formation {
   model_count = 0
   vision = 2
   Xp=0
+  intelligence=1
   level= 0
   benefits=[]//this benefits come from the formation type if there is one 
   badges=[]//this are archievements as formation
   movement = 4
   type = undefined //this comes from the composition of the formation (old 40k formations rules)
   dedication=[] //this are enancements assigned to the formation by user
-  color='white' //mission/campaign/faction related
+  color='white' //faction related
+  subColor='white' //user choice
   is_listed = false
   point_const = 0  
   carry_capacity = 0 //from the units
   infantry_count = 0
 
-  constructor(name, composition = [], s_description="", l_description="", image=""){
+
+  constructor(name, composition = [], s_description="", l_description="", image="", faction="", subfaction=""){
     this.name = name
     this.composition = composition
     this.s_description = s_description
     this.l_description = l_description
     this.image = image
+    this.faction = faction
+    this.subfaction = subfaction
     this.setPointCost() 
     this.setDamage()
     this.setMovement()
     this.setWorkForce()
     this.setModelCount()
     this.setMaxVision()
+    this.setFaction()
     //action points
     }
     
@@ -67,6 +73,7 @@ export class Formation {
       this.setWorkForce()
       this.setModelCount()
       this.setMaxVision()
+      this.setFaction()
     }
     setPointCost(){ // checked  
       this.composition.forEach(unit =>{
@@ -154,6 +161,46 @@ export class Formation {
         this.vision += bonusVision;
       });
     };
+    setFaction(){
+      switch (this.faction.name) {
+        case "The Justice Aliance":
+          this.defense = 10;
+          this.color = "#309abb";
+          break;
+        case "damage%+10":
+          this.damage += this.damage * 0.1;
+          this.color = "#830202";
+          break;
+        case "The Death Machines":
+          this.work_force += 0.1;
+          this.color = "#1fc778";
+          //regeneration while still?
+          break;
+        case "The Beast Hordes":
+          this.movement += 1;
+          this.color = "#395B64";
+          //less intelligent?
+          break;
+        case "The Advanced Humanoids":
+          this.intelligence += 0.1;
+          this.color = "#0F3D3E";
+          break;
+        case "The Infestation Bugs":
+          for (let unit in this.units){
+            unit.skills.passive.push('claim-tile');
+          }
+          this.color = "#D1512D";
+          //low defence?
+          break;
+      
+        default:
+          break;
+      }
+    }
+
+    increaseXP(increase){
+      this.Xp += increase * this.intelligence;
+    }
 };
 
 export class ArmyList {// all the models in the map from the same player.
@@ -456,44 +503,44 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
 };
 
-export const factions = [
-  {
+export const factions = {
+  justice_aliance:{
     id:"ja",
     name:"The Justice Aliance",
     color:"#309abb",
-    benefit:["defence%+10"]
+    benefit:["defence+10"]
   },
       
-  {
+  dark_forces:{
     id:"df",
     name:"The Dark Forces",
     color:"#830202",
     benefit:["damage%+10"]
   },
-  {
+  advanced_humanoids:{
     id:"ae",
-    name:"The Aliens and ET's",
+    name:"The Advanced Humanoids",
     color:"#1fc778",
-    benefit:[]
+    benefit:['XP%+10']
   },
-  {
+  death_machines:{
     id:"dm",
     name:"The Death Machines",
     color:"#395B64",
     benefit:["build%+10"]},
-  {
+  beast_hordes:{
     id:"bh",
     name:"The Beast Hordes",
     color:"#0F3D3E",
     benefit:["movement+1"]
   },
-  {
+  infestation_bugs:{
     id:"ib",
     name:"The Infestation Bugs",
     color:"#D1512D",
     benefit:["pasive: claim_tile"]
   }
-]
+}
 export const dedications = {
   'anti-infantry':'+10% damage vs infantry', 
   'anti-tank':'+10% damage vs tank', 
@@ -515,7 +562,7 @@ export const badges = {
   '':'',
   '':'',
 }
-export const active_skills =[
+export const active_skills = [
   "build", 
   "get-ready",
   "claim-tile",

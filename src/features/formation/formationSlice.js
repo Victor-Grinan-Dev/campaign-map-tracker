@@ -1,21 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const createFormatinSlice = createSlice({
+
     name: 'formation',
-    initialState:{
-        name:"",
-        composition:[],
-        s_description:"",
-        l_description:"",
-        image:"",
+
+    initialState: {
+            formationName: "",
+            composition: [],
+            s_description: "",
+            l_description: "",
+            image: "",
+            faction: "",
+            subfaction: "",
+        
     },
 
     reducers:{
-        changeName:(state, action) => {
-            state.name = action.payload;
+        changeFormationName:(state, action) => {
+            state.formationName = action.payload;
         },
-        changeComposition:(state, action) => {
-            state.composition = action.payload;
+        addUnitToComposition:(state, action) => {
+            //state.composition = action.payload;
+            state.composition.push(action.payload);
         },
         changeS_description:(state, action) => {
             state.s_description = action.payload;
@@ -25,6 +31,12 @@ const createFormatinSlice = createSlice({
         },
         changeImage:(state, action) => {
             state.image = action.payload;
+        },
+        changeFaction:(state, action) => {
+            state.faction = action.payload;
+        },
+        changeSubFaction:(state, action) => {
+            state.subfaction = action.payload;
         },
         resetState:(state) => {
             state.value = {
@@ -38,12 +50,14 @@ const createFormatinSlice = createSlice({
     },
 });
 
-export const {changeName, changeComposition, changeS_description, changeL_description, changeImage} = createFormatinSlice.actions;
+export const {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = createFormatinSlice.actions;
 
-export const nameFormationSelector = (state) => state.formation.name;
-export const compositionFormationSelector = (state) => state.formation.composition;
-export const s_descriptionFormationSelector = (state) => state.formation.s_description;
-export const l_descriptionFormationSelector = (state) => state.formation.l_description;
-export const imageFormationSelector = (state) => state.formation.image;
+export const formNameSelector = (state) => state.formationName;
 
+export const compositionSelector = (state) => state.composition;
+export const s_descriptionSelector = (state) => state.s_description;
+export const l_descriptionSelector = (state) => state.l_description;
+export const imageSelector = (state) => state.image;
+export const factionSelector = (state) => state.faction;
+export const subfactionSelector = (state) => state.subfaction;
 export default createFormatinSlice.reducer;

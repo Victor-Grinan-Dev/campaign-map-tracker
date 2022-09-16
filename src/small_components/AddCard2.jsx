@@ -10,7 +10,6 @@ import { unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSel
 
 import {changeUnitName, changeModels, changePointCost, changeSkills} from '../features/unit/unitSlice';
 
-
 function AddCard2() {
     const dispatch = useDispatch()
     const unitName = useSelector(unitNameSelector);
@@ -19,12 +18,14 @@ function AddCard2() {
     const unitSkills = useSelector(skillsSelector);
     
     //dispatch(changeSkills('transport_tank'))
+/*
     useEffect(()=>{
         dispatch(changeSkills('infantry'));
         dispatch(changeModels(5));
         dispatch(changePointCost(90));
         dispatch(changeUnitName('the cool infantry'));
     },[])
+*/
     
   return (
     <div style={{backgroundColor:"blue"}}>
