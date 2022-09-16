@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 import css from './hall.module.css';
-import CampaignCard from '../small_components/CampaignCard';
+import CampaignCard from './small_components/CampaignCard';
 import Campaign from '../functions/Objects';
 import {availableMaps} from '../functions/mapGenerator';
 import { useSelector } from 'react-redux';

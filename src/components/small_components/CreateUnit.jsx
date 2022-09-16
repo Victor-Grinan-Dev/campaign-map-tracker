@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 //data:
-import { skills_by_unit_type, Unit } from '../functions/Objects';
+import { skills_by_unit_type, Unit } from '../../functions/Objects';
 
 //comopents:
 import Button from './Button';
@@ -8,11 +8,11 @@ import Button from './Button';
 //redux:
 //unit
 import { useDispatch, useSelector } from 'react-redux';
-import { unitIdSelector, unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSelector} from '../features/unit/unitSlice';
-import {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} from '../features/unit/unitSlice';
+import { unitIdSelector, unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSelector} from '../../features/unit/unitSlice';
+import {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} from '../../features/unit/unitSlice';
 //formation
-import { compositionSelector } from '../features/formation/formationSlice';
-import { addUnitToComposition } from '../features/formation/formationSlice';
+import { compositionSelector } from '../../features/formation/formationSlice';
+import { addUnitToComposition } from '../../features/formation/formationSlice';
 
 function CreateUnit() {
     const skillsByUnitType = [];

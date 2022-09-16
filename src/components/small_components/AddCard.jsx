@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import css from './AddCard.module.css';
 import Button from './Button';
-import { ArmyList, Formation, Unit, skills_by_unit_type } from '../functions/Objects';
+import { ArmyList, Formation, Unit, skills_by_unit_type } from '../../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
 

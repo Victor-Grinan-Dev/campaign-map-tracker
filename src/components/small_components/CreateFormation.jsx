@@ -7,15 +7,15 @@ import css from './AddCard.module.css';
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
 
-import {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../features/formation/formationSlice';
+import {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../../features/formation/formationSlice';
 
 import {formNameSelector,
     compositionSelector,
     s_descriptionSelector,
     l_descriptionSelector,
-    imageSelector, factionSelector, subfactionSelector} from '../features/formation/formationSlice';
+    imageSelector, factionSelector, subfactionSelector} from '../../features/formation/formationSlice';
 
-import { factions, Formation } from '../functions/Objects';
+import { factions, Formation } from '../../functions/Objects';
 
 function CreateFormation() {
     const [formation, setFormation] = useState({});

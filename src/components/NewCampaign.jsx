@@ -7,8 +7,8 @@ import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
 import { factions } from '../functions/objectsGame';
-import Button from '../small_components/Button';
-import NavBar from '../small_components/NavBar';
+import Button from './small_components/Button';
+import NavBar from './small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import css from './newCampaign.module.css'
 import { useSelector } from 'react-redux';

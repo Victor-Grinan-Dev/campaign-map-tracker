@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import checkMark from '../assets/icon_package/answer-right.png'
+import checkMark from '../../assets/icon_package/answer-right.png'
 
 /*
 const visit_for_cards = "https://freefrontend.com/css-cards/"
