@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 import css from './hall.module.css';
 
 import Campaign from '../functions/Objects'

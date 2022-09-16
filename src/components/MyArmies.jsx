@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import Card from '../small_components/Card';
+import Card from './small_components/Card';
 import { useState, useEffect } from 'react';
-import AddCard from '../small_components/AddCard';
-import BackTo from '../small_components/BackTo';
+import AddCard from './small_components/AddCard';
+import BackTo from './small_components/BackTo';
 import { Unit, Formation } from '../functions/Objects';
 import Database from '../functions/dbConnection';
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 const databaseApi = 'http://localhost:8010/database';
 
 const testUnit1 = new Unit('vg', 'Vitrix guards', 2, 5, 100, "infantry")

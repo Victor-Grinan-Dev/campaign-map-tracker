@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
-import Button from '../small_components/Button';
-import NavBar from '../small_components/NavBar';
+import Button from './small_components/Button';
+import NavBar from './small_components/NavBar';
 import { useNavigate } from 'react-router-dom';
 import css from './NewCampaign.module.css'
 const justiceAlianceColor = "#309abb";

@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../small_components/NavBar';
+import NavBar from './small_components/NavBar';
 function HallSingle() {
   return (
     <div>

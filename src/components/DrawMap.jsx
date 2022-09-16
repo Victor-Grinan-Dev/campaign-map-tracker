@@ -1,9 +1,9 @@
 import React from 'react';
 import { canvasSquare, canvasHex, generateSqareMap, generateHexagonalMap } from '../functions/mapGenerator';
 import { mapReader } from '../functions/positions';
-import BackTo from '../small_components/BackTo';
+import BackTo from './small_components/BackTo';
 import { useState } from 'react';
-import Button from '../small_components/Button';
+import Button from './small_components/Button';
 import css from './DrawMap.module.css';
 import { useNavigate } from 'react-router-dom';
 
