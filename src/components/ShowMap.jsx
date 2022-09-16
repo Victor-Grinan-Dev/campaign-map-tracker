@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { mapReader } from '../functions/positions';
-import BackTo from '../small_components/BackTo';
+import BackTo from './small_components/BackTo';
 
 function ShowMap() {
 
@@ -33,4 +33,4 @@ function ShowMap() {
             </div>
           )
 }
-export default ShowMap
+export default ShowMap;
