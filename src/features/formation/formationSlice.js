@@ -6,7 +6,7 @@ export const formationSlice = createSlice({
     name:'formation',
     initialState:{
         formName:"",
-        composition:[], //array of objects
+        composition:[], 
         s_description: "",
         l_description: "",
         image: "",

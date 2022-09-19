@@ -45,8 +45,6 @@ function CreateUnit() {
     */
     const newUnit = new Unit(unitId, unitName, unitModels, unitPointCost, skills_by_unit_type[unitSkills])
     dispatch(addUnitToComposition(newUnit))
-    console.log(newUnit)
-    console.log(unitList)
   }
 
 
