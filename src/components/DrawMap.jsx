@@ -6,18 +6,23 @@ import { useState } from 'react';
 import Button from './small_components/Button';
 import css from './DrawMap.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { useEffect } from 'react';
 
 const tilesArrayImages = [
     "blank",
     "planes",
+    //"fores_sonja",
     "mountains",
     "forest",
     "hills",
     "swamp"
-]
+];
 
 function DrawMap() {
-    const navigate = useNavigate();
+    const userType = useSelector(userTypeSelector);
+    const currentUser = useSelector(userSelector);
     const emptySqMap = canvasSquare("Unknown Sq Map", 17, 17);
     const emptyHxMap = canvasHex("Unknown Hx Map", 9);
     const mapCanvas = {
@@ -28,6 +33,13 @@ function DrawMap() {
     const [changingName, setChangingName] = useState(false);
     const [brush, setBrush] = useState ("blank");
     const [showTilesId, setShowTilesId] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+      if (!currentUser && userType==='visitor'){
+        navigate('/');
+      }
+    },[currentUser]);
 
     const changeData = (e) => {  
         setCurrentMap({ ...currentMap, [e.target.name]: e.target.value });    
@@ -97,7 +109,7 @@ function DrawMap() {
         setShowTilesId(!showTilesId);
     }
     const drawTileHandler = (e, image=brush) => {
-
+        console.log("drawMap-drawtilehandler:", image);
         const tempNestedArray = currentMap.map;
         tempNestedArray.map(row=>(
             row.map(tile => (
@@ -110,10 +122,12 @@ function DrawMap() {
         setBrush(e.target.value)
     }
     const brushTool = () => {
+        //TODO: read the available options from database.
         return <>
             <select name="brushTool" onChange={brushHandler} >
                 <option  value="blank"> blank </option>
                 <option  value="planes"> planes </option>
+                <option  value="forest_sonja"> forest_sonja </option>
                 <option  value="forest"> forest </option>
                 <option  value="hills"> hills </option>
                 <option  value="swamp"> swamp </option>

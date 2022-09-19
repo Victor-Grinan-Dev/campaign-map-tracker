@@ -9,14 +9,26 @@
     width:50px;
 
     display:flex;
-    justify-content:flex-start;
-    align-items:flex-start;
+    justify-content:center;
+    align-items:center;
     
     position: absolute;
+    
 }
 
 .Tile:hover{
     filter: opacity(50%);
+}
+
+.tileContent{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    grid-auto-rows: minmax(15px, 15px);
+    background-color: aqua;
+    font-size: 10px;
 }
 
  p {

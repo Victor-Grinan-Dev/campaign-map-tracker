@@ -33,4 +33,4 @@ function ShowMap() {
             </div>
           )
 }
-export default ShowMap
+export default ShowMap;
