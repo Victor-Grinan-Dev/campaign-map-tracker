@@ -1,5 +1,5 @@
 import React from "react";
-import Tile from "../small_components/Tile";
+import Tile from "../components/small_components/Tile";
 import tilesImages, { tilesAddresses } from "./tilesImages";
 
 const createValuesArray = (increment, iters, start) => {

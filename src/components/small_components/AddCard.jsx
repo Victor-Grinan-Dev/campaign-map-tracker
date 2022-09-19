@@ -2,10 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import css from './AddCard.module.css';
 import Button from './Button';
-import { Formation, Unit } from '../functions/Objects';
+import { Formation, Unit } from '../../functions/Objects';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { capitalStart } from '../functions/functions'
+//import { capitalStart } from '../functions/functions'
 
 const databaseApi = 'http://localhost:8010/database';
 
@@ -127,7 +127,7 @@ function AddCard() {
     ]);
    
     const changeFormationData = (e) => {
-        setFormationData({ ...formationData, [e.target.name]: capitalStart(e.target.value) });
+        setFormationData({ ...formationData, [e.target.name]: e.target.value });
       };
 
       /*//TODO: read the unitTypes available from the database.

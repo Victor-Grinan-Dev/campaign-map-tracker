@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import css from './navBar.module.css';
 import Button from './Button';
-import logo from '../logo.svg'
+import logo from '../../logo.svg'
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { loggedSelector } from '../features/logged/loggedSlice';
-import { changeLogStatus, changeUser } from '../features/logged/loggedSlice';
+import { loggedSelector } from '../../features/logged/loggedSlice';
+import { changeLogStatus, changeUser } from '../../features/logged/loggedSlice';
 
 
 

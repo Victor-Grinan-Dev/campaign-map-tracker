@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import css from './Tile.module.css';
-//import { imported_tiles_images } from '../functions/tilesImages';
+import { imported_tiles_images } from '../../functions/tilesImages';
 
 //TODO: change the changes of the map tile in temporary db? global state? 
 
