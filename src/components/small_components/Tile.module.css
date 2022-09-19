@@ -1,11 +1,11 @@
 .Tile{
     background-image: url('../../assets/tile_images/blank.png');
-    background-size: 50px 50px;
+    background-size: 50px 56px;
     
     background-repeat: no-repeat;
     background-position: "center";
 
-    height:50px;
+    height:56px;
     width:50px;
 
     display:flex;

@@ -25,7 +25,7 @@ import {formNameSelector,
 import { factions, Formation } from '../../functions/Objects';
 
 function CreateFormation() {
-
+    const dispatch = useDispatch()
     const [factionList, setFactionList] = useState([])
 /*
     const [formation, setFormation] = useState({});
@@ -116,11 +116,11 @@ function CreateFormation() {
     //ui components
     const displayUnits = () => {
         
-        return(
-            composition.map((unit, i) =>{
-                <p key={i}>{unit.name}, {unit.skills.type}</p>
-            })
-        )
+            return(
+                composition.map((unit, i) =>{
+                    <p key={i}>{unit.name}, {unit.skills.type}</p>
+                })
+            )
     }
 
     useEffect(() => {
@@ -139,6 +139,11 @@ function CreateFormation() {
             ))
         )
     }
+
+    useEffect(() => {
+        displayUnits();
+    }, [composition]);
+
     const populateFormation = () => {
         /*
                 testFormation = new Formation(formation_name, formation_composition, formation_s_description, formation_l_description, formation_image, formation_faction,formation_subfaction)
@@ -176,7 +181,8 @@ function CreateFormation() {
 
             <p>Unit in this formation: </p>
 
-            {composition ? displayUnits() : <p style={{color:"tomato"}}>[ No units added yet ]</p>}
+            {/*composition ? displayUnits() : <p style={{color:"tomato"}}>[ No units added yet ]</p>*/}
+            {displayUnits()}
                 <Button role='submit' caption={'Add Formation'}/>
             </form>
             <h3>Formation data:</h3>

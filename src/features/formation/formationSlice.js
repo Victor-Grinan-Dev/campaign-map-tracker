@@ -18,9 +18,7 @@ export const formationSlice = createSlice({
             state.formName = action.payload;
         },
         addUnitToComposition:(state, action) => {
-            const list = state.composition;
-            list.push(action.payload);
-            state.composition = list;
+            state.composition.push(action.payload);
         },
         changeS_description:(state, action) => {
             state.s_description = action.payload;
@@ -50,24 +48,16 @@ export const formationSlice = createSlice({
 })
 
 export const {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = formationSlice.actions;
-//if I export it with the followeing line
-//export const formNameSelector = (state) => state.formation.formName;
-//I get 1000 errors "Cannot read properties of undefined"
-//but if I export it as:
-//export const formNameSelector = (state) => state.formName;
-//i dont geet to read the state is always undefined.
 
-export const formNameSelector = (state) => state.formName;
-export const compositionSelector = (state) => state.composition;
+export const formNameSelector = (state) => state.formation.formName;
+export const compositionSelector = (state) => state.formation.composition;
 
 //the rest of the selectors:
-/*
-s_descriptionSelector = (state) => state.formation.s_description;
+
+export const s_descriptionSelector = (state) => state.formation.s_description;
 export const l_descriptionSelector = (state) => state.formation.l_description;
 export const imageSelector = (state) => state.formation.image;
 export const factionSelector = (state) => state.formation.faction;
 export const subfactionSelector = (state) => state.formation.subfaction;
-export default 
-*/
 
 export default formationSlice.reducer;
