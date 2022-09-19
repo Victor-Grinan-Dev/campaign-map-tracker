@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-export const unitsSlice = createSlice({
+export const unitSlice = createSlice({
 
     name: 'unit',
     initialState: { 
@@ -38,10 +38,10 @@ export const unitsSlice = createSlice({
     },
 });
 
-export const {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} = unitsSlice.actions;
+export const {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} = unitSlice.actions;
 export const unitIdSelector = (state) => state.unit.id;
 export const unitNameSelector = (state) => state.unit.name;
 export const unitModelsSelector = (state) => state.unit.models;
 export const unitPointConstSelector = (state) => state.unit.point_const;
 export const skillsSelector = (state) => state.unit.skills;
-export default unitsSlice.reducer;
+export default unitSlice.reducer;

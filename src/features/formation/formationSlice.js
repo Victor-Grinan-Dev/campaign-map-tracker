@@ -1,27 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const createFormatinSlice = createSlice({
 
-    name: 'formation',
-
-    initialState: {
-            formationName: "",
-            composition: [],
-            s_description: "",
-            l_description: "",
-            image: "",
-            faction: "",
-            subfaction: "",
-        
+export const formationSlice = createSlice({
+    
+    name:'formation',
+    initialState:{
+        formName:"",
+        composition:[], //array of objects
+        s_description: "",
+        l_description: "",
+        image: "",
+        faction: undefined, //this will be object
+        subfaction: undefined, //this will be object
     },
-
     reducers:{
         changeFormationName:(state, action) => {
-            state.formationName = action.payload;
+            state.formName = action.payload;
         },
         addUnitToComposition:(state, action) => {
-            //state.composition = action.payload;
-            state.composition.push(action.payload);
+            const list = state.composition;
+            list.push(action.payload);
+            state.composition = list;
         },
         changeS_description:(state, action) => {
             state.s_description = action.payload;
@@ -47,17 +46,28 @@ const createFormatinSlice = createSlice({
                 image:"",
             }
         }
-    },
-});
+    }
+})
 
-export const {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = createFormatinSlice.actions;
+export const {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = formationSlice.actions;
+//if I export it with the followeing line
+//export const formNameSelector = (state) => state.formation.formName;
+//I get 1000 errors "Cannot read properties of undefined"
+//but if I export it as:
+//export const formNameSelector = (state) => state.formName;
+//i dont geet to read the state is always undefined.
 
-export const formNameSelector = (state) => state.formationName;
-
+export const formNameSelector = (state) => state.formName;
 export const compositionSelector = (state) => state.composition;
-export const s_descriptionSelector = (state) => state.s_description;
-export const l_descriptionSelector = (state) => state.l_description;
-export const imageSelector = (state) => state.image;
-export const factionSelector = (state) => state.faction;
-export const subfactionSelector = (state) => state.subfaction;
-export default createFormatinSlice.reducer;
+
+//the rest of the selectors:
+/*
+s_descriptionSelector = (state) => state.formation.s_description;
+export const l_descriptionSelector = (state) => state.formation.l_description;
+export const imageSelector = (state) => state.formation.image;
+export const factionSelector = (state) => state.formation.faction;
+export const subfactionSelector = (state) => state.formation.subfaction;
+export default 
+*/
+
+export default formationSlice.reducer;

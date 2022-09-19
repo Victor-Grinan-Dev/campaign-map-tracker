@@ -34,7 +34,6 @@ function AddCard2() {
         <p>unitModels: {unitModels}</p>
         <p>unitPointCost: {unitPointCost}</p>
         <p>type: {unitSkills}</p>
-
     </div>
   )
 }

@@ -3,7 +3,7 @@ import loggedReducers from '../features/logged/loggedSlice';
 import armyReducers from'../features/army/armySlice';
 import unitReducers from '../features/unit/unitSlice';
 import unitListReducer from '../features/unitList/unitListSlice';
-import createFormtionReducer from '../features/formation/formationSlice';
+import formtionReducer from '../features/formation/formationSlice';
 
 
 export default configureStore({
@@ -14,6 +14,6 @@ export default configureStore({
         army: armyReducers,
         unit: unitReducers,
         unitList: unitListReducer,
-        fomation: createFormtionReducer,
+        fomation: formtionReducer,
         }
 });

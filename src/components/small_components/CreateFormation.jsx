@@ -7,6 +7,7 @@ import css from './AddCard.module.css';
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
 
+/*
 import {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../../features/formation/formationSlice';
 
 import {formNameSelector,
@@ -14,13 +15,21 @@ import {formNameSelector,
     s_descriptionSelector,
     l_descriptionSelector,
     imageSelector, factionSelector, subfactionSelector} from '../../features/formation/formationSlice';
+*/
+
+import {changeFormationName, addUnitToComposition} from '../../features/formation/formationSlice';
+
+import {formNameSelector,
+    compositionSelector} from '../../features/formation/formationSlice';
 
 import { factions, Formation } from '../../functions/Objects';
 
 function CreateFormation() {
-    const [formation, setFormation] = useState({});
-    const [factionList, setFactionList] = useState([])
 
+    const [factionList, setFactionList] = useState([])
+/*
+    const [formation, setFormation] = useState({});
+    
     const [formation_name, set_formation_name] = useState()
     const [formation_composition, set_formation_composition] = useState()
     const [formation_s_description, set_formation_s_description] = useState()
@@ -29,16 +38,32 @@ function CreateFormation() {
     const [formation_faction, set_formation_faction] = useState()
     const [formation_subfaction, set_formation_subfaction] = useState()
     const dispatch = useDispatch();
+*/
 
     const nameFormation = useSelector(formNameSelector);
     const composition = useSelector(compositionSelector);
+/*
     const s_description = useSelector(s_descriptionSelector);
     const l_description = useSelector(l_descriptionSelector);
     const image = useSelector(imageSelector);
     const faction = useSelector(factionSelector);
     const subfaction = useSelector(subfactionSelector);
+*/
 
     let testFormation;
+
+    const nameHandler = (e) => {
+        console.log("from input: ", e.target.value)
+        console.log("from redux state: ", nameFormation)
+    }
+
+    const compositionHandler = () => {
+        console.log({
+            name:nameFormation,
+            composition:composition
+        })
+    }
+/*
 
     const nameHandler = (e) => {
         dispatch(changeFormationName(e.target.value));
@@ -87,6 +112,7 @@ function CreateFormation() {
         console.log(formation_subfaction)
         populateFormation()
     }
+*/
     //ui components
     const displayUnits = () => {
         
@@ -114,8 +140,11 @@ function CreateFormation() {
         )
     }
     const populateFormation = () => {
-        testFormation = new Formation(formation_name, formation_composition, formation_s_description, formation_l_description, formation_image, formation_faction,formation_subfaction)
-        setFormation(testFormation);
+        /*
+                testFormation = new Formation(formation_name, formation_composition, formation_s_description, formation_l_description, formation_image, formation_faction,formation_subfaction)
+                setFormation(testFormation);
+        */
+        
         
     }
         
@@ -130,18 +159,20 @@ function CreateFormation() {
             <form>
             <input className={css.addCardInput} type="text" name="name" placeholder='Name...' onChange={nameHandler}/>
 
-            <select name="faction" defaultValue={'default'} onChange={factionHandler}>
+            <select name="faction" defaultValue={'default'} >
                 <option value="default" disabled> faction... </option>
                 {displayFactions()}
             </select>
 
-            <input className={css.addCardInput} type="text" name="subfaction" placeholder='subfaction...' onChange={subfactionHandler}/>
+            <input className={css.addCardInput} type="text" name="subfaction" placeholder='subfaction...' 
+            
+            />
 
-            <input className={css.addCardInputText} type="text" name="s_description" placeholder='Max 3 words description... ' onChange={s_descriptionHandler}/>
+            <input className={css.addCardInputText} type="text" name="s_description" placeholder='Max 3 words description... ' />
 
-            <textarea className={css.addCardInputText} type="text" name="l_description" placeholder='Write a detailed description of this formation... (optional)' onChange={l_descriptionHandler}/>
+            <textarea className={css.addCardInputText} type="text" name="l_description" placeholder='Write a detailed description of this formation... (optional)' />
 
-            <input className='addCard-input' type="text" name="image" placeholder='Image url... (optional)' onChange={imageHandler}/>
+            <input className='addCard-input' type="text" name="image" placeholder='Image url... (optional)' />
 
             <p>Unit in this formation: </p>
 

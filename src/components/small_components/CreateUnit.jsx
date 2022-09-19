@@ -28,20 +28,25 @@ function CreateUnit() {
     const unitPointCost = useSelector(unitPointConstSelector);
     const unitSkills = useSelector(skillsSelector);
 
- 
     for(let unitType in skills_by_unit_type){
         skillsByUnitType.push(unitType)
     }
         
-  const addUnitToFormation = () => {
-    
+  const addUnitToFormation = () => { 
     dispatch(changeUnitId())
-    
-    const newUnit = new Unit(unitId, unitName, unitModels, unitPointCost, skills_by_unit_type[unitSkills] )
-    
+    /*
+        const newUnit = {
+        id: unitId,
+        name: unitName,
+        models: unitModels,
+        point_cost: unitPointCost,
+        skills: skills_by_unit_type[unitSkills]
+    }
+    */
+    const newUnit = new Unit(unitId, unitName, unitModels, unitPointCost, skills_by_unit_type[unitSkills])
     dispatch(addUnitToComposition(newUnit))
-
     console.log(newUnit)
+    console.log(unitList)
   }
 
 
