@@ -49,13 +49,18 @@ export class Formation {
 
   constructor(name, composition = [], s_description="", l_description="", image="", faction="", subfaction=""){
     this.name = name
-    this.composition = composition
+    if (typeof(composition) != "array"){
+      this.composition = []
+    }else{
+      this.composition = composition
+    }
+    
     this.s_description = s_description
     this.l_description = l_description
     this.image = image
     this.faction = faction
     this.subfaction = subfaction
-    this.setPointCost() 
+    //this.setPointCost() 
     this.setDamage()
     this.setMovement()
     this.setWorkForce()
@@ -67,7 +72,7 @@ export class Formation {
     
     setAllUnits(){
       //call this method if you added units after created the formation.
-      this.setPointCost() 
+      //this.setPointCost() 
       this.setDamage()
       this.setMovement()
       this.setWorkForce()
@@ -75,11 +80,13 @@ export class Formation {
       this.setMaxVision()
       this.setFaction()
     }
+    /*
     setPointCost(){ // checked  
       this.composition.forEach(unit =>{
       this.point_const += unit.point_const
       });
     }
+    */
     setDamage(){ //checked
         this.damage = Math.floor(this.point_const / 10)
     }

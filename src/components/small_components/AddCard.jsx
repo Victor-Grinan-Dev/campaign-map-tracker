@@ -11,7 +11,7 @@ const databaseApi = 'http://localhost:8010/database';
 
 const formationsEndPoint = '/users/0/formations';
 const armyListEndPoint = '/users/0/army_lists';
-
+const emptyFormation = new Formation("");
 const unitTypes = [
     {
         "id":1,
@@ -116,8 +116,7 @@ const unitTypes = [
   ]
 const sampleUnit = new Unit(1,"sample 1", 2, 5, 100, "infantry");
 const sampleFormation = new Formation(2, "sampl2 form", []);
-const emptyUnit = sampleUnit.getParams();
-const emptyFormation = sampleFormation.getParams([]);
+
 
 function AddCard() {
 
