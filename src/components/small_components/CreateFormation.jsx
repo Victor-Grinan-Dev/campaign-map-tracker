@@ -19,7 +19,6 @@ import { factions, Formation } from '../../functions/Objects';
 function CreateFormation() {
     const dispatch = useDispatch()
     const [factionList, setFactionList] = useState([])
-    const [unitList, setUnitList,] = useState([]);
     const [isComposition, setIsComposition] = useState(false);
     const [totalPointCost, setTotalPointCost]= useState(0);
 
@@ -34,7 +33,6 @@ function CreateFormation() {
 
     const nameFormation = useSelector(formNameSelector);
     const composition = useSelector(compositionSelector);
-
     const s_description = useSelector(s_descriptionSelector);
     const l_description = useSelector(l_descriptionSelector);
     const image = useSelector(imageSelector);
@@ -106,13 +104,10 @@ function CreateFormation() {
 
     useEffect(() => {
         if(composition.length > 0){
-            const temp = [];
             let tempPoints = 0;
-            for(let unit in composition){  
-                temp.push(composition[unit].name);  
+            for(let unit in composition){   
                 tempPoints += parseInt(composition[unit].point_const, 10);       
             };
-            setUnitList(temp);
             if (composition.length > 0){
                 setIsComposition(true);
             }else{
@@ -152,8 +147,8 @@ function CreateFormation() {
 
             <p>Units in this formation: </p>
             <ol>
-                {unitList.map((unitName, i) => (
-                    <li key={i}>{unitName}</li>
+                {composition.map((unit, i) => (
+                    <li key={i}>{unit.name}</li>
                 ))}
             </ol>
             { !isComposition ? <p style={{color:"tomato"}}>[ No units added yet ] </p>: null}
