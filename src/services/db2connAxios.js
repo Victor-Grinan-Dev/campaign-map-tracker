@@ -1,16 +1,11 @@
-import React from "react";
 import axios from "axios";
 
-export const getData = (url) => {
-    (async () =>{
-        axios.get(url).then(res => {
-            return res.data;
-        }).catch(err => {
-            console.log(err);
-        })
-    })();
-    
-};
+const baseUrl = 'http://localhost/8011'
+
+export const getData = async () => {
+    const response = await axios.get(baseUrl);
+    return response.data;
+  };
 
 export const deleteData = (url, id) => {
     (async () =>{

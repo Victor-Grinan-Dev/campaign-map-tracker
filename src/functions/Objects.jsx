@@ -62,21 +62,8 @@ export class Formation {
     this.setModelCount()
     this.setMaxVision()
     this.setFaction()
-    //action points
+    //action points?
     }
-    
-/*
-    setAllUnits(){
-      //call this method if you added units after created the formation.
-      //this.setPointCost() 
-      this.setDamage()
-      this.setMovement()
-      this.setWorkForce()
-      this.setModelCount()
-      this.setMaxVision()
-      this.setFaction()
-    }
-*/
 
     setPointCost(){ // checked  
       this.composition.forEach(unit =>{
@@ -173,7 +160,7 @@ export class Formation {
           this.color = "#830202";
           break;
         case "The Death Machines":
-          this.work_force += 0.1;
+          this.work_force *= 0.1;
           this.color = "#1fc778";
           //regeneration while still?
           break;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 //components:
 import Button from './Button';
 //style:
@@ -71,6 +72,7 @@ function CreateFormation() {
             const newFormation = new Formation(nameFormation, tempComposition, s_description, l_description, image, faction, subfaction);
             //TODO: add to database
             console.log(newFormation);
+
             const form = e.nativeEvent.path[1];
             //reset form
             Array.from(form.elements).forEach(element => {
