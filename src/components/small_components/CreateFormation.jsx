@@ -74,7 +74,6 @@ function CreateFormation() {
             const form = e.nativeEvent.path[1];
             //reset form
             Array.from(form.elements).forEach(element => {
-                console.log(element.name === "faction")
                 if(element.name === "faction"){
                     element.value = "default";
                 }else{
@@ -104,15 +103,12 @@ function CreateFormation() {
     };
 
     useEffect(() => {
-        console.log(composition.length > 0)
         if(composition.length > 0){
             const temp = [];
             let tempPoints = 0;
             for(let unit in composition){  
-                temp.push(composition[unit].name);
-                //console.log(parseInt(composition[unit].point_const, 10));   
-                tempPoints += parseInt(composition[unit].point_const, 10);  
-                //console.log(composition[unit]);       
+                temp.push(composition[unit].name);  
+                tempPoints += parseInt(composition[unit].point_const, 10);       
             };
             setUnitList(temp);
             if (composition.length > 0){

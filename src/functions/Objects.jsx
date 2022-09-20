@@ -91,8 +91,6 @@ export class Formation {
       let apply_bonus = false;
       let bonus = 0;
       for (let unit of this.composition){
-        console.log(unit)
-
         if(unit.skills.type.includes("infantry")){
           this.work_force += unit.point_const;
         }
