@@ -32,32 +32,40 @@ function CreateUnit() {
         skillsByUnitType.push(unitType)
     }
         
-  const addUnitToFormation = () => { 
-    dispatch(changeUnitId())
-    /*
-        const newUnit = {
-        id: unitId,
-        name: unitName,
-        models: unitModels,
-        point_cost: unitPointCost,
-        skills: skills_by_unit_type[unitSkills]
+  const addUnitToFormation = (e) => { 
+    
+    if (unitName && unitModels && unitPointCost && skills_by_unit_type){
+        const newUnit = new Unit(unitId, unitName, unitModels, unitPointCost, skills_by_unit_type[unitSkills])
+        dispatch(changeUnitId())
+        dispatch(addUnitToComposition(newUnit));
+        //reset state:
+        dispatch(changeUnitName(undefined));
+        dispatch(changeModels(null));
+        dispatch(changePointCost(null));
+        dispatch(changeSkills(undefined));
+        const form = e.nativeEvent.path[1]
+        //console.log(form)
+        Array.from(form.elements).forEach(element => {
+            if(element.name === "unitTypeSkills"){
+                element.value = "Choose"
+            }else{
+                element.value = ""
+            }
+          });
+    }else{
+        console.log('empty field(s) modal')
     }
-    */
-    const newUnit = new Unit(unitId, unitName, unitModels, unitPointCost, skills_by_unit_type[unitSkills])
-    dispatch(addUnitToComposition(newUnit))
-  }
-
+  };
 
   return (
     <div>
         <h2>Create Unit</h2>
-        <div>
-            <p>id: {unitId} - "{unitName}" - {unitSkills} - {unitModels} models - {unitPointCost}pts </p>         
+        <div>        
             <form>
                 <p>Name:</p>
                 <input type="text" onChange={(e)=>dispatch(changeUnitName(e.target.value))}/>
                 <p>Unit Type:</p>
-                <select name="unitTypeSkills" id="" onChange={(e)=>dispatch(changeSkills(e.target.value)) } defaultValue='Choose' >
+                <select name="unitTypeSkills" id="skills" onChange={(e)=>dispatch(changeSkills(e.target.value)) } defaultValue='Choose' >
                     <option value="Choose" disabled> Choose...</option>
                     {
                     skillsByUnitType.map((skill, i) => (
@@ -69,7 +77,7 @@ function CreateUnit() {
                 <input type="number" onChange={(e)=>dispatch(changeModels(e.target.value))}/>
                 <p>Point cost:</p>
                 <input type="number" onChange={(e)=>dispatch(changePointCost(e.target.value))}/>
-                <Button  caption={' <<< Add Unit to Formation'} action={addUnitToFormation}/>
+                <Button caption={' <<< Add Unit to Formation'} action={addUnitToFormation}/>
             </form>
         </div>
     </div>
@@ -79,5 +87,5 @@ function CreateUnit() {
 export default CreateUnit;
 
 /*
-role='submit'
+
 */

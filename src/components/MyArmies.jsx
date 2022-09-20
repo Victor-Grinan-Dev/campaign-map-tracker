@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 //components:
 import Card from './small_components/Card';
-import AddCard from './small_components/AddCard';
+
 import BackTo from './small_components/BackTo';
 import NavBar from './small_components/NavBar';
 import AddCard2 from './small_components/AddCard2';

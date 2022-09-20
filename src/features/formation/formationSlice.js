@@ -20,6 +20,9 @@ export const formationSlice = createSlice({
         addUnitToComposition:(state, action) => {
             state.composition.push(action.payload);
         },
+        changeComposition:(state, action) => {
+            state.composition = action.payload;
+        },
         changeS_description:(state, action) => {
             state.s_description = action.payload;
         },
@@ -47,7 +50,7 @@ export const formationSlice = createSlice({
     }
 })
 
-export const {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = formationSlice.actions;
+export const {changeFormationName, addUnitToComposition, changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} = formationSlice.actions;
 
 export const formNameSelector = (state) => state.formation.formName;
 export const compositionSelector = (state) => state.formation.composition;

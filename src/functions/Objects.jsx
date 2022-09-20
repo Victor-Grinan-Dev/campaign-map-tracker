@@ -49,18 +49,13 @@ export class Formation {
 
   constructor(name, composition = [], s_description="", l_description="", image="", faction="", subfaction=""){
     this.name = name
-    if (typeof(composition) != "array"){
-      this.composition = []
-    }else{
-      this.composition = composition
-    }
-    
+    this.composition = composition
     this.s_description = s_description
     this.l_description = l_description
     this.image = image
     this.faction = faction
     this.subfaction = subfaction
-    //this.setPointCost() 
+    this.setPointCost() 
     this.setDamage()
     this.setMovement()
     this.setWorkForce()
@@ -70,6 +65,7 @@ export class Formation {
     //action points
     }
     
+/*
     setAllUnits(){
       //call this method if you added units after created the formation.
       //this.setPointCost() 
@@ -80,20 +76,23 @@ export class Formation {
       this.setMaxVision()
       this.setFaction()
     }
-    /*
+*/
+
     setPointCost(){ // checked  
       this.composition.forEach(unit =>{
       this.point_const += unit.point_const
       });
     }
-    */
+
     setDamage(){ //checked
         this.damage = Math.floor(this.point_const / 10)
     }
     setWorkForce(){ //checked
       let apply_bonus = false;
       let bonus = 0;
-      this.composition.forEach(unit => {
+      for (let unit of this.composition){
+        console.log(unit)
+
         if(unit.skills.type.includes("infantry")){
           this.work_force += unit.point_const;
         }
@@ -101,10 +100,9 @@ export class Formation {
           if(skill.includes("work_force")){
             apply_bonus = true
             bonus = (parseInt(skill.split('+')[1], 10)/100);
-            
           }
         });
-      })
+      }
       if(apply_bonus){
         this.work_force += this.work_force * bonus;
       }
@@ -125,14 +123,12 @@ export class Formation {
         if(unit.skills.type.includes('infantry')){
           this.infantry_count += unit.models;
         };
-
         //what is the minimun movement value of all not infantry models in the formation.
         if(!unit.skills.type.includes('infantry')){
           if (unit.skills.movement < nonInfantryModelsMinMovement){
             nonInfantryModelsMinMovement = unit.skills.movement;
             }
         }
-        
         //check if there is transport(s) and if true, whats the transport combine capacity.
         unit.skills.passive.forEach(skill => {
           if(skill.includes('transport')){

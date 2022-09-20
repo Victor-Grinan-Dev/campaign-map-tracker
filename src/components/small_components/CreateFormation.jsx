@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-
 //components:
 import Button from './Button';
 //style:
 import css from './AddCard.module.css';
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import {changeFormationName, addUnitToComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../../features/formation/formationSlice';
+import {changeFormationName, changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../../features/formation/formationSlice';
 import {formNameSelector,
     compositionSelector,
     s_descriptionSelector,
@@ -41,6 +40,7 @@ function CreateFormation() {
     const faction = useSelector(factionSelector);
     const subfaction = useSelector(subfactionSelector);
 
+    //handlers
     const nameHandler = (e) => {
         dispatch(changeFormationName(e.target.value));
     }
@@ -65,15 +65,42 @@ function CreateFormation() {
         dispatch(changeSubFaction(e.target.value));
     }
 
-    //ui components
-    const displayUnits = () => {         
-        return(
-            unitList.map((unit, i) =>{
-                <li key={i}>{unit}</li>
-            })
-        )     
+    const addFormation = (e) =>{
+        const tempComposition = composition;
+        if (nameFormation && composition.length > 0 && s_description && faction && subfaction){
+            //here composition value is lost
+            const newFormation = new Formation(nameFormation, tempComposition, s_description, l_description, image, faction, subfaction)
+
+            //TODO: add to database
+            console.log(newFormation);
+            const form = e.nativeEvent.path[1];
+            Array.from(form.elements).forEach(element => {
+                console.log(element.name === "faction")
+/*
+                if(element.name === "faction"){
+                    element.value = "Choose"
+                }else{
+                    element.value = ""
+                }
+*/
+              });
+            //reset state:
+/*
+            dispatch(changeFormationName(undefined));
+            dispatch(changeComposition([]));
+            dispatch(changeS_description(""));
+            dispatch(changeL_description(""));
+            dispatch(changeImage(""));
+            dispatch(changeFaction(undefined));
+            dispatch(changeSubFaction(undefined));
+*/
+        }else{
+            console.log('empty field(s) modal')
+        }
+        console.log(composition)//here the value of composition is read
     }
 
+    //UI elements
     const displayFactions = () => {
         return(   
             factionList.map((factionItem, i) => (
@@ -83,22 +110,24 @@ function CreateFormation() {
     }
 
     useEffect(() => {
-        const temp = [];
-        let tempPoints = 0;
-
-        for(let unit in composition){  
-            temp.push(composition[unit].name);
-           console.log(parseInt(composition[unit].point_const, 10));
-
-            tempPoints += parseInt(composition[unit].point_const, 10);             
+        console.log(composition.length > 0)
+        if(composition.length > 0){
+            const temp = [];
+            let tempPoints = 0;
+            for(let unit in composition){  
+                temp.push(composition[unit].name);
+                //console.log(parseInt(composition[unit].point_const, 10));   
+                tempPoints += parseInt(composition[unit].point_const, 10);  
+                //console.log(composition[unit]);       
+            }
+            setUnitList(temp);
+            if (composition.length > 0){
+                setIsComposition(true);
+            }else{
+                setIsComposition(false);
+            } 
+            setTotalPointCost(tempPoints);
         }
-        setUnitList(temp);
-        if (composition.length > 0){
-            setIsComposition(true);
-        }else{
-            setIsComposition(false);
-        } 
-        setTotalPointCost(tempPoints);
     }, [composition]);
    
   return (
@@ -137,7 +166,7 @@ function CreateFormation() {
             </ol>
             { !isComposition ? <p style={{color:"tomato"}}>[ No units added yet ] </p>: null}
 
-                <Button role='submit' caption={'Add Formation'}/>
+                <Button caption={'Add Formation'} action={addFormation}/>
             </form>
             <h3>Total: {totalPointCost}pts </h3>
             
