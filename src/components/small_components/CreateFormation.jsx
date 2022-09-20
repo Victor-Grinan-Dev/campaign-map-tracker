@@ -68,24 +68,20 @@ function CreateFormation() {
     const addFormation = (e) =>{
         const tempComposition = composition;
         if (nameFormation && composition.length > 0 && s_description && faction && subfaction){
-            //here composition value is lost
-            const newFormation = new Formation(nameFormation, tempComposition, s_description, l_description, image, faction, subfaction)
-
+            const newFormation = new Formation(nameFormation, tempComposition, s_description, l_description, image, faction, subfaction);
             //TODO: add to database
             console.log(newFormation);
             const form = e.nativeEvent.path[1];
+            //reset form
             Array.from(form.elements).forEach(element => {
                 console.log(element.name === "faction")
-/*
                 if(element.name === "faction"){
-                    element.value = "Choose"
+                    element.value = "default";
                 }else{
-                    element.value = ""
+                    element.value = "";
                 }
-*/
               });
             //reset state:
-/*
             dispatch(changeFormationName(undefined));
             dispatch(changeComposition([]));
             dispatch(changeS_description(""));
@@ -93,12 +89,10 @@ function CreateFormation() {
             dispatch(changeImage(""));
             dispatch(changeFaction(undefined));
             dispatch(changeSubFaction(undefined));
-*/
         }else{
             console.log('empty field(s) modal')
-        }
-        console.log(composition)//here the value of composition is read
-    }
+        };
+    };
 
     //UI elements
     const displayFactions = () => {
@@ -107,7 +101,7 @@ function CreateFormation() {
                 <option value={factionItem} key={i} >{factionItem}</option>
             ))
         )
-    }
+    };
 
     useEffect(() => {
         console.log(composition.length > 0)
@@ -119,15 +113,15 @@ function CreateFormation() {
                 //console.log(parseInt(composition[unit].point_const, 10));   
                 tempPoints += parseInt(composition[unit].point_const, 10);  
                 //console.log(composition[unit]);       
-            }
+            };
             setUnitList(temp);
             if (composition.length > 0){
                 setIsComposition(true);
             }else{
                 setIsComposition(false);
-            } 
+            };
             setTotalPointCost(tempPoints);
-        }
+        };
     }, [composition]);
    
   return (
@@ -137,7 +131,7 @@ function CreateFormation() {
             <form>
             <input className={css.addCardInput} type="text" name="name" placeholder='Name...' onChange={nameHandler}/>
 
-            <select name="faction" defaultValue={'default'} onChange={factionHandler} >
+            <select name="faction" defaultValue='default' onChange={factionHandler} >
                 <option value="default" disabled> faction... </option>
                 {displayFactions()}
             </select>
