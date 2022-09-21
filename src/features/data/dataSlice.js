@@ -1,5 +1,11 @@
+/*
+import React, { useEffect } from 'react'
+
 import { createSlice } from "@reduxjs/toolkit";
 import { getData } from "../../services/db2connAxios";
+import { useSelector } from "react-redux";
+import { userTypeSelector } from "../logged/loggedSlice";
+
 
 export const dataSlice = createSlice({
     name:'data',
@@ -21,7 +27,7 @@ export const dataSlice = createSlice({
         },
         changeSearch(state, action) {
             state.search = action.payload;
-          },
+        },
     }
 });
 
@@ -31,7 +37,7 @@ export const formationsSelector = (state) => state.data.formations;
 export const armyListSelector = (state) => state.data.armyList;
 export const isLoadingSelector = (state) => state.data.isLoading;
 export const searchSelector = (state) => state.data.search;
-
+    
 export const initializeData = () => {
     return async (dispatch) => {
       const formations = await getData();
@@ -41,3 +47,4 @@ export const initializeData = () => {
   };
 
 export default dataSlice.reducer;
+*/

@@ -3,23 +3,26 @@ import axios from 'axios';
 
 //hooks:
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector, userIndexSelector } from '../features/logged/loggedSlice';
 import { useNavigate } from 'react-router-dom';
+
+//redux:
+import { useDispatch, useSelector } from 'react-redux';
+import { userSelector, userTypeSelector, userIndexSelector } from '../features/logged/loggedSlice';
+//import { formationsSelector, armyListSelector, isLoadingSelector, searchSelector } from '../features/data/dataSlice';
 
 //components:
 import Card from './small_components/Card';
-
 import BackTo from './small_components/BackTo';
 import NavBar from './small_components/NavBar';
 import AddCard2 from './small_components/AddCard2';
 import CreateUnit from './small_components/CreateUnit';
+import Button from './small_components/Button';
+import CreateFormation from './small_components/CreateFormation';
+
 //objects:
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
 import { unitTypesArray } from '../functions/objectsGame';
-import Button from './small_components/Button';
-import CreateFormation from './small_components/CreateFormation';
 
 //console.log(unitTypes)
 /*
@@ -38,16 +41,16 @@ const riding_victor = new Formation("riding victor", [yoamelInABike, yoamelInABi
 */
 //console.log(riding_victor)
 const databaseApi = 'http://localhost:8011/database';
-const visitorDb2 = 'http://localhost:8011/visitors';
+const visitorDb2 = 'http://localhost:8011/visitor';
 
 function MyArmies() {
+  const dispatch = useDispatch();
+
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userSelector);
   const navigate = useNavigate();
-  const [data, setData] = useState({});
   const [formations, setformations] = useState([]);
   const [search, setSearch] = useState('');
-  const [enlisted, setEnlisted] = useState([]);
   const [loading, setLoading] = useState(false);
   const userIndex = useSelector(userIndexSelector);;
 

@@ -1,13 +1,15 @@
 import React from 'react'
 import NavBar from './small_components/NavBar';
 import NextPage from './small_components/NextPage';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 //import { capitalStart } from '../functions/functions';
 import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import { initializeData } from '../features/data/dataSlice';
 import NewCampaignCss from './newCampaign.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 function Profile() {
+  const dispatch = useDispatch();
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userSelector);
   const navigate = useNavigate();
@@ -17,6 +19,10 @@ function Profile() {
       navigate('/');
     }
   },[currentUser]);
+
+  useEffect(() => {
+    dispatch(initializeData(`/${userType}`));
+  }, [dispatch]);
 
     const visitorWelcoming = () => {
         if (userType === 'visitor'){

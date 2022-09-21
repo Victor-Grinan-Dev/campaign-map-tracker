@@ -54,9 +54,6 @@ export const {changeFormationName, addUnitToComposition, changeComposition, chan
 
 export const formNameSelector = (state) => state.formation.formName;
 export const compositionSelector = (state) => state.formation.composition;
-
-//the rest of the selectors:
-
 export const s_descriptionSelector = (state) => state.formation.s_description;
 export const l_descriptionSelector = (state) => state.formation.l_description;
 export const imageSelector = (state) => state.formation.image;

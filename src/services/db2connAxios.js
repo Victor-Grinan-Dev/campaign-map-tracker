@@ -1,13 +1,14 @@
 import axios from "axios";
-
+ 
 const baseUrl = 'http://localhost/8011'
 
-export const getData = async () => {
-    const response = await axios.get(baseUrl);
+export const getData = async ( endPoint ) => {
+    const response = await axios.get(baseUrl + endPoint);
     return response.data;
   };
 
 export const deleteData = (url, id) => {
+    
     (async () =>{
         axios.get(url).then(res => {
             res.data.map((user, index) => {

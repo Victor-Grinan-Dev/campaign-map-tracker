@@ -722,7 +722,7 @@
     }
   },
   "unit_types": {},
-  "users": {
+  "user": {
     "a01": {
       "id": "a01",
       "email": "admin@onlinecampaign.com",
@@ -760,7 +760,7 @@
       "stats": {}
     }
   },
-  "visitors": [
+  "visitor": [
     {
       "id": "v00",
       "email": null,
