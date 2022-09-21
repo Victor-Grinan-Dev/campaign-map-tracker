@@ -2,18 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 //components:
 import Button from './Button';
+
 //style:
 import css from './AddCard.module.css';
+
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import {changeFormationName, changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction} from '../../features/formation/formationSlice';
-import {formNameSelector,
-    compositionSelector,
-    s_descriptionSelector,
-    l_descriptionSelector,
-    imageSelector, factionSelector, subfactionSelector} from '../../features/formation/formationSlice';
+import { changeFormationName,  changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction } from '../../features/globalState/globalStateSlice';
+import { formNameSelector, compositionSelector, s_descriptionSelector, l_descriptionSelector, imageSelector, factionSelector, subfactionSelector } from '../../features/globalState/globalStateSlice';
 
-//functions:
+//function and objects:
 import { factions, Formation } from '../../functions/Objects';
 
 function CreateFormation() {

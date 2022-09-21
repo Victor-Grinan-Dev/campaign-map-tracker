@@ -1,7 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import checkMark from '../../assets/icon_package/answer-right.png'
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 /*
 const visit_for_cards = "https://freefrontend.com/css-cards/"
 const randomArtillery = "https://source.unsplash.com/500x400/?artillery"

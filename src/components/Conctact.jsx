@@ -1,9 +1,15 @@
-import React from 'react'
-import NavBar from './small_components/NavBar';
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+import React from 'react';
+
+//hooks:
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+
+//comoponents:
+import NavBar from './small_components/NavBar';
 
 function Conctact() {
     const userType = useSelector(userTypeSelector);

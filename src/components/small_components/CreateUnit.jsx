@@ -1,18 +1,22 @@
 import React, {useEffect} from 'react';
-//data:
-import { skills_by_unit_type, Unit } from '../../functions/Objects';
 
-//comopents:
+//hooks:
+//redux:
+import { useDispatch, useSelector } from 'react-redux';
+
+import { unitNameSelector, modelsSelector, skillsSelector, compositionSelector, addUnitToComposition, unitIdSelector, unitPointSelector } from '../../features/globalState/globalStateSlice';
+
+import { changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills } from '../../features/globalState/globalStateSlice';
+
+//components:
 import Button from './Button';
 
-//redux:
-//unit
-import { useDispatch, useSelector } from 'react-redux';
-import { unitIdSelector, unitNameSelector, unitModelsSelector, unitPointConstSelector, skillsSelector} from '../../features/unit/unitSlice';
-import {changeUnitId, changeUnitName, changeModels, changePointCost, changeSkills} from '../../features/unit/unitSlice';
+//style:
+
+//function and objects:
+import { skills_by_unit_type, Unit } from '../../functions/Objects';
+
 //formation
-import { compositionSelector } from '../../features/formation/formationSlice';
-import { addUnitToComposition } from '../../features/formation/formationSlice';
 
 function CreateUnit() {
     const skillsByUnitType = [];
@@ -22,10 +26,10 @@ function CreateUnit() {
     const unitList = useSelector(compositionSelector);
 
     //from unit slice
-    const unitId = useSelector(unitIdSelector);
+    const unitId = useSelector(unitIdSelector)
     const unitName = useSelector(unitNameSelector);
-    const unitModels = useSelector(unitModelsSelector);
-    const unitPointCost = useSelector(unitPointConstSelector);
+    const unitModels = useSelector(modelsSelector);
+    const unitPointCost = useSelector(unitPointSelector);
     const unitSkills = useSelector(skillsSelector);
 
     for(let unitType in skills_by_unit_type){

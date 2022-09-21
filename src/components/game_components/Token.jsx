@@ -1,6 +1,10 @@
 import React from 'react';
 import css from './token.module.css';
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 function Token({formation}) {
   let color;
   let name;

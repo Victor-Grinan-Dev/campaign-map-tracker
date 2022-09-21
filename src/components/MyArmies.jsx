@@ -7,14 +7,13 @@ import { useNavigate } from 'react-router-dom';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { userSelector, userTypeSelector, userIndexSelector } from '../features/logged/loggedSlice';
+import { userSelector, userTypeSelector , userIndexSelector } from '../features/globalState/globalStateSlice';
 //import { formationsSelector, armyListSelector, isLoadingSelector, searchSelector } from '../features/data/dataSlice';
 
 //components:
 import Card from './small_components/Card';
 import BackTo from './small_components/BackTo';
 import NavBar from './small_components/NavBar';
-import AddCard2 from './small_components/AddCard2';
 import CreateUnit from './small_components/CreateUnit';
 import Button from './small_components/Button';
 import CreateFormation from './small_components/CreateFormation';
@@ -23,7 +22,11 @@ import CreateFormation from './small_components/CreateFormation';
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
 import { unitTypesArray } from '../functions/objectsGame';
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 //console.log(unitTypes)
 /*
 const dog = new Unit(1, "firulais", 1, 15, skills_by_unit_type.beast);

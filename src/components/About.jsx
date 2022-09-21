@@ -1,15 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+//components:
 import NavBar from './small_components/NavBar';
 
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+//hooks:
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 
 function About() {
-
+  
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userSelector);
   const navigate = useNavigate();

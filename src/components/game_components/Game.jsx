@@ -1,17 +1,25 @@
 import React from 'react';
-import css from './game.module.css';
-import { mapReader } from '../../functions/positions';
-import { availableMaps } from '../../functions/mapGenerator';
-import NavBar from '.././small_components/NavBar';
-import BackTo from '.././small_components/BackTo';
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../../features/logged/loggedSlice';
+
+//hooks:
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const map = availableMaps[3];
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../../features/globalState/globalStateSlice';
 
-/** object testing */
+//components:
+import NavBar from '.././small_components/NavBar';
+import BackTo from '.././small_components/BackTo';
+
+//style:
+import css from './game.module.css';
+
+//function and objects:
+import { mapReader } from '../../functions/positions';
+import { availableMaps } from '../../functions/mapGenerator';
+
+const map = availableMaps[3];
 
 function Game() {
     const userType = useSelector(userTypeSelector);

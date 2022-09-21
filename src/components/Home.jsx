@@ -1,16 +1,25 @@
 import React from 'react';
-import css from './home.module.css'
-import logo from '../logo.svg';
-import NextPage from './small_components/NextPage';
-import Button from './small_components/Button';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { loggedSelector, userIndexSelector, userSelector, userTypeSelector } from '../features/logged/loggedSlice';
-import { changeLogStatus, changeUser, changeUserIndex } from '../features/logged/loggedSlice';
-import { User } from '../functions/Objects';
+
+//hooks:
 import { useState } from 'react';
 import { useEffect } from 'react';
+
+//redux:
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { loggedSelector, userIndexSelector, userSelector, userTypeSelector, changeLogStatus, changeUser, changeUserIndex } from '../features/globalState/globalStateSlice';
+
+//components:
+import NextPage from './small_components/NextPage';
+import Button from './small_components/Button';
+
+//style:
+import css from './home.module.css';
+import logo from '../logo.svg';
+
+//function and objects:
+import { User } from '../functions/Objects';
 
 const visitor = "https://source.unsplash.com/R_6kw7NUTLY";
 const admin = "https://source.unsplash.com/BoISbSP0HVk";

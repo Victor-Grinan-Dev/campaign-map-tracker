@@ -1,5 +1,9 @@
 import React from 'react'
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 function Button({caption, action, role='button'}) {
   return (
     <button type={role} onClick={action} style={{

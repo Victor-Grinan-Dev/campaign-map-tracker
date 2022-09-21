@@ -1,14 +1,23 @@
 import React from 'react';
+
+//hooks:
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+
+//components:
+import BackTo from './small_components/BackTo';
+import Button from './small_components/Button';
+
+//style
+import css from './DrawMap.module.css';
+
+//function and objects:
 import { canvasSquare, canvasHex, generateSqareMap, generateHexagonalMap } from '../functions/mapGenerator';
 import { mapReader } from '../functions/positions';
-import BackTo from './small_components/BackTo';
-import { useState } from 'react';
-import Button from './small_components/Button';
-import css from './DrawMap.module.css';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
-import { useEffect } from 'react';
 
 const tilesArrayImages = [
     "blank",

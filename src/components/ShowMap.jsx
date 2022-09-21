@@ -2,7 +2,11 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { mapReader } from '../functions/positions';
 import BackTo from './small_components/BackTo';
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 function ShowMap() {
 
     const location = useLocation();

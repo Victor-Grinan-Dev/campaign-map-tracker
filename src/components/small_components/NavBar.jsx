@@ -1,15 +1,21 @@
 import React from 'react';
+
+//hooks:
 import { Link, useNavigate } from 'react-router-dom';
-import css from './navBar.module.css';
+
+//redux:
+import { useDispatch, useSelector } from 'react-redux';
+import { loggedSelector } from '../../features/globalState/globalStateSlice';
+import { changeUser, changeLogStatus } from '../../features/globalState/globalStateSlice';
+
+//components:
 import Button from './Button';
-import logo from '../../logo.svg'
 
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { loggedSelector } from '../../features/logged/loggedSlice';
-import { changeLogStatus, changeUser } from '../../features/logged/loggedSlice';
+//style:
+import css from './navBar.module.css';
+import logo from '../../logo.svg';
 
-
+//function and objects:
 
 function NavBar() {
    const dispatch = useDispatch();
@@ -22,7 +28,6 @@ const logOutHandler = () => {
 }
 
   return (
- 
         <nav className={css.navbar}>
          <div className={css.logo}>
                 <img src={logo} alt="logo" className={css.logo}/>
@@ -37,8 +42,7 @@ const logOutHandler = () => {
           </ul>
 
           <Button caption="Log Out" action={logOutHandler}/>
-        </nav>
-        
+        </nav>     
   )
 }
 

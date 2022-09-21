@@ -1,13 +1,30 @@
-import React from 'react'
+import React from 'react';
+
+//component:
 import NavBar from './small_components/NavBar';
 import NextPage from './small_components/NextPage';
-import { useDispatch, useSelector } from 'react-redux';
-//import { capitalStart } from '../functions/functions';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
-import { initializeData } from '../features/data/dataSlice';
+
+//style:
 import NewCampaignCss from './newCampaign.module.css';
+
+//hooks:
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+
+//redux:
+import { useDispatch, useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { initializeData } from '../features/globalState/globalStateSlice';
+
+//style:
+const testStyle = {
+  width:75,
+  height:75,
+  backgroundColor:"black",
+  /* backgroundImage:`url(${currentUser.image})` */
+}
+//function and objects:
+
 function Profile() {
   const dispatch = useDispatch();
   const userType = useSelector(userTypeSelector);
@@ -44,12 +61,7 @@ function Profile() {
 
        <div className={NewCampaignCss.section}>
        
-        <div style={{
-          width:75,
-          height:75,
-          backgroundColor:"black",
-          /* backgroundImage:`url(${currentUser.image})` */
-        }}>
+        <div style={testStyle}>
 
         </div>
         <h2>{currentUser}</h2>

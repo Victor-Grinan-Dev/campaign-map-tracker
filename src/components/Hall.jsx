@@ -1,13 +1,25 @@
 import React from 'react';
-import NavBar from './small_components/NavBar';
-import css from './hall.module.css';
-import CampaignCard from './small_components/CampaignCard';
-import Campaign from '../functions/Objects';
-import {availableMaps} from '../functions/mapGenerator';
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
+
+//hooks:
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+
+//components:
+import NavBar from './small_components/NavBar';
+import CampaignCard from './small_components/CampaignCard';
+
+//style:
+import css from './hall.module.css';
+
+//function and objects:
+import Campaign from '../functions/Objects';
+import {availableMaps} from '../functions/mapGenerator';
+
+
 
 const dummyCampaign = new Campaign('testCampaign', 1000, 'hx', '7x7', availableMaps[3], 2, 'all', 4, "xoxo")
 

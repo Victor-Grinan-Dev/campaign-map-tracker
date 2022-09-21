@@ -1,5 +1,9 @@
 import React from 'react';
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 function DrawMapTopBar() {
 
     

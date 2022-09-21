@@ -1,18 +1,26 @@
-
-
 import React from 'react';
+
+//hooks:
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+//redux:
+import { useSelector } from 'react-redux';
+import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+
+//components:
+import Button from './small_components/Button';
+import NavBar from './small_components/NavBar';
+
+//style:
+import css from './newCampaign.module.css';
+
+//function and objects:
 import {availableMaps} from '../functions/mapGenerator';
 import Campaign, {campaign_Object} from '../functions/Objects';
 import { factions } from '../functions/objectsGame';
-import Button from './small_components/Button';
-import NavBar from './small_components/NavBar';
-import { useNavigate } from 'react-router-dom';
-import css from './newCampaign.module.css'
-import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/logged/loggedSlice';
 
 const available_maps = availableMaps;
 //TODO: change this to redux

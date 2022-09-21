@@ -160,9 +160,10 @@ export const {
     resetUnitState
 } = globalState.actions;
 
-export const nameSelector = (state) => state.globalState.unit.name
+export const unitIdSelector = (state) => state.globalState.unit.id
+export const unitNameSelector = (state) => state.globalState.unit.name
 export const modelsSelector = (state) => state.globalState.unit.models
-export const point_constSelector = (state) => state.globalState.unit.point_const
+export const unitPointSelector = (state) => state.globalState.unit.point_const
 export const skillsSelector = (state) => state.globalState.unit.skills
 
 //formation

@@ -2,7 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import css from './Tile.module.css';
 import { imported_tiles_images } from '../../functions/tilesImages';
-
+//hooks:
+//redux:
+//components:
+//style:
+//function and objects:
 //TODO: change the changes of the map tile in temporary db? global state? 
 
 function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId }) {
