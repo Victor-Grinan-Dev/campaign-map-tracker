@@ -10,12 +10,12 @@ import { useEffect } from 'react';
 
 //redux:
 import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 
 function About() {
   
   const userType = useSelector(userTypeSelector);
-  const currentUser = useSelector(userSelector);
+  const currentUser = useSelector(userNameSelector);
   const navigate = useNavigate();
     useEffect(()=>{
       if (!currentUser && userType==='visitor'){

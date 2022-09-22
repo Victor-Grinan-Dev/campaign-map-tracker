@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 //redux:
 import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 
 //components:
 import NavBar from './small_components/NavBar';
@@ -17,7 +17,7 @@ import NavBar from './small_components/NavBar';
 
 function HallSingle() {
   const userType = useSelector(userTypeSelector);
-  const currentUser = useSelector(userSelector);
+  const currentUser = useSelector(userNameSelector);
   const navigate = useNavigate();
     useEffect(()=>{
       if (!currentUser && userType==='visitor'){

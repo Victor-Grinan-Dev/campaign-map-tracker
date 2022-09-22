@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 //redux:
 import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 
 //components:
 import Button from './small_components/Button';
@@ -32,7 +32,7 @@ function NewCampaign() {
     const [data, setData] = useState(campaign_Object);
     const [database, setDatabase] = useState()
     const userType = useSelector(userTypeSelector);
-    const currentUser = useSelector(userSelector);
+    const currentUser = useSelector(userNameSelector);
     const navigate = useNavigate();
     useEffect(()=>{
       if (!currentUser && userType==='visitor'){

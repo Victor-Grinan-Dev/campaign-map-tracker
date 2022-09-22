@@ -47,3 +47,20 @@
     transition: all 500ms ease-in-out 100ms;
     
 }   
+
+.initialA,
+.initialB{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    display: inline;
+    background-color:rgb(44,48,45);
+}
+
+.initialA{
+    color: rgb(236,202,0);
+}
+
+.initialB{
+    color: coral;
+}

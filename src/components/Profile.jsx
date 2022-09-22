@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 import { initializeData } from '../features/globalState/globalStateSlice';
 
 //style:
@@ -28,7 +28,7 @@ const testStyle = {
 function Profile() {
   const dispatch = useDispatch();
   const userType = useSelector(userTypeSelector);
-  const currentUser = useSelector(userSelector);
+  const currentUser = useSelector(userNameSelector);
   const navigate = useNavigate();
 
   useEffect(()=>{

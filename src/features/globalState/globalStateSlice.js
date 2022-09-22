@@ -5,7 +5,8 @@ export const globalState = createSlice({
     initialState:{
 
         //logged:
-        islogged: false, 
+        isLogging: false, 
+        isLogged: false,
         currentUser:undefined, 
         userType:"user",
         userIndex:0,
@@ -36,16 +37,17 @@ export const globalState = createSlice({
     },
     reducers:{
         //logged:
-        changeLogStatus: (state, action) => {
-            //todo: need review.
-            if (action.payload === "visitor"){
-                state.islogged = !state.islogged;
-            }else if(!action.payload){
-                state.islogged = !state.islogged;
-            }
+        toggleIsLogging: (state) => {
+            state.isLogging = !state.isLogging;
         },
-        changeUser:(state, action)=>{
+        toggleIsLogged: (state) => {
+            state.isLogged = !state.isLogged;
+        },
+        changeUserName:(state, action)=>{
             state.currentUser = action.payload;
+        },
+        changeUserType:(state, action) => {
+            state.userType = action.payload;
         },
         changeUserIndex:(state) =>{
             state.userIndex += 1;
@@ -131,26 +133,42 @@ export const globalState = createSlice({
         }
     },
 });
+const campaingsEndPoint = "http://localhost:8011/campaings";
+const mapsEndPoint = "http://localhost:8011/maps";
+const factionsEndPoint = "http://localhost:8011/factions";
+const badgesEndPoint = "http://localhost:8011/badges";
+const active_skillsEndPoint = "http://localhost:8011/active_skills";
+const passive_skillsEndPoint = "http://localhost:8011/passive_skills";
+const negativeEndPoint = "http://localhost:8011/negative";
+const objectsEndPoint = "http://localhost:8011/objects";
+const unit_typesEndPoint = "http://localhost:8011/unit_types";
+const userEndPoint = "http://localhost:8011/user";
+const visitorEndPoint = "http://localhost:8011/visitor";
+
 
 export const initializeData = (endPoint = '') => {
     return async (dispatch) => {
       const formations = await getData(endPoint);
       dispatch(setFormations(formations)); //get formations from database
       dispatch(toggleIsLoading());
+      console.log(formations)
     };
 };
 
 //logged
 export const { 
-    changeLogStatus, 
-    changeUser, 
+    toggleIsLogging,
+    toggleIsLogged, 
+    changeUserName,
+    changeUserType, 
     changeUserIndex,
     toggleIsLoading,
     changeSearch
 } = globalState.actions;
 
-export const loggedSelector = (state) => state.globalState.islogged;
-export const userSelector = (state) => state.globalState.currentUser;
+export const isLoggingSelector = (state) => state.globalState.isLogging;
+export const isLoggedSelector = (state) => state.globalState.isLogged;
+export const userNameSelector = (state) => state.globalState.currentUser;
 export const userTypeSelector = (state) => state.globalState.userType;
 export const userIndexSelector = (state) => state.globalState.userIndex;
 

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 //redux:
 import { useSelector } from 'react-redux';
-import { userSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 
 //components:
 import BackTo from './small_components/BackTo';
@@ -31,7 +31,7 @@ const tilesArrayImages = [
 
 function DrawMap() {
     const userType = useSelector(userTypeSelector);
-    const currentUser = useSelector(userSelector);
+    const currentUser = useSelector(userNameSelector);
     const emptySqMap = canvasSquare("Unknown Sq Map", 17, 17);
     const emptyHxMap = canvasHex("Unknown Hx Map", 9);
     const mapCanvas = {

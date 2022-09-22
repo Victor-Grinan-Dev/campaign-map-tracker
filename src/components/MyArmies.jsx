@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { userSelector, userTypeSelector , userIndexSelector } from '../features/globalState/globalStateSlice';
+import { userNameSelector, userTypeSelector , userIndexSelector } from '../features/globalState/globalStateSlice';
 //import { formationsSelector, armyListSelector, isLoadingSelector, searchSelector } from '../features/data/dataSlice';
 
 //components:
@@ -42,13 +42,13 @@ const riding_victor = new Formation("riding victor", [yoamelInABike, yoamelInABi
 */
 //console.log(riding_victor)
 const databaseApi = 'http://localhost:8011/database';
-const visitorDb2 = 'http://localhost:8011/visitor';
+const visitorEndPoint = 'http://localhost:8011/visitor';
 
 function MyArmies() {
   const dispatch = useDispatch();
 
   const userType = useSelector(userTypeSelector);
-  const currentUser = useSelector(userSelector);
+  const currentUser = useSelector(userNameSelector);
   const navigate = useNavigate();
   const [formations, setformations] = useState([]);
   const [search, setSearch] = useState('');
@@ -67,7 +67,7 @@ function MyArmies() {
     return res.name.includes(search.toLowerCase());
   });
 
-  const getData = () => axios.get(visitorDb2)
+  const getData = () => axios.get(visitorEndPoint)
   //const getformations = () => axios.get(databaseApi);
   const searchHandler = (e) => {
     setSearch(e.target.value); 
