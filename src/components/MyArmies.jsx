@@ -61,12 +61,11 @@ function MyArmies() {
   //  }
   //},[currentUser]);
 
-/*
-  const formationsFilter = formations.filter((res) => {
-    res.name = res.name.toLowerCase()
-    return res.name.includes(search.toLowerCase());
+
+  const formationsFilter = formations.filter((item) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
   });
-*/
+
 
 /*
   const getData = () => axios.get(visitorEndPoint)
@@ -150,7 +149,7 @@ function MyArmies() {
       <div className={"browser"}>
 
         {
-         formations.map(formation => (
+         formationsFilter.map(formation => (
           console.log(formation.name),
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
         ))
