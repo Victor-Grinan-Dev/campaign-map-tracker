@@ -18,15 +18,13 @@ import CreateUnit from './small_components/CreateUnit';
 import Button from './small_components/Button';
 import CreateFormation from './small_components/CreateFormation';
 
-//objects:
+//function and objects
 import { Unit, Formation } from '../functions/Objects';
 import { skills_by_unit_type } from '../functions/Objects';
 import { unitTypesArray } from '../functions/objectsGame';
-//hooks:
-//redux:
-//components:
+
 //style:
-//function and objects:
+
 //console.log(unitTypes)
 /*
 const dog = new Unit(1, "firulais", 1, 15, skills_by_unit_type.beast);

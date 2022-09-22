@@ -126,16 +126,20 @@ export const globalState = createSlice({
                 return formation.name !== action.payload || formation.id !== action.payload;
             });
         }, 
+        setFormations:(state, action) => {
+            state.army.formations = action.payload;
+        }
     },
 });
 
-export const initializeData = () => {
+export const initializeData = (endPoint = '') => {
     return async (dispatch) => {
-      const formations = await getData();
-      dispatch(); //getFormations(formations)
-      dispatch();//toggleIsLoading
+      const formations = await getData(endPoint);
+      dispatch(setFormations(formations)); //get formations from database
+      dispatch(toggleIsLoading());
     };
 };
+
 //logged
 export const { 
     changeLogStatus, 
@@ -178,7 +182,7 @@ export const {
     changeSubFaction
 } = globalState.actions;
 
-export const formNameSelector = (state) => state.globalState.formation.formName;
+export const formNameSelector = (state) => state.globalState.formation.name;
 export const compositionSelector = (state) => state.globalState.formation.composition;
 export const s_descriptionSelector = (state) => state.globalState.formation.s_description;
 export const l_descriptionSelector = (state) => state.globalState.formation.l_description;
@@ -191,7 +195,8 @@ export const {
     addToEnlisted, 
     removeFromEnlisted, 
     addToFormations, 
-    removeFromFormations 
+    removeFromFormations,
+    setFormations
 } = globalState.actions;
 
 export const enlistedSelector = (state) => state.globalState.army.enlisted;

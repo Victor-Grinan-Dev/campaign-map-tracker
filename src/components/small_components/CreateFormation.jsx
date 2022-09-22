@@ -63,9 +63,10 @@ function CreateFormation() {
     }
 
     const addFormation = (e) =>{
-        const tempComposition = composition;
+        console.log(nameFormation);
+
         if (nameFormation && composition.length > 0 && s_description && faction && subfaction){
-            const newFormation = new Formation(nameFormation, tempComposition, s_description, l_description, image, faction, subfaction);
+            const newFormation = new Formation(nameFormation, composition, s_description, l_description, image, faction, subfaction);
             //TODO: add to database
             console.log(newFormation);
 
