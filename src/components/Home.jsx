@@ -6,7 +6,7 @@ import axios from 'axios';
 //redux:
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging, initializeData } from '../features/globalState/globalStateSlice';
+import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, setIsLogging,toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging, initializeData } from '../features/globalState/globalStateSlice';
 
 //components:
 import NextPage from './small_components/NextPage';
@@ -23,8 +23,6 @@ const visitor = "https://source.unsplash.com/R_6kw7NUTLY";
 const admin = "https://source.unsplash.com/BoISbSP0HVk";
 const user = "https://source.unsplash.com/1vC4ZwkJNdA";
 
-const visitorEndPoint = 'http://localhost:8011/visitor';
-
 function Home(){
     const dispatch = useDispatch()
     const isLogged = useSelector(isLoggedSelector);
@@ -37,53 +35,64 @@ function Home(){
         dispatch(changeUserName(e.target.value));
     }
 
-    const inComingVisitorHandler = (e) => {
-        console.log("Incoming visitor!");
-        dispatch(toggleIsLogging()); //set logging to true
+    const displayUserType = (text = "Incoming") => {
+        console.log(text, userType, "!");
+    }
+    const inComingVisitorHandler = () => {
         dispatch(changeUserType('visitor'));
+        dispatch(toggleIsLogging()); //set logging to true      
+        displayUserType("user type switch to: ")
     };
 
-    const inComingUserHandler = (e) => {
-        console.log("Incoming user!");
+    const inComingUserHandler = () => {   
         dispatch(toggleIsLogging()); //set logging to true
         dispatch(changeUserType('user'));
+        displayUserType("user type switch to: ")
     };
-/*
-    useEffect(()=>{
-        axios.get(visitorEndPoint).then(res =>{
-            setFormations(res.data[0].formations);
-        })
-    },[])
-*/
-useEffect(() => {
-    
-  }, [dispatch]);
+
     const createVisitorUser = () => {
         dispatch(changeUserIndex());
         //TODO:
-        //create new user with dummy database.
-        //populate this new user formations with dummy formation cards.
+        //1- create new user with dummy database.
+        //2- populate this new user formations with dummy formation cards.
 
         /*
-                const newUser = new User(userIndex, currentUser, null, null);
-        axios.post(visitorEndPoint, newUser)
+        const newUser = new User(userIndex, currentUser, null, null);
+        axios.post(visitorEndPoint, newUser) //use middleware instead
         .then(() => {
             axios.get(visitorEndPoint).then(res => {
                 console.log(res.data)
             });
         });
         */
-        dispatch(initializeData(visitorEndPoint)); //read database
-        dispatch(toggleIsLogged());
+        dispatch(changeUserType('visitor'));
+        dispatch(initializeData(userType)); //reads database
+        displayUserType();
+        dispatch(setIsLogging(true));
     };
 
-    const loginModalVisitor = (e) => {
+    const displayModal = () => {
+        if (isLogging){
+            if (userType === 'visitor'){
+                return loginModalVisitor()
+            }else if (userType === 'user'){
+                return loginModalUser()
+            }
+        }
+    }
+
+    const loginModalVisitor = () => {
         return <div>
             <h2>Oh, Hello there! </h2>
             <p>How should we call you?</p>
             <input type="text" name="tempUsername" placeholder="write a username..." onChange={userChanger}/>
             { currentUser && <NextPage pageUrl={"/profile"} pageName={"Welcome Page"} action={createVisitorUser}/>} 
         </div>
+    }
+
+    const loginUser = () => {
+        dispatch(changeUserType('user'));
+        displayUserType()
     }
 
     const loginModalUser = () => {
@@ -93,7 +102,7 @@ useEffect(() => {
             <input type="text" name="username" placeholder="Username..." />
             <input type="password" name="password" placeholder="Password..." />
             {/*if password match with user logics*/}
-            
+            <Button caption="log in" action={loginUser}/>
         </div>
     }
 
@@ -138,9 +147,7 @@ useEffect(() => {
                 </div>
             
             </div>
-            {/* TODO: get an custom username from the visitor */}
-            { isLogging && userType === 'visitor' ? loginModalVisitor(): null}
-            { isLogging && userType === 'user' ? loginModalUser() : null }
+            { displayModal()}
         </div>
     );
 }

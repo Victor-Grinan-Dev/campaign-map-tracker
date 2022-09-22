@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
-import { getDatabase, postSettedFormation } from "../../services/db2connAxios";
+import { getDatabase, getUser, postSettedFormation } from "../../services/db2connAxios";
 export const globalState = createSlice({
     name:'globalState',
     initialState:{
@@ -40,6 +40,9 @@ export const globalState = createSlice({
         //logged:
         toggleIsLogging: (state) => {
             state.isLogging = !state.isLogging;
+        },
+        setIsLogging:(state,action) =>{
+            state.isLogging = action.payload;
         },
         setIsLoading:(state, action) => {
             state.isLoading = action.payload;
@@ -151,40 +154,36 @@ const visitorEndPoint = "http://localhost:8011/visitor";
 
 const baseUrl = "http://localhost:8011"
 
-export const initializeData = (endPointFromHome = null) => {
-    return async (dispatch, getData) => {
-        let endPoint = endPointFromHome;
-        if (endPoint){
-
-            /**
-            const thisUserIndex = getData().globalState.userIndex;
-            const thisUserName = getData().globalState.currentUser;
-            const thisUserType = getData().globalState.userType;
-            const thisUserEndpoint = `${thisUserType}/${thisUserIndex}`;
-             */
-
-            
+export const initializeData = (userType) => {
+    return async (dispatch) => {//(dispatch, getData)
+        
+        if (userType === 'visitor'){
+       
             const sampleFormations = await getDatabase(`${visitorEndPoint}/0`);
-            //console.log('sample formations', sampleFormations.formations)
+
             dispatch(setFormations(sampleFormations.formations));
-            const formations = getData().globalState.army.formations;
-            console.log(formations)
-/*
-            console.log('endPoint from state: ', `${endPointFromHome}/${thisUserIndex}`);
-            const data = await getDatabase(`${baseUrl}/${endPointFromHome}/${thisUserIndex}`);
-*/
-            dispatch(toggleIsLoading());
+            dispatch(setIsLoading(false));
+
         }else{
-            const data = await getDatabase(visitorEndPoint);
-            dispatch(setFormations(data)); //get formations from database
+            const data = await getDatabase(userEndPoint);
+            dispatch(setFormations(data[0].formations)); 
             dispatch(toggleIsLoading());
         }
     };
 };
 
+export const initializeUser = (name, password) => {
+    return async (dispatch) => {
+
+        const user = await getUser(name, password);
+        console.log(user);
+
+    };
+};
 //logged
 export const { 
     toggleIsLogging,
+    setIsLogging,
     toggleIsLogged, 
     changeUserName,
     changeUserType, 

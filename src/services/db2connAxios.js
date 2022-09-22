@@ -21,6 +21,15 @@ export const getDatabase = async (desiredEndPoint) => {
     return response.data;
   };
 
+export const getUser = async (name, password) => {
+    const response = await axios.get(userEndPoint);
+    for(let item in response){
+        console.log(item.username, item.password);
+    }
+};
+
 export const postSettedFormation = async (desiredEndPoint, data) => {
     await axios.post(desiredEndPoint, data);
-}
+};
+
+

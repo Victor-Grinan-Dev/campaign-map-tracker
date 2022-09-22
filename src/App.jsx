@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+/********* redux **********/
+import { useSelector } from 'react-redux';
+import { isLoggedSelector } from './features/globalState/globalStateSlice';
+
 /********* styles **********/
 import './styles/main.css';
 import './styles/cards.css';
@@ -18,24 +22,41 @@ import NewCampaign  from './components/NewCampaign';
 import Profile from './components/Profile';
 import ShowMap from './components/ShowMap';
 import Game from './components/game_components/Game';
+import Show404 from './components/Show404';
 
 function App() {
+  const logged = useSelector(isLoggedSelector);
+
+  const allRoutes = () => {
+    return (
+      <>
+      <Route path="/newcampaign" element={<NewCampaign />} />
+      <Route path="newcampaign/:map" element={<ShowMap />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/myarmy" element={<MyArmies />} />
+      <Route path='/contact' element={<Conctact />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/drawmap' element={<DrawMap />} />
+      <Route path='/hall' element={<Hall />} />
+      <Route path='/game' element={<Game />} />
+      <Route path='/hall/:campaign' element={<HallSingle />} />
+      
+      </>
+    )
+  }
+
+
+
   return (
     <div className="App">
      
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/newcampaign" element={<NewCampaign />} />
-          <Route path="newcampaign/:map" element={<ShowMap />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/myarmy" element={<MyArmies />} />
-          <Route path='/contact' element={<Conctact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/drawmap' element={<DrawMap />} />
-          <Route path='/hall' element={<Hall />} />
-          <Route path='/game' element={<Game />} />
-          <Route path='/hall/:campaign' element={<HallSingle />} />
+          {
+            logged ? allRoutes() : <Route path='/:error' element={<Show404 />} />
+          }
+
         </Routes>
       </BrowserRouter>     
     </div>

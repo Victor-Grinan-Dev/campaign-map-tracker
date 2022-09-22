@@ -46,6 +46,7 @@ const visitorEndPoint = 'http://localhost:8011/visitor';
 
 function MyArmies() {
   const dispatch = useDispatch();
+  
   const loading = useSelector(isLoadingSelector);
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userNameSelector);
@@ -53,50 +54,27 @@ function MyArmies() {
   const search = useSelector(searchSelector);
   const userIndex = useSelector(userIndexSelector);;
 
-  console.log('myarmies mapping: ', formations)
-  //useEffect(()=>{
-  //  //on page reload, log out.
-  //  if (!currentUser && userType==='visitor'){
-  //    useNavigate('/');
-  //  }
-  //},[currentUser]);
-
+/*
+  useEffect(()=>{
+    //on page reload, log out.
+    if (!currentUser && userType==='visitor'){
+      ('/');
+    }
+  },[currentUser]);
+*/
 
   const formationsFilter = formations.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
+    return item?.name?.toLowerCase().includes(search.toLowerCase());
   });
 
-
-/*
-  const getData = () => axios.get(visitorEndPoint)
-*/
-  //const getformations = () => axios.get(databaseApi);
   const searchHandler = (e) => {
     dispatch(changeSearch(e.target.value)); 
     };
 
-  //const currentUserId = 'v01';
-
-/*
-    useEffect(() => {
-      setLoading(true);
-      Promise.all([getData()]).then((res) => {
-
-        //console.log(res[0].data[userIndex].formations)
-        //const userData = results[0].data.users.filter((user)=>{
-        //  return user.id == currentUserId;
-        //})
-        //const  armyList = userData[0].armyList;
-        setformations(res[0].data[userIndex].formations)
-        setLoading(false);
-      });
-    }, []);
-*/
   useEffect(() => {  
     dispatch(setIsLoading(true));
-    console.log('use effect in myarmies', formations.length > 0);
     if(formations.length > 0){
-      //if there is formations in the array... for now 
+      console.log(formations) 
       dispatch(setIsLoading(false));
     }
   }, [formations]);
@@ -149,7 +127,7 @@ function MyArmies() {
       <div className={"browser"}>
 
         {
-         formationsFilter.map(formation => (
+         formations.map(formation => (
           console.log(formation.name),
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
         ))

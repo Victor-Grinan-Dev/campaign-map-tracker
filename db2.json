@@ -721,12 +721,12 @@
     }
   },
   "unit_types": {},
-  "user": {
-    "a01": {
+  "user": [
+    {
       "id": "a01",
       "email": "admin@onlinecampaign.com",
       "username": "Vitisman",
-      "password": null,
+      "password": 123456,
       "type": "admin",
       "formations": [
         {
@@ -758,7 +758,7 @@
       "army_lists": [],
       "stats": {}
     }
-  },
+  ],
   "visitor": [
     {
       "id": "0",
