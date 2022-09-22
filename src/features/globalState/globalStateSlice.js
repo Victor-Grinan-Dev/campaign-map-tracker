@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getData } from "../../services/db2connAxios";
+import { useSelector } from "react-redux";
+import { getDatabase, postSettedFormation } from "../../services/db2connAxios";
 export const globalState = createSlice({
     name:'globalState',
     initialState:{
@@ -8,7 +9,7 @@ export const globalState = createSlice({
         isLogging: false, 
         isLogged: false,
         currentUser:undefined, 
-        userType:"user",
+        userType:"visitor",
         userIndex:0,
         isLoading:true,
         search:"",
@@ -39,6 +40,9 @@ export const globalState = createSlice({
         //logged:
         toggleIsLogging: (state) => {
             state.isLogging = !state.isLogging;
+        },
+        setIsLoading:(state, action) => {
+            state.isLoading = action.payload;
         },
         toggleIsLogged: (state) => {
             state.isLogged = !state.isLogged;
@@ -145,13 +149,36 @@ const unit_typesEndPoint = "http://localhost:8011/unit_types";
 const userEndPoint = "http://localhost:8011/user";
 const visitorEndPoint = "http://localhost:8011/visitor";
 
+const baseUrl = "http://localhost:8011"
 
-export const initializeData = (endPoint = '') => {
-    return async (dispatch) => {
-      const formations = await getData(endPoint);
-      dispatch(setFormations(formations)); //get formations from database
-      dispatch(toggleIsLoading());
-      console.log(formations)
+export const initializeData = (endPointFromHome = null) => {
+    return async (dispatch, getData) => {
+        let endPoint = endPointFromHome;
+        if (endPoint){
+
+            /**
+            const thisUserIndex = getData().globalState.userIndex;
+            const thisUserName = getData().globalState.currentUser;
+            const thisUserType = getData().globalState.userType;
+            const thisUserEndpoint = `${thisUserType}/${thisUserIndex}`;
+             */
+
+            
+            const sampleFormations = await getDatabase(`${visitorEndPoint}/0`);
+            //console.log('sample formations', sampleFormations.formations)
+            dispatch(setFormations(sampleFormations.formations));
+            const formations = getData().globalState.army.formations;
+            console.log(formations)
+/*
+            console.log('endPoint from state: ', `${endPointFromHome}/${thisUserIndex}`);
+            const data = await getDatabase(`${baseUrl}/${endPointFromHome}/${thisUserIndex}`);
+*/
+            dispatch(toggleIsLoading());
+        }else{
+            const data = await getDatabase(visitorEndPoint);
+            dispatch(setFormations(data)); //get formations from database
+            dispatch(toggleIsLoading());
+        }
     };
 };
 
@@ -163,6 +190,7 @@ export const {
     changeUserType, 
     changeUserIndex,
     toggleIsLoading,
+    setIsLoading,
     changeSearch
 } = globalState.actions;
 
@@ -171,6 +199,8 @@ export const isLoggedSelector = (state) => state.globalState.isLogged;
 export const userNameSelector = (state) => state.globalState.currentUser;
 export const userTypeSelector = (state) => state.globalState.userType;
 export const userIndexSelector = (state) => state.globalState.userIndex;
+export const isLoadingSelector = (state) => state.globalState.isLoading;
+export const searchSelector = (state) => state.globalState.search;
 
 //unit
 export const {

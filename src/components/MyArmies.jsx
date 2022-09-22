@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { userNameSelector, userTypeSelector , userIndexSelector } from '../features/globalState/globalStateSlice';
-//import { formationsSelector, armyListSelector, isLoadingSelector, searchSelector } from '../features/data/dataSlice';
+import { userNameSelector, userTypeSelector , userIndexSelector, formationsSelector, searchSelector, changeSearch, toggleIsLoading, setIsLoading } from '../features/globalState/globalStateSlice';
+import { isLoadingSelector } from '../features/globalState/globalStateSlice';
 
 //components:
 import Card from './small_components/Card';
@@ -46,35 +46,39 @@ const visitorEndPoint = 'http://localhost:8011/visitor';
 
 function MyArmies() {
   const dispatch = useDispatch();
-
+  const loading = useSelector(isLoadingSelector);
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userNameSelector);
-  const navigate = useNavigate();
-  const [formations, setformations] = useState([]);
-  const [search, setSearch] = useState('');
-  const [loading, setLoading] = useState(false);
+  const formations = useSelector(formationsSelector);
+  const search = useSelector(searchSelector);
   const userIndex = useSelector(userIndexSelector);;
 
+  console.log('myarmies mapping: ', formations)
   //useEffect(()=>{
   //  //on page reload, log out.
   //  if (!currentUser && userType==='visitor'){
-  //    navigate('/');
+  //    useNavigate('/');
   //  }
   //},[currentUser]);
 
+/*
   const formationsFilter = formations.filter((res) => {
     res.name = res.name.toLowerCase()
     return res.name.includes(search.toLowerCase());
   });
+*/
 
+/*
   const getData = () => axios.get(visitorEndPoint)
+*/
   //const getformations = () => axios.get(databaseApi);
   const searchHandler = (e) => {
-    setSearch(e.target.value); 
+    dispatch(changeSearch(e.target.value)); 
     };
 
   //const currentUserId = 'v01';
 
+/*
     useEffect(() => {
       setLoading(true);
       Promise.all([getData()]).then((res) => {
@@ -88,10 +92,42 @@ function MyArmies() {
         setLoading(false);
       });
     }, []);
-
-    if (loading) {
-      return <p>Loading...</p>;
+*/
+  useEffect(() => {  
+    dispatch(setIsLoading(true));
+    console.log('use effect in myarmies', formations.length > 0);
+    if(formations.length > 0){
+      //if there is formations in the array... for now 
+      dispatch(setIsLoading(false));
     }
+  }, [formations]);
+
+  if (loading) {
+    return(
+    <div className='browseAndAdd-container'>
+      <NavBar/>
+      <div className="panel">
+
+        <div className='add-card-container'>
+        <CreateFormation />
+        </div>
+        <div className='add-card-container'>
+          <CreateUnit />
+        </div>
+      </div>
+
+      <div className='search-container'> 
+      
+        <input type="text" placeholder='Search...' onChange={searchHandler}/>
+        </div>
+      <div className={"browser"}>
+
+      <p>Loading...</p>
+
+      </div>
+    </div>
+     )
+  }
 
   return (
 
@@ -114,7 +150,8 @@ function MyArmies() {
       <div className={"browser"}>
 
         {
-         formationsFilter.map(formation => (
+         formations.map(formation => (
+          console.log(formation.name),
           <Card key={formation.id} name={formation.name} description={formation.description} is_selected={formation.is_selected} image={formation.image} />
         ))
          }

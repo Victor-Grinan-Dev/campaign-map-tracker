@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { loggedSelector } from '../../features/globalState/globalStateSlice';
 import { changeUserName, toggleIsLogged } from '../../features/globalState/globalStateSlice';
 
 //components:
@@ -21,11 +20,11 @@ function NavBar() {
    const dispatch = useDispatch();
    const navigate = useNavigate();
 
-const logOutHandler = () => {
-    dispatch(toggleIsLogged());
-    dispatch(changeUserName(undefined));
-    navigate('/');
-}
+  const logOutHandler = () => {
+      dispatch(toggleIsLogged());
+      dispatch(changeUserName(undefined));
+      navigate('/');
+  }
 
   return (
         <nav className={css.navbar}>

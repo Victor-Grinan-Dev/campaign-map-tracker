@@ -6,7 +6,7 @@ import axios from 'axios';
 //redux:
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging } from '../features/globalState/globalStateSlice';
+import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging, initializeData } from '../features/globalState/globalStateSlice';
 
 //components:
 import NextPage from './small_components/NextPage';
@@ -55,10 +55,15 @@ function Home(){
         })
     },[])
 */
-
+useEffect(() => {
+    
+  }, [dispatch]);
     const createVisitorUser = () => {
         dispatch(changeUserIndex());
+        //TODO:
         //create new user with dummy database.
+        //populate this new user formations with dummy formation cards.
+
         /*
                 const newUser = new User(userIndex, currentUser, null, null);
         axios.post(visitorEndPoint, newUser)
@@ -68,6 +73,8 @@ function Home(){
             });
         });
         */
+        dispatch(initializeData(visitorEndPoint)); //read database
+        dispatch(toggleIsLogged());
     };
 
     const loginModalVisitor = (e) => {
