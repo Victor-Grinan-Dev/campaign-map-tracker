@@ -14,19 +14,24 @@ const visitorEndPoint = "http://localhost:8011/visitor";
 
 const baseUrl = 'http://localhost/8011';
 
-
 //TODO: specify what user you are geting the data from.
 export const getDatabase = async (desiredEndPoint) => {
     const response = await axios.get(desiredEndPoint);
     return response.data;
   };
 
+
+//user
 export const getUser = async (name, password) => {
     const response = await axios.get(userEndPoint);
     for(let item in response){
         console.log(item.username, item.password);
     }
 };
+
+export const postVisitorUser = async ( userObject ) => {
+    await axios.post(visitorEndPoint, userObject).catch(err => console.log('posting user error', err));
+}
 
 export const postSettedFormation = async (desiredEndPoint, data) => {
     await axios.post(desiredEndPoint, data);

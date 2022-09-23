@@ -50,6 +50,9 @@ export const globalState = createSlice({
         toggleIsLogged: (state) => {
             state.isLogged = !state.isLogged;
         },
+        setIsLogged: (state, action) => {
+            state.isLogged = action.payload;
+        },
         changeUserName:(state, action)=>{
             state.currentUser = action.payload;
         },
@@ -184,7 +187,8 @@ export const initializeUser = (name, password) => {
 export const { 
     toggleIsLogging,
     setIsLogging,
-    toggleIsLogged, 
+    toggleIsLogged,
+    setIsLogged, 
     changeUserName,
     changeUserType, 
     changeUserIndex,

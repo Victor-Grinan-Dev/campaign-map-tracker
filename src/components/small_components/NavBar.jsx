@@ -4,8 +4,8 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 //redux:
-import { useDispatch, useSelector } from 'react-redux';
-import { changeUserName, toggleIsLogged } from '../../features/globalState/globalStateSlice';
+import { useDispatch } from 'react-redux';
+import { changeUserName, changeUserType, setIsLogged } from '../../features/globalState/globalStateSlice';
 
 //components:
 import Button from './Button';
@@ -21,7 +21,8 @@ function NavBar() {
    const navigate = useNavigate();
 
   const logOutHandler = () => {
-      dispatch(toggleIsLogged());
+      dispatch(setIsLogged(false));
+      dispatch(changeUserType(undefined))
       dispatch(changeUserName(undefined));
       navigate('/');
   }

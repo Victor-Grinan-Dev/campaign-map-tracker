@@ -1,9 +1,4 @@
-import React from 'react';
-import axios from 'axios';
-
-//hooks:
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,43 +20,14 @@ import { unitTypesArray } from '../functions/objectsGame';
 
 //style:
 
-//console.log(unitTypes)
-/*
-const dog = new Unit(1, "firulais", 1, 15, skills_by_unit_type.beast);
-const victor = new Unit(2, "dt-26", 5, 100, skills_by_unit_type.infantry);
-const victor3 = new Unit(3, "dt-26", 5, 100, skills_by_unit_type.infantry);
-const transport = new Unit(4, "victor's transport", 1, 150, skills_by_unit_type.transport_tank);
-transport.skills.movement = 4
-const yoamelInABike = new Unit(5, "yoamel", 1, 55, skills_by_unit_type.rider)
-const yoamelInABike2 = new Unit(6, "yoamel", 1, 55, skills_by_unit_type.rider)
-const yoamelInABike3 = new Unit(7, "yoamel", 1, 55, skills_by_unit_type.rider)
-const victor2 = new Unit(8, "dt-26", 10, 100, skills_by_unit_type.infantry);
-const transport2 = new Unit(9, "victor's transport", 1, 150, skills_by_unit_type.transport_tank);
-
-const riding_victor = new Formation("riding victor", [yoamelInABike, yoamelInABike2, yoamelInABike3, victor, victor3, transport, victor2, transport2, dog], "assault", "is just me as a lone wolve model assaulting in a tank", "https://i.pinimg.com/474x/5d/69/1c/5d691c4e1e7b4a6f9913033d805e301e.jpg")
-*/
-//console.log(riding_victor)
-const databaseApi = 'http://localhost:8011/database';
-const visitorEndPoint = 'http://localhost:8011/visitor';
-
 function MyArmies() {
   const dispatch = useDispatch();
-  
   const loading = useSelector(isLoadingSelector);
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userNameSelector);
   const formations = useSelector(formationsSelector);
   const search = useSelector(searchSelector);
   const userIndex = useSelector(userIndexSelector);;
-
-/*
-  useEffect(()=>{
-    //on page reload, log out.
-    if (!currentUser && userType==='visitor'){
-      ('/');
-    }
-  },[currentUser]);
-*/
 
   const formationsFilter = formations.filter((item) => {
     return item?.name?.toLowerCase().includes(search.toLowerCase());
@@ -74,7 +40,7 @@ function MyArmies() {
   useEffect(() => {  
     dispatch(setIsLoading(true));
     if(formations.length > 0){
-      console.log(formations) 
+
       dispatch(setIsLoading(false));
     }
   }, [formations]);

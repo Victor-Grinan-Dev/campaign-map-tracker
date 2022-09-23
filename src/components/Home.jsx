@@ -6,12 +6,12 @@ import axios from 'axios';
 //redux:
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, setIsLogging,toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging, initializeData } from '../features/globalState/globalStateSlice';
+import { isLoggingSelector, isLoggedSelector, userIndexSelector, userNameSelector, userTypeSelector, toggleIsLoading, setIsLogging,toggleIsLogged, changeUserName, changeUserType, changeUserIndex, toggleIsLogging, initializeData, setIsLogged } from '../features/globalState/globalStateSlice';
 
 //components:
 import NextPage from './small_components/NextPage';
 import Button from './small_components/Button';
-
+import Login from './small_components/Login';
 //style:
 import css from './home.module.css';
 import logo from '../logo.svg';
@@ -24,12 +24,20 @@ const admin = "https://source.unsplash.com/BoISbSP0HVk";
 const user = "https://source.unsplash.com/1vC4ZwkJNdA";
 
 function Home(){
+
+    const [errorMessages, setErrorMessages] = useState({});
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const dispatch = useDispatch()
     const isLogged = useSelector(isLoggedSelector);
     const isLogging = useSelector(isLoggingSelector);
     const currentUser = useSelector(userNameSelector);
     const userType = useSelector(userTypeSelector);
     const userIndex = useSelector(userIndexSelector);
+
+    const renderErrorMessage = (name) =>{
+        name === errorMessages.name && (<div className="error">{errorMessages.message}</div>)
+    };
 
     const userChanger = (e) => {
         dispatch(changeUserName(e.target.value));
@@ -68,7 +76,8 @@ function Home(){
         dispatch(changeUserType('visitor'));
         dispatch(initializeData(userType)); //reads database
         displayUserType();
-        dispatch(setIsLogging(true));
+        dispatch(setIsLogged(true));
+        dispatch(setIsLogging(false));
     };
 
     const displayModal = () => {
@@ -81,6 +90,30 @@ function Home(){
         }
     }
 
+    const handleSubmit = (event) => {
+        // Prevent page reload
+        event.preventDefault();
+      };
+    // JSX code for login form
+    const renderForm = (
+        <div className="form">
+        <form onSubmit={handleSubmit}>
+            <div className="input-container">
+            <label>Username </label>
+            <input type="text" name="uname" required />
+            {renderErrorMessage("uname")}
+            </div>
+            <div className="input-container">
+            <label>Password </label>
+            <input type="password" name="pass" required />
+            {renderErrorMessage("pass")}
+            </div>
+            <div className="button-container">
+            <input type="submit" />
+            </div>
+        </form>
+        </div>
+    );
     const loginModalVisitor = () => {
         return <div>
             <h2>Oh, Hello there! </h2>
@@ -91,19 +124,15 @@ function Home(){
     }
 
     const loginUser = () => {
+
+        
+
         dispatch(changeUserType('user'));
         displayUserType()
     }
 
     const loginModalUser = () => {
-        return <div>
-            <h2>Hello, friend! </h2>
-            <p>Please login...</p>
-            <input type="text" name="username" placeholder="Username..." />
-            <input type="password" name="password" placeholder="Password..." />
-            {/*if password match with user logics*/}
-            <Button caption="log in" action={loginUser}/>
-        </div>
+        return <Login/>
     }
 
     return (

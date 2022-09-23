@@ -23,11 +23,13 @@ import Profile from './components/Profile';
 import ShowMap from './components/ShowMap';
 import Game from './components/game_components/Game';
 import Show404 from './components/Show404';
+import SignUp from './components/small_components/SignUp';
 
 function App() {
   const logged = useSelector(isLoggedSelector);
 
   const allRoutes = () => {
+    
     return (
       <>
       <Route path="/newcampaign" element={<NewCampaign />} />
@@ -53,6 +55,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path='/signup' element={<SignUp />} />
           {
             logged ? allRoutes() : <Route path='/:error' element={<Show404 />} />
           }
