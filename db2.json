@@ -757,7 +757,36 @@
       ],
       "army_lists": [],
       "stats": {}
+    },
+    {
+      "type": "user",
+      "level": 0,
+      "rank": "conscript",
+      "badges": [],
+      "battles": 0,
+      "winRate": 0,
+      "formations": [],
+      "army_lists": [],
+      "email": "",
+      "username": "Qwerty",
+      "password": "Qwerty123",
+      "id": "k3m27Fo"
+    },
+    {
+      "type": "user",
+      "level": 0,
+      "rank": "conscript",
+      "badges": [],
+      "battles": 0,
+      "winRate": 0,
+      "formations": [],
+      "army_lists": [],
+      "email": "",
+      "username": "Vitisman",
+      "password": "Vitisman1",
+      "id": "hOp4JxB"
     }
+
   ],
   "visitor": [
     {

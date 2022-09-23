@@ -1,24 +1,29 @@
 import React, {useEffect, useRef, useState} from 'react';
+import axios from '../../api/axios';
 
 //components:
 import NextPage from './NextPage';
 import Button from './Button';
 import BackTo from './BackTo';
+import { User } from '../../functions/Objects';
 
 const userImage = "https://source.unsplash.com/1vC4ZwkJNdA";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/; //4 to 24
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$/; //(?*=.*[!"$€£%"])
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$/; //(?*=.*[!"$@€£%"])
+
+const USER_URL = "/user";
+
 function SignUp() {
     const userRef = useRef();
     const errRef = useRef();
 
     const [user, setUser] = useState('');
-    const [validateName, setValidateName] = useState(false);
+    const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
 
     const [pwd, setPwd] = useState('');
-    const [validatePwd, setValidatePwd] = useState(false);
+    const [validPwd, setValidPwd] = useState(false);
     const [pwdFocus, setPwdFocus] = useState(false);
 
     const [matchPwd, setMatchPwd] = useState('');
@@ -34,16 +39,16 @@ function SignUp() {
 
     useEffect(()=>{
         const result = USER_REGEX.test(user);
-        console.log(result);
-        console.log(user);
-        setValidateName(result);
+        //console.log(result);
+        //console.log(user);
+        setValidName(result);
     },[user]);
 
     useEffect(()=>{
         const result = PWD_REGEX.test(pwd);
-        console.log(result);
-        console.log(pwd);
-        setValidatePwd(result);
+        //console.log(result);
+        //console.log(pwd);
+        setValidPwd(result);
         const match = pwd === matchPwd;
         setValidMatch(match);
     },[pwd, matchPwd]);
@@ -51,8 +56,36 @@ function SignUp() {
     useEffect(()=>{
         setErrMsg('');
     },[user, pwd, matchPwd]);
-    const handleSubmit = () =>{
-        console.log('tada!')
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        const v1 = USER_REGEX.test(user);
+        const v2 = PWD_REGEX.test(pwd);
+        if(!v1||!v2){
+            setErrMsg("Invalid Entry");
+            //set an alarm here and log  
+        }
+        try {
+            const newUser = new User(user, pwd);
+            const response = await axios.post(USER_URL, JSON.stringify(newUser),
+            {
+                headers: { "Content-Type": "application/json"},
+                withCredentioals: true 
+            }
+            );
+            console.log(response.data);
+            setSuccess(true);
+        } catch (error) {
+            if (!error.response){
+                setErrMsg('No server response');
+            }else if(errMsg.response?.status === 409){
+                setErrMsg('Username Taken');
+            } else {
+                setErrMsg('Registration Failed');
+            }
+            errRef.current.focus();
+        }
+        
     }
   return (
     <>
@@ -72,15 +105,24 @@ function SignUp() {
             <section >
                 <h1>You are Signed up!</h1>
                 <br />           
-                <NextPage pageUrl="/home" pageName="Front page"/>           
+                <NextPage pageUrl="/" pageName="Front page"/>           
             </section >
         ) : (
             <section style={{width:"300px"}}>
-                <p ref={errRef} className={errMsg ? "errMsg" : "offScreen"} aria-live="assertive">
+                <p ref={errRef} className={ errMsg ? "errMsg" : "invisible"} aria-live="assertive">
                 {errMsg}
                 </p>
                 <h2>Enlist soldier, dutty calls... </h2>
                 <form>
+                    <label htmlFor="username">
+                        Username:
+                        <span className={validName ? "valid" : "inexistent"}>
+                        ✅
+                        </span>
+                        <span className={validName || !user ? "inexistent" : "invalid"}>
+                        ❌
+                        </span>
+                    </label>
                     <input 
                         type="text" 
                         name="username" 
@@ -89,8 +131,21 @@ function SignUp() {
                         ref={userRef} 
                         autoComplete="off"
                         value={user}
+                        aria-invalid={validName ? false : true}
+                        aria-describedby="uidnote"
+                        onFocus={()=>setUserFocus(true)}
+                        onBlur={()=>setUserFocus(false)}
                         required
                     />
+                    <label htmlFor="password">
+                        Password:
+                        <span className={validPwd ? "valid" : "inexistent"}>
+                        ✅
+                        </span>
+                        <span className={validPwd || !pwd ? "inexistent" : "invalid"}>
+                        ❌
+                        </span>
+                    </label>
                     <input 
                         type="password" 
                         name="password" 
@@ -98,23 +153,54 @@ function SignUp() {
                         onChange={(e)=>setPwd(e.target.value)} 
                         value={pwd}
                         required
+                        aria-invalid={validPwd ? false : true}
+                        aria-describedby="pwdnote"
+                        onFocus={()=>setPwdFocus(true)}
+                        onBlur={()=>setPwdFocus(false)}
+                        
                     />
+                    <label htmlFor="match">
+                        Confirm Password:
+                        <span className={ validMatch && matchPwd ? "valid" : "inexistent"}>
+                        ✅
+                        </span>
+                        <span className={ validMatch || !matchPwd ? "inexistent" : "invalid"}>
+                        ❌
+                        </span>
+                    </label>
                     <input 
                         type="password" 
-                        name="confirm" 
+                        name="match" 
                         placeholder="Confirm Password..."
                         onChange={(e)=>setMatchPwd(e.target.value)} 
                         value={matchPwd}
                         required
+                        aria-invalid={validPwd ? false : true}
+                        aria-describedby="matchnote"
+                        onFocus={()=>setMatchFocus(true)}
+                        onBlur={()=>setMatchFocus(false)}
                     />
 
-                    <Button caption="Sign Up" action={handleSubmit}/>
+                    <Button caption="Sign Up" action={handleSubmit} disabled={!validName || !validPwd || !validMatch ? true : false}/>
                 </form>
                 <p>
-                    Are you already enlisted? <br />
-                    {/* put a router her? */}       
+                    Are you already enlisted? <br />    
                 </p>
                 <BackTo pageUrl="/" pageName="Log in"/>    
+                <p id="uidnote" className={userFocus && user &&!validName ? "instructions" : "inexistent"} >
+                    4 to 24 characters. <br />
+                    Must begin with a letter. <br />
+                    Allowed: letters, numbers, underscores and hyphens.
+                </p>
+                <p id="pwdnote" className={ pwdFocus && pwd && !validPwd ? "instructions" : "inexistent"} >
+                    8 to 24 characters. <br />
+                    Must include upperCase and lowercase letter and a number. <br />
+                    {/*Allowed special characters: @ # ! $ € £ %*/}
+                </p>
+                <p id="matchnote" className={ matchFocus && matchPwd && !validMatch ? "instructions" : "inexistent"} >
+                    Must match the password. <br />
+                    {/*Allowed special characters: @ # ! $ € £ %*/}
+                </p>
     </section>
         )
     }

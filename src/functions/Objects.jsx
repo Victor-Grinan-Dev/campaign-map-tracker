@@ -213,7 +213,7 @@ export class ArmyList {// all the models in the map from the same player.
 }
 export class User {
   
-  type = "Visitor"
+  type = "user"
   level = 0
   rank = "conscript"
   badges = []
@@ -221,12 +221,11 @@ export class User {
   winRate = 0
   formations = []
   army_lists = []
+  email = ""
 
-  constructor(id, username, email="", password=""){
-      this.email = email
+  constructor(username, password=""){
       this.username = username
       this.password = password
-      this.id = id
   }
 }
 //Map objects:

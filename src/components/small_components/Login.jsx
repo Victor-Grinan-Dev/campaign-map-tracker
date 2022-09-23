@@ -26,6 +26,9 @@ const Login = () => {
     const [user, setUser] = useState('');
     const [success, setSuccess] = useState(false);
 
+    const [usernameMatch, setUsernameMatch] = useState(false);
+    const [pwdMatch, setPwdMatch] = useState(false);
+
     useEffect(()=>{
         userRef.current.focus();
     },[]);
@@ -36,19 +39,21 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(user, pwd);
 
         try{
-            const response = await axios.post(LOGIN_URL, JSON.stringify({user, pwd}), {
-                
-                headers: { 'Content-Type' : 'application/json'},
-                withCredentials: true
+            const response = await axios.get(LOGIN_URL)
+            const data = response.data;
+            for(let item in data){
+                if (data[item].username === user && data[item].password === pwd){
+                    setSuccess(true);
+                    setUser('');
+                    setPwd('');
+                    dispatch(setIsLogged(true));
+                    dispatch(setCurrentUser(user));
+                    break;
+                }
+            };
 
-            });
-            setUser('');
-            setPwd('');
-            dispatch(setIsLogged(true))
-            setSuccess(true);
         } catch (err){
 
         }

@@ -49,13 +49,13 @@ function Home(){
     const inComingVisitorHandler = () => {
         dispatch(changeUserType('visitor'));
         dispatch(toggleIsLogging()); //set logging to true      
-        displayUserType("user type switch to: ")
+       // displayUserType("user type switch to: ")
     };
 
     const inComingUserHandler = () => {   
         dispatch(toggleIsLogging()); //set logging to true
         dispatch(changeUserType('user'));
-        displayUserType("user type switch to: ")
+       // displayUserType("user type switch to: ")
     };
 
     const createVisitorUser = () => {

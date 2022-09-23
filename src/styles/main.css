@@ -100,3 +100,11 @@ a:hover{
 .numInput{
   width: 75px;
 }
+
+.invisible{
+  visibility: hidden;
+}
+
+.inexistent{
+  display: none;
+}
