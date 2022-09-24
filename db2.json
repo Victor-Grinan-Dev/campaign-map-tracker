@@ -723,40 +723,18 @@
   "unit_types": {},
   "user": [
     {
-      "id": "a01",
-      "email": "admin@onlinecampaign.com",
-      "username": "Vitisman",
-      "password": 123456,
-      "type": "admin",
-      "formations": [
-        {
-          "id": 1,
-          "name": "Team Alfa",
-          "description": "Multi-use",
-          "image": "https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
-          "components": [
-            {
-              "type": "infantry-squad",
-              "movement": 2,
-              "composition": 5,
-              "pts": 100
-            },
-            {
-              "type": "infantry squad",
-              "movement": 2,
-              "composition": 1,
-              "pts": 100
-            }
-          ],
-          "badges": [
-            "objective-holder"
-          ],
-          "formation": "motorized-patrol",
-          "is_selected": true
-        }
-      ],
+      "type": "user",
+      "level": 0,
+      "rank": "Supreme Commander",
+      "badges": [],
+      "battles": 1,
+      "winRate": 100,
+      "formations": [],
       "army_lists": [],
-      "stats": {}
+      "email": "",
+      "username": "victor",
+      "password": "123456",
+      "id": "SPOULAKK"
     },
     {
       "type": "user",
@@ -771,20 +749,6 @@
       "username": "Qwerty",
       "password": "Qwerty123",
       "id": "k3m27Fo"
-    },
-    {
-      "type": "user",
-      "level": 0,
-      "rank": "conscript",
-      "badges": [],
-      "battles": 0,
-      "winRate": 0,
-      "formations": [],
-      "army_lists": [],
-      "email": "",
-      "username": "Vitisman",
-      "password": "Vitisman1",
-      "id": "hOp4JxB"
     },
     {
       "type": "user",
