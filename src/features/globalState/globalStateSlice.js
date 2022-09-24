@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 import { getDatabase, getUser, postSettedFormation } from "../../services/db2connAxios";
 export const globalState = createSlice({
     name:'globalState',
@@ -158,19 +157,17 @@ const visitorEndPoint = "http://localhost:8011/visitor";
 const baseUrl = "http://localhost:8011"
 
 export const initializeData = (userType) => {
-    return async (dispatch) => {//(dispatch, getData)
+    return async (dispatch) => {//(dispatch, getData) for read state here
         
-        if (userType === 'visitor'){
-       
+        if (userType === 'visitor'){      
             const sampleFormations = await getDatabase(`${visitorEndPoint}/0`);
-
             dispatch(setFormations(sampleFormations.formations));
             dispatch(setIsLoading(false));
 
         }else{
             const data = await getDatabase(userEndPoint);
             dispatch(setFormations(data[0].formations)); 
-            dispatch(toggleIsLoading());
+            dispatch(setIsLoading(false));
         }
     };
 };
@@ -178,8 +175,7 @@ export const initializeData = (userType) => {
 export const initializeUser = (name, password) => {
     return async (dispatch) => {
 
-        const user = await getUser(name, password);
-        console.log(user);
+        console.log("user");
 
     };
 };

@@ -51,7 +51,7 @@ function Profile() {
         </div>
         }
     };
-
+  console.log(currentUser);
   return (
     <div>
         <NavBar />

@@ -85,7 +85,7 @@ function Home(){
             if (userType === 'visitor'){
                 return loginModalVisitor()
             }else if (userType === 'user'){
-                return loginModalUser()
+                return <Login />
             }
         }
     }
@@ -124,9 +124,6 @@ function Home(){
     }
 
     const loginUser = () => {
-
-        
-
         dispatch(changeUserType('user'));
         displayUserType()
     }

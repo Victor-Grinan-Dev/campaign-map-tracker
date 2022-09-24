@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import axios from '../../api/axios';
+import { getIsUsernameDuplicated } from '../../services/db2connAxios';
 
 //components:
 import NextPage from './NextPage';
@@ -21,6 +22,7 @@ function SignUp() {
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
+    const [isUsernameTaken, setIsUsernameTaken] = useState(false);
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -56,6 +58,21 @@ function SignUp() {
     useEffect(()=>{
         setErrMsg('');
     },[user, pwd, matchPwd]);
+
+
+    useEffect(()=>{
+        
+        axios.get('/user').then(res=>{
+            setIsUsernameTaken(false);
+            for (let item in res.data){
+                if (res.data[item].username === user){
+                    setIsUsernameTaken(res.data[item].username === user);
+                }
+            }  
+        },
+    )
+        
+    },[user]);
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
@@ -116,10 +133,13 @@ function SignUp() {
                 <form>
                     <label htmlFor="username">
                         Username:
-                        <span className={validName ? "valid" : "inexistent"}>
+                        <span className={validName && !isUsernameTaken ? "valid" : "inexistent"}>
                         ✅
                         </span>
                         <span className={validName || !user ? "inexistent" : "invalid"}>
+                        ❌
+                        </span>
+                        <span className={!isUsernameTaken ? "inexistent" : "invalid"}>
                         ❌
                         </span>
                     </label>
@@ -181,16 +201,19 @@ function SignUp() {
                         onBlur={()=>setMatchFocus(false)}
                     />
 
-                    <Button caption="Sign Up" action={handleSubmit} disabled={!validName || !validPwd || !validMatch ? true : false}/>
+                    <Button caption="Sign Up" action={handleSubmit} disabled={!validName || !validPwd || !validMatch || isUsernameTaken ? true : false}/>
                 </form>
                 <p>
                     Are you already enlisted? <br />    
                 </p>
                 <BackTo pageUrl="/" pageName="Log in"/>    
-                <p id="uidnote" className={userFocus && user &&!validName ? "instructions" : "inexistent"} >
+                <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "inexistent"} >
                     4 to 24 characters. <br />
                     Must begin with a letter. <br />
                     Allowed: letters, numbers, underscores and hyphens.
+                </p>
+                <p id="uidnote" className={userFocus && user && isUsernameTaken ? "UsernameTaken" : "inexistent"} >
+                    Username Taken
                 </p>
                 <p id="pwdnote" className={ pwdFocus && pwd && !validPwd ? "instructions" : "inexistent"} >
                     8 to 24 characters. <br />

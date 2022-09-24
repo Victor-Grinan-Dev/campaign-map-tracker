@@ -14,7 +14,8 @@ const getValue = (skill) => {
   
 }
 
-export class Unit {//READY!
+export class Unit {
+    image = ""
     constructor(id, unitName, models, point_const, skills){
       this.id = id
         this.name = unitName
@@ -338,6 +339,7 @@ export default class Campaign {
 export const skills_by_unit_type = {//TODO?: smarter change all this to separate tags?
   infantry:{
     type:"infantry",
+    image: "/public/assets/unit_infantry.png",
     movement:2,
     active:["build", "set_defence", "get_ready"],
     negative:[],
@@ -345,6 +347,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
   light_infantry:{
     type:"light_infantry",
+    image: "/public/assets/unit_infantry.png",
     movement:2,
     active:["conceal", "get_ready", "claim_tile"],
     negative:["defense-10", "damage-10"],
@@ -352,6 +355,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
   heavy_armoured_infantry:{
     type:"heavy_armoured_infantry",
+    image: "/public/assets/unit_heavy_infantry.png",
     movement:1,
     active:[ "set_defence", "get_ready", "claim_tile"],
     negative:[],
@@ -359,6 +363,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
   heavy_weapons_infantry:{
     type:"heavy_weapons_infantry",
+    image: "/public/assets/unit_heavy_infantry.png",
     movement:1,
     active:[ "set_defence", "get_ready", "claim_tile"],
     negative:[],
@@ -366,7 +371,8 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   },
   jet_infantry:{
     type:"jet_infantry",
-    movement:2,
+    image: "/public/assets/unit_transport_copter.png",
+    movement:4,
     active:["deep_assault", "jump"],
     negative:["No_water", "recharge_jets"],
     passive:["fly"]
@@ -374,12 +380,14 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   rider:{
     type:"rider",
     movement:5,
+    image: "/public/assets/unit_recon.png",
     active:["hit&run"],
     negative:["No_water", "no_Mountain", "hard_in_swamps" ],
     passive:["turbo_boost"]
   },
   beast_rider:{
     type:"beast_rider",
+    image: "/public/assets/unit_recon.png",
     movement:3,
     active:["hit&run", "turbo_boost"],
     negative:["No_water"],
@@ -388,6 +396,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   transport_tank:{
     type:"transport_tank",
+    image: "/public/assets/unit_apc.png",
     movement:4,
     active:null,
     negative:["No_water", "no_Mountain" ],
@@ -396,6 +405,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   transport_armoured_tank:{
     type:"transport_heavy_weapon_tank",
+    image: "/public/assets/unit_ligth_tank.png",
     movement:4,
     active:null,
     negative:["No_water", "no_Mountain" ],
@@ -404,22 +414,34 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   light_tank:{
     type:"light_tank",
+    image: "/public/assets/unit_ligth_tank.png",
     movement:4,
     active:null,
     negative:["No_water", "no_Mountain", "low_defence" ],
     passive:[]
   },
 
+  tank:{
+    type:"heavy_tank",
+    image: "/public/assets/unit_mid_tank.png",
+    movement:4,
+    active:null,
+    negative:["No_water", "no_Mountain"],
+    passive:["defense+5", "damage+5"]
+  },
+
   heavy_tank:{
     type:"heavy_tank",
+    image: "/public/assets/unit_big_tank.png",
     movement:3,
     active:null,
     negative:["No_water", "no_Mountain"],
-    passive:["defense+10", "damage+15"]
+    passive:["defense+10", "damage+10"]
   },
 
   fast_hover_transport:{
     type:"fast_hover_transport",
+    image: "/public/assets/unit_transport_copter.png",
     movement:6,
     active:null,
     negative:["low_defence"],
@@ -428,6 +450,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   fast_fover:{
     type:"fast_fover",
+    image: "/public/assets/unit_copter.png",
     movement:6,
     active:null,
     negative:[ "low_defence"],
@@ -436,6 +459,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   walker_wehicle:{
     type:"walker_wehicle",
+    image: "/public/assets/unit_heavy_hover_tank.png",
     movement:2,
     active:null,
     negative:["no_water", "no_swamp"],
@@ -444,6 +468,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   artillery_tank:{
     type:"artillery_tank",
+    image: "/public/assets/unit_rockets.png",
     movement:4,
     active:['deploy', "barage"],
     negative:["no_water"],
@@ -452,6 +477,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   artillery_battery:{
     type:"artillery_battery",
+    image: "/public/assets/unit_artillery.png",
     movement:1,
     active:['deploy', "barage"],
     negative:["no_water"],
@@ -460,6 +486,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   warsuit:{
     type:"warsuit",
+    image: "/public/assets/unit_heavy_hover_tank.png",
     movement:3,
     active:[],
     negative:["no_water"],
@@ -468,13 +495,15 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   monster:{
     type:"monster",
+    image: "/public/assets/unit_heavy_hover_tank.png",
     movement:3,
     active:[],
     negative:[],
     passive:[]
   },
-  beast:{
+  beast:{ 
     type:"beast",
+    image: "/public/assets/unit_recon.png",
     movement:4,
     active:[],
     negative:[],
@@ -483,6 +512,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
 
   flying_beast:{
     type:"flying_beast",
+    image: "/public/assets/unit_copter.png",
     movement:6,
     active:[],
     negative:[],

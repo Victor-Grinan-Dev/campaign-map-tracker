@@ -1,18 +1,16 @@
-import axios from "axios";
+import axios from "../api/axios";
 
-const campaingsEndPoint = "http://localhost:8011/campaings";
-const mapsEndPoint = "http://localhost:8011/maps";
-const factionsEndPoint = "http://localhost:8011/factions";
-const badgesEndPoint = "http://localhost:8011/badges";
-const active_skillsEndPoint = "http://localhost:8011/active_skills";
-const passive_skillsEndPoint = "http://localhost:8011/passive_skills";
-const negativeEndPoint = "http://localhost:8011/negative";
-const objectsEndPoint = "http://localhost:8011/objects";
-const unit_typesEndPoint = "http://localhost:8011/unit_types";
-const userEndPoint = "http://localhost:8011/user";
-const visitorEndPoint = "http://localhost:8011/visitor";
-
-const baseUrl = 'http://localhost/8011';
+const campaingsEndPoint = "/campaings";
+const mapsEndPoint = "/maps";
+const factionsEndPoint = "/factions";
+const badgesEndPoint = "/badges";
+const active_skillsEndPoint = "/active_skills";
+const passive_skillsEndPoint = "/passive_skills";
+const negativeEndPoint = "/negative";
+const objectsEndPoint = "/objects";
+const unit_typesEndPoint = "/unit_types";
+const userEndPoint = "/user";
+const visitorEndPoint = "/visitor";
 
 //TODO: specify what user you are geting the data from.
 export const getDatabase = async (desiredEndPoint) => {
@@ -22,12 +20,18 @@ export const getDatabase = async (desiredEndPoint) => {
 
 
 //user
-export const getUser = async (name, password) => {
+
+
+export const getIsUsernameDuplicated = async (name) => {
     const response = await axios.get(userEndPoint);
     for(let item in response){
-        console.log(item.username, item.password);
+        if (response[item].username === name){
+            return true;
+        }
     }
 };
+
+
 
 export const postVisitorUser = async ( userObject ) => {
     await axios.post(visitorEndPoint, userObject).catch(err => console.log('posting user error', err));

@@ -41,13 +41,10 @@ function App() {
       <Route path='/drawmap' element={<DrawMap />} />
       <Route path='/hall' element={<Hall />} />
       <Route path='/game' element={<Game />} />
-      <Route path='/hall/:campaign' element={<HallSingle />} />
-      
+      <Route path='/hall/:campaign' element={<HallSingle />} />    
       </>
     )
   }
-
-
 
   return (
     <div className="App">
