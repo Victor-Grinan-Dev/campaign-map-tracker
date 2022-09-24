@@ -45,11 +45,16 @@ const Login = () => {
             const data = response.data;
             for(let item in data){
                 if (data[item].username === user && data[item].password === pwd){
+                    //set
                     setSuccess(true);
+                    dispatch(setCurrentUser(user));
+                    dispatch(setIsLogged(true));
+
+                    //reset
                     setUser('');
                     setPwd('');
-                    dispatch(setIsLogged(true));
-                    dispatch(setCurrentUser(user));
+                    
+                    
                     break;
                 }
             };

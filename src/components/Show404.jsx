@@ -14,6 +14,8 @@ function Show404() {
         <div style={centerAll}>
             <h1> 404 </h1>
             <p> Oops! </p>
+            <p>You just lost you access permission.</p>
+            <p>Log back in and dont reload the page.</p>
         </div>
     </div>
   )
