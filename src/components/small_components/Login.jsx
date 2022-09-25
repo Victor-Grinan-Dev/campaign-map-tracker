@@ -3,8 +3,8 @@ import axios from '../../api/axios';
 
 //redux
 import { useDispatch, useSelector } from 'react-redux';
-import { changeUserName, isLoggedSelector, setIsLogged, userNameSelector } from '../../features/globalState/globalStateSlice';
-
+import { changeUserIndex, changeUserName, isLoggedSelector, setIsLogged, userDataSelector, userNameSelector } from '../../features/globalState/globalStateSlice';
+import { initializeUser } from '../../features/globalState/globalStateSlice';
 //Auth:
 import AuthContext from '../../context/AuthProvider';
 
@@ -22,9 +22,11 @@ const Login = () => {
     const dispatch = useDispatch();
     const currentUser = useSelector(userNameSelector);
     const setCurrentUser = useDispatch(changeUserName());
+    const userData = useSelector(userDataSelector)
     const [errMsg, setErrMsg] = useState('');
     const [pwd, setPwd] = useState('');
     const [user, setUser] = useState('');
+    //const [userData, setUserData] = useState({});
 
     useEffect(()=>{
         userRef.current.focus();
@@ -43,7 +45,7 @@ const Login = () => {
                     //set
                     dispatch(setIsLogged(true));
                     dispatch(changeUserName(data[item].username));
-
+                    dispatch(changeUserIndex(item))
                     //reset
                     setUser('');
                     setPwd('');
@@ -51,7 +53,16 @@ const Login = () => {
             };
 
         } catch (err){
-
+            if(!err?.response){
+                setErrMsg('No server response');
+            } else if (err.response?.status === 400){
+                setErrMsg('Missing Username or password');
+            } else if (err.response?.status === 401){
+                setErrMsg('Unauthorized');
+            } else {
+                setErrMsg('Login failed');
+            }
+            errRef.current.focus();
         }
     }
 

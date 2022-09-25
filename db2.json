@@ -729,12 +729,125 @@
       "badges": [],
       "battles": 1,
       "winRate": 100,
-      "formations": [],
+      "formations": [
+        {
+          "id": "SPOULAKK",
+          "name": "Alfa Patrol",
+          "s_description:": "Take, Build, Hold",
+          "l_description": "",
+          "image": "https://images.dakkadakka.com/gallery/2012/7/13/389072-Grey%20Hunters%2C%20Meltagun%2C%20Rhino%2C%20Space%20Marines%2C%20Space%20Wolves%2C%20Troops%2C%20Warhammer%2040%2C000.JPG",
+          "type": "motorized patrol",
+          "action_points": 2,
+          "damage": 31,
+          "model_count": 7,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "light blue",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 310,
+          "composition": [
+            {
+              "name": "Iron priest",
+              "equipments": [
+                "servo harness",
+                "tempest hammer & frost pistol"
+              ],
+              "models": 1,
+              "point_const": 85,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "repair"
+              ],
+              "negative": [],
+              "passive_skills": [
+                "research"
+              ]
+            },
+            {
+              "name": "Grey hunters",
+              "models": 5,
+              "point_const": 100,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain"
+              ]
+            },
+            {
+              "name": "Razorback",
+              "equipment":["twin assult cannon"],
+              "models": 1,
+              "point_const": 125,
+              "unitType": "transport-tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": []
+            }
+          ],
+          "army_lists": [],
+          "email": "",
+          "username": "victor",
+          "password": "123456"
+        },
+        {
+          "type": "user",
+          "level": 0,
+          "rank": "conscript",
+          "badges": [],
+          "battles": 0,
+          "winRate": 0,
+          "formations": [],
+          "army_lists": [],
+          "email": "",
+          "username": "Qwerty",
+          "password": "Qwerty123",
+          "id": "k3m27Fo"
+        },
+        {
+          "type": "user",
+          "level": 0,
+          "rank": "conscript",
+          "badges": [],
+          "battles": 0,
+          "winRate": 0,
+          "formations": [],
+          "army_lists": [],
+          "email": "",
+          "username": "Machete",
+          "password": "Machete85",
+          "id": "HNs_33y"
+        }
+      ],
+      
       "army_lists": [],
-      "email": "",
+      "email": null,
       "username": "victor",
       "password": "123456",
-      "id": "SPOULAKK"
+      "id": 1
     },
     {
       "type": "user",
@@ -743,34 +856,96 @@
       "badges": [],
       "battles": 0,
       "winRate": 0,
-      "formations": [],
+      "formations": [
+        {
+          "id":1,
+          "name": "Alfa Patrol",
+          "s_description:": "Take, Build, Hold",
+          "l_description": "",
+          "image": "https://images.dakkadakka.com/gallery/2012/7/13/389072-Grey%20Hunters%2C%20Meltagun%2C%20Rhino%2C%20Space%20Marines%2C%20Space%20Wolves%2C%20Troops%2C%20Warhammer%2040%2C000.JPG",
+          "type": "motorized patrol",
+          "action_points": 2,
+          "damage": 31,
+          "model_count": 7,
+          "vision": 2,
+          "Xp": 0,
+          "level": 0,
+          "benefits": [],
+          "badges": [],
+          "movement": 4,
+          "dedication": [],
+          "color": "light blue",
+          "is_listed": false,
+          "carry_capacity": 3,
+          "point_const": 310,
+          "composition": [
+            {
+              "name": "Iron priest",
+              "equipments":["servo harness", "tempest hammer & frost pistol"],
+              "models": 1,
+              "point_const": 85,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "repair"
+              ],
+              "negative": [],
+              "passive_skills": [
+                "research"
+              ]
+            },
+            {
+              "name": "Grey hunters",
+              "models": 5,
+              "point_const": 100,
+              "type": "infantry",
+              "movement": 2,
+              "actions": 2,
+              "active_skills": [
+                "build",
+                "get-ready",
+                "claim-tile"
+              ],
+              "negative": [
+                "defense(-10)",
+                "damage(-10)"
+              ],
+              "passive_skills": [
+                "hold-position",
+                "all-terrain"
+              ]
+            },
+            {
+              "name": "Razorback/twin assult cannon",
+              "models": 1,
+              "point_const": 125,
+              "unitType": "transport-tank",
+              "movement": 4,
+              "actions": 0,
+              "active_skills": [],
+              "negative": [
+                "no-water"
+              ],
+              "passive_skills": []
+            }
+          ]
+        }
+      ],
       "army_lists": [],
       "email": "",
-      "username": "Qwerty",
-      "password": "Qwerty123",
-      "id": "k3m27Fo"
-    },
-    {
-      "type": "user",
-      "level": 0,
-      "rank": "conscript",
-      "badges": [],
-      "battles": 0,
-      "winRate": 0,
-      "formations": [],
-      "army_lists": [],
-      "email": "",
-      "username": "Machete",
-      "password": "Machete85",
-      "id": "HNs_33y"
+      "username": "Victor",
+      "password": "Victor123",
+      "id": 2
     }
   ],
   "visitor": [
     {
       "id": "0",
       "email": null,
-      "username": "",
-      "password": null,
+      "username": "Sample Visitor",
+      "password": "123456",
       "type": "visitor",
       "level": 0,
       "rank": "conscript",
@@ -963,204 +1138,6 @@
         }
       ],
       "army_lists": []
-    },
-    {
-      "type": "Visitor",
-      "level": 0,
-      "rank": "conscript",
-      "badges": [],
-      "battles": 0,
-      "winRate": 0,
-      "formations": [
-        {
-          "id": 1,
-          "name": "Team Alfa",
-          "s_description:": "Multi-use",
-          "l_description": "El tabaco es una planta herbasea horiunda de löos campos tropicales delas islas caribeñas",
-          "image": "https://www.royalnavy.mod.uk/-/media/royal-navy-responsive/images/news/royal-marines/3-cdo-brigade/43-cdo-fp-grm/170608-clyde-marines-high-calibre-competition/20170605-43-cdo-shooting-competition-1.jpg",
-          "type": null,
-          "is_selected": false,
-          "action_points": 2,
-          "damage": 20,
-          "model_count": 6,
-          "vision": 2,
-          "Xp": 0,
-          "level": 0,
-          "benefits": [],
-          "badges": [],
-          "movement": 4,
-          "dedication": [],
-          "color": "white",
-          "is_listed": false,
-          "carry_capacity": 3,
-          "point_const": 200,
-          "composition": [
-            {
-              "name": "squad-1",
-              "models": 5,
-              "point_const": 100,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "get-ready",
-                "claim-tile"
-              ],
-              "negative": [
-                "defense(-10)",
-                "damage(-10)"
-              ],
-              "passive_skills": [
-                "hold-position",
-                "all-terrain",
-                "move(+1)"
-              ]
-            },
-            {
-              "name": "Humbee",
-              "models": 1,
-              "point_const": 100,
-              "unitType": "transport-tank",
-              "movement": 4,
-              "actions": 0,
-              "active_skills": [],
-              "negative": [
-                "no-water"
-              ],
-              "passive_skills": [
-                "fly",
-                "transport-5"
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Team Bravo",
-          "s_description": "Harrasment",
-          "l_description": "El tabaco es una planta herbasea horiunda de los campos tropicales delas islas caribeñas",
-          "image": "http://2.bp.blogspot.com/-Uhym0ZSI3Bc/VikMZuM_W7I/AAAAAAABUfA/bzSQWFp7ZmY/s1600/Title.jpg",
-          "type": null,
-          "action_points": 2,
-          "damage": 12,
-          "model_count": 5,
-          "vision": 2,
-          "Xp": 0,
-          "level": 0,
-          "benefits": [],
-          "badges": [],
-          "movement": 4,
-          "dedication": [],
-          "color": "white",
-          "is_listed": false,
-          "carry_capacity": 3,
-          "point_const": 120,
-          "composition": [
-            {
-              "unitName": "scout squad 205",
-              "models": 5,
-              "point_const": 120,
-              "type": "light_infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "conceal",
-                "get-ready",
-                "claim-tile"
-              ],
-              "negative": [
-                "defense(-10)",
-                "damage(-10)"
-              ],
-              "passive_skills": [
-                "hold-position",
-                "all-terrain",
-                "move(+1)"
-              ]
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "name": "The expendables",
-          "s_description": "Good for everything",
-          "l_description": "this unit is product of the civil war during the chorizo war back in 1904.",
-          "image": "https://muropaketti.com/wp-content/uploads/2018/08/the-expendables-3.jpg",
-          "type": null,
-          "action_points": 2,
-          "damage": 12,
-          "model_count": 5,
-          "vision": 2,
-          "Xp": 0,
-          "level": 0,
-          "benefits": [],
-          "badges": [],
-          "movement": 4,
-          "dedication": [],
-          "color": "white",
-          "is_listed": false,
-          "carry_capacity": 3,
-          "point_const": 120,
-          "composition": [
-            {
-              "name": "Supreme Leader",
-              "models": 1,
-              "point_const": 75,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [],
-              "negative": [],
-              "passive_skills": []
-            },
-            {
-              "name": "The expendables",
-              "models": 5,
-              "point_const": 150,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "get-ready",
-                "claim-tile"
-              ],
-              "negative": [
-                "defense(-10)",
-                "damage(-10)"
-              ],
-              "passive_skills": [
-                "hold-position",
-                "all-terrain",
-                "move(+1)"
-              ]
-            },
-            {
-              "name": "The expendables trasport",
-              "models": 1,
-              "point_const": 125,
-              "type": "transport_tank",
-              "movement": 4,
-              "actions": 0,
-              "active_skills": [],
-              "negative": [
-                "no-water"
-              ],
-              "passive_skills": [
-                "carry(+3)",
-                "trasport(6)"
-              ]
-            }
-          ]
-        }
-      ],
-      "army_lists": [],
-      "email": null,
-      "username": "victor",
-      "password": null,
-      "id": 1
     }
   ]
 }

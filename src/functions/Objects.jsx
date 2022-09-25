@@ -13,9 +13,14 @@ const getValue = (skill) => {
   return parseInt(skill.split(divider)[1], 10);
   
 }
-
+ 
 export class Unit {
     image = ""
+    is_hero = false
+    hero_xp = []
+    hero_level = []
+    hero_upgrades = []
+    equipment = []
     constructor(id, unitName, models, point_const, skills){
       this.id = id
         this.name = unitName

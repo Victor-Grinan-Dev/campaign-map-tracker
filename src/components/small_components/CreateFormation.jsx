@@ -8,11 +8,14 @@ import css from './AddCard.module.css';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFormationName,  changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction } from '../../features/globalState/globalStateSlice';
+import { changeFormationName,  changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction, userTypeSelector, userIndexSelector } from '../../features/globalState/globalStateSlice';
 import { formNameSelector, compositionSelector, s_descriptionSelector, l_descriptionSelector, imageSelector, factionSelector, subfactionSelector } from '../../features/globalState/globalStateSlice';
 
 //function and objects:
 import { factions, Formation } from '../../functions/Objects';
+import axios from '../../api/axios';
+
+
 
 function CreateFormation() {
     const dispatch = useDispatch()
@@ -29,6 +32,12 @@ function CreateFormation() {
         setFactionList(temp);
     }, []);
 
+    //userState
+    const userType = useSelector(userTypeSelector);
+    const userIndex = useSelector(userIndexSelector);
+    const thisUserFormationsUrl = `/${userType}/${userIndex}/formations`;
+
+    //formation state
     const nameFormation = useSelector(formNameSelector);
     const composition = useSelector(compositionSelector);
     const s_description = useSelector(s_descriptionSelector);
@@ -36,6 +45,8 @@ function CreateFormation() {
     const image = useSelector(imageSelector);
     const faction = useSelector(factionSelector);
     const subfaction = useSelector(subfactionSelector);
+
+
 
     //handlers
     const nameHandler = (e) => {
@@ -63,13 +74,16 @@ function CreateFormation() {
     }
 
     const addFormation = (e) =>{
-        console.log(nameFormation);
-
+        axios.get("/user").then(res=>{
+            const data =res.data;
+            console.log(data[userIndex].formations)
+        })
         if (nameFormation && composition.length > 0 && s_description && faction && subfaction){
             const newFormation = new Formation(nameFormation, composition, s_description, l_description, image, faction, subfaction);
             //TODO: add to database
             console.log(newFormation);
-
+            console.log('url: ',thisUserFormationsUrl)
+            
             const form = e.nativeEvent.path[1];
             //reset form
             Array.from(form.elements).forEach(element => {

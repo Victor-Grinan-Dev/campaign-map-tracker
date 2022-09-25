@@ -94,6 +94,7 @@ function Home(){
         // Prevent page reload
         event.preventDefault();
       };
+      
     // JSX code for login form
     const renderForm = (
         <div className="form">

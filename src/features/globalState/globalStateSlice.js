@@ -10,6 +10,8 @@ export const globalState = createSlice({
         currentUser:undefined, 
         userType:"visitor",
         userIndex:0,
+
+        userData:undefined,
         isLoading:true,
         search:"",
 
@@ -40,6 +42,10 @@ export const globalState = createSlice({
         toggleIsLogging: (state) => {
             state.isLogging = !state.isLogging;
         },
+
+        changeUserData:(state, action) => {
+            state.userData = action.payload;
+        },
         setIsLogging:(state,action) =>{
             state.isLogging = action.payload;
         },
@@ -58,9 +64,10 @@ export const globalState = createSlice({
         changeUserType:(state, action) => {
             state.userType = action.payload;
         },
-        changeUserIndex:(state) =>{
-            state.userIndex += 1;
+        changeUserIndex:(state, action) =>{
+            state.userIndex = action.payload;
         },
+        
         toggleIsLoading(state){
             state.isLoading = !state.isLoading
         },
@@ -157,7 +164,7 @@ const visitorEndPoint = "http://localhost:8011/visitor";
 const baseUrl = "http://localhost:8011"
 
 export const initializeData = (userType) => {
-    return async (dispatch) => {//(dispatch, getData) for read state here
+    return async (dispatch, getData) => {//(dispatch, getData) for read state here
         
         if (userType === 'visitor'){      
             const sampleFormations = await getDatabase(`${visitorEndPoint}/0`);
@@ -165,22 +172,19 @@ export const initializeData = (userType) => {
             dispatch(setIsLoading(false));
 
         }else{
-            const data = await getDatabase(userEndPoint);
-            dispatch(setFormations(data[0].formations)); 
+            const index = getData().globalState.userIndex;
+            const data = await getDatabase(`${userEndPoint}`);
+            dispatch(changeUserData(data[index]));
+            dispatch(setFormations(data[index].formations)); 
             dispatch(setIsLoading(false));
         }
     };
 };
 
-export const initializeUser = (name, password) => {
-    return async (dispatch) => {
-
-        console.log("user");
-
-    };
-};
 //logged
 export const { 
+    changeUserData,
+
     toggleIsLogging,
     setIsLogging,
     toggleIsLogged,
@@ -193,6 +197,8 @@ export const {
     changeSearch
 } = globalState.actions;
 
+
+export const userDataSelector = (state) => state.globalState.userData;
 export const isLoggingSelector = (state) => state.globalState.isLogging;
 export const isLoggedSelector = (state) => state.globalState.isLogged;
 export const userNameSelector = (state) => state.globalState.currentUser;
