@@ -721,230 +721,53 @@
     }
   },
   "unit_types": {},
-  "user": [
+  "user": [ 
     {
       "type": "user",
       "level": 0,
-      "rank": "Supreme Commander",
+      "rank": "Conscript",
       "badges": [],
-      "battles": 1,
-      "winRate": 100,
-      "formations": [
-        {
-          "id": "SPOULAKK",
-          "name": "Alfa Patrol",
-          "s_description:": "Take, Build, Hold",
-          "l_description": "",
-          "image": "https://images.dakkadakka.com/gallery/2012/7/13/389072-Grey%20Hunters%2C%20Meltagun%2C%20Rhino%2C%20Space%20Marines%2C%20Space%20Wolves%2C%20Troops%2C%20Warhammer%2040%2C000.JPG",
-          "type": "motorized patrol",
-          "action_points": 2,
-          "damage": 31,
-          "model_count": 7,
-          "vision": 2,
-          "Xp": 0,
-          "level": 0,
-          "benefits": [],
-          "badges": [],
-          "movement": 4,
-          "dedication": [],
-          "color": "light blue",
-          "is_listed": false,
-          "carry_capacity": 3,
-          "point_const": 310,
-          "composition": [
-            {
-              "name": "Iron priest",
-              "equipments": [
-                "servo harness",
-                "tempest hammer & frost pistol"
-              ],
-              "models": 1,
-              "point_const": 85,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "repair"
-              ],
-              "negative": [],
-              "passive_skills": [
-                "research"
-              ]
-            },
-            {
-              "name": "Grey hunters",
-              "models": 5,
-              "point_const": 100,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "get-ready",
-                "claim-tile"
-              ],
-              "negative": [
-                "defense(-10)",
-                "damage(-10)"
-              ],
-              "passive_skills": [
-                "hold-position",
-                "all-terrain"
-              ]
-            },
-            {
-              "name": "Razorback",
-              "equipment":["twin assult cannon"],
-              "models": 1,
-              "point_const": 125,
-              "unitType": "transport-tank",
-              "movement": 4,
-              "actions": 0,
-              "active_skills": [],
-              "negative": [
-                "no-water"
-              ],
-              "passive_skills": []
-            }
-          ],
-          "army_lists": [],
-          "email": "",
-          "username": "victor",
-          "password": "123456"
-        },
-        {
-          "type": "user",
-          "level": 0,
-          "rank": "conscript",
-          "badges": [],
-          "battles": 0,
-          "winRate": 0,
-          "formations": [],
-          "army_lists": [],
-          "email": "",
-          "username": "Qwerty",
-          "password": "Qwerty123",
-          "id": "k3m27Fo"
-        },
-        {
-          "type": "user",
-          "level": 0,
-          "rank": "conscript",
-          "badges": [],
-          "battles": 0,
-          "winRate": 0,
-          "formations": [],
-          "army_lists": [],
-          "email": "",
-          "username": "Machete",
-          "password": "Machete85",
-          "id": "HNs_33y"
-        }
-      ],
-      
+      "battles": 0,
+      "winRate": 0,
+      "formations": [],
       "army_lists": [],
-      "email": null,
-      "username": "victor",
-      "password": "123456",
-      "id": 1
+      "email": "",
+      "image": "conscript_red.png",
+      "images": [
+        "conscript_red.png",
+        "conscript_blue.png",
+        "conscript_green.png",
+        "conscript_yellow.png"
+      ],
+      "username": "Victor123",
+      "password": "Victor123"
     },
     {
       "type": "user",
       "level": 0,
-      "rank": "conscript",
+      "rank": "Conscript",
       "badges": [],
       "battles": 0,
       "winRate": 0,
-      "formations": [
-        {
-          "id":1,
-          "name": "Alfa Patrol",
-          "s_description:": "Take, Build, Hold",
-          "l_description": "",
-          "image": "https://images.dakkadakka.com/gallery/2012/7/13/389072-Grey%20Hunters%2C%20Meltagun%2C%20Rhino%2C%20Space%20Marines%2C%20Space%20Wolves%2C%20Troops%2C%20Warhammer%2040%2C000.JPG",
-          "type": "motorized patrol",
-          "action_points": 2,
-          "damage": 31,
-          "model_count": 7,
-          "vision": 2,
-          "Xp": 0,
-          "level": 0,
-          "benefits": [],
-          "badges": [],
-          "movement": 4,
-          "dedication": [],
-          "color": "light blue",
-          "is_listed": false,
-          "carry_capacity": 3,
-          "point_const": 310,
-          "composition": [
-            {
-              "name": "Iron priest",
-              "equipments":["servo harness", "tempest hammer & frost pistol"],
-              "models": 1,
-              "point_const": 85,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "repair"
-              ],
-              "negative": [],
-              "passive_skills": [
-                "research"
-              ]
-            },
-            {
-              "name": "Grey hunters",
-              "models": 5,
-              "point_const": 100,
-              "type": "infantry",
-              "movement": 2,
-              "actions": 2,
-              "active_skills": [
-                "build",
-                "get-ready",
-                "claim-tile"
-              ],
-              "negative": [
-                "defense(-10)",
-                "damage(-10)"
-              ],
-              "passive_skills": [
-                "hold-position",
-                "all-terrain"
-              ]
-            },
-            {
-              "name": "Razorback/twin assult cannon",
-              "models": 1,
-              "point_const": 125,
-              "unitType": "transport-tank",
-              "movement": 4,
-              "actions": 0,
-              "active_skills": [],
-              "negative": [
-                "no-water"
-              ],
-              "passive_skills": []
-            }
-          ]
-        }
-      ],
+      "formations": [],
       "army_lists": [],
       "email": "",
-      "username": "Victor",
-      "password": "Victor123",
-      "id": 2
+      "image": "conscript_red.png",
+      "images": [
+        "conscript_red.png",
+        "conscript_blue.png",
+        "conscript_green.png",
+        "conscript_yellow.png"
+      ],
+      "username": "Qwerty123",
+      "password": "Qwerty123"
     }
   ],
   "visitor": [
     {
       "id": "0",
       "email": null,
-      "username": "Sample Visitor",
+      "username": "SampleVisitor",
       "password": "123456",
       "type": "visitor",
       "level": 0,

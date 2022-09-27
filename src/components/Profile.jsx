@@ -13,24 +13,27 @@ import { useEffect } from 'react';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { userDataSelector, userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
+import { enlistedSelector, userDataSelector, userNameSelector, userTypeSelector } from '../features/globalState/globalStateSlice';
 import { initializeData } from '../features/globalState/globalStateSlice';
 
 //style:
-const testStyle = {
-  width:75,
-  height:75,
-  backgroundColor:"black",
-  /* backgroundImage:`url(${currentUser.image})` */
-}
-//function and objects:
+
+//functions and objects:
 
 function Profile() {
   const dispatch = useDispatch();
   const userType = useSelector(userTypeSelector);
   const currentUser = useSelector(userNameSelector);
   const userData = useSelector(userDataSelector);
+  const army = useSelector(enlistedSelector)
   const navigate = useNavigate();
+
+  const testStyle = {
+    width:75,
+    height:75,
+    backgroundColor:"black",
+    backgroundImage:`url(${currentUser.image})`,
+  }
 
   useEffect(()=>{
     if (!currentUser && userType==='visitor'){
@@ -52,7 +55,19 @@ function Profile() {
         </div>
         }
     };
-  console.log(currentUser);
+
+    const displayArmy = () => {
+      return( 
+        <ol>
+          {
+            army.map((formation) =>{
+              <li key={formation.id}>{formation.name}-{formation.pointCost}</li>
+            })
+          }
+        </ol>
+      )
+    }
+
   return (
     <div>
         <NavBar />
@@ -63,22 +78,31 @@ function Profile() {
        <div className={NewCampaignCss.section}>
        
         <div style={testStyle}>
-
+          <img src={`/assets/conscript_red.png`} alt="profileimg" style={{
+            objectFit:"fill",
+            width:"100%"
+          }}/>{/*${userData.image}*/}
         </div>
-        <h2>{currentUser}</h2>
+        <h2>{userData?.rank} {currentUser}</h2>
        </div>
 
        <div className={NewCampaignCss.section}>
         
-        <p> Player level: </p>
-        <p> Rank: </p>
-        <p> Battles fought: </p>
-        <p> WinRate: </p>
-        <p> Badges: </p>
+        <p> Level: {userData?.level}</p>
+        <p> Battles: {userData?.battles}</p>
+        <p> WinRate: {userData?.winRate}</p>
+        {userData?.badges.length > 0 ? <p> Badges: </p>
+        : null}
+        <ol>
+          {userData?.badges.map((badge, i)=>{
+            <li key={i}>{badge}</li>
+          })}
+        </ol>
        </div>
        
        <div className={NewCampaignCss.section}>
         <p> Current Army: </p>
+        { army.length > 0 ? displayArmy() : <p style={{color:"tomato"}} >[ No formations enlisted yet ]</p>}
        </div>
 
     </div>

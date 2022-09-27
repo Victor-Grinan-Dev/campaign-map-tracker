@@ -271,13 +271,9 @@ export const badges = {
     '':'',
     '':'',
 }
-
 export const active_skills ={
-
 }
 export const negative ={
-
 }
 export const passive_skills ={
-
 }

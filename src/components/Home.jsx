@@ -129,9 +129,7 @@ function Home(){
         displayUserType()
     }
 
-    const loginModalUser = () => {
-        return <Login/>
-    }
+
 
     return (
         <div className={css.homeContainer} >

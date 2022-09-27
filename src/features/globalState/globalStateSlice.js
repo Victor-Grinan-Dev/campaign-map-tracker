@@ -10,8 +10,10 @@ export const globalState = createSlice({
         currentUser:undefined, 
         userType:"visitor",
         userIndex:0,
+        userId:undefined,
 
         userData:undefined,
+
         isLoading:true,
         search:"",
 
@@ -45,6 +47,12 @@ export const globalState = createSlice({
 
         changeUserData:(state, action) => {
             state.userData = action.payload;
+        },
+        changeUserImage:(state, action) =>{
+            state.userData.image = action.payload;
+        },
+        addUserImage:(state, action) => {
+            state.action.images.push(action.payload);
         },
         setIsLogging:(state,action) =>{
             state.isLogging = action.payload;
@@ -197,7 +205,7 @@ export const {
     changeSearch
 } = globalState.actions;
 
-
+export const userIdSelector = (state) => state.globalState.userId;
 export const userDataSelector = (state) => state.globalState.userData;
 export const isLoggingSelector = (state) => state.globalState.isLogging;
 export const isLoggedSelector = (state) => state.globalState.isLogged;

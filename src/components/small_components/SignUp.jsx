@@ -82,13 +82,25 @@ function SignUp() {
             setErrMsg("Invalid Entry");
             //set an alarm here and log  
         }
+
+        /*
+             const newUser = new User(user, pwd);
+            //JSON.stringify()
+            const data = {user: newUser};
+            const response = await axios.patch('/user', data,
+                {
+                    headers: { "Content-Type": "application/json"},
+                    withCredentioals: true 
+                }
+            );
+        */
         try {
             const newUser = new User(user, pwd);
-            const response = await axios.post(USER_URL, JSON.stringify(newUser),
-            {
-                headers: { "Content-Type": "application/json"},
-                withCredentioals: true 
-            }
+            const response = await axios.patch(USER_URL, JSON.stringify(newUser),
+                {
+                    headers: { "Content-Type": "application/json"},
+                    withCredentioals: true 
+                }
             );
             console.log(response.data);
             setSuccess(true);

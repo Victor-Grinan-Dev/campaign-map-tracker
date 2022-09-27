@@ -11,7 +11,6 @@ const getValue = (skill) => {
     return;
   }
   return parseInt(skill.split(divider)[1], 10);
-  
 }
  
 export class Unit {
@@ -202,7 +201,7 @@ export class ArmyList {// all the models in the map from the same player.
     color=null
     faction = null //this is an object with own properties, including faction color.
 
-    constructor(name, composition){
+    constructor(name="", composition=""){
         this.name = name
         this.composition = composition //an array of all formations-objects.
         this.setPointCost()
@@ -221,13 +220,15 @@ export class User {
   
   type = "user"
   level = 0
-  rank = "conscript"
+  rank = "Conscript"
   badges = []
   battles = 0
   winRate = 0
   formations = []
-  army_lists = []
+  army_lists = new ArmyList()
   email = ""
+  image = "conscript_red.png"
+  images = ["conscript_red.png", "conscript_blue.png", "conscript_green.png", "conscript_yellow.png"]
 
   constructor(username, password=""){
       this.username = username

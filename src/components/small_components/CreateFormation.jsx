@@ -8,20 +8,21 @@ import css from './AddCard.module.css';
 
 //redux:
 import { useDispatch, useSelector } from 'react-redux';
-import { changeFormationName,  changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction, userTypeSelector, userIndexSelector } from '../../features/globalState/globalStateSlice';
+import { changeFormationName,  changeComposition, changeS_description, changeL_description, changeImage, changeFaction, changeSubFaction, userTypeSelector, userIndexSelector, userDataSelector, changeUserData, userIdSelector } from '../../features/globalState/globalStateSlice';
 import { formNameSelector, compositionSelector, s_descriptionSelector, l_descriptionSelector, imageSelector, factionSelector, subfactionSelector } from '../../features/globalState/globalStateSlice';
 
 //function and objects:
 import { factions, Formation } from '../../functions/Objects';
 import axios from '../../api/axios';
-
-
+import { updateFormation } from '../../services/db2connAxios';
 
 function CreateFormation() {
     const dispatch = useDispatch()
+    const userData =useSelector(userDataSelector);
     const [factionList, setFactionList] = useState([])
     const [isComposition, setIsComposition] = useState(false);
     const [totalPointCost, setTotalPointCost]= useState(0);
+    const [tempUserData, setTempUserData] = useState(userData);
 
     useEffect(() => {
         //populate the factions names
@@ -31,12 +32,12 @@ function CreateFormation() {
             }
         setFactionList(temp);
     }, []);
-
+    
     //userState
     const userType = useSelector(userTypeSelector);
     const userIndex = useSelector(userIndexSelector);
-    const thisUserFormationsUrl = `/${userType}/${userIndex}/formations`;
-
+    const userId = useSelector(userIdSelector);
+ 
     //formation state
     const nameFormation = useSelector(formNameSelector);
     const composition = useSelector(compositionSelector);
@@ -45,8 +46,6 @@ function CreateFormation() {
     const image = useSelector(imageSelector);
     const faction = useSelector(factionSelector);
     const subfaction = useSelector(subfactionSelector);
-
-
 
     //handlers
     const nameHandler = (e) => {
@@ -74,16 +73,35 @@ function CreateFormation() {
     }
 
     const addFormation = (e) =>{
-        axios.get("/user").then(res=>{
-            const data =res.data;
-            console.log(data[userIndex].formations)
+
+        axios.get('/user').then((res)=>{
+            console.log(res.data)
+            //copy the value to the state and change it there then post it back. or patch it back.
         })
+        updateFormation()
+        
         if (nameFormation && composition.length > 0 && s_description && faction && subfaction){
             const newFormation = new Formation(nameFormation, composition, s_description, l_description, image, faction, subfaction);
-            //TODO: add to database
-            console.log(newFormation);
-            console.log('url: ',thisUserFormationsUrl)
+            const allFormations = [];
+            if (userData.formations.length > 0){
+                for (let item in userData.formations){
+                    allFormations.push(userData.formations[item])
+                }
+            }
+
+            allFormations.push(newFormation);
+
+            setTempUserData( {...userData, formations : allFormations });
+
+            dispatch(changeUserData(tempUserData))
             
+            //TODO: add to database
+            //patch the user with new data
+            console.log(tempUserData)
+            axios.post(`/user`, {tony:[], oscar:[]});
+
+            
+
             const form = e.nativeEvent.path[1];
             //reset form
             Array.from(form.elements).forEach(element => {
@@ -101,6 +119,8 @@ function CreateFormation() {
             dispatch(changeImage(""));
             dispatch(changeFaction(undefined));
             dispatch(changeSubFaction(undefined));
+
+            setTotalPointCost(0);
         }else{
             console.log('empty field(s) modal')
         };
