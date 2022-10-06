@@ -213,7 +213,10 @@ export class ArmyList {// all the models in the map from the same player.
     }
 
     setPointCost(){
-      this.composition.forEach(formation => this.point_cost += formation.pointCost)
+      if (this.composition){
+        this.composition.forEach(formation => this.point_cost += formation.pointCost)
+      }
+      
     }
 }
 export class User {
@@ -510,7 +513,7 @@ export const skills_by_unit_type = {//TODO?: smarter change all this to separate
   beast:{ 
     type:"beast",
     image: "/public/assets/unit_recon.png",
-    movement:4,
+    movement:3,
     active:[],
     negative:[],
     passive:["vision+1"]

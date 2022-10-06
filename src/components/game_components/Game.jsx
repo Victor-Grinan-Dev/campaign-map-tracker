@@ -19,6 +19,9 @@ import css from './game.module.css';
 import { mapReader } from '../../functions/positions';
 import { availableMaps } from '../../functions/mapGenerator';
 
+//test
+import './Data.js';
+
 const map = availableMaps[3];
 
 function Game() {

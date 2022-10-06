@@ -74,8 +74,12 @@ function SignUp() {
         
     },[user]);
 
-    const handleSubmit = async (e) =>{
-        e.preventDefault();
+    const handleSubmit = async () =>{
+
+        console.log('hello')
+        const newUser = new User(user, pwd);
+        localStorage.setItem("CMT", JSON.stringify(newUser))
+        setSuccess(true);
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
         if(!v1||!v2){
@@ -84,19 +88,10 @@ function SignUp() {
         }
 
         /*
-             const newUser = new User(user, pwd);
-            //JSON.stringify()
-            const data = {user: newUser};
-            const response = await axios.patch('/user', data,
-                {
-                    headers: { "Content-Type": "application/json"},
-                    withCredentioals: true 
-                }
-            );
-        */
         try {
-            const newUser = new User(user, pwd);
-            const response = await axios.patch(USER_URL, JSON.stringify(newUser),
+            
+           
+            const response = await axios.post(USER_URL, JSON.stringify(newUser),
                 {
                     headers: { "Content-Type": "application/json"},
                     withCredentioals: true 
@@ -104,17 +99,18 @@ function SignUp() {
             );
             console.log(response.data);
             setSuccess(true);
+            
         } catch (error) {
             if (!error.response){
                 setErrMsg('No server response');
-            }else if(errMsg.response?.status === 409){
-                setErrMsg('Username Taken');
-            } else {
+            }else {
                 setErrMsg('Registration Failed');
             }
             errRef.current.focus();
         }
         
+    
+        */
     }
   return (
     <>
