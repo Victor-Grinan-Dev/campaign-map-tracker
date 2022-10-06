@@ -39,6 +39,7 @@ function NavBar() {
             <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/myarmy">My Army</Link></li>
             <li><Link to="/about">About</Link></li>
+            <li><Link to="/game">test game</Link></li>
           </ul>
 
           <Button caption="Log Out" action={logOutHandler}/>

@@ -18,11 +18,12 @@ import css from './game.module.css';
 //function and objects:
 import { mapReader } from '../../functions/positions';
 import { availableMaps } from '../../functions/mapGenerator';
-
+import { hexTestMap } from './maps';
 //test
 import './Data.js';
 
-const map = availableMaps[3];
+//const map = availableMaps[3];
+const map = hexTestMap;
 
 function Game() {
     const userType = useSelector(userTypeSelector);
@@ -36,7 +37,6 @@ function Game() {
   return (
     <div className={css.game}>
       <div>
-      <NavBar/>
       <BackTo pageUrl={'/profile'} pageName={'Profile'} />
       </div>
 

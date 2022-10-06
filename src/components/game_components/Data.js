@@ -75,7 +75,7 @@ const termies = new Unit(9, "Termies", 1, 200, skills_by_unit_type['walker_wehic
 
 //lion formations
 const hq = new Formation("HQ", [chappy, alfaTacticals, bravoTacticals], "building army");
-const hoverPatrol = Formation("Hover Patrol", [IconOfCaliban, alfaSpeeder, bravoSpeeder], "spot and harrass");
+const hoverPatrol = new Formation("Hover Patrol", [IconOfCaliban, alfaSpeeder, bravoSpeeder], "spot and harrass");
 
 const ravenWing = new Formation("Raven Wing", [bikeApothecary, knigths, alfaBikers, bravoBikers]);
 

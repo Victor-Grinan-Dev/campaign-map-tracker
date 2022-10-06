@@ -1,7 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
 import css from './Tile.module.css';
-import { imported_tiles_images } from '../../functions/tilesImages';
+import Token from '../game_components/Token';
 //hooks:
 //redux:
 //components:
@@ -9,9 +8,8 @@ import { imported_tiles_images } from '../../functions/tilesImages';
 //function and objects:
 //TODO: change the changes of the map tile in temporary db? global state? 
 
-function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId }) {
+function Tile({id, posLeft, posTop, image, func = null, showId, formation=null }) {
 
-  //console.log(imgUrl)
   return (
     <div
     id={id}
@@ -23,8 +21,11 @@ function Tile({id, posLeft, posTop, image, imgUrl, func = null, showId }) {
       top:`${posTop}px`,
     }}
     >
-      {showId && <p>{id}</p>}
-
+      <div className="tileContent">
+        {showId && <p>{id}</p>}
+        {formation && <Token formation={formation} />}
+      </div>
+      
     </div>
   )
 }

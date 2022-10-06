@@ -12,13 +12,28 @@ const getValue = (skill) => {
   }
   return parseInt(skill.split(divider)[1], 10);
 }
- 
+export const heroTypes = {
+  medic:"bonus heal",
+  orator:"bonus luck",
+  ingenier:"bonus build",
+  figther:"bonus attack",
+  tactician: "bonus defence"
+}
+
+export class Hero{
+  is_hero = false
+  hero_xp = []
+  hero_level = []
+  hero_skills = []
+
+  constructor(type){
+    this.type = type
+  }
+}
+
 export class Unit {
     image = ""
-    is_hero = false
-    hero_xp = []
-    hero_level = []
-    hero_upgrades = []
+    hero = null
     equipment = []
     constructor(id, unitName, models, point_const, skills){
       this.id = id
@@ -26,6 +41,9 @@ export class Unit {
         this.models = models
         this.point_const = point_const
         this.skills = skills
+    }
+    makeHero(type){
+      this.hero = heroTypes[type]
     }
 };
 
@@ -239,22 +257,62 @@ export class User {
   }
 }
 //Map objects:
+
+class Terrain {
+    image = undefined
+
+  constructor(name, move_in_action, get_out_action, grants_cover, can_hIde_in, blocks_sight, can_build, actions, benefits){
+    this.name = name
+
+    this.move_in_action = move_in_action
+    this.get_out_action = get_out_action
+    this.grants_cover = grants_cover
+
+    this.can_hIde_in = can_hIde_in
+    this.is_blocks_sight = blocks_sight
+    this.can_build = can_build
+
+    this.actions = actions 
+    this.benefits = benefits
+    this.image = name
+  }
+}
+
+const planes = new Terrain("planes", 1, 0, 0, false, false, true, [], null);
+const hills = new Terrain("hills", 2, 1, 1, true, true, true, [], "vision+1");
+const forest = new Terrain("forest", 2, 1, 2, true, true, false, [], "luck+4");
+const swamps = new Terrain("swamps", 1, 2, -1, false, false, false, [], "luck+9");
+const mountains = new Terrain("mountains", 5, 5, 3, true, true, false, [], null);
+
+export const terrainType = {
+  planes: planes,
+  hills: hills,
+  forest: forest,
+  swamps: swamps,
+  mountains: mountains
+}
+
 export class Tile {
-    move_in = 1
-    is_cover = undefined
-    can_hIde_in = undefined
-    blocks_sight = undefined
     owned_by = undefined
     formation = null
     resources = []
     buildings = []
-    objective = null
+    objective = false
     actions = []
+    image = undefined
+    is_starting_position = false
 
-    constructor(id, image, is_starting_position = false){
+    constructor(id, terrain){
         this.id = id,  
-        this.image = image,    
-        this.is_starting_position = is_starting_position
+        this.terrain = terrain,
+        this.setImage()  
+    }
+    setImage(){
+      this.image = this.terrain.image
+    }
+
+    toogle(){
+      this.is_starting_position = !this.is_starting_position
     }
 }
 export class Map {
