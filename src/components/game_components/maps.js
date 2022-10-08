@@ -1,4 +1,5 @@
-import { terrainType } from "../../functions/Objects"
+import { terrainTypes, Tile, Map } from "./objects/map";
+
 
 export const hexTestMap = {
     name:"Devil's Arena",
@@ -70,276 +71,45 @@ export const hexTestMap = {
     maxPlayers: 2
     }
 
-export const miniMapHx = {
-        name:"the mini hex",
+export const firstAutomatedMap = {
+        name:"Devil's Arena",
         shape:"hx",
-        dimensions:"3x3x3",
-        map:[
-                [
-                    {
-                        id:330,
-                        image:null,
-                        move_in:null,
-                        cover:null,
-                        is_starting_position:null,
-                        posY:null,
-                        posX:null,
-                        owned_by:null,
-                        objective:false,
-                        formation:null,
-                    },
-                    {
-                        id:"a01",
-                        image:"planes",
-                        move_in:1,
-                        cover:false,
-                        is_starting_position:false,
-                        posY:null,
-                        posX:null,
-                        owned_by:null,
-                        objective:true,
-                        formation:null,
-                    },
-                {
-                    id:"b01",
-                    image:"planes",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-    
-                },
-                {
-                    id:"c01",
-                    image:"planes",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:true,
-                    formation:null,
-                }
+        dimensions: "4x4x4",
+        map:[ 
+                [undefined,     undefined,      "a01,planes",   "b01,planes",   "c01,planes",   "d01,planes"],
+                [       undefined,     "a02,planes",   "b02,planes",   "c02,planes",   "d02,planes",   "e02,planes"], 
+                [undefined,     "a03,planes",   "b03,planes",   "c03,planes",   "d03,planes",   "e03,planes",   "f03,planes"],
+                [       "a04,planes",  "b04,planes",   "c04,planes",   "d04,planes",   "e04,planes",   "f04,planes",   "g04,planes"],
+                [undefined,     "b05,planes",   "c05,planes",   "d05,planes",   "e05,planes",   "f05,planes",   "g05,planes"], 
+                [       undefined,     "c06,planes",   "d06,planes",   "e06,planes",   "f06,planes",   "g06,planes"],
+                [undefined,     undefined,      "d07,planes",   "e07,planes",   "f07,planes",   "g07,planes"] 
             ],
-            [
-                {
-                    id:"a02",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:false,
-                    formation:null,
-                },
-                {
-                    id:"b02",
-                    image:"forest",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"c02",
-                    image:"forest",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"d02",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                }
-            ],
-            [
-                {
-                    id:"a03",
-                    image:"hills",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:true,
-                    posY:null,
-                    posX:null,
-                    owned_by:'red',
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"b03",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"c03",
-                    image:"mountains",
-                    move_in:null,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"d03",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"e03",
-                    image:"hills",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:true,
-                    posY:null,
-                    posX:null,
-                    owned_by:'blue',
-                    objective:null,
-                    formation:null,
-                }
-            ],
-            [
-                {
-                    id:"b04",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"c04",
-                    image:"forest",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"d04",
-                    image:"forest",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"e04",
-                    image:"swamp",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                }
-            ],
+        maxPlayers: 2
+        }
 
-            [
-                {
-                    id:500,
-                    image:null,
-                    move_in:null,
-                    cover:null,
-                    is_starting_position:null,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:null,
-                    formation:null,
-                },
-                {
-                    id:"c05",
-                    image:"planes",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:true,
-                    formation:null,
-                },
-                {
-                    id:"d05",
-                    image:"planes",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:false,
-                    formation:null,
-                },
-                {
-                    id:"e05",
-                    image:"planes",
-                    move_in:1,
-                    cover:false,
-                    is_starting_position:false,
-                    posY:null,
-                    posX:null,
-                    owned_by:null,
-                    objective:true,
-                    formation:null,
-
-                }
-            ]
-        ],
-        maxPlayers:2
-    }
+export const automatedMap = ( mapName, nestedArray, shape, dimensions) => {
+    let newMap = []
+    nestedArray.map((row, i) => {
+        let newRow = []
+        row.map((autoTile, j) => {
+            if (autoTile){
+                const [id, terrain] = autoTile.split(',')
+                
+                newRow.push(new Tile(id, terrainTypes[terrain]))
+            }
+            else{
+                const null_id = `${i+1}${j}`;
+                newRow.push(new Tile(null_id, null))
+            }
+        })
+        newMap.push(newRow);
+    })
+    newMap.map(row=>{
+        row.map(tile=>{
+            console.log(tile)
+        })
+    })
+    return new Map(mapName, shape, dimensions, newMap);
+}      
+           
+                

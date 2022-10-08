@@ -543,7 +543,7 @@ const canvasSquare = (name, maxRows, maxCols) => {
     return new Map(name, "sq",`${maxRows}x${maxCols}`, map, null);
 }
 const canvasHex = (name, side = 13) => {
-    //TODO: fix the generator to start in alphabet a instead of i
+    //TODO: fix the generator to start in alphabet "a" instead of "i"
 
     if (side < 5){
         side = 5;

@@ -22,9 +22,14 @@ import { hexTestMap } from './maps';
 //test
 import './Data.js';
 
-//const map = availableMaps[3];
+import { firstAutomatedMap, automatedMap } from './maps';
+import { gameMapReader } from './gameMapReader/gameMapReader';
+
+
 const map = hexTestMap;
 
+const autoMap = automatedMap(firstAutomatedMap.map)
+console.log(autoMap)
 function Game() {
     const userType = useSelector(userTypeSelector);
     const currentUser = useSelector(userNameSelector);
@@ -36,12 +41,16 @@ function Game() {
     },[currentUser]);
   return (
     <div className={css.game}>
-      <div>
+      <div style={{
+        position:'absolute',
+        top:20,
+        left:20
+      }}>
       <BackTo pageUrl={'/profile'} pageName={'Profile'} />
       </div>
 
         <div>
-        {mapReader(map.map)}
+        {gameMapReader(map.map)}
         </div>
     </div>
   )

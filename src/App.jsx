@@ -26,8 +26,8 @@ import Show404 from './components/Show404';
 import SignUp from './components/small_components/SignUp';
 
 function App() {
-  const logged = useSelector(isLoggedSelector);
-
+  //const logged = useSelector(isLoggedSelector);
+  const logged = true
   const allRoutes = () => {
     
     return (
@@ -53,10 +53,10 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path='/signup' element={<SignUp />} />
-          {
+          {/*
             logged ? allRoutes() : <Route path='/:error' element={<Show404 />} />
-          }
-
+  */}
+          {allRoutes()}
         </Routes>
       </BrowserRouter>     
     </div>

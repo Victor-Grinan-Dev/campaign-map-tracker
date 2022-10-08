@@ -1,0 +1,44 @@
+.Tile{
+    background-image: url('../../assets/tile_images/blank.png');
+    background-size: 100px 100px;
+    
+    background-repeat: no-repeat;
+    background-position: "center";
+
+    height:100px;
+    width:100px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    position: absolute;
+    
+}
+
+.Tile:hover{
+    filter: opacity(50%);
+}
+
+.tileContent{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    grid-auto-rows: minmax(15px, 15px);
+    background-color: aqua;
+    font-size: 10px;
+}
+
+ p {
+    margin-top: 8px;
+    margin-left: 8px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-shadow: 0 0 5px black;
+}

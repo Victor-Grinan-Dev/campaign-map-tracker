@@ -304,7 +304,7 @@ export class Tile {
 
     constructor(id, terrain){
         this.id = id,  
-        this.terrain = terrain,
+        this.terrain = terrainType[terrain],
         this.setImage()  
     }
     setImage(){

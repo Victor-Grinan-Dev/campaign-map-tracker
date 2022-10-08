@@ -57,7 +57,7 @@ const handleLeft = (y, x) => {
         return evenLeftStart + left * x
     }
 }
-const mapReader = (map, action=null, showTilesId) => {
+const mapReader = (map, action=null, showTilesId=false) => {
     //map is a nested array 
     return (
         <div className="mapReader">
@@ -71,7 +71,6 @@ const mapReader = (map, action=null, showTilesId) => {
                             id={tile.id}
                             showId={showTilesId}
                             image={tile.image}  
-                            imgUrl={"'../assets/tile_images/blank.png'"}
                             posTop={topStart + top * y} 
                             posLeft={handleLeft(y, x)} 
                             tileWidth={side} 
