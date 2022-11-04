@@ -1,4 +1,4 @@
-# Welcome to the Campaign Map Tracker app, (the project is in process)
+# Welcome to the Campaign Map Tracker app, (in process...)
 
 ## set up:
 
